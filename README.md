@@ -1,2 +1,2 @@
 # Waarwi
-Waar wuniy baye ci tool bi
+Waar wunuy baye ci tool bi
