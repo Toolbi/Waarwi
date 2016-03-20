@@ -1,0 +1,343 @@
+[09-Apr-2015 11:20:49 UTC] PHP Fatal error:  Call to a member function login_oauth() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/login.php on line 264
+[09-Apr-2015 11:22:13 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+Array
+(
+)
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', Array)
+#2 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider->access('AQC_UJXD791sl67...')
+#3 [internal function]: Login->sociallogin('facebook')
+#4 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#5 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#6 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 11:39:27 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/1HCBZDk67pWvu...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/1HCBZDk67pWvu...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 11:43:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/-IqOe8cr1XSU0...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/-IqOe8cr1XSU0...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 12:06:05 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/0q04xZCCzWU9g...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/0q04xZCCzWU9g...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 12:17:34 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/0wjMevpb1Q69O...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/0wjMevpb1Q69O...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 12:19:59 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/0wjMevpb1Q69O...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/0wjMevpb1Q69O...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 12:20:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/Veptd5l4_7ZuJ...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/Veptd5l4_7ZuJ...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Apr-2015 12:20:48 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/Veptd5l4_7ZuJ...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/Veptd5l4_7ZuJ...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[15-Apr-2015 14:07:38 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/19gUrneh1B5y2...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/19gUrneh1B5y2...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[15-Apr-2015 14:08:02 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/Jm6ioACzanZF-...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/Jm6ioACzanZF-...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[17-Apr-2015 09:40:55 UTC] PHP Fatal error:  Call to a member function count_subscribes() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/subscriber.php on line 26
+[17-Apr-2015 09:41:10 UTC] PHP Fatal error:  Call to a member function count_subscribes() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/subscriber.php on line 26
+[17-Apr-2015 09:41:51 UTC] PHP Fatal error:  Call to a member function count_subscribes() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/subscriber.php on line 26
+[17-Apr-2015 09:52:57 UTC] PHP Fatal error:  Call to a member function count_subscribes() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/subscriber.php on line 26
+[17-Apr-2015 09:53:31 UTC] PHP Fatal error:  Call to a member function count_subscribes() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/subscriber.php on line 26
+[17-Apr-2015 10:41:33 UTC] PHP Fatal error:  Call to undefined method Pages::check() in /home/scriptsale/public_html/demo/carpooling/controllers/pages.php on line 57
+[17-Apr-2015 13:04:13 UTC] PHP Fatal error:  Call to undefined method Radius_model::count_radius() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 26
+[17-Apr-2015 13:06:12 UTC] PHP Fatal error:  Call to undefined method Vehicles_model::count_vehicles() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 29
+[17-Apr-2015 13:08:04 UTC] PHP Fatal error:  Call to undefined method Radius_model::count_radius() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 26
+[17-Apr-2015 13:11:30 UTC] PHP Fatal error:  Call to a member function initialize() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 31
+[17-Apr-2015 13:11:57 UTC] PHP Fatal error:  Call to a member function initialize() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 31
+[17-Apr-2015 13:12:24 UTC] PHP Fatal error:  Call to a member function initialize() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 31
+[17-Apr-2015 13:12:34 UTC] PHP Fatal error:  Call to undefined method Radius_model::count_radiues() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/radius.php on line 26
+[17-Apr-2015 13:14:13 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/b1E2T3i0iPpFa...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/b1E2T3i0iPpFa...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[27-Apr-2015 09:09:21 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/A-X1oP3bYTRgY...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/A-X1oP3bYTRgY...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[05-May-2015 16:50:04 Asia/Kolkata] PHP Fatal error:  Call to undefined method Travel_model::get_travellers() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/traveller.php on line 175
+[13-May-2015 10:37:42 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/Fj88d973w-rXZ...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/Fj88d973w-rXZ...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[18-May-2015 13:07:59 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/IMR_TtiwAeEdo...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/IMR_TtiwAeEdo...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[19-May-2015 08:55:23 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(NULL)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(223): OAuth2_Token::factory('access', NULL)
+#2 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(61): OAuth2_Provider->access('4/55qZrQ8ZC02nn...', Array)
+#3 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(251): OAuth2_Provider_Google->access('4/55qZrQ8ZC02nn...')
+#4 [internal function]: Login->sociallogin('google')
+#5 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#6 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#7 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[03-Jun-2015 10:50:50 Asia/Kolkata] PHP Fatal error:  Call to undefined method Travel_model::get_travellers() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/traveller.php on line 175
+[10-Jun-2015 18:49:08 Asia/Kolkata] PHP Fatal error:  Call to undefined method Enquiry_model::count_enquiry() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/dashboard.php on line 25
+[10-Jun-2015 18:49:11 Asia/Kolkata] PHP Fatal error:  Call to undefined method Enquiry_model::count_enquiry() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/dashboard.php on line 25
+[01-Aug-2015 07:50:05 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/home.php on line 41
+[10-Aug-2015 07:47:40 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+Array
+(
+)
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(234): OAuth2_Token::factory('access', Array)
+#2 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(246): OAuth2_Provider->access('AQCDXogTb6tgqx7...')
+#3 [internal function]: Login->facebooklogin()
+#4 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#5 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#6 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[10-Aug-2015 07:48:13 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+Array
+(
+)
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(234): OAuth2_Token::factory('access', Array)
+#2 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(246): OAuth2_Provider->access('AQCDXogTb6tgqx7...')
+#3 [internal function]: Login->facebooklogin()
+#4 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#5 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#6 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[11-Aug-2015 18:55:28 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 18:56:01 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 18:56:10 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 18:56:17 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 18:57:10 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 19:01:48 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 19:01:59 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 19:02:22 Asia/Kolkata] PHP Fatal error:  Call to a member function getcategory_list() on a non-object in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 77
+[11-Aug-2015 19:27:38 Asia/Kolkata] PHP Fatal error:  Call to undefined function theme_vehicles_img() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 182
+[11-Aug-2015 19:28:10 Asia/Kolkata] PHP Fatal error:  Call to undefined function theme_vehicles_img() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 182
+[11-Aug-2015 19:32:19 Asia/Kolkata] PHP Fatal error:  Call to undefined function theme_vehicles_img() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 182
+[11-Aug-2015 14:03:29 UTC] PHP Parse error:  syntax error, unexpected '');"></div>' (T_CONSTANT_ENCAPSED_STRING) in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 191
+[12-Aug-2015 10:43:51 Asia/Kolkata] PHP Fatal error:  Call to undefined method Country_model::check_vehicle() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/country.php on line 126
+[12-Aug-2015 11:15:37 Asia/Kolkata] PHP Fatal error:  Call to undefined function theme_vehicles_img() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/vehicle.php on line 182
+[18-Aug-2015 16:11:31 Asia/Kolkata] PHP Fatal error:  Call to undefined method Trip_model::past_trip() in /home/scriptsale/public_html/demo/carpooling/controllers/addtrip.php on line 574
+[18-Aug-2015 16:12:16 Asia/Kolkata] PHP Fatal error:  Call to undefined method Trip_model::past_trip() in /home/scriptsale/public_html/demo/carpooling/controllers/addtrip.php on line 574
+[18-Aug-2015 11:11:01 UTC] PHP Fatal error:  Call to undefined function format_currency() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/trip_detail.php on line 122
+[18-Aug-2015 11:14:59 UTC] PHP Fatal error:  Call to undefined function format_currency() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/trip_detail.php on line 122
+[18-Aug-2015 11:20:57 UTC] PHP Fatal error:  Call to undefined function format_currency() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/trip_detail.php on line 122
+[18-Aug-2015 11:21:03 UTC] PHP Fatal error:  Call to undefined function format_currency() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/trip_detail.php on line 122
+[18-Aug-2015 11:25:29 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[18-Aug-2015 11:25:31 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[18-Aug-2015 14:07:48 UTC] PHP Fatal error:  Call to undefined function format_currency() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/trip_detail.php on line 122
+[19-Aug-2015 08:42:30 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[21-Aug-2015 03:40:36 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[23-Aug-2015 07:41:02 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[23-Aug-2015 07:41:05 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[25-Aug-2015 09:43:32 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not provided: id' in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php:69
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/OAuth2.php(32): OAuth2_Provider->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(226): OAuth2::provider('facebook', Array)
+#2 [internal function]: Login->facebooklogin()
+#3 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#5 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php on line 69
+[25-Aug-2015 09:43:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not provided: id' in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php:69
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/OAuth2.php(32): OAuth2_Provider->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(226): OAuth2::provider('facebook', Array)
+#2 [internal function]: Login->facebooklogin()
+#3 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#5 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php on line 69
+[25-Aug-2015 12:06:23 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[25-Aug-2015 12:06:26 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[25-Aug-2015 13:02:05 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not provided: id' in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php:69
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Provider/Google.php(45): OAuth2_Provider->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/OAuth2.php(32): OAuth2_Provider_Google->__construct(Array)
+#2 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(271): OAuth2::provider('google', Array)
+#3 [internal function]: Login->googlelogin()
+#4 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#5 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#6 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php on line 69
+[25-Aug-2015 13:02:14 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not provided: id' in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php:69
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/OAuth2.php(32): OAuth2_Provider->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(226): OAuth2::provider('facebook', Array)
+#2 [internal function]: Login->facebooklogin()
+#3 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#4 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#5 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php on line 69
+[29-Aug-2015 13:47:29 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[01-Sep-2015 03:05:13 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[05-Sep-2015 21:06:09 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[05-Sep-2015 23:23:09 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[11-Sep-2015 16:49:59 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[11-Sep-2015 16:50:01 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[14-Sep-2015 06:02:36 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/scriptsale/public_html/demo/carpooling/libraries/Auth.php on line 204
+[14-Sep-2015 06:03:36 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/scriptsale/public_html/demo/carpooling/libraries/Auth.php on line 204
+[14-Sep-2015 06:04:31 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/scriptsale/public_html/demo/carpooling/libraries/Auth.php on line 204
+[14-Sep-2015 06:16:36 UTC] PHP Fatal error:  Call to a member function view() on a non-object in /home/scriptsale/public_html/demo/carpooling/libraries/Auth.php on line 215
+[18-Sep-2015 13:45:39 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/header.php on line 51
+[18-Sep-2015 13:45:48 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/views/admin/header.php on line 80
+[18-Sep-2015 13:46:01 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/views/admin/header.php on line 80
+[18-Sep-2015 13:46:13 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/views/admin/header.php on line 80
+[18-Sep-2015 13:47:13 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/header.php on line 51
+[18-Sep-2015 13:47:39 UTC] PHP Fatal error:  Call to undefined function theme_logo_img() in /home/scriptsale/public_html/demo/carpooling/themes/carpooling/views/header_home.php on line 86
+[22-Sep-2015 14:27:18 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[23-Sep-2015 14:48:58 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[27-Sep-2015 07:18:13 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[28-Sep-2015 13:08:59 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[28-Sep-2015 13:09:02 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[01-Oct-2015 14:01:23 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[01-Oct-2015 14:01:25 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[04-Oct-2015 14:27:57 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[05-Oct-2015 19:55:57 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Required option not passed: access_token
+Array
+(
+)
+' in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php:44
+Stack trace:
+#0 /home/scriptsale/public_html/demo/carpooling/libraries/Token.php(30): OAuth2_Token_Access->__construct(Array)
+#1 /home/scriptsale/public_html/demo/carpooling/libraries/Provider.php(234): OAuth2_Token::factory('access', Array)
+#2 /home/scriptsale/public_html/demo/carpooling/controllers/login.php(186): OAuth2_Provider->access('AQAXV45WcIhH6hY...')
+#3 [internal function]: Login->facebooklogin()
+#4 /home/scriptsale/public_html/demo/system/core/CodeIgniter.php(359): call_user_func_array(Array, Array)
+#5 /home/scriptsale/public_html/demo/index.php(213): require_once('/home/scriptsal...')
+#6 {main}
+  thrown in /home/scriptsale/public_html/demo/carpooling/libraries/Token/Access.php on line 44
+[09-Oct-2015 07:50:09 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[09-Oct-2015 07:50:12 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[14-Oct-2015 20:52:29 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
+[17-Oct-2015 18:09:48 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[17-Oct-2015 18:09:48 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[17-Oct-2015 18:10:24 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[17-Oct-2015 18:10:29 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[17-Oct-2015 18:10:29 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[17-Oct-2015 18:10:32 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/scriptsale/public_html/demo/system/core/CodeIgniter.php on line 233
+[20-Oct-2015 02:13:35 UTC] PHP Fatal error:  Call to undefined method Trip_model::get_tripc() in /home/scriptsale/public_html/demo/carpooling/controllers/admin/trip.php on line 165
