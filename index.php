@@ -26,7 +26,7 @@ if(!file_exists(dirname($_SERVER['SCRIPT_FILENAME']).'/waarwi/config/carpooling.
  *
  * NOTE: If you change these, also change the error_reporting() code below
  *
- */
+ **/
 	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
