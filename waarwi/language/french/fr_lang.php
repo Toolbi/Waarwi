@@ -1,10 +1,10 @@
 <?php
 //Add Trip Language
-$lang['my_trips']					= 'My Trips';
-$lang['rides_offered']				= 'Rides Offered';
+$lang['my_trips']					= 'Mes trajets';
+$lang['rides_offered']				= 'Trajets proposés';
 $lang['enquiry']				    = 'Enquiry';
 $lang['upcoming_trips']				= 'Upcoming trips';
-$lang['past_trips']					= 'Past Trip';
+$lang['past_trips']					= 'Dernier trajet';
 $lang['trip_legs']					= 'Trip legs:';
 $lang['edit_trips']					= 'Edit trips';
 $lang['trip_leg']					= 'Trip leg';
