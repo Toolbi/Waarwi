@@ -1,7 +1,7 @@
 <?php
 
 //if the Carpooling config file doesn't exist, the cart hasn't been installed.
-if(!file_exists(dirname($_SERVER['SCRIPT_FILENAME']).'/carpooling/config/carpooling.php'))
+if(!file_exists(dirname($_SERVER['SCRIPT_FILENAME']).'/waarwi/config/carpooling.php'))
 {
 	$folder = dirname($_SERVER['SCRIPT_NAME']);
 	$path	= rtrim($_SERVER['HTTP_HOST'].$folder, '/\\').'/';	
