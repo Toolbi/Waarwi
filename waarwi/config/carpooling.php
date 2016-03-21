@@ -13,8 +13,8 @@ $config['country']			= 'France'; // use proper country codes only
 $config['city']				= 'Saint-Etienne'; 
 $config['state']			= 'Unlisted/None';
 $config['zip']				= '42100';
-$config['email']			= 'yobaalema@gmail.com';
-$config['admin_email']		= 'yobaalema@gmail.com';
+$config['email']			= 'notre_mail@gmail.com';
+$config['admin_email']		= 'notre_mail@gmail.com';
 
 
 //facebook and google app id
