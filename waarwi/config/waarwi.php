@@ -81,10 +81,10 @@ $config['admin_email']                  = 'notremail_contact@gmail.com';
 
 
 //facebook and google app id
-$config['fb_appid']				= '';
-$config['fb_appsecret']			= '';
-$config['googleplus_appid']		= '';
-$config['googleplus_appsecret']	= '';
+$config['fb_appid']				= '263443957017496';
+$config['fb_appsecret']			= '5cd826e5a64b89981075d6f41a522eba';
+$config['googleplus_appid']		= '472269687820-k28acr2gebm0utid3kbsnte1ap7jr4k6.apps.googleusercontent.com';
+$config['googleplus_appsecret']	= 'U3cQlM1Msxf5MIcoTFINY_g4';
 
 $config['country_code']			= 'SEN'; // use proper country codes only
 
