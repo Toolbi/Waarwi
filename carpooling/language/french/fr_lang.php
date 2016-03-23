@@ -1,4 +1,9 @@
 <?php
+/******************************************
+Francçais
+Langue du tableau de bord utilisateur
+******************************************/
+
 //Add Trip Language
 $lang['my_trips']					= 'Mes trajets';
 $lang['rides_offered']				= 'Trajets proposés';
@@ -234,7 +239,7 @@ $lang['sign_in_to_carpooling']					= 'Se connecter';
 $lang['login']					                = 'Login';
 $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
-$lang['forgot_password']						= 'Mot de passe oublié ?';
+$lang['forgot_password']						= 'Mot de passe oublié ';
 $lang['sign_in']								= 'Se connecter';
 $lang['road_travel_made_easy']					= 'Voyager facilement, dans les meilleures conditions';
 $lang['got_a_question']					        = 'Une question?';

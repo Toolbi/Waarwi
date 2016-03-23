@@ -2,8 +2,8 @@
 
 /******************************************
 
-US English
-Common Language
+Français
+Langue commune
 
 ******************************************/
 
@@ -12,25 +12,25 @@ Common Language
 
 /*******************
 
-Site front end
+Site client (front end)
 
 *******************/
 
 //common terms
-$lang['login']					= 'Login';
-$lang['logout']					= 'Logout';
-$lang['my_account']				= 'My Account';
-$lang['my_downloads']			= 'My Downloads';
-$lang['enabled']				= 'Enabled';
-$lang['disabled']				= 'Disabled';
+$lang['login']					= 'Se connecter';
+$lang['logout']					= 'Se déconnecter';
+$lang['my_account']				= 'Mon compte';
+$lang['my_downloads']			= 'Mes téléchargements';
+$lang['enabled']				= 'Activé';
+$lang['disabled']				= 'Désactivé';
 $lang['mode']					= 'Mode';
-$lang['currency']				= 'Currency';
-$lang['active']					= 'Active';
+$lang['currency']				= 'Monnaie';
+$lang['active']					= 'Actif';
 $lang['inactive']				= 'In Active';
-$lang['approved']				= 'Approved';
-$lang['cancel']					= 'Cancelled';
-$lang['yes']					= 'Yes';
-$lang['no']						= 'No';
+$lang['approved']				= 'Approvée';
+$lang['cancel']					= 'Annulé';
+$lang['yes']					= 'Oui';
+$lang['no']						= 'Non';
 $lang['download_link']			= 'Click here to access your downloads!';
 $lang['catalog']				= 'Catalog';
 $lang['account']				= 'Account';

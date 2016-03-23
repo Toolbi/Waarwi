@@ -1,7 +1,7 @@
 <?php
 /******************************************
-US English
-Admin Page Language
+Français
+Langue page Admin
 ******************************************/
 
 $lang['link_information']		= 'Link Information';
