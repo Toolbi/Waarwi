@@ -128,7 +128,7 @@ class Install extends CI_Controller {
 				$settings['database']		= $this->input->post('database');
 				//$settings['prefix']			= $this->input->post('prefix');				
 				$file_contents				= $this->load->view('templates/database', $settings, true);
-				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'waarwi/config/database.php', $file_contents);
+				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'carpooling/config/database.php', $file_contents);
 
 				//setup the carpooling config file
 				$settings					= array();
@@ -147,7 +147,7 @@ class Install extends CI_Controller {
 				$settings['googleplus_appid']			= $this->input->post('google_app_id');
 				$settings['googleplus_appsecret']	= (bool)$this->input->post('google_app_secret_id');
 				$file_contents				= $this->load->view('templates/carpooling', $settings, true);
-				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'waarwi/config/carpooling.php', $file_contents);
+				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'carpooling/config/carpooling.php', $file_contents);
 
 				//setup the CodeIgniter default config file
 				$config_index				= array('index'=>'index.php');
@@ -156,7 +156,7 @@ class Install extends CI_Controller {
 					$config_index			= array('index'=>'');
 				}
 				$file_contents				= $this->load->view('templates/config', $config_index, true);
-				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'waarwi/config/config.php', $file_contents);
+				write_file($_SERVER['DOCUMENT_ROOT'].$subfolder.'carpooling/config/config.php', $file_contents);
 				
 				//setup the .htaccess file
 				if($this->input->post('mod_rewrite'))
