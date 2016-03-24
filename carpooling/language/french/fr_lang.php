@@ -211,7 +211,7 @@ $lang['list_of_vehicles']					= 'Liste des véhicules';
 $lang['list_of_trips']						= 'Liste des trajets';
 $lang['list_of_enquires']					= 'Liste des demandes';
 $lang['my_settings']						= 'Mes paramètres';
-$lang['edit_profile']						= 'Modifier le profile';
+$lang['edit_profile']						= 'Modifier le profil';
 $lang['change_password']					= 'Changer le mot de passe';
 $lang['settings']							= 'Paramètres';
 //header
@@ -379,18 +379,18 @@ $lang['departure_time']       = 'Departure Time';
 $lang['departure_date']       = 'Departure Date';
 $lang['booking_information']  = 'Booking Information';
 
-
-// nouvelles traductions admin == navigation gauche
+//***************** NOUVELLES TRADUCTIONS **************************************
+// admin navigation gauche/top
 $lang['dashboard']                           	= 'Tableau de board';
 $lang['welcome']                           	  	= 'Bienvenue';
 $lang['edit_photo']                           	= 'Modifier la photo';
 $lang['master']                           		= 'Principal';
 $lang['country']                           		= 'Pays';
 $lang['currency']                           	= 'Monnaies';
-$lang['Language']                           	= 'Langues';
+$lang['language']                           	= 'Langues';
 $lang['vehicle_brand']                          = 'Marques des voitures';
-$lang['vehicule']                          		= 'Voitures';
-$lang['raduis']                          		= 'Rayons';
+$lang['vehicle']                          		= 'Voitures';
+$lang['radius']                          		= 'Rayons';
 $lang['users']                          		= 'Utilisateurs';
 $lang['admin_management']                       = 'Administrateurs';
 $lang['add_site_user']                          = 'Ajouter un utilisateur';
@@ -402,4 +402,15 @@ $lang['pages']                          		= 'Pages';
 $lang['testimonials']                         	= 'Témoignages';
 $lang['trips']                          		= 'Trajets';
 $lang['list_of_trips']                          = 'Liste des trajets';
+$lang['toggle_navigation']                      = 'Afficher/Masquer la navigation';
+$lang['you_have']                           	= 'Vous avez ';
+$lang['new_message']                           	= ' notifications';
+$lang['list_site_users_details']                = 'Détails des utilisateurs';
+$lang['notification']                			= 'Notification';
+$lang['email_template']                			= 'Template des mails';
+$lang['subscriber']                				= 'Abonnés';
+$lang['edit_settings']                			= 'Modifier les paramètres';
+$lang['change_logo']                			= 'Changer le logo';
+$lang['well_done']                				= 'Bien joué !';
+$lang['on_snap']                				= 'Le snap !';
 ?>
