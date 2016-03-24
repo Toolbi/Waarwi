@@ -8,8 +8,8 @@
 							<div class="row">
 								<div class="col-lg-12">
 									<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li class="active"><span>Dashboard</span></li>
+										<li><a href="#">Acceuil</a></li>
+										<li class="active"><span>Tableau de bord</span></li>
 									</ol>
 									
 									
@@ -21,7 +21,7 @@
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box colored emerald-bg">
 										<i class="fa fa-user"></i>
-										<span class="headline">Users</span>
+										<span class="headline">Utilisateurs</span>
 										<span class="value"><?=$total_users?></span>
 									</div>
 								</div>
@@ -29,21 +29,21 @@
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box colored green-bg">
 										<i class="fa fa-map-marker"></i>
-										<span class="headline">Trips</span>
+										<span class="headline">Trajets</span>
 										<span class="value"><?=$total_trips?></span>
 									</div>
 								</div>
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box colored purple-bg">
 										<i class="fa fa-bookmark-o"></i>
-										<span class="headline">Subscribers</span>
+										<span class="headline">Abonnées</span>
 										<span class="value"><?=$total_subscribers?></span>
 									</div>
 								</div>
                                 <div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box colored red-bg">
 										<i class="fa  fa-car"></i>
-										<span class="headline">Vehicles</span>
+										<span class="headline">Véhicules</span>
 										<span class="value"><?=$total_vehicles?></span>
 									</div>
 								</div>
@@ -53,7 +53,7 @@
 								<div class="col-md-12">
 									<div class="main-box">
 										<header class="main-box-header clearfix">
-											<h2 class="pull-left">Daily Logged Users</h2>
+											<h2 class="pull-left">Utilisateurs connéctés aujourd'hui</h2>
 										</header>
 
 										<div class="main-box-body clearfix">
@@ -71,7 +71,7 @@
                             	<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box">
 										<i class="fa fa-file-photo-o emerald-bg"></i>
-										<span class="headline">Enquires</span>
+										<span class="headline">Demande</span>
 										<span class="value">
 											<span class="timer" data-from="30" data-to="658" data-speed="800" data-refresh-interval="30">
 												<?=$total_enquiry?>
@@ -82,7 +82,7 @@
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box">
 										<i class="fa fa-sliders red-bg"></i>
-										<span class="headline">Testimonials</span>
+										<span class="headline">Avis</span>
 										<span class="value">
 											<span class="timer" data-from="120" data-to="2562" data-speed="1000" data-refresh-interval="50">
 												<?=$total_testimonials?>
@@ -93,7 +93,7 @@
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box">
 										<i class="fa fa-arrows-alt green-bg"></i>
-										<span class="headline">Vehicle Brands</span>
+										<span class="headline">Marque de voitures</span>
 										<span class="value">
 											<span class="timer" data-from="83" data-to="8400" data-speed="900" data-refresh-interval="60">
 												<?=$total_categories?>
