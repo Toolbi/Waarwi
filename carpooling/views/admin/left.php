@@ -47,11 +47,11 @@ else
             <div class="user-box">
                 <span class="name">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      Welcome  <?= $name; ?> 
+                        <?php echo lang('welcome');?>  <?= $name; ?> 
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" id="profile_pic"><i class="fa fa-user"></i>Edit Photo</a></li>						
+                        <li><a href="#" id="profile_pic"><i class="fa fa-user"></i><?php echo lang('edit_photo');?></a></li>						
                     </ul>
                 </span>
                 
@@ -69,7 +69,7 @@ else
                 <li>
                     <a href="<?php echo $admin_url;?>dashboard/">
                         <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
+                        <span><?php echo lang('admin_dashboard');?></span>
                         <span class="label label-primary label-circle pull-right"></span>
                     </a>
                 </li>
@@ -77,40 +77,40 @@ else
                    <li> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-table"></i>
-                        <span>Master</span>
+                        <span><?php echo lang('master');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>                   
                      <ul class="submenu">
                      	<li>
                             <a href="<?php echo $admin_url;?>country">                                
-                                Country
+                                <?php echo lang('country');?>
                             </a>
                         </li>
                         
                         <li>
                             <a href="<?php echo $admin_url;?>currency">                                
-                                Currency
+                                <?php echo lang('currency');?>
                             </a>
                         </li>                    
                                             
                         <li>
                             <a href="<?php echo $admin_url;?>language">                                
-                                Language
+                                <?php echo lang('language');?>
                             </a>
                         </li>
                          <li>
                             <a href="<?php echo $admin_url;?>category">                                
-                                Vehicle Brand
+                                <?php echo lang('vehicle_brand');?>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $admin_url;?>vehicle">                               
-                                Vehicles
+                                <?php echo lang('vehicule');?>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $admin_url;?>radius">                               
-                                Radius
+                                <?php echo lang('radius');?>
                             </a>
                         </li>
                     </ul>
@@ -118,27 +118,27 @@ else
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-child"></i>
-                        <span>Site Users</span>
+                        <span><?php echo lang('users');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
                         <li>
-							<a href="<?php echo $admin_url;?>traveller/form">Add Site User</a>
+							<a href="<?php echo $admin_url;?>traveller/form"><?php echo lang('add_site_user');?></a>
                         </li>
                         <li>
-                            <a href="<?php echo $admin_url;?>traveller">List Site User</a>
+                            <a href="<?php echo $admin_url;?>traveller"><?php echo lang('list_site_users');?></a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-users"></i>
-                        <span>User Management</span>
+                        <span><?php echo lang('admin_management');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
                         <li>
-							<a href="<?php echo $admin_url;?>admin">Admin</a>
+							<a href="<?php echo $admin_url;?>admin"><?php echo lang('admin');?></a>
 						</li>
                     </ul>
                 </li>
@@ -146,18 +146,18 @@ else
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="fa  fa-file-text"></i>
-                        <span>CMS</span>
+                        <span><?php echo lang('cms');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
-                        <!--<li>
-							<a href="<?php //echo $admin_url;?>banner">Banners</a>
-						</li>-->
+                        <li>
+							<a href="<?php echo $admin_url;?>banner"><?php echo lang('banners');?></a>
+						</li>
 						<li>
-							<a href="<?php echo $admin_url;?>pages">Pages</a>
+							<a href="<?php echo $admin_url;?>pages"><?php echo lang('pages');?></a>
 						</li>
                         <li>
-							<a href="<?php echo $admin_url;?>testimonials">testimonials</a>
+							<a href="<?php echo $admin_url;?>testimonials"><?php echo lang('testimonials');?></a>
 						</li>
                     </ul>
                 </li>
@@ -166,12 +166,12 @@ else
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-cab"></i>
-                        <span>Trips</span>
+                        <span><?php echo lang('trips');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
                         <li>
-							<a href="<?php echo $admin_url;?>trip">List of Trips</a>
+							<a href="<?php echo $admin_url;?>trip"><?php echo lang('list_of_trips');?></a>
 						</li>
                     </ul>
                 </li>
