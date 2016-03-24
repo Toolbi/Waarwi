@@ -7,7 +7,7 @@ Langue du tableau de bord utilisateur
 //Add Trip Language
 $lang['my_trips']					= 'Mes trajets';
 $lang['rides_offered']				= 'Trajets proposés';
-$lang['enquiry']				    = 'Voyages comme passager';
+$lang['enquiry']				    = 'Demandes';
 $lang['upcoming_trips']				= 'Voyages à venir';
 $lang['past_trips']					= 'Derniers trajets';
 $lang['trip_legs']					= 'Parties du trajet:';
@@ -380,7 +380,7 @@ $lang['departure_date']       = 'Departure Date';
 $lang['booking_information']  = 'Booking Information';
 
 //***************** NOUVELLES TRADUCTIONS **************************************
-// admin navigation gauche/top
+// admin navigation gauche, top, centre
 $lang['dashboard']                           	= 'Tableau de board';
 $lang['welcome']                           	  	= 'Bienvenue';
 $lang['edit_photo']                           	= 'Modifier la photo';
@@ -413,4 +413,7 @@ $lang['edit_settings']                			= 'Modifier les paramètres';
 $lang['change_logo']                			= 'Changer le logo';
 $lang['well_done']                				= 'Bien joué !';
 $lang['on_snap']                				= 'Le snap !';
+$lang['total_daily_users']                		= 'Utilisateurs connéctés aujourd\'hui !';
+$lang['daily_users']                			= "Utilisateurs connectés aujourd'hui";
+$lang['subscribers']                			= 'Abonnés';
 ?>

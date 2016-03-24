@@ -448,7 +448,7 @@ $lang['departure_time']       = 'Departure Time';
 $lang['departure_date']       = 'Departure Date';
 $lang['booking_information']  = 'Booking Information';
 
-// admin navigation left/top
+// admin navigation left/top, centre
 $lang['dashboard']                           	= 'Dashboard';
 $lang['welcome']                           	  	= 'Welcome';
 $lang['edit_photo']                           	= 'Edit picture';
@@ -481,4 +481,7 @@ $lang['edit_settings']                			= 'Edit settings';
 $lang['change_logo']                			= 'Chhange logo';
 $lang['well_done']                				= 'Well done !';
 $lang['on_snap']                				= 'On snap !';
+$lang['total_daily_users']                		= 'Total daily users !';
+$lang['daily_users']                			= "Daily connected";
+$lang['subscribers']                			= 'Subscribers';
 ?>
