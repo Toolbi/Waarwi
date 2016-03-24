@@ -484,4 +484,19 @@ $lang['on_snap']                				= 'On snap !';
 $lang['total_daily_users']                		= 'Total daily users !';
 $lang['daily_users']                			= "Daily connected";
 $lang['subscribers']                			= 'Subscribers';
+
+// admin country
+$lang['delete_confirm']                			= 'Are you want to delete this ?';
+$lang['all_country']                			= 'All country';
+$lang['country2']                				= 'Country';
+$lang['add_country']                			= 'Add country';
+$lang['country_name']                			= 'Country name';
+$lang['country_short_name']                		= 'Country short name';
+$lang['created']                				= 'Created';
+$lang['status']                					= 'Status';
+$lang['inactive']                				= 'Inactive';
+$lang['active']                					= 'Active';
+$lang['change_status']                			= 'Change status';
+$lang['enable']                					= 'Enable';
+$lang['disable']                				= 'Disable';
 ?>
