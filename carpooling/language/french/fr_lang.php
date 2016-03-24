@@ -432,5 +432,13 @@ $lang['change_status']                			= 'Changer le status';
 $lang['enable']                					= 'Activer';
 $lang['disable']                				= 'Desactiver';
 $lang['add_new_country']                		= 'Ajout d\'un nouveau pays';
-$lang['save_country']                			= 'Enregistrer';
+$lang['save_form']                			= 'Enregistrer';
+
+// admin monnaie
+$lang['all_currencies']                			= 'Toutes les monnaies';
+$lang['add_currency']                			= ' Ajouter une monnaie';
+$lang['add_new_currency']                		= ' Ajouter d\'une nouvelle monnaie';
+$lang['currency_name']                			= 'Nom de la monnaie';
+$lang['currency_symbol']                		= 'Symbole de la monnaie';
+$lang['created']                				= 'Date de création';
 ?>
