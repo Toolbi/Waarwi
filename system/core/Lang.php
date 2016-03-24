@@ -56,7 +56,7 @@ class CI_Lang {
 	 *
 	 * @access	public
 	 * @param	mixed	the name of the language file to be loaded. Can be an array
-	 * @param	string	the language (english, etc.)
+	 * @param	string	the language (french, etc.)
 	 * @param	bool	return loaded array of translations
 	 * @param 	bool	add suffix to $langfile
 	 * @param 	string	alternative path to look for language file
@@ -82,8 +82,8 @@ class CI_Lang {
 
 		if ($idiom == '')
 		{
-			$deft_lang = ( ! isset($config['language'])) ? 'english' : $config['language'];
-			$idiom = ($deft_lang == '') ? 'english' : $deft_lang;
+			$deft_lang = ( ! isset($config['language'])) ? 'french' : $config['language'];
+			$idiom = ($deft_lang == '') ? 'french' : $deft_lang;
 		}
 
 		// Determine where the language file is and load it

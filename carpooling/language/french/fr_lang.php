@@ -196,7 +196,7 @@ $lang['email_id']					    = 'Email';
 $lang['mobile_no']					    = 'Portable';
 $lang['password']					    = 'Mot de passe';
 $lang['register']					    = "S'incrire";
-$lang['welcome_to_car_pooling']		    = 'Bienvenu sur Waarwi';
+$lang['welcome_to_car_pooling']		    = 'Bienvenue sur Waarwi';
 $lang['Find_a_ride_and_Share_a_ride']	= 'Trouver un trajet et partagr un trajet';
 $lang['save_money_fuel_environment']	= "Economiser de l'argent, du carburant et protèger l'environnement.";
 $lang['got_a_question']		            = 'Une question ?';
@@ -236,7 +236,7 @@ $lang['find_a_candidate'] 				= 'Trouver un voyageur';
 $lang['find_a_car'] 					= 'Trouver un véhicule';
 //Login Language
 $lang['sign_in_to_carpooling']					= 'Se connecter';
-$lang['login']					                = 'Login';
+$lang['login']					                = 'CONNEXION';
 $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
 $lang['forgot_password']						= 'Mot de passe oublié ';
@@ -248,7 +248,7 @@ $lang['contact_now']				         	= 'Contactez-nous maintenant';
 $lang['find_a_ride']					= 'Trouver un trajet';
 $lang['search']							= 'Recherche';
 $lang['recent_rides']					= 'Trajets récents';
-$lang['testimonials']					= 'Témoingnages';
+$lang['testimonials']					= 'Témoignages';
 $lang['how_it_works']					= 'Comment ça marche';
 $lang['for_car_owners']					= 'Pour les propriétaires de véhicule';
 $lang['find_your_perfect_car_travellers'] = 'Trouver vos voyageurs parfaits';
@@ -309,7 +309,6 @@ $lang['accept']                               = 'Accepter';
 $lang['reject']                               = 'Rejeter';
 
 //Admin Languages Dashboard
-
 $lang['admin_home']                           = 'Accueil';
 $lang['admin_dashboard']                      = 'Tableau de board';
 $lang['admin_users']                          = 'Users';
@@ -379,4 +378,28 @@ $lang['booking_confirmation']       = 'Booking Confirmation';
 $lang['departure_time']       = 'Departure Time';
 $lang['departure_date']       = 'Departure Date';
 $lang['booking_information']  = 'Booking Information';
+
+
+// nouvelles traductions admin == navigation gauche
+$lang['dashboard']                           	= 'Tableau de board';
+$lang['welcome']                           	  	= 'Bienvenue';
+$lang['edit_photo']                           	= 'Modifier la photo';
+$lang['master']                           		= 'Principal';
+$lang['country']                           		= 'Pays';
+$lang['currency']                           	= 'Monnaies';
+$lang['Language']                           	= 'Langues';
+$lang['vehicle_brand']                          = 'Marques des voitures';
+$lang['vehicule']                          		= 'Voitures';
+$lang['raduis']                          		= 'Rayons';
+$lang['users']                          		= 'Utilisateurs';
+$lang['admin_management']                       = 'Administrateurs';
+$lang['add_site_user']                          = 'Ajouter un utilisateur';
+$lang['list_site_users']                        = 'Liste des utilisateur';
+$lang['admin']                          		= 'Gestion des admins';
+$lang['cms']                          			= 'Page CMS';
+$lang['banners']                         		= 'Bannières';
+$lang['pages']                          		= 'Pages';
+$lang['testimonials']                         	= 'Témoignages';
+$lang['trips']                          		= 'Trajets';
+$lang['list_of_trips']                          = 'Liste des trajets';
 ?>
