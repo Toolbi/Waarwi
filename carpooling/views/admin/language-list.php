@@ -4,9 +4,9 @@
             <thead>
                 <tr>
                     <th><span>Id</span></th>
-                    <th><span>Language Name</span></th>
-                    <th><span>Language Prefix</span></th>
-                    <th><span>Created</span></th>                    
+                    <th><span><?php echo lang('language_name');?></span></th>
+                    <th><span><?php echo lang('language_prefix');?></span></th>
+                    <th><span><?php echo lang('created');?></span></th>                    
                 </tr>
             </thead>
             <tbody>

@@ -18,7 +18,7 @@
 
     function areyousure()
     {
-        return confirm('<?php echo 'Are you want to delete this'; ?>');
+        return confirm('<?php echo lang('delete_confirm');?>');
     }
 </script>
 
@@ -26,16 +26,16 @@
     <div class="row">
         <div class="col-lg-12">
             <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active"><span>Language</span></li>
+                <li><a href="#"><?php echo lang('admin_home');?>Home</a></li>
+                <li class="active"><span><?php echo lang('language');?></span></li>
             </ol>
 
             <div class="clearfix">
-                <h1 class="pull-left">All Languages</h1>
+                <h1 class="pull-left"><?php echo lang('all_language');?></h1>
 
                 <div class="pull-right top-page-ui">
                     <a href="<?php echo base_url('admin/language/form'); ?>" class="btn btn-primary pull-right">
-                        <i class="fa fa-plus-circle fa-lg"></i> Add Language
+                        <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_language');?>
                     </a>
                 </div>
             </div>
@@ -51,9 +51,9 @@
                                     <thead>
                                         <tr>
                                             <th><span>Id</span></th>
-                                            <th><span>Language Name</span></th>
-                                            <th><span>Language Prefix</span></th>
-                                            <th><span>Created</span></th>                                            
+                                            <th><span><?php echo lang('language_name');?></span></th>
+                                            <th><span><?php echo lang('language_prefix');?></span></th>
+                                            <th><span><?php echo lang('created');?></span></th>                                            
                                         </tr>
                                     </thead>
                                     <tbody>

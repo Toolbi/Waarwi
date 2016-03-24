@@ -8,8 +8,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active"><span>Add New Language</span></li>
+                        <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                        <li class="active"><span><?php echo lang('add_new_language');?></span></li>
                     </ol>
 
 
@@ -20,20 +20,20 @@
                 <div class="col-lg-12">
                     <div class="main-box">
                         <header class="main-box-header clearfix">
-                            <h2>Add Group Language</h2>
+                            <h2><?php echo lang('add_new_language');?></h2>
                         </header>
                         <?php echo form_open($this->config->item('admin_folder') . '/language/form/' . $languageid, ' id="req-form"'); ?>
                         <div class="main-box-body clearfix">
                             <div class="row">
                                 <div class="form-group col-xs-3">
-                                    <label><b>Language Name</b></label>
+                                    <label><b><?php echo lang('language_name');?></b></label>
                                         <?php
                                         $data = array('name' => 'languagename', 'value' => set_value('name', $languagename), 'class' => 'form-control');
                                         echo form_input($data);
                                         ?>
                                 </div>                            
                                 <div class="form-group col-xs-3">
-                                    <label><b>Language Prefix (Ex - EN,IN,FR)</b></label>
+                                    <label><b><?php echo lang('language_prefix');?> (Ex - EN,IN,FR)</b></label>
                                         <?php
                                         $data = array('name' => 'languagecode', 'value' => set_value('name', $languagecode), 'class' => 'form-control');
                                         echo form_input($data);
@@ -53,8 +53,8 @@
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form');?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel');?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
                                 </form>
                             </div>
