@@ -1,25 +1,25 @@
 <?php
 /******************************************
-US English
-Admin Dashboard Language
+Francçais
+Langue du tableau de bord Administrateur
 ******************************************/
 
-$lang['dashboard']					= 'Dashboard';
-$lang['order_number']				= 'Order Number';
-$lang['bill_to']					= 'Bill To';
-$lang['ship_to']					= 'Ship To';
+$lang['dashboard']					= 'Tableau de bord';
+$lang['order_number']				= 'Numéro de réservation';
+$lang['bill_to']					= 'Facture à';
+$lang['ship_to']					= 'Envoyer à';
 $lang['ordered_on']					= 'Ordered On';
-$lang['status']						= 'Status';
-$lang['firstname']					= 'First Name';
-$lang['lastname']					= 'Last Name';
+$lang['status']						= 'Statu';
+$lang['firstname']					= 'Prénom';
+$lang['lastname']					= 'Nom';
 $lang['email']						= 'Email';
-$lang['active']						= 'Active';
-$lang['yes']						= 'Yes';
-$lang['no']							= 'No';
-$lang['recent_orders']				= 'Recent Orders';
-$lang['recent_customers']			= 'Recent Customers';
-$lang['view_all_orders']			= 'View All Orders';
-$lang['view_all_customers']			= 'View All Customers';
+$lang['active']						= 'Actif';
+$lang['yes']						= 'Oui';
+$lang['no']							= 'Non';
+$lang['recent_orders']				= 'Récenntes réservation';
+$lang['recent_customers']			= 'Récenntes clients';
+$lang['view_all_orders']			= 'Afficher toutes les réservations';
+$lang['view_all_customers']			= 'Afficher tous les clients';
 
-$lang['no_shipping_module_installed']	= 'There is no shipping module currently installed. This could stop customers from checking out properly.';
-$lang['no_payment_module_installed']	= 'There is no payment module currently installed. This could stop customers from checking out properly.';
+$lang['no_shipping_module_installed']	= "Il n'y a aucun module d'expédition(de navigation) actuellement installé. Ceci pourrait empêcher aux clients de régler correctement";
+$lang['no_payment_module_installed']	= "Il n'y a aucun module de paiement actuellement installé. Ceci pourrait empêcher aux clients de régler correctement.";
