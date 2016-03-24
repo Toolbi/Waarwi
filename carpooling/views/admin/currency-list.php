@@ -4,9 +4,9 @@
             <thead>
                 <tr>
                     <th><span>Id</span></th>
-                    <th><span>Currency Name</span></th>
-                    <th><span>Currency Symbol</span></th>
-                    <th><span>Created</span></th>                    
+                    <th><span><?php echo lang('currency_name');?></span></th>
+                    <th><span><?php echo lang('currency_symbol');?></span></th>
+                    <th><span><?php echo lang('created');?></span></th>                    
                 </tr>
             </thead>
             <tbody>
