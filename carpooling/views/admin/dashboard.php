@@ -9,7 +9,7 @@
 								<div class="col-lg-12">
 									<ol class="breadcrumb">
 										<li><a href="#"><?php echo lang('admin_home');?></a></li>
-										<li class="active"><span><?php echo lang('dashboard');?></span></li>
+										<li class="active"><span><?php echo lang('admin_dashboard');?></span></li>
 									</ol>
 									
 									
