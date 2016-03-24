@@ -25,8 +25,8 @@ $config['googleplus_appsecret']	= '';
 
 $config['country_code']			= ''; // use proper country codes only
 
-$config['site_language_prefix']			= 'fr';
-$config['site_language']				= 'french';
+$config['site_language_prefix']			= 'en';
+$config['site_language']				= 'english';
 
 
 // Store currency

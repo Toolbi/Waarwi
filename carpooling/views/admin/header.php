@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title> Carpooling </title>
+        <title> Waarwi </title>
 
         <script type="text/javascript">
             var baseurl = "<?php print base_url(); ?>";
@@ -82,7 +82,7 @@
 
                     <div class="clearfix">
                         <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only"><?php echo lang('toggle_navigation');?></span>
                             <span class="fa fa-bars"></span>
                         </button>
 
@@ -103,7 +103,9 @@
                                                 <div class="arrow"></div>
                                             </div>
                                         </li>
-                                        <li class="item-header">You have <?= sizeof($this->trips)?> new notifications</li>
+                                        <li class="item-header">
+                                       <?php echo lang('you_have');?><?= sizeof($this->trips)?><?php echo lang('new_message');?>
+                                        </li>
                                         <?php
                                         if ($this->trips) {
                                             foreach ($this->trips as $trips) {
@@ -125,102 +127,102 @@
                                 </li>						
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        Master
+                                        <?php echo lang('master');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>country">
                                                 <i class="fa  fa-arrows-alt"></i> 
-                                                Country
+                                                <?php echo lang('country');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                                 <a href="<?php echo $admin_url; ?>currency">
                                                         <i class="fa fa-archive"></i> 
-                                                        Currency
+                                                        <?php echo lang('currency');?>
                                                 </a>
                                         </li>
                                         <li class="item">
                                                 <a href="<?php echo $admin_url; ?>language">
                                                         <i class="fa fa-archive"></i> 
-                                                        Language
+                                                        <?php echo lang('language');?>
                                                 </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>category">
                                                 <i class="fa  fa-arrows-alt"></i> 
-                                                Vehicle Brand
+                                                <?php echo lang('vehicle_brand');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>vehicle">
                                                 <i class="fa  fa-car"></i> 
-                                                Vehicles
+                                                <?php echo lang('vehicle');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>radius">
                                                 <i class="fa fa-circle-o-notch"></i> 
-                                                Radius
+                                                <?php echo lang('radius');?>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        Site Users
+                                        <?php echo lang('users');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>traveller/form">
                                                 <i class="fa fa-plus"></i>
-                                                Add Site User
+                                                 <?php echo lang('add_site_user');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>traveller">
                                                 <i class="fa fa-male"></i>
-                                                List Site User 
+                                                 <?php echo lang('list_site_users');?>
                                             </a>
                                         </li>
-                                        <!--<li class="item">
+                                        <li class="item">
                                                 <a href="<?php echo $admin_url; ?>traveller/details">
-                                                        List Site User Details
+                                                         <?php echo lang('list_site_users_details');?>
                                                 </a>
-                                        </li>-->
+                                        </li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        User Management
+                                        <?php echo lang('admin_management');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
-                                            <a href="<?php echo $admin_url; ?>admin"><i class="fa fa-users"></i> Admin</a>
+                                            <a href="<?php echo $admin_url; ?>admin"><i class="fa fa-users"></i> <?php echo lang('admin');?></a>
                                         </li>
 
                                     </ul>
                                 </li>
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        CMS
+                                        <?php echo lang('cms');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>pages">
                                                 <i class="fa fa-file"></i> 
-                                                Pages
+                                                <?php echo lang('pages');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>testimonials">
                                                 <i class="fa fa-sliders"></i> 
-                                                Testimonials
+                                                <?php echo lang('testimonials');?>
                                             </a>
                                         </li>
 
@@ -228,14 +230,14 @@
                                 </li>
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        Trips
+                                        <?php echo lang('trips');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>trip">
                                                 <i class="fa  fa-map-marker"></i> 
-                                                List of Trips
+                                                <?php echo lang('list_of_trips');?>
                                             </a>
                                         </li>
                                     </ul>
@@ -243,20 +245,20 @@
 
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
-                                        Notification
+                                       <?php echo lang('notification');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>settings">
                                                 <i class="fa fa-inbox"></i> 
-                                                Email Templates
+                                                <?php echo lang('email_template');?>
                                             </a>
                                         </li>
                                         <li class="item">
                                             <a href="<?php echo $admin_url; ?>subscriber">
                                                 <i class="fa fa-bookmark-o"></i> 
-                                                Subscribers
+                                                 <?php echo lang('subscriber');?>
                                             </a>
                                         </li>
                                     </ul>
@@ -270,15 +272,15 @@
                                 <li class="dropdown profile-dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                                        <span class="hidden-xs">Welcome <?= $name; ?> </span> <b class="caret"></b>
+                                        <span class="hidden-xs"><?php echo lang('welcome');?> <?= $name; ?> </span> <b class="caret"></b>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="<?php echo base_url('admin/admin/edit_profile'); ?>"><i class="fa fa-user"></i>Edit Profile</a></li>
-                                        <li><a href="<?php echo base_url('admin/admin/edit_settings'); ?>"><i class="fa fa-wrench"></i>Edit Settings</a></li>	
-                                        <li><a href="<?php echo base_url('admin/admin/changepwd_form'); ?>"><i class="fa fa-cog"></i>Change Password</a></li>						
-                                         <li><a href="<?php echo base_url('admin/admin/change_logo'); ?>"><i class="fa fa-cog"></i>Change logo</a></li>
+                                        <li><a href="<?php echo base_url('admin/admin/edit_profile'); ?>"><i class="fa fa-user"></i><?php echo lang('edit_profile');?></a></li>
+                                        <li><a href="<?php echo base_url('admin/admin/edit_settings'); ?>"><i class="fa fa-wrench"></i><?php echo lang('edit_settings');?></a></li>	
+                                        <li><a href="<?php echo base_url('admin/admin/changepwd_form'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_password');?></a></li>						
+                                         <li><a href="<?php echo base_url('admin/admin/change_logo'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_logo');?></a></li>
                                         		
-                                        <li><a href="<?php echo base_url('admin/login/logout'); ?>"><i class="fa fa-power-off"></i>Logout</a></li>
+                                        <li><a href="<?php echo base_url('admin/login/logout'); ?>"><i class="fa fa-power-off"></i><?php echo lang('logout');?></a></li>
                                     </ul>
                                 </li>
                                 <li class="hidden-xxs" >
@@ -314,7 +316,7 @@
                             <div class="alert alert-success fade in">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                 <i class="fa fa-check-circle fa-fw fa-lg"></i>
-                                <strong>Well done!</strong> <?php echo $message; ?>
+                                <strong><?php echo lang('well_done');?></strong> <?php echo $message; ?>
                             </div>
 <?php endif; ?>
 
@@ -322,7 +324,7 @@
                             <div class="alert alert-danger fade in">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                                 <i class="fa fa-times-circle fa-fw fa-lg"></i>
-                                <strong>Oh snap!</strong><?php echo $error; ?>
+                                <strong><?php echo lang('on_snap');?></strong><?php echo $error; ?>
                             </div>              
 <?php endif; ?>
                     </div>
