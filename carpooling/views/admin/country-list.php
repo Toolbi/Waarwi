@@ -4,10 +4,10 @@
             <thead>
                 <tr>
                     <th><span>Id</span></th>
-                    <th><span>Country Name</span></th>
-                    <th><span>Country Short Name</span></th>
-                    <th><span>Created</span></th>
-                    <th class="text-center"><span>Status</span></th>															
+                    <th><span><?php echo lang('country_name'); ?></span></th>
+                    <th><span><?php echo lang('Country_short_name'); ?></span></th>
+                    <th><span><?php echo lang('created'); ?></span></th>
+                    <th class="text-center"><span><?php echo lang('status'); ?></span></th>															
                     <th>&nbsp;</th>
                     <th>&nbsp;</th>
                 </tr>
@@ -30,21 +30,21 @@
                         </td>
                         <td class="text-center">
                             <?php if ($country['is_active'] == 0) { ?>
-                                <span class="label label-default" id="label-<?= $country['country_id'] ?>">Inactive</span>
+                                <span class="label label-default" id="label-<?= $country['country_id'] ?>"><?php echo lang('Inactive'); ?></span>
                             <?php } else { ?>
-                                <span class="label label-success" id="label-<?= $country['country_id'] ?>">Active</span>
+                                <span class="label label-success" id="label-<?= $country['country_id'] ?>"><?php echo lang('active'); ?>Active</span>
                             <?php } ?>
                         </td>
                         <td class="text-center">
                             <div class="btn-group" id="btn-<?= $country['country_id'] ?>">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                    Change Status <span class="caret"></span>
+                                    <?php echo lang('change_status'); ?> <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <?php if ($country['is_active'] == 0) { ?>
-                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $country['country_id'] ?>" class="change-status-country" rel="<?= $country['country_id'] ?>">Enable</a></li>
+                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $country['country_id'] ?>" class="change-status-country" rel="<?= $country['country_id'] ?>"><?php echo lang('enable'); ?></a></li>
                                     <?php } else { ?>
-                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $country['country_id'] ?>" class="change-status-country" rel="<?= $country['country_id'] ?>">Disable</a></li>
+                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $country['country_id'] ?>" class="change-status-country" rel="<?= $country['country_id'] ?>"><?php echo lang('disable'); ?></a></li>
                                     <?php } ?>
 
                                     <li class="divider"></li>

@@ -331,8 +331,8 @@ $lang['admin_status']                         = 'Status';
 $lang['admin_inactive']                       = 'Inactive';
 $lang['admin_active']                         = 'Active';
 $lang['admin_change_status']                  = 'Change Status';
-$lang['admin_enable']                         = 'Enable';
-$lang['admin_disable']                        = 'Disable';
+$lang['admin_enable']                         = 'Activer';
+$lang['admin_disable']                        = 'Desactiver';
 
 //Admin Languages Category Form
 $lang['admin_add_category']                   = 'Add New Category';
@@ -416,4 +416,21 @@ $lang['on_snap']                				= 'Le snap !';
 $lang['total_daily_users']                		= 'Utilisateurs connéctés aujourd\'hui !';
 $lang['daily_users']                			= "Utilisateurs connectés aujourd'hui";
 $lang['subscribers']                			= 'Abonnés';
+
+// admin pays 
+$lang['delete_confirm']                			= 'Voulez vous vraiment supprimer ça?';
+$lang['all_country']                			= 'Tous les pays';
+$lang['country2']                				= 'Pays';
+$lang['add_country']                			= 'Ajouter un pays';
+$lang['country_name']                			= 'Nom du pays';
+$lang['country_short_name']                		= 'Nom court';
+$lang['created']                				= 'Date de création';
+$lang['status']                					= 'Status';
+$lang['inactive']                				= 'Inactive';
+$lang['active']                					= 'Active';
+$lang['change_status']                			= 'Changer le status';
+$lang['enable']                					= 'Activer';
+$lang['disable']                				= 'Desactiver';
+$lang['add_new_country']                		= 'Ajout d\'un nouveau pays';
+$lang['save_country']                			= 'Enregistrer';
 ?>
