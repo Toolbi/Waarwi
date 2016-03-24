@@ -500,7 +500,7 @@ $lang['change_status']                			= 'Change status';
 $lang['enable']                					= 'Enable';
 $lang['disable']                				= 'Disable';
 $lang['add_new_country']                		= 'Add new country';
-$lang['save_form']                			= 'Save';
+$lang['save_form']                				= 'Save';
 
 // admin currency
 $lang['all_currencies']                			= 'All currencies';
@@ -509,4 +509,10 @@ $lang['add_new_currency']                		= ' Add group currency';
 $lang['currency_name']                			= 'Currency name';
 $lang['currency_symbol']                		= 'Currency symbol';
 $lang['created']                				= 'Created';
+
+// admin language
+$lang['add_new_language']                		= 'Add new language';
+$lang['language_name']                			= 'language name';
+$lang['language_prefix']                		= 'language prefix';
+$lang['add_language']                			= 'Add language';
 ?>
