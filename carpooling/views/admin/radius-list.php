@@ -3,9 +3,9 @@
 <table class="table user-list table-hover">
     <thead>
         <tr>
-            <th><span>Distance From</span></th>
-            <th><span>Distance To</span></th>
-            <th><span>Radius</span></th>																													
+            <th><span<?php echo lang('distance_from');?>></span></th>
+            <th><span><?php echo lang('distance_to');?></span></th>
+            <th><span><?php echo lang('radius');?></span></th>																													
             <th>&nbsp;</th>
         </tr>
     </thead>

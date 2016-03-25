@@ -461,4 +461,11 @@ $lang['vehicle_category']                		= 'Liste des catégories des marques'
 $lang['vehicle_brand_forms']                	= 'Ajout d\'une nouvelle marque';
 $lang['add_vehicle_brand']                	= 'Ajout une nouvelle marque';
 
+// admin rayons
+$lang['radius_page']                		= 'Gestion des rayons';
+$lang['all_radius']                			= 'Liste des rayons';
+$lang['add_radius']                			= ' Ajouter un rayon';
+$lang['distance_from']                		= 'De la distance de';
+$lang['distance_to']                		= 'A la distance de';
+
 ?>
