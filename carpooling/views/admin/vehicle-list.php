@@ -4,10 +4,10 @@
             <thead>
                 <tr>
                     <th><?php echo 'Vehicle Id'; ?></th>
-                    <th><?php echo 'Vehicle Name'; ?></th>
-                    <th><?php echo 'Vehicle Brand name'; ?></th>
-                    <th><?php echo 'Vehicle Image'; ?></th>
-                    <th>Status</th>
+                    <th><?php echo lang('vehicle_name');?><?php echo 'Vehicle Name'; ?></th>
+                    <th><?php echo lang('vehicle_brand_name');?><?php echo 'Vehicle Brand name'; ?></th>
+                    <th><?php echo lang('vehicle_imahe');?><?php echo 'Vehicle Image'; ?></th>
+                    <th><?php echo lang('status');?>Status</th>
                     <th></th>
                 </tr>
             </thead>
@@ -25,21 +25,21 @@
                         </td>
                         <td class="text-center">
                             <?php if ($travell->isactive == 0) { ?>
-                                <span class="label label-default" id="label-<?= $travell->vechicle_type_id; ?>">Inactive</span>
+                                <span class="label label-default" id="label-<?= $travell->vechicle_type_id; ?>"><?php echo lang('active');?></span>
                             <?php } else { ?>
-                                <span class="label label-success" id="label-<?= $travell->vechicle_type_id; ?>">Active</span>
+                                <span class="label label-success" id="label-<?= $travell->vechicle_type_id; ?>"><?php echo lang('inactive');?></span>
                             <?php } ?>
                         </td>
                         <td class="text-center">
                             <div class="btn-group" id="btn-<?= $travell->vechicle_type_id; ?>">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                    Change Status <span class="caret"></span>
+                                    <?php echo lang('change_status');?> <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <?php if ($travell->isactive == 0) { ?>
-                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $travell->vechicle_type_id; ?>" class="change-status" rel="<?= $travell->vechicle_type_id; ?>">Enable</a></li>
+                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $travell->vechicle_type_id; ?>" class="change-status" rel="<?= $travell->vechicle_type_id; ?>"><?php echo lang('enable');?></a></li>
                                     <?php } else { ?>
-                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $travell->vechicle_type_id; ?>" class="change-status" rel="<?= $travell->vechicle_type_id; ?>">Disable</a></li>
+                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $travell->vechicle_type_id; ?>" class="change-status" rel="<?= $travell->vechicle_type_id; ?>"><?php echo lang('disable');?></a></li>
                                     <?php } ?>
 
                                     <li class="divider"></li>

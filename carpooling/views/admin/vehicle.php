@@ -65,8 +65,8 @@ $('body').on("click",'.change-status',function(e){
         <div class="row">
           <div class="col-lg-12">
             <ol class="breadcrumb">
-              <li><a href="#">Home</a></li>
-              <li class="active"><span>Vehicles</span></li>
+              <li><a href="#"><?php echo lang('admin_home');?></a></li>
+              <li class="active"><span><?php echo lang('vehicle_list');?></span></li>
             </ol>
             <div class="clearfix">
               <h1 class="pull-left">
@@ -74,7 +74,7 @@ $('body').on("click",'.change-status',function(e){
                 <?php echo  $page_title; ?>
                 <?php endif; ?>
               </h1>
-              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/vehicle/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> Add New Vehicle </a> </div>
+              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/vehicle/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_new_vehicule');?></a> </div>
             </div>
           </div>
           <div class="row">
@@ -87,10 +87,10 @@ $('body').on("click",'.change-status',function(e){
                         <thead>
                           <tr>
                            <th><?php echo  'Vehicle Id'; ?></th>
-                            <th><?php echo  'Vehicle Name'; ?></th>
-                            <th><?php echo  'Vehicle Brand name'; ?></th>
-                            <th><?php echo  'Vehicle Image'; ?></th>
-                            <th>Status</th>
+                            <th><?php echo lang('vehicle_name');?></th>
+                            <th><?php echo lang('vehicle_brand');?></th>
+                            <th><?php echo lang('vehicle_image');?></th>
+                            <th><?php echo lang('status');?></th>
                             <th></th>
                           </tr>
                         </thead>
@@ -116,13 +116,13 @@ $('body').on("click",'.change-status',function(e){
                                                             <td class="text-center">
                                                                 <div class="btn-group" id="btn-<?=$travell->vechicle_type_id;?>">
                                                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                                        Change Status <span class="caret"></span>
+                                                                        <?php echo lang('change_status');?><span class="caret"></span>
                                                                     </button>
                                                                     <ul class="dropdown-menu" role="menu">
                                                                     <?php if($travell->isactive == 0) { ?>
-                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$travell->vechicle_type_id;?>" class="change-status" rel="<?=$travell->vechicle_type_id;?>">Enable</a></li>
+                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$travell->vechicle_type_id;?>" class="change-status" rel="<?=$travell->vechicle_type_id;?>"><?php echo lang('enable');?></a></li>
                                                                     <?php } else { ?>
-                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$travell->vechicle_type_id;?>" class="change-status" rel="<?=$travell->vechicle_type_id;?>">Disable</a></li>
+                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$travell->vechicle_type_id;?>" class="change-status" rel="<?=$travell->vechicle_type_id;?>"><?php echo lang('disable');?></a></li>
                  <?php } ?>
                                                                         
                                                                         <li class="divider"></li>

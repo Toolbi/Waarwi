@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ol class="breadcrumb">
-                <li><a href="#"><?php echo lang('admin_home');?>Home</a></li>
+                <li><a href="#"><?php echo lang('admin_home');?></a></li>
                 <li class="active"><span><?php echo lang('language');?></span></li>
             </ol>
 
