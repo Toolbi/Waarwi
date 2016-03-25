@@ -565,4 +565,9 @@ $lang['email_subject']						= 'Mail subject';
 $lang['email_name']							= 'Mail name';
 $lang['email_message']						= 'Message mail';
 $lang['add_new_mail']						= 'Add new template';
+
+//admin subcribers
+$lang['all_subscribers']					= 'All subscriber';
+$lang['subscriber_mail']					= 'Email';
+$lang['subscriber_ip']						= 'IP';
 ?>

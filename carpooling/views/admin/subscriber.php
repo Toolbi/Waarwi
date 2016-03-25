@@ -27,12 +27,12 @@ function areyousure()
 					<div class="row">
 						<div class="col-lg-12">
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Home</a></li>
-                                    <li class="active"><span>Subscribers</span></li>
+                                    <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                                    <li class="active"><span><?php echo lang('subscribers');?></span></li>
                                 </ol>
                                 
                                 <div class="clearfix">
-                                    <h1 class="pull-left">All Subscribers</h1>
+                                    <h1 class="pull-left"><?php echo lang('all_subscribers');?></h1>
                                     
                                    
                                 </div>
@@ -48,9 +48,9 @@ function areyousure()
                                                     <thead>
                                                         <tr>
                                                             <th><span>Id</span></th>
-                                                            <th><span>Subscribed Email-Id</span></th>
-                                                            <th><span>Subscribed IP</span></th>
-                                                            <th class="text-center"><span>created</span></th>															
+                                                            <th><span><?php echo lang('subscriber_mail');?></span></th>
+                                                            <th><span><?php echo lang('subscriber_ip');?></span></th>
+                                                            <th class="text-center"><span><?php echo lang('created');?></span></th>															
                                                             <th>&nbsp;</th>
                                                         </tr>
                                                     </thead>

@@ -510,4 +510,9 @@ $lang['email_subject']						= 'Sujet du mail';
 $lang['email_name']							= 'Nom du mail';
 $lang['email_message']						= 'Message du mail';
 $lang['add_new_mail']						= 'Ajout d\'une nouvelle template';
+
+//admin abonnées
+$lang['all_subscribers']					= 'Liste des abonnées';
+$lang['subscriber_mail']					= 'E-mail';
+$lang['subscriber_ip']						= 'IP';
 ?>
