@@ -143,15 +143,15 @@ $(document).ready(function(){
         <!-- TEXTS -->
 
         <div id="bannerscollection_kenburns_photoText1" class="bannerscollection_kenburns_texts">
-          <div class="bannerscollection_kenburns_text_line textElement11_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0">Life is about the journey</div>
+          <div class="bannerscollection_kenburns_text_line textElement11_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0"><?php echo lang('home_slide1');?></div>
        </div>   
                  
         <div id="bannerscollection_kenburns_photoText2" class="bannerscollection_kenburns_texts">
-        	<div class="bannerscollection_kenburns_text_line textElement21_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="280" data-duration="0.5" data-fade-start="0" data-delay="0.5">Carpool easily in a fun, safe &amp;  <br>economical way!</div>         
+        	<div class="bannerscollection_kenburns_text_line textElement21_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="280" data-duration="0.5" data-fade-start="0" data-delay="0.5"><?php echo lang('home_slide2');?></div>         
         </div>
        
         <div id="bannerscollection_kenburns_photoText3" class="bannerscollection_kenburns_texts">
-       		<div class="bannerscollection_kenburns_text_line textElement31_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0">Helping the planet, one shared ride at a time</div>
+       		<div class="bannerscollection_kenburns_text_line textElement31_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0"><?php echo lang('home_slide3');?></div>
         </div> 
     
                                             
@@ -163,14 +163,14 @@ $(document).ready(function(){
 	        <h2> <?php echo lang('find_a_ride');?> </h2>
 
           <form method="get" id="searchform"  action="<?php echo  base_url(); ?>search">
-            <input type="text" placeholder="From"  name="source" id="source" class="srcdes marker-ico"> 
+            <input type="text" placeholder="<?php echo lang('from');?>"  name="source" id="source" class="srcdes marker-ico"> 
             <input type="hidden" name="formlatlng" id="formlatlng"  value=""/>
-            <input type="text"  placeholder="To"   name="destination" id="destination" class="srcdes marker-ico" />
+            <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="destination" class="srcdes marker-ico" />
             <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
-            <input type="text" placeholder="DD/MM/YYYY" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
+            <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
              
              <input type="hidden" name="frequency" id="frequency"  value=""/>
-			<input type="submit"  value="Search"   class="ind-src-but"/>       
+			       <input type="submit"  value="<?php echo lang('search');?>"   class="ind-src-but btn btn-success" />       
                </form>
         </div>      
     </div>
@@ -186,16 +186,16 @@ $(document).ready(function(){
 	        <h2> <?php echo lang('find_a_ride');?> </h2>
 
 	        <form method="get" id="searchform"  action="<?php echo  base_url(); ?>search">
-            <input type="text" placeholder="From"  name="source" id="mob_source" class="srcdes marker-ico"> 
+            <input type="text" placeholder="<?php echo lang('from');?>"  name="source" id="mob_source" class="srcdes marker-ico"> 
             <input type="hidden" name="formlatlng" id="mob_formlatlng"  value=""/>
             
-            <input type="text"  placeholder="To"   name="destination" id="mob_destination" class="srcdes marker-ico" />
+            <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="mob_destination" class="srcdes marker-ico" />
            <input type="hidden" name="tolatlng" id="mob_tolatlng"  value=""/>
             
-            <input type="text" placeholder="DD/MM/YYYY" id="journey_dater" class="srcdes cal-ico" onchange="getfrequencymob();"  name="journey_date" >
+            <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_dater" class="srcdes cal-ico" onchange="getfrequencymob();"  name="journey_date" >
              
              <input type="hidden" name="frequency" id="mob_frequency"  value=""/>
-			<input type="submit"  value="Search"   class="ind-src-but"/>       
+			<input type="submit"  value="<?php echo lang('recherche');?>"   class="ind-src-but"/>       
                </form>
 
 	      </div>     
