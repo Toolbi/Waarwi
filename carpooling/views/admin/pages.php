@@ -19,7 +19,7 @@ function page_ajax(url) {
 	
 function areyousure()
     {
-        return confirm('<?php echo 'Are you want to delete this'; ?>');
+        return confirm('<?php echo lang('delete_confim'); ?>');
     }
 		
 </script> 
@@ -29,9 +29,9 @@ function areyousure()
         <div class="container-fluid">
           <div class="col-lg-12">
             <ol class="breadcrumb">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">CMS</a></li>
-              <li class="active"><span>Pages</span></li>
+              <li><a href="#"><?php echo lang('admin_home');?></a></li>
+              <li><a href="#"><?php echo lang('cms');?></a></li>
+              <li class="active"><span><?php echo lang('pages');?></span></li>
             </ol>
             <div class="clearfix">
               <h1 class="pull-left">
@@ -39,7 +39,7 @@ function areyousure()
                 <?php echo  $page_title; ?>
                 <?php endif; ?>
               </h1>
-              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/pages/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> Add New Page </a> </div>
+              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/pages/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('new_page');?> </a> </div>
             </div>
           </div>
           <div class="row">
@@ -51,7 +51,8 @@ function areyousure()
                       <table class="table user-list table-hover">
                         <thead>
                           <tr>
-                            <th><?php echo lang('title');?></th>
+                            <th><?php echo lang('title_page');?></th>
+                            <!-- <th><?php echo lang('title_page');?></th> -->
                             <th></th>
                           </tr>
                         </thead>
@@ -65,7 +66,7 @@ function areyousure()
                           <tr class="gc_row">
                             <td><?php echo $page->title; ?></td>
                             <td style="width: 20%;" class="bacis">
-                              <a href="<?php echo base_url($GLOBALS['admin_folder'].'/pages/form/'.$page->id); ?>" class="table-link"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil fa-stack-1x fa-inverse"></i> </span> </a><a class="btn btn-primary pull-right" href="<?php echo base_url($page->slug); ?>" target="_blank"><?php echo lang('go_to_page');?></a>
+                              <a href="<?php echo base_url($GLOBALS['admin_folder'].'/pages/form/'.$page->id); ?>" class="table-link"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil fa-stack-1x fa-inverse"></i> </span> </a><a class="btn btn-primary pull-right" href="<?php echo base_url($page->slug); ?>" target="_blank"><?php echo lang('go_to_page_');?></a>
                              
 								
 								 <a href="<?php echo base_url('admin/pages/delete/' . $page->id); ?>"  onclick="return areyousure();" class="table-link danger">
