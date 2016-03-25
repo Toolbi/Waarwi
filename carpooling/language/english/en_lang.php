@@ -548,4 +548,13 @@ $lang['go_to_page_']						= 'View the page';
 $lang['content_page']						= 'Content';
 $lang['title']								= 'SEO title';
 $lang['metadata']							= 'Meta data';
+
+$lang['trip_user']							= 'Trip user';
+$lang['trip_email']							= 'User Email';
+$lang['trip_vehicle']						= 'Vehicle';
+$lang['trip_vehicle_number']				= 'N° de la voit.';
+$lang['source']								= 'Source';
+$lang['destination']						= 'Destination';
+$lang['casual']								= 'Casual';
+$lang['regular']							= 'Regular';
 ?>
