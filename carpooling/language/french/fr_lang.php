@@ -211,8 +211,8 @@ $lang['list_of_vehicles']					= 'Liste des véhicules';
 $lang['list_of_trips']						= 'Liste des trajets';
 $lang['list_of_enquires']					= 'Liste des demandes';
 $lang['my_settings']						= 'Mes paramètres';
-$lang['edit_profile']						= 'Modifier le profil';
-$lang['change_password']					= 'Changer le mot de passe';
+$lang['edit_profile']						= 'Gestion de profil';
+$lang['change_password_page']				= 'Changement du mot de passe';
 $lang['settings']							= 'Paramètres';
 //header
 $lang['post_a_trip']					= 'PUBLIER UN TRAJET';
@@ -411,6 +411,7 @@ $lang['email_template']                			= 'Template des mails';
 $lang['subscriber']                				= 'Abonnés';
 $lang['edit_settings']                			= 'Modifier les paramètres';
 $lang['change_logo']                			= 'Changer le logo';
+$lang['change_logo_page']                		= 'Changement du logo';
 $lang['well_done']                				= 'Bien joué !';
 $lang['on_snap']                				= 'Le snap !';
 $lang['total_daily_users']                		= 'Utilisateurs connéctés aujourd\'hui !';
@@ -511,8 +512,12 @@ $lang['email_name']							= 'Nom du mail';
 $lang['email_message']						= 'Message du mail';
 $lang['add_new_mail']						= 'Ajout d\'une nouvelle template';
 
-//admin abonnées
-$lang['all_subscribers']					= 'Liste des abonnées';
-$lang['subscriber_mail']					= 'E-mail';
-$lang['subscriber_ip']						= 'IP';
+//admin modif. profil
+$lang['company_name']					= 'Nom de l\'entreprise';
+$lang['company_email']					= 'E-mail  l\'entreprise';
+$lang['company_mobile']					= 'Téléphone de l\'entreprise';
+$lang['upload_text']					= 'Téléchargez votre logo fichier image ici';
+$lang['change_size_text']				= "Assurez-vous que la taille de l'image est exactement 225px de largeur et 53px de hauteur.";
+$lang['logo_image']						= "Logo";
+
 ?>
