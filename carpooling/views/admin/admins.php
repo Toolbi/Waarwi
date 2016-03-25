@@ -11,14 +11,14 @@ function areyousure()
     <div class="row">
     <div class="col-lg-12">
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li class="active"><span>User Management</span></li>
+            <li><a href="#"><?php echo lang('admin_home');?></a></li>
+            <li class="active"><span><?php echo lang('admin_manage');?></span></li>
         </ol>
         <div class="clearfix">
-           <h1 class="pull-left">Admin Users</h1>
+           <h1 class="pull-left"><?php echo lang('admins_list');?></h1>
             <div class="pull-right top-page-ui">
                 <a href="<?php echo base_url($this->config->item('admin_folder').'/admin/form'); ?>" class="btn btn-primary pull-right">
-                <i class="fa fa-plus-circle fa-lg"></i>Add Users
+                <i class="fa fa-plus-circle fa-lg"></i><?php echo lang('add_admin');?>
                 </a>
             </div>
         </div>
@@ -32,7 +32,7 @@ function areyousure()
                                 <table class="table user-list table-hover">
                                     <thead>
                                         <tr>
-                                            <th><?php echo ('Admin Name');?></th>
+                                            <th><?php echo lang('admin_name');?></th>
                                             <th><?php echo lang('email');?></th>			
                                             <th></th>
                                             <th></th>

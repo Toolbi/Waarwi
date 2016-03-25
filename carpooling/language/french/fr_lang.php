@@ -474,6 +474,14 @@ $lang['add_new_traveller']					= 'Ajout d\'un nouveau utilisateur';
 $lang['traveller']							= 'Utilisateurs';
 $lang['telephone']							= 'Téléphone';
 $lang['user_pass']							= 'Mot de passe';
+$lang['user_pass_confirm']					= 'Confirmer le mot de passe';
 $lang['email_flag']							= 'Email flottante?';
+
+// admin admin
+$lang['admin_name']							= 'Nom de l\'admin';
+$lang['add_admin']							= ' Ajouter un admin';
+$lang['admin_manage']						= 'Gestion des admins';
+$lang['admins_list']						= 'Liste des admins';
+$lang['new_admin']						    = 'Ajout d\'un nouveau admin';
 
 ?>

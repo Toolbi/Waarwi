@@ -529,5 +529,13 @@ $lang['add_new_traveller']					= 'Add new traveller';
 $lang['traveller']							= 'Travelers';
 $lang['telephone']							= 'Phone';
 $lang['user_pass']							= 'Password';
+$lang['user_pass_confirm']					= 'Confirm password';
 $lang['email_flag']							= 'Email flag?';
+
+// admin admin
+$lang['admin_name']							= 'Admin name';
+$lang['add_admin']							= ' Add admin';
+$lang['admin_manage']						= 'Admin manage';
+$lang['admins_list']						= 'Admins list';
+$lang['new_admin']							= 'Add new admin';
 ?>
