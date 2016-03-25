@@ -522,4 +522,12 @@ $lang['all_radius']                			= 'List of radius';
 $lang['add_radius']                			= 'Add radius ';
 $lang['distance_from']                		= 'Distance from';
 $lang['distance_to']                		= 'Distance to';
+
+//admin travellers
+$lang['all_traveller_list']					= 'All travellers';
+$lang['add_new_traveller']					= 'Add new traveller';
+$lang['traveller']							= '';
+$lang['telephone']							= 'Téléphone';
+$lang['user_pass']							= 'Mot de passe';
+$lang['email_flag']							= 'Email flottante?';
 ?>

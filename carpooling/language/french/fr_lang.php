@@ -468,4 +468,12 @@ $lang['add_radius']                			= ' Ajouter un rayon';
 $lang['distance_from']                		= 'De la distance de';
 $lang['distance_to']                		= 'A la distance de';
 
+//admin utilisateurs
+$lang['all_traveller_list']					= 'Tous les utilisateurs';
+$lang['add_new_traveller']					= 'Ajout d\'un nouveau utilisateur';
+$lang['traveller']							= 'Utilisateurs';
+$lang['telephone']							= 'Téléphone';
+$lang['user_pass']							= 'Mot de passe';
+$lang['email_flag']							= 'Email flottante?';
+
 ?>

@@ -3,11 +3,11 @@
 <table class="table user-list table-hover">
 <thead>
     <tr>
-        <th><span>First Name</span></th>
-        <th><span>Last Name</span></th>
-        <th><span>Phone</span></th>
-        <th><span>Email</span></th>
-        <th class="text-center"><span>Status</span></th>															
+        <th><span><?php echo lang('first_name');?></span></th>
+        <th><span><?php echo lang('last_name');?></span></th>
+        <th><span><?php echo lang('telephone');?></span></th>
+        <th><span><?php echo lang('email');?></span></th>
+        <th class="text-center"><span><?php echo lang('status');?></span></th>															
         <th>&nbsp;</th>
     </tr>
 </thead>
@@ -29,21 +29,21 @@
         </td>
        <td class="text-center">
                                                             <?php if($travel['isactive'] == 0) { ?>
-                <span class="label label-default" id="label-<?=$travel['user_id']?>">Inactive</span>
+                <span class="label label-default" id="label-<?=$travel['user_id']?>"><?php echo lang('inactive');?></span>
                                                             <?php } else { ?>
-                                                             <span class="label label-success" id="label-<?=$travel['user_id']?>">Active</span>
+                                                             <span class="label label-success" id="label-<?=$travel['user_id']?>"><?php echo lang('active');?></span>
                                                             <?php } ?>
                </td>
                                                             <td class="text-center">
                                                                 <div class="btn-group" id="btn-<?=$travel['user_id']?>">
                                                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                                        Change Status <span class="caret"></span>
+                                                                        <?php echo lang('change_status');?> <span class="caret"></span>
                                                                     </button>
                                                                     <ul class="dropdown-menu" role="menu">
                                                                     <?php if($travel['isactive'] == 0) { ?>
-                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$travel['user_id']?>" class="change-status-traveller" rel="<?=$travel['user_id']?>">Enable</a></li>
+                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$travel['user_id']?>" class="change-status-traveller" rel="<?=$travel['user_id']?>"><?php echo lang('enable');?></a></li>
                                                                     <?php } else { ?>
-                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$travel['user_id']?>" class="change-status-traveller" rel="<?=$travel['user_id']?>">Disable</a></li>
+                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$travel['user_id']?>" class="change-status-traveller" rel="<?=$travel['user_id']?>"><?php echo lang('disable');?></a></li>
                  <?php } ?>
                                                                         
                                                                         <li class="divider"></li>
