@@ -10,8 +10,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active"><span>Change logo</span></li>
+                        <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                        <li class="active"><span><?php echo lang('change_logo_page');?></span></li>
                     </ol>
 
 
@@ -22,21 +22,20 @@
                 <div class="col-lg-12">
                     <div class="main-box">
                         <header class="main-box-header clearfix">
-                            <h2> <?php if (!empty($page_title)): ?>
-
-                                    <?php echo "Change logo"; ?>
-                                <?php endif; ?></h2>
+                           <h1 class="pull-left">
+                                <?php echo lang('change_logo_page');?>
+                            </h1>
                         </header>
                         <?php echo form_open($this->config->item('admin_folder') . '/admin/change_logo/'); ?>
                         <div class="main-box-body clearfix">
                             
                             <div class="logo">
-                               <h1>Upload your logo image file here</h1>
-                               <p>Ensure that your image size is exactly 225px in width, and 53px in height.</p>
+                               <h1><?php echo lang('upload_text');?></h1>
+                               <p><?php echo lang('change_size_text');?></p>
                                </div>
                               
                                     <div class="form-group col-xs-12">
-                                        <label><b>Logo Image</b></label>
+                                        <label><b><?php echo lang('logo_image');?></b></label>
                                         <div id='preview' class="img-preview">
                                             <?php
                                             if (!empty($vehicletypeid)) {
@@ -64,14 +63,14 @@
                                             ?>
                                         </div>
                                         <div id='imageloadstatus' style="display:none">
-                                            <img src='<?php echo theme_img('loader.gif'); ?>'/> Uploading please wait ....
+                                            <img src='<?php echo theme_img('loader.gif'); ?>'/><?php echo lang('upload_msg');?>
                                         </div>
 
 
                                         <div id="uploadlink" <?= !empty($uploadvalues) ? 'style="display: none"' : '' ?>>
 
                                             <a href="javascript:void(0);" class="btn btn-link" id="camera2" title="Upload Image">
-                                                upload image
+                                                <?php echo lang('add_photo');?>
                                             </a>
                                         </div>
 
@@ -92,8 +91,8 @@
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form');?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel');?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
                                 
                             </div>

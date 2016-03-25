@@ -197,6 +197,7 @@ $lang['add_new_car']					= 'Add New Car';
 
 
 $lang['change_password']			    = 'Change Password';
+$lang['change_password_page']			    = 'Change Password';
 $lang['old_password']					= 'Old password';
 $lang['new_password']					= 'New password';
 $lang['confirm_new_pass']				= 'Confirm new password';
@@ -478,7 +479,8 @@ $lang['notification']                			= 'Notification';
 $lang['email_template']                			= 'Email template';
 $lang['subscriber']                				= 'Subscribers';
 $lang['edit_settings']                			= 'Edit settings';
-$lang['change_logo']                			= 'Chhange logo';
+$lang['change_logo']                			= 'Change logo';
+$lang['change_logo_page']                			= 'Change logo';
 $lang['well_done']                				= 'Well done !';
 $lang['on_snap']                				= 'On snap !';
 $lang['total_daily_users']                		= 'Total daily users !';
@@ -570,4 +572,11 @@ $lang['add_new_mail']						= 'Add new template';
 $lang['all_subscribers']					= 'All subscriber';
 $lang['subscriber_mail']					= 'Email';
 $lang['subscriber_ip']						= 'IP';
+
+//admin modif. profil
+$lang['company_name']					= 'Compagny name';
+$lang['company_email']					= 'Compagny email';
+$lang['company_mobile']					= 'Compagny phone';
+$lang['upload_text']					= 'Upload your logo image file here';
+$lang['change_size_text']				= "Ensure that your image size is exactly 225px in width, and 53px in height.";
 ?>
