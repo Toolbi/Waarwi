@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 25 Mars 2016 à 13:52
+-- Généré le :  Ven 25 Mars 2016 à 19:36
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -108,9 +108,9 @@ INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity
 ('37b8dd92fe5d85115cb47e6813b8cdbf', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458758577, 'a:1:{s:9:"user_data";s:0:"";}'),
 ('ddcef54def807e393c6816957554dff2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458758577, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";N;s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1458759236;}}'),
 ('b555520dbc7f852241aa3d0d079ff36f', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458758577, ''),
-('3251fcb29bdc5c694120c0f7479a875a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458910246, ''),
-('2d092f3d9bcb87e45fb67fa95c76a293', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458910246, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";N;s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1458910866;}}'),
-('20e6e5d3ab046904d7ab73beb19ec6f5', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458910246, '');
+('2aa053e70e3309ef826b786787a35795', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458930725, 'a:1:{s:17:"flash:old:message";s:29:"Your Profile has been changed";}'),
+('dc4efd209e471d6d607ef69fb57260d6', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458930725, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1458931524;}}'),
+('3bcf0927b1ffcbe18b49b30a443407e8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1458930725, '');
 
 -- --------------------------------------------------------
 
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `admin_email`, `admin_password`, `admin_name`, `first_name`, `last_name`, `company_name`, `company_email`, `company_mobile`, `admin_img`, `access`, `admin_createddate`) VALUES
-(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Admin', NULL);
+(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', 'KhadimFallou MbackeFall', NULL, NULL, NULL, NULL, NULL, NULL, 'Admin', NULL);
 
 -- --------------------------------------------------------
 
