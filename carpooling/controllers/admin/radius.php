@@ -16,7 +16,7 @@ class Radius extends Admin_Controller {
     function index() {
 
 
-        $data['page_title'] = 'Radius Page';
+        $data['page_title'] = lang('radius_page');
 
         $this->load->library('pagination_admin');
         $config['is_ajax_paging'] = true;
@@ -39,7 +39,7 @@ class Radius extends Admin_Controller {
 
     function radius_ajax() {
         $this->load->library('pagination_admin');
-        $data['page_title'] = 'Radius Page';
+        $data['page_title'] = lang('radius_page');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'radius_ajax';
         $config['base_url'] = base_url('admin/group');
@@ -61,7 +61,7 @@ class Radius extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = 'Radius form';
+        $data['page_title'] = lang('radius_page');
 
         //default values are empty if the radius is new
         $data['radiusid'] = '';

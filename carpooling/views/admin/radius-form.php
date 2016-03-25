@@ -8,8 +8,8 @@
 							<div class="row">
 								<div class="col-lg-12">
 									<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li class="active"><span>Add New Radius</span></li>
+										<li><a href="#"><?php echo lang('admin_home');?></a></li>
+										<li class="active"><span><?php echo lang('add_radius');?></span></li>
 									</ol>
 									
 									
@@ -60,7 +60,9 @@
 								<div class="col-lg-12">
 									<div class="main-box">
 										<header class="main-box-header clearfix">
-											<h2>Add Radius</h2>
+											<h1 class="pull-left">
+							                	<?php echo lang('add_radius');?>
+							                </h1>
 										</header>
 										  <?php 
 										 
@@ -68,7 +70,7 @@
 										<div class="main-box-body clearfix">
                                      <div class="row">
 											<div class="form-group col-xs-3">
-												   <label><b>Distance From</b></label>
+												   <label><b><?php echo lang('distance_from');?></b></label>
                                                      <?php
 													$data	= array('name'=>'distancefrom', 'value'=>set_value('distancefrom', $distancefrom), 'class'=>'form-control');
 													echo form_input($data); ?>
@@ -76,7 +78,7 @@
                                     </div>
                                     <div class="row">
 											<div class="form-group col-xs-3">
-												   <label><b>Distance To</b></label>
+												   <label><b><?php echo lang('distance_to');?></b></label>
                                                      <?php
 													$data	= array('name'=>'distanceto', 'value'=>set_value('distanceto', $distanceto), 'class'=>'form-control');
 													echo form_input($data); ?>
@@ -84,7 +86,7 @@
                                     </div>
                                     <div class="row">
 											<div class="form-group col-xs-3">
-												   <label><b>Radius</b></label>
+												   <label><b><?php echo lang('radius');?></b></label>
                                                       <?php
 													$data	= array('name'=>'radius', 'value'=>set_value('radius', $radius), 'class'=>'form-control');
 													echo form_input($data); ?>
@@ -106,8 +108,8 @@
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form');?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel');?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
                                  </form>
                             </div>
@@ -118,8 +120,8 @@
 	
 	<script type="text/javascript" src="<?php echo admin_js('jquery.validate.js');?>"></script>
 <?php echo admin_js('jquery.validate-rules.js', true);?>
-    
-	<script src="<?php echo admin_js('bootstrap.js');?>"></script>
+<!--     
+	<script src="<?php echo admin_js('bootstrap.js');?>"></script> -->
      <script src="<?php echo admin_js('jquery.maskedinput.min.js');?>"></script>
 	 <script src="<?php echo admin_js('bootstrap-datepicker.js');?>"></script>
     

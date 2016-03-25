@@ -516,9 +516,10 @@ $lang['language_name']                			= 'language name';
 $lang['language_prefix']                		= 'language prefix';
 $lang['add_language']                			= 'Add language';
 
-// admin vehicle
-$lang['add_new_language']                		= 'Ajout d\'une nouvelle langue';
-$lang['language_name']                			= 'Nom de la langue';
-$lang['language_prefix']                		= 'Prefixe de la langue';
-$lang['add_language']                			= 'Ajouter une langue';
+// admin radius
+$lang['radius_page']                		= 'Radius manage';
+$lang['all_radius']                			= 'List of radius';
+$lang['add_radius']                			= 'Add radius ';
+$lang['distance_from']                		= 'Distance from';
+$lang['distance_to']                		= 'Distance to';
 ?>

@@ -19,7 +19,7 @@ function radius_ajax(url) {
 
 function areyousure()
 {
-	return confirm('<?php echo 'Are you want to delete this';?>');
+	return confirm('<?php echo lang('delete_confirm');?>');
 }
 </script>
 
@@ -27,16 +27,20 @@ function areyousure()
 					<div class="row">
 						<div class="col-lg-12">
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Home</a></li>
-                                    <li class="active"><span>Radius</span></li>
+                                    <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                                    <li class="active"><span><?php echo lang('radius');?></span></li>
                                 </ol>
                                 
                                 <div class="clearfix">
-                                    <h1 class="pull-left">All Radius</h1>
+                                    <h1 class="pull-left">
+						                <?php if(!empty($page_title)):?>
+						                <?php echo  $page_title; ?>
+						                <?php endif; ?>
+						            </h1>
                                     
                                     <div class="pull-right top-page-ui">
                                         <a href="<?php echo base_url('admin/radius/form');?>" class="btn btn-primary pull-right">
-                                            <i class="fa fa-plus-circle fa-lg"></i> Add Radius
+                                            <i class="fa fa-plus-circle fa-lg"></i><?php echo lang('add_radius');?> 
                                         </a>
                                     </div>
                                 </div>
@@ -51,9 +55,9 @@ function areyousure()
 												<table class="table user-list table-hover">
 													<thead>
 														<tr>
-															<th><span>Distance From</span></th>
-                                                            <th><span>Distance To</span></th>
-															<th><span>Radius</span></th>																													
+															<th><span><?php echo lang('distance_from');?></span></th>
+                                                            <th><span><?php echo lang('distance_to');?></span></th>
+															<th><span><?php echo lang('radius');?></span></th>																													
 															<th>&nbsp;</th>
 														</tr>
 													</thead>
