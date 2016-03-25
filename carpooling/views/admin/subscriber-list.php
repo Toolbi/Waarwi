@@ -4,9 +4,9 @@
 <thead>
     <tr>
         <th><span>Id</span></th>
-        <th><span>Subscribed Email-Id</span></th>
-        <th><span>Subscribed IP</span></th>
-        <th class="text-center"><span>created</span></th>															
+        <th><span><?php echo lang('subscriber_mail');?></span></th>
+        <th><span><?php echo lang('subscriber_ip');?></span></th>
+        <th class="text-center"><span><?php echo lang('created');?></span></th>															
         <th>&nbsp;</th>
     </tr>
 </thead>
