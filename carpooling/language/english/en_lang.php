@@ -526,8 +526,8 @@ $lang['distance_to']                		= 'Distance to';
 //admin travellers
 $lang['all_traveller_list']					= 'All travellers';
 $lang['add_new_traveller']					= 'Add new traveller';
-$lang['traveller']							= '';
-$lang['telephone']							= 'Téléphone';
-$lang['user_pass']							= 'Mot de passe';
-$lang['email_flag']							= 'Email flottante?';
+$lang['traveller']							= 'Travelers';
+$lang['telephone']							= 'Phone';
+$lang['user_pass']							= 'Password';
+$lang['email_flag']							= 'Email flag?';
 ?>
