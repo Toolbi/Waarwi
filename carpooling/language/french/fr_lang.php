@@ -228,7 +228,7 @@ $lang['logout']							= 'DECONNEXION';
 //footer
 $lang['subscribe_to_newsletter']		= "S'incrire aux lettres d'informations";
 $lang['sign_up']		                = 'S\'inscrire';
-$lang['sitemap']		                = 'Sitemap';
+$lang['sitemap']		                = 'Plan du site';
 $lang['blog']		                	= 'Blog';
 $lang['company_directory']        		= "Répertoire de l'entreprise";
 $lang['contact']        				= 'Contact';
@@ -519,5 +519,9 @@ $lang['company_mobile']					= 'Téléphone de l\'entreprise';
 $lang['upload_text']					= 'Téléchargez votre logo fichier image ici';
 $lang['change_size_text']				= "Assurez-vous que la taille de l'image est exactement 225px de largeur et 53px de hauteur.";
 $lang['logo_image']						= "Logo";
+
+//copyright 
+$lang['copyright']				= 'Tous droits réservés';
+$lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 ?>

@@ -7,10 +7,10 @@
 			      <div class="logo"> <a href="<?=base_url();?>"> <img src="<?php echo theme_img('logo.png')?>"> </a> </div>
 			      <div class="ftr-subs margintop20 marginbot10 fleft lgrey-text">
 			        <form id="subscribe">   
-                        <p class="margintop20 colorwhite size17"> Subscribe to Newsletter </p>
-                        <input type="text" placeholder="Email Address" id="email_id" name="email_id" class="emaddr">
+                        <p class="margintop20 colorwhite size17"><?php echo lang('newsletters');?> </p>
+                        <input type="text" placeholder="<?php echo lang('email');?>" id="email_id" name="email_id" class="emaddr">
                         <div id="send">
-                            <input type="submit" value="Sign Up" class="blue-bg white-text subs-brd">
+                            <input type="submit" value="<?php echo lang('sign_up');?>" class="blue-bg white-text subs-brd">
                         </div>
                     </form>
       </div>
@@ -18,7 +18,7 @@
     </div>
 
 			    <div class="col-lg-2 col-md-6 col-sm-6  col-xs-12">
-			      <h3 class="colorwhite size18 marginbot10"> Sitemap </h3>
+			      <h3 class="colorwhite size18 marginbot10"> <?php echo lang('sitemap');?> </h3>
       <ul class="fleft ftr-ste">
 		<li> <a href="<?php echo base_url('blog');?>"> <?php echo lang('blog');?> </a> </li>
         <li> <a href="<?php echo base_url('company-directory');?>"> <?php echo lang('company_directory');?> </a> </li>
@@ -39,7 +39,7 @@
       </div>
    </div> 
    <div class="fright width20p ftr-arti"> 
-    <a class="twitter-timeline" href="https://twitter.com/carpoolingscrip" data-widget-id="588318601595125760">Tweets by @carpoolingscrip</a> 
+    <a class="twitter-timeline" href="https://twitter.com/carpoolingscrip" data-widget-id="588318601595125760">@waarwi</a> 
     </div>
 
 </div>
@@ -52,7 +52,7 @@
     <div class="container-fluid ftrbg padding10">
   <div class="container">
     <div class="row footer colorwhite">
-      <p class="size14 fleft"> &copy; 2015 Carpooling - All Rights Reserved. </p>
+      <p class="size14 fleft"> &copy; Copyright 2016 - Waarwi - <?php echo lang('copyright');?> </p>
       <div class="fright">
         <ul class="fleft soc-ico">
         </ul>
