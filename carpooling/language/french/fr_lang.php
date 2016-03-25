@@ -486,12 +486,12 @@ $lang['new_admin']						    = 'Ajout d\'un nouveau admin';
 
 // admin page cms
 $lang['link_form']							= 'Lien formulaire';
-$lang['page_manage']							= 'Gestion des pages';
-$lang['new_page']						= 'Ajouter une page';
-$lang['title_page']						= 'Titre de la page';
+$lang['page_manage']						= 'Gestion des pages';
+$lang['new_page']							= 'Ajouter une page';
+$lang['title_page']							= 'Titre de la page';
 $lang['go_to_page_']						= 'Voir la page';
 $lang['content_page']						= 'Contenu';
-$lang['title']						= 'Titre du SEO';
-$lang['metadata']						= 'Métadonnées';
+$lang['title']								= 'Titre du SEO';
+$lang['metadata']							= 'Métadonnées';
 
 ?>

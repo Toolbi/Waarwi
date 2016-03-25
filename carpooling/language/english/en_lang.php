@@ -538,4 +538,14 @@ $lang['add_admin']							= ' Add admin';
 $lang['admin_manage']						= 'Admin manage';
 $lang['admins_list']						= 'Admins list';
 $lang['new_admin']							= 'Add new admin';
+
+// admin page cms
+$lang['link_form']							= 'Link from';
+$lang['page_manage']						= 'Page manage';
+$lang['new_page']							= 'New page';
+$lang['title_page']							= 'Page title';
+$lang['go_to_page_']						= 'View the page';
+$lang['content_page']						= 'Content';
+$lang['title']								= 'SEO title';
+$lang['metadata']							= 'Metadata';
 ?>
