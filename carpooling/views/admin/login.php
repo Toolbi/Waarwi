@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <button type="submit" class="btn btn-success col-xs-12">Login</button>
+                                                <button type="submit" class="btn btn-success col-xs-12"><?php echo lang('login');?></button>
                                                 <input type="hidden" value="<?php echo $redirect; ?>" name="redirect"/>
 												<input type="hidden" value="submitted" name="submitted"/>			
                                             </div>
@@ -113,8 +113,8 @@
 					success: function(json)	{
 				
 						if (json.result == 0){
-							
-							$('#spnError').html('Invalid Login!');
+	
+							$('#spnError').html("<?php echo lang('error_authentication_failed');?>");
 							$('#spnError').addClass('alert alert-danger')
 							
 						
@@ -123,7 +123,7 @@
 						} else if (json.result == 1) {
 							$('#spnError').addClass('alert alert-success')
 							
-							$('#spnError').html('Success...Transferring');
+							$('#spnError').html("<?php echo lang('authentication_success');?>");
 							window.location	= baseurl + json.redirect;
 						}
 					}
