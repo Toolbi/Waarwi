@@ -579,4 +579,8 @@ $lang['company_email']					= 'Compagny email';
 $lang['company_mobile']					= 'Compagny phone';
 $lang['upload_text']					= 'Upload your logo image file here';
 $lang['change_size_text']				= "Ensure that your image size is exactly 225px in width, and 53px in height.";
+
+// copyright 
+$lang['copyright']					= 'All right reserved';
+$lang['newsletters']				= 'Subscribe to Newsletter';
 ?>

@@ -5,8 +5,9 @@ Admin login Language
 ******************************************/
 
 $lang['error_authentication_failed']	= 'Authentication Failed!';
+$lang['authentication_success']			= 'Successful connection!';
 $lang['message_logged_out']				= 'You have been logged out.';
-$lang['Carpooling_login']					= 'Carpooling Login';
+$lang['Carpooling_login']				= 'Carpooling Login';
 $lang['login']							= 'Login';
 $lang['password']						= 'Password';
 $lang['email']							= 'Email';
