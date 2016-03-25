@@ -547,5 +547,5 @@ $lang['title_page']							= 'Page title';
 $lang['go_to_page_']						= 'View the page';
 $lang['content_page']						= 'Content';
 $lang['title']								= 'SEO title';
-$lang['metadata']							= 'Metadata';
+$lang['metadata']							= 'Meta data';
 ?>

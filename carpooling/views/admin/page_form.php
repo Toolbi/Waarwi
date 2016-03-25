@@ -20,7 +20,9 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-lg-12">
               <ol class="breadcrumb">
+                <!-- <li><a href="#"><?php echo lang('admin_home');?></a></li> -->
                 <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                <li><a href="<?php echo base_url('admin/pages');?>"><?php echo lang('page_manage');?></a></li>
                 <li class="active"><span><?php echo lang('new_page');?></span></li>
               </ol>
             </div>

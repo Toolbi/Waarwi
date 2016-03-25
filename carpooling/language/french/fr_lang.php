@@ -484,7 +484,7 @@ $lang['admin_manage']						= 'Gestion des admins';
 $lang['admins_list']						= 'Liste des admins';
 $lang['new_admin']						    = 'Ajout d\'un nouveau admin';
 
-// admin page cms
+// admin page CMS
 $lang['link_form']							= 'Lien formulaire';
 $lang['page_manage']						= 'Gestion des pages';
 $lang['new_page']							= 'Ajouter une page';

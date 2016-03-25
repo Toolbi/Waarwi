@@ -52,6 +52,7 @@ function areyousure()
                         <thead>
                           <tr>
                             <th><?php echo lang('title_page');?></th>
+                            <!-- <th><?php echo lang('title_page');?></th> -->
                             <th></th>
                           </tr>
                         </thead>
