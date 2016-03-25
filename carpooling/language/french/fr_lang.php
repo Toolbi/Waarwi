@@ -494,4 +494,13 @@ $lang['content_page']						= 'Contenu';
 $lang['title']								= 'Titre du SEO';
 $lang['metadata']							= 'Métadonnées';
 
+// admin trajets 
+$lang['trip_user']							= 'Conducteur';
+$lang['trip_email']							= 'E-mail';
+$lang['trip_vehicle']						= 'Voiture';
+$lang['trip_vehicle_number']				= 'N° de la voit.';
+$lang['source']								= 'Source';
+$lang['destination']						= 'Destination';
+$lang['casual']								= 'Occasionnel';
+$lang['regular']							= 'Fréquent';
 ?>
