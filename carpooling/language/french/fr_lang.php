@@ -503,4 +503,11 @@ $lang['source']								= 'Source';
 $lang['destination']						= 'Destination';
 $lang['casual']								= 'Occasionnel';
 $lang['regular']							= 'Fréquent';
+
+//admin gestion des templates mail
+$lang['add_email_template']					= 'Ajouter une nouvelle';
+$lang['email_subject']						= 'Sujet du mail';
+$lang['email_name']							= 'Nom du mail';
+$lang['email_message']						= 'Message du mail';
+$lang['add_new_mail']						= 'Ajout d\'une nouvelle template';
 ?>

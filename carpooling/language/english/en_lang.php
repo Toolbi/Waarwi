@@ -549,6 +549,7 @@ $lang['content_page']						= 'Content';
 $lang['title']								= 'SEO title';
 $lang['metadata']							= 'Meta data';
 
+// admin trips
 $lang['trip_user']							= 'Trip user';
 $lang['trip_email']							= 'User Email';
 $lang['trip_vehicle']						= 'Vehicle';
@@ -557,4 +558,11 @@ $lang['source']								= 'Source';
 $lang['destination']						= 'Destination';
 $lang['casual']								= 'Casual';
 $lang['regular']							= 'Regular';
+
+//admin template mail
+$lang['add_email_template']					= 'Add template';
+$lang['email_subject']						= 'Mail subject';
+$lang['email_name']							= 'Mail name';
+$lang['email_message']						= 'Message mail';
+$lang['add_new_mail']						= 'Add new template';
 ?>

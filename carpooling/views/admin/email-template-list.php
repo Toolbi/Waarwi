@@ -4,8 +4,8 @@
 <thead>
     <tr>
         <th><span>Id</span></th>
-        <th><span>Email Name</span></th>
-        <th><span>Email subject</span></th>															
+        <th><span><?php echo lang('email_name');?></span></th>
+        <th><span><?php echo lang('email_subject');?></span></th>															
         <th>&nbsp;</th>
     </tr>
 </thead>

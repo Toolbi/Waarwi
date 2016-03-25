@@ -8,8 +8,8 @@
 							<div class="row">
 								<div class="col-lg-12">
 									<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li class="active"><span>Add New Email Template</span></li>
+										<li><a href="#"><?php echo lang('admin_home');?></a></li>
+										<li class="active"><span><?php echo lang('add_new_mail');?></span></li>
 									</ol>
 									
 									
@@ -60,7 +60,7 @@
 								<div class="col-lg-12">
 									<div class="main-box">
 										<header class="main-box-header clearfix">
-											<h2>Add Email Template</h2>
+											<h2><?php echo lang('add_new_mail');?></h2>
 										</header>
 										  <?php 
 										 
@@ -68,7 +68,7 @@
                                     <div class="main-box-body clearfix">
                                      <div class="row">
                                         <div class="form-group col-xs-5">
-                                               <label><b>Email Name</b></label>
+                                               <label><b><?php echo lang('email_name');?></b></label>
                                                
                                                     <?php
 								$name_array = array('name' =>'email_name', 'class'=>'form-control', 'value'=>set_value('email_name', $email_name));
@@ -78,14 +78,14 @@
                                 </div>
                                      <div class="row">
 											<div class="form-group col-xs-5">
-												   <label><b>Email Subject</b></label>
+												   <label><b><?php echo lang('email_subject');?></b></label>
                                                    
                                                         <?php echo form_input(array('name'=>'subject', 'class'=>'form-control', 'value'=>set_value('subject', $subject)));?>
 											</div>
                                     </div>
                                     <div class="row">
                                     <div class="form-group col-xs-9">
-                                    <label><b>Email Message</b></label>
+                                    <label><b><?php echo lang('email_message');?></b></label>
                                   <?php
 									$data	= array('id'=>'description', 'name'=>'content','row'=>3, 'class'=>'form-control ckeditor', 'value'=>set_value('content', $content));
 									echo form_textarea($data);
@@ -109,8 +109,8 @@
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form');?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel');?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
 								</form>
                             </div>
