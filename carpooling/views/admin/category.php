@@ -19,7 +19,7 @@
 
     function areyousure()
     {
-        return confirm('<?php echo 'Are you want to delete this'; ?>');
+        return confirm('<?php echo lang('delete_confirm'); ?>');
     }
 </script>
 
@@ -27,16 +27,21 @@
     <div class="row">
         <div class="col-lg-12">
             <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li class="active"><span>Vehicle Brand</span></li>
+                <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                <li class="active"><span><?php echo lang('vehicle_brand');?></span></li>
             </ol>
 
             <div class="clearfix">
-                <h1 class="pull-left">All Vehicle Brands</h1>
+            <h1 class="pull-left">
+                <?php if(!empty($page_title)):?>
+                <?php echo  $page_title; ?>
+                <?php endif; ?>
+              </h1>
+                <h1 class="pull-left"><?php echo lang('top_level_categorie');?></h1>
 
                 <div class="pull-right top-page-ui">
                     <a href="<?php echo base_url('admin/category/form'); ?>" class="btn btn-primary pull-right">
-                        <i class="fa fa-plus-circle fa-lg"></i> Add Vehicle Brand
+                        <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_vehicle_brand');?>
                     </a>
                 </div>
             </div>
@@ -52,9 +57,9 @@
                                     <thead>
                                         <tr>
                                             <th><span>Id</span></th>
-                                            <th><span>Vehicle Brand Name</span></th>
-                                            <th><span>Created</span></th>
-                                            <th class="text-center"><span>Status</span></th>					
+                                            <th><span><?php echo lang('vehicle_brand_name');?></span></th>
+                                            <th><span><?php echo lang('created');?></span></th>
+                                            <th class="text-center"><span><?php echo lang('status');?></span></th>					
                                             <th>&nbsp;</th>
                                         </tr>
                                     </thead>
@@ -74,21 +79,21 @@
 
                                                 <td class="text-center">
                                                     <?php if ($category['is_active'] == 0) { ?>
-                                                        <span class="label label-default" id="label-<?= $category['category_id'] ?>">Inactive</span>
+                                                        <span class="label label-default" id="label-<?= $category['category_id'] ?>"><?php echo lang('inactive');?></span>
                                                     <?php } else { ?>
-                                                        <span class="label label-success" id="label-<?= $category['category_id'] ?>">Active</span>
+                                                        <span class="label label-success" id="label-<?= $category['category_id'] ?>"><?php echo lang('enable');?></span>
                                                     <?php } ?>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group" id="btn-<?= $category['category_id'] ?>">
                                                         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                            Change Status <span class="caret"></span>
+                                                            <?php echo lang('change_status') ?> <span class="caret"></span>
                                                         </button>
                                                         <ul class="dropdown-menu" role="menu">
                                                             <?php if ($category['is_active'] == 0) { ?>
-                                                                <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $category['category_id'] ?>" class="change-status" rel="<?= $category['category_id'] ?>">Enable</a></li>
+                                                                <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?= $category['category_id'] ?>" class="change-status" rel="<?= $category['category_id'] ?>"><?php echo lang('enable');?></a></li>
                                                             <?php } else { ?>
-                                                                <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $category['category_id'] ?>" class="change-status" rel="<?= $category['category_id'] ?>">Disable</a></li>
+                                                                <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?= $category['category_id'] ?>" class="change-status" rel="<?= $category['category_id'] ?>"><?php echo lang('disable');?></a></li>
                                                             <?php } ?>
 
                                                             <li class="divider"></li>

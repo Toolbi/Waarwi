@@ -388,7 +388,7 @@ $lang['master']                           		= 'Principal';
 $lang['country']                           		= 'Pays';
 $lang['currency']                           	= 'Monnaies';
 $lang['language']                           	= 'Langues';
-$lang['vehicle_brand']                          = 'Marques des voitures';
+$lang['vehicle_brand']                          = 'Marque des voitures';
 $lang['vehicle']                          		= 'Voitures';
 $lang['radius']                          		= 'Rayons';
 $lang['users']                          		= 'Utilisateurs';
@@ -447,4 +447,18 @@ $lang['add_new_language']                		= 'Ajout d\'une nouvelle langue';
 $lang['language_name']                			= 'Nom de la langue';
 $lang['language_prefix']                		= 'Prefixe de la langue';
 $lang['add_language']                			= 'Ajouter une langue';
+
+// admin voitures
+$lang['add_new_vehicule']                		= 'Ajout d\'une nouvelle voiture';
+$lang['vehicle_list']                			= 'Liste des voitures';
+$lang['vehicle_brand_name']                		= 'Nom de la marque de la voiture';
+$lang['top_level_category']                		= 'Liste des catégories';
+$lang['vehicle_status']                			= 'Status de la voiture';
+$lang['vehicle_image']                			= 'Photo de la voiture';
+$lang['uploading_message']                		= 'Chargement en cours, veuillez pentienter...';
+$lang['upload_image']                			= 'Choissisez une photo';
+$lang['vehicle_category']                		= 'Liste des catégories des marques';
+$lang['vehicle_brand_forms']                	= 'Ajout d\'une nouvelle marque';
+$lang['add_vehicle_brand']                	= 'Ajout une nouvelle marque';
+
 ?>

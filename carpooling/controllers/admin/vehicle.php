@@ -19,7 +19,7 @@ class Vehicle extends Admin_Controller {
         //we're going to use flash data and redirect() after form submissions to stop people from refreshing and duplicating submissions
         //$this->session->set_flashdata('message', 'this is our message');
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('Vehicle');
+        $data['page_title'] =   lang('vehicle_list');
 
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'vehicle_ajax';
@@ -59,7 +59,7 @@ class Vehicle extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('Vehicle Form');
+        $data['page_title'] = lang('add_new_vehicule');
 
         //default values are empty if the provider is new
         $data['vehicletypeid'] = '';
