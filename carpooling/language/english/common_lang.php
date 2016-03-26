@@ -254,3 +254,11 @@ $lang['error_updating_cart']				= 'There was an error updating the cart!';
 $lang['not_enough_stock']					= 'The quantity requested for the "%s" product could not be added. We only have %d item(s) in stock.';
 $lang['remove_item']						= 'Are you sure you want to remove this item from your cart?';
 $lang['confirm_remove_image']				= 'Are you sure you want to remove this image?';
+
+// home slider text
+$lang['home_slide1']				= 'Life is about the journey';
+$lang['home_slide2']				= 'Carpool easily in a fun, safe &amp;  <br>economical way!';
+$lang['home_slide3']				= 'Helping the planet, one shared ride at a time';
+$lang['from']						= 'From';
+$lang['to']							= 'To';
+$lang['dd/mm/yyyy']					= 'DD/MM/YYYY';
