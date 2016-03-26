@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 26 Mars 2016 à 18:05
+-- Généré le :  Sam 26 Mars 2016 à 19:26
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `waarwi3`
 --
+CREATE DATABASE IF NOT EXISTS waarwi3;
 USE waarwi3;
 -- --------------------------------------------------------
 
@@ -114,12 +115,12 @@ INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity
 ('55c9ce6d2f3dafe8633b339e7054f909', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1458943258, 'a:1:{s:11:"journeyDate";s:10:"27/03/2016";}'),
 ('91f0b346e12cc456216bfd7afb7e1cdf', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1458943258, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1458941833;}}'),
 ('3fef4f7ea0932eba1d3da82d76d78738', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1458943258, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"3";s:7:"trip_id";a:0:{}s:6:"expire";i:1458943858;}}'),
-('b6be080795b04021a5dea5fe6ee755ae', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459011922, 'a:3:{s:9:"user_data";s:0:"";s:11:"journeyDate";s:10:"27/03/2016";s:17:"flash:old:message";s:28:"Vous vous êtes déconnecté";}'),
-('06d939a4ed36e01335f7a80044300b9e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459011922, ''),
-('14cb59c7d36823802d1d1f322de7eea7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459011922, 'a:1:{s:9:"user_data";s:0:"";}'),
-('f36c8b2dbb3082b754d65fdf315da177', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459010097, 'a:1:{s:9:"user_data";s:0:"";}'),
-('fba3b702365d651f1a615bd49f6c09ec', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459010097, ''),
-('50f5ac7a1c8adb6d607ed588e89224c6', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459010097, '');
+('2b50f184c7b7c5f49fb0f3382e7cc6b8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459016470, 'a:2:{s:9:"user_data";s:0:"";s:11:"journeyDate";s:10:"27/03/2016";}'),
+('ddf04377780e5dde240eca60cd002935', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459016470, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";b:0;}}'),
+('d3c3f7ada6530b8b35d71e3db16a5445', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1459016470, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:20:"fallfallo@hotmail.fr";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"3";s:7:"trip_id";a:0:{}s:6:"expire";i:1459016567;}}'),
+('a12261dae64a04fa649b5133488637ab', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015501, 'a:1:{s:9:"user_data";s:0:"";}'),
+('ef07411b18fbc2845f98bd2eeae3bc00', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015501, ''),
+('70cc7846a921367e92ef67b4193406de', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015511, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";b:0;s:6:"expire";i:1459016121;}}');
 
 -- --------------------------------------------------------
 
@@ -721,6 +722,10 @@ INSERT INTO `tbl_t_login_logs` (`login_log_id`, `login_id`, `login_ip`, `login_t
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL);
 
 -- --------------------------------------------------------
@@ -1606,8 +1611,8 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 
 INSERT INTO `tbl_users` (`user_id`, `user_email`, `user_password`, `user_type`, `user_company_name`, `user_first_name`, `user_last_name`, `user_about_us`, `user_profile_img`, `user_mobile`, `user_secondary_phone`, `user_secondary_mail`, `user_company_id`, `user_url`, `user_street`, `user_city`, `postal_code`, `user_occupation`, `marital_status`, `isverified`, `show_number`, `send_sms`, `allowed_food`, `allowed_pet`, `allowed_smoke`, `allowed_chat`, `allowed_music`, `user_gender`, `user_country`, `user_dob`, `communication_mobile`, `communication_email`, `login_type`, `isactive`, `user_admin_status`, `user_created_date`, `user_lost_login`) VALUES
 (1, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', 'Simple et gentil', 'user1_profile_1458760441.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '7b0254d50421e95bda45d5c5eed38276d7af8964', '1', '0', 0, 0, 0, 1, 1, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:09:12', '2016-03-23 20:36:31'),
-(3, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-03-26 17:10:38'),
-(5, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', NULL, NULL, 'Falilou', 'Fall', '', '', '0781786703', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 0, 0, '2016-03-26 16:36:45', '');
+(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-03-26 19:05:21'),
+(3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-03-26 19:06:56');
 
 -- --------------------------------------------------------
 
