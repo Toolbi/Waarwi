@@ -188,7 +188,7 @@ $lang['new_password']					= 'Nouveau mot de passe';
 $lang['confirm_new_pass']				= 'Confirmer le mot de passe';
 $lang['save']				            = 'Enregistrer';
 //Register Language
-$lang['join_carpooling']			    = 'Réserver ce trajet';
+$lang['join_carpooling']			    = 'Rejoignez-nous !';
 $lang['login']			                = 'CONNEXION';
 $lang['first_name']				     	= 'Prénom';
 $lang['last_name']					    = 'Nom';
