@@ -5,36 +5,36 @@ Admin Common Language
 ******************************************/
 
 //header
-$lang['common_sales']				= 'Sales';
-$lang['common_orders']				= 'Orders';
-$lang['common_customers']			= 'Customers';
-$lang['common_groups']				= 'Groups';
-$lang['common_reports']				= 'Reports';
-$lang['common_coupons']				= 'Coupons';
-$lang['common_giftcards']			= 'Gift Cards';
-$lang['common_catalog']				= 'Catalog';
-$lang['common_categories']			= 'Categories';
-$lang['common_products']			= 'Products';
-$lang['common_digital_products']	= 'Digital Products';
-$lang['common_content']				= 'Content';
-$lang['common_banners']				= 'Banners';
-$lang['common_boxes']				= 'Boxes';
+$lang['common_sales']				= 'Ventes';
+$lang['common_orders']				= 'Réservations';
+$lang['common_customers']			= 'Clients';
+$lang['common_groups']				= 'Groupes';
+$lang['common_reports']				= 'Rapports';
+$lang['common_coupons']				= 'Bon de réduction';
+$lang['common_giftcards']			= 'Cartes-cadeaux';
+$lang['common_catalog']				= 'Catalogue';
+$lang['common_categories']			= 'Catégories';
+$lang['common_products']			= 'Produits';
+$lang['common_digital_products']	= 'Produits numériques';
+$lang['common_content']				= 'Contenu';
+$lang['common_banners']				= 'Bannière';
+$lang['common_boxes']				= 'Boites';
 $lang['common_pages']				= 'Pages';
-$lang['common_administrative']		= 'Administrative';
-$lang['common_settings']			= 'Settings';
-$lang['common_locations']			= 'Locations';
-$lang['common_administrators']		= 'Administrators';
-$lang['common_note']				= 'Note';
-$lang['common_alert']				= 'Alert';
-$lang['common_log_out']				= 'Log Out';
+$lang['common_administrative']		= 'Administratif';
+$lang['common_settings']			= 'Paramètres';
+$lang['common_locations']			= 'Répertoire'; // Location
+$lang['common_administrators']		= 'Administrateurs';
+$lang['common_note']				= 'Remarque';
+$lang['common_alert']				= 'Alerte';
+$lang['common_log_out']				= 'Déconnexion';
 $lang['common_front_end']			= 'Front End';
 $lang['common_dashboard']			= 'Tableau de bord';
-$lang['common_home']				= 'Home';
+$lang['common_home']				= 'Accueil';
 $lang['common_actions']				= 'Actions';
 
 //buttons
-$lang['save']						= 'Save';
-$lang['edit']						= 'Edit';
-$lang['delete']						= 'Delete';
-$lang['search']						= 'Search';
-$lang['toggle_wysiwyg']				= 'Toggle WYSIWYG';
+$lang['save']						= 'Enregistrer';
+$lang['edit']						= 'Modifier';
+$lang['delete']						= 'Supprimer';
+$lang['search']						= 'Recherche';
+$lang['toggle_wysiwyg']				= 'Toggle WYSIWYG'; // Je connais pas de mot français correspondant
