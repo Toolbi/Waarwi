@@ -3,9 +3,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <head>
-<title>Carpooling</title>
+<title>Waarwi</title>
 <!-- must have -->
+<?php  echo theme_css('bootstrap.css', true);?>
+<?php  echo theme_css('style.css', true);?>
+<?php  echo theme_css('bannerscollection_kenburns.css', true);?>
+
+<?php  echo theme_css('bootstrap-theme.css', true);?>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
 <?php echo theme_js('jquery-1.7.1.min.js', true);?>
+<?php  echo theme_js('home.js', true);?>
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 
@@ -17,13 +25,7 @@ var baseurl = "<?php print base_url(); ?>";
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
-<?php  echo theme_js('home.js', true);?>
-<?php  echo theme_css('style.css', true);?>
-<?php  echo theme_css('bannerscollection_kenburns.css', true);?>
-<?php  echo theme_css('bootstrap.css', true);?>
-<?php  //echo theme_css('bootstrap-theme.css', true);?>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
+
 
 
 <?php echo theme_js('jquery.ui.touch-punch.min.js', true);?>
@@ -82,8 +84,9 @@ $(document).ready(function(){
 	<div class="container-fluid pull-top topbg paddingtopbot10">
   <div class="container">
     <div class="row">  
-      <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 tophdr"> <a href="<?php echo base_url('home');?>" id="logo" class="navbar-brand"> <img src="<?php echo theme_logo_img($this->logo->name)?>" style="width:255px; height:53px;"> </a>  </div>
-        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">        
+      <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 tophdr"> <a href="<?php echo base_url('home');?>" id="logo" class="navbar-brand"> 
+        <img src="<?php echo theme_logo_img($this->logo->name)?>" style="width: 180px;height: 80px;"> </a>  </div>
+          <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
              <?php 
 				$this->CI =& get_instance();
 				$carpool_session['carpool_session']		= $this->CI->carpool_session->userdata('carpool');
@@ -92,8 +95,7 @@ $(document).ready(function(){
 			   $profile	= $this->auth_travel->get_travel($id);
 				if($this->auth_travel->is_logged_in(false, false)):				
 				?>	
-            <ul class="top-nav new-top-nav">
-              <li>  <a href="<?php echo base_url('addtrip/form');?>" class="ride"><?php echo lang('post_a_trip');?> </a> </li>
+            <ul class="top-nav new-top-nav pull-right">
               <li>
                 <div id="my-account">
                   <div class="my-account-button">  <div class="profile-img"> <img src="<?php if($profile->user_profile_img) { echo theme_profile_img($profile->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> </div> <span> <?=$profile->user_first_name.' '.$profile->user_last_name ?> </span> <p> <img src="<?php echo theme_img('drop-white.png')?>"> </p>  </div>
@@ -111,18 +113,29 @@ $(document).ready(function(){
                   </div>
                 </div>  
               </li>
+
               
               <?php else: ?>
-                <ul class="top-nav new-top-nav">              
-					  <li> <a href="<?php echo base_url('login');?>" class=""> <?php echo lang('login');?> </a> </li>
-					  <li> <a href="<?php echo base_url('register');?>" class="top-signup"> <?php echo lang('register');?> </a> </li>
-					  <li> <a href="<?php echo base_url('addtrip/form');?>" class="ride"> <?php echo lang('post_a_trip');?> </a> </li>
-				</ul>
+            <ul class="top-nav new-top-nav pull-right">              
+  					  <li> <a href="<?php echo base_url('login');?>" class="top-login ride"> <?php echo lang('login');?> </a> </li>
+  					  <li> <a href="<?php echo base_url('register');?>" class="top-signup ride"> <?php echo lang('register');?> </a> </li>
+  					  <!-- <li>  </li> -->
+				    </ul>
+            
             <?php endif; ?>
             </ul>                     
         </div>
     </div>
   </div>
+</div>
+
+<div class="top-trip-add">
+  <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
+    <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
+    <p class="size20">
+      <strong><?php echo lang('post_a_trip');?></strong>
+    </p>
+  </a>  
 </div>
 
     <div class="container-fluid padding0 banner">
@@ -170,7 +183,7 @@ $(document).ready(function(){
             <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
              
              <input type="hidden" name="frequency" id="frequency"  value=""/>
-			       <input type="submit"  value="<?php echo lang('search');?>"   class="ind-src-but btn btn-success" />       
+			       <input type="submit"  value="     <?php echo lang('search');?>"   class="ind-src-but" />       
                </form>
         </div>      
     </div>

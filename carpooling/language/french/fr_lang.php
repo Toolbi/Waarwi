@@ -524,4 +524,8 @@ $lang['logo_image']						= "Logo";
 $lang['copyright']				= 'Tous droits réservés';
 $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
+
+//client
+$lang['do_you_have_car']				= 'Vous avez déjà une voiture ?';
+
 ?>

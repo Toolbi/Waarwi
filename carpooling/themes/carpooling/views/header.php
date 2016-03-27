@@ -10,7 +10,7 @@ if(!empty($description)){
 <?php
 }
 ?>
-<title>Carpool</title>
+<title>Waarwi</title>
 <!-- must have -->
     <?php  echo theme_css('bootstrap.css', true);?>
 	<?php  echo theme_css('bootstrap-theme.css', true);?>
@@ -54,7 +54,7 @@ $(document).ready(function(){
   <div class="container">
      <div class="logo"> 
      
-     <a href="<?php echo base_url('home');?>"id="logo" class="navbar-brand"><img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:255px; height:53px;"> </a> </div>
+     <a href="<?php echo base_url('home');?>"id="logo" class="navbar-brand"><img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:115px;"> </a> </div>
         <div class="pull-right head-rht">  
                   
        	 <?php 
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				if($this->auth_travel->is_logged_in(false, false)):				
 				?>	
             <ul class="top-nav new-top-nav pull-right">
-              <li>  <a href="<?php echo base_url('addtrip/form');?>" class="ride"><?php echo lang('post_a_trip');?></a> </li>
+              <li>  <a href="<?php echo base_url('addtrip/form');?>" class="ride btn defaut-bouton"><?php echo lang('post_a_trip');?></a> </li>
               <li>
                 <div id="my-account">
                   <div class="my-account-button">  <div class="profile-img"> <img src="<?php if($profile->user_profile_img) { echo theme_profile_img($profile->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> </div> <span> <?=$profile->user_first_name.' '.$profile->user_last_name ?> </span> <p> <img src="<?php echo theme_img('drop-white.png')?>"> </p>  </div>
@@ -87,9 +87,9 @@ $(document).ready(function(){
               
               <?php else: ?>
                 <ul class="top-nav new-top-nav pull-right">
-                <li>  <a href="<?php echo base_url('register');?>" class="ride"> <?php echo lang('post_a_trip');?> </a> </li>
-                <li> <a href="<?php echo base_url('login');?>" class=""> <?php echo lang('login');?> </a> </li>
-                <li> <a href="<?php echo base_url('register');?>" class="top-signup"> <?php echo lang('register');?> </a> </li>
+                <li>  <a href="<?php echo base_url('register');?>" class="btn ride bouton"> <?php echo lang('post_a_trip');?> </a> </li>
+                <!-- <li> <a href="<?php echo base_url('login');?>" class="btn ride top-login"> <?php echo lang('login');?> </a> </li> -->
+                <li> <a href="<?php echo base_url('register');?>" class="btn ride top-signup"> <?php echo lang('register');?> </a> </li>
                 
                 </ul>
             <?php endif; ?>

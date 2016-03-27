@@ -105,7 +105,7 @@ function theme_logo_img($uri)
 {
 	
 		$CI =& get_instance();
-		return $CI->config->base_url('uploads/logo/thumbnails/'.$uri);
+		return $CI->config->base_url('uploads/logo/full/'.$uri);
 	
 }
 
