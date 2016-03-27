@@ -286,7 +286,7 @@ class Vechicle extends Traveller_Controller
         $category_id = $this->input->post('cid');
         $type_id = $this->input->post('tid');
         $type = $this->vechicle_model->get_type($category_id);
-        $data = array('' => 'Select Type');
+        $data = array('' => lang('select_type'));
         foreach ($type as $parent) 
 		{
             $data[$parent->vechicle_type_id] = $parent->vechicle_type_name;

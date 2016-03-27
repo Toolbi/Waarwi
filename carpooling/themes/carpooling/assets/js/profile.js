@@ -155,8 +155,10 @@ $(document).ready(function() {
 				//alert(group_id);
 				//alert();
 				// $('#property_cat_id').empty();
+					var select_type = $('#vechicletype').find('#select_type');
 				   $('#vechicletype').find('option').remove().end();
-				   $('#vechicletype').append('<option value="">-Select Type-</option>');
+				   //$('#vechicletype').append("<option value=\"\"><?php echo lang('select_type'); ?></option>"); // Anciennement '<option value="">-Select type-</option>'
+                    $('#vechicletype').append(select_type);
                     $.each(locations,function(id,location) 
                     {
 						//alert(id);

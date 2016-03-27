@@ -48,7 +48,7 @@ $lang['upload_msg']				    = 'Uploading please wait';
 $lang['add_photo']					= 'Add Photo';
 $lang['vehicle_number']			    = 'Vehicle Number';
 $lang['car_type']			        = 'Vehicle Type';
-$lang['select_type']		        = 'Select Type';
+$lang['select_type']		        = '-- Select Type --';
 $lang['basic']			            = 'Basic';
 $lang['car_with_basic']			    = 'Car with Basic Features';
 $lang['comfortable']			    = 'Comfortable';
@@ -60,9 +60,12 @@ $lang['leather_seats']			    = "Leather Seats";
 $lang['back']					    = 'Back';
 $lang['edit_car_information']	    = 'Edit Vehicle Information';
 $lang['brand']	                    = 'Brand';
+$lang['select_vechiclecomfort']		= '-- Select --';
+$lang['select_brand']				= '-- Select brand --';
 $lang['comfort']	                = 'Comfort';
 $lang['normal']	                    = 'Normal';
 $lang['save']	                    = 'Save';
+$lang['vehicle_number_immat']	    = 'Vehicle Number';
 
 //Search Language
 $lang['find_your_carpool']					= 'Find your carpool';
