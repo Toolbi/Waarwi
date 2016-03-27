@@ -264,3 +264,16 @@ $lang['home_slide3']				= 'Aider la planète, un tour partagé à la fois!';
 $lang['from']						= 'De';
 $lang['to']							= 'A';
 $lang['dd/mm/yyyy']					= 'JJ/MM/AAAA';
+
+// Months
+$lang['january']					= 'Janvier';
+$lang['february']					= 'Février';
+$lang['march']						= 'Mars';
+$lang['april']						= 'Avril';
+$lang['may']						= 'Mai';
+$lang['june']						= 'Juin';
+$lang['august']						= 'Août';
+$lang['september']					= 'Septembre';
+$lang['october']					= 'Octobre';
+$lang['november']					= 'Novembre';
+$lang['december']					= 'Décembre';

@@ -207,18 +207,18 @@ var baseurl = "<?php print base_url(); ?>";
 							 ?>
                         <span><?php echo lang('month') ; ?></span>
                         <?php $data = array(
-						'' => 'Month',
-						'January'=>'January',
-						'February'=>'February',
-						'March'=>'March',
-						'April'=>'April',
-						'May'=>'May',
-						'June'=>'June',
-						'August'=>'August',
-						'September'=>'September',
-						'October'=>'October',
-						'November'=>'November',
-						'December'=>'December');
+						'' => lang('month'),
+						'January'=>lang('january'),
+						'February'=>lang('february'),
+						'March'=>lang('march'),
+						'April'=>lang('april'),
+						'May'=>lang('may'),
+						'June'=>lang('june'),
+						'August'=>lang('august'),
+						'September'=>lang('september'),
+						'October'=>lang('october'),
+						'November'=>lang('november'),
+						'December'=>lang('december'));
 						 echo form_dropdown('month', $data, $month, ' id="month" ');?>
 
                         <span><?php echo lang('year');?></span>
