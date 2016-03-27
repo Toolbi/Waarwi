@@ -85,7 +85,7 @@ var param = 'tid='+type_id+'&cid=<?php echo $vechiclecategory_id; ?>'
         <div class="fleft pro-tab-cont">
           <h5><?php echo lang('car_type');?></h5>
           <select name="vechicletype" id="vechicletype" >
-            <option value=""><?php echo lang('select_type');?></option>
+            <option id = "select_type" value=""><?php echo lang('select_type');?></option>
            </select>
         </div>
        <div class="fright pro-tab-cont">
