@@ -282,6 +282,10 @@ $lang['password']								= 'Password';
 $lang['forgot_password']						= 'Forgot password?';
 $lang['sign_in']								= 'Sign in';
 $lang['road_travel_made_easy']					= 'Road travel made easy';
+$lang['road_travel_made_easy_text']				= '<p>A connecting site for online search for Car Poolers.</p><br/> 
+           <p> Sign up and meet drivers who are travelling in the same direction. 
+           Get in touch with them to reach the common destination at the same time, through the same ride. </p><br/>
+           <p>Post your travel need and find fastest and easiest way for reaching your destination.</p>';
 $lang['got_a_question']					        = 'Got a Question';
 $lang['contact_now']				         	= 'Contact Now';
 
