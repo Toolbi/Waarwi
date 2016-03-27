@@ -66,7 +66,7 @@ var param = 'tid='+type_id+'&cid=<?php echo $vechiclecategory_id; ?>'
         <div class="fleft pro-tab-cont">
           <h5><?php echo lang('brand');?></h5>
          <?php				
-				$data	= array('' => '-- Select --');
+				$data	= array('' => lang('select_brand'));
 				
 				foreach($vechiclecategory as $parent)
 				{
@@ -77,7 +77,7 @@ var param = 'tid='+type_id+'&cid=<?php echo $vechiclecategory_id; ?>'
         </div>
          <div class="fright pro-tab-cont">
           <h5><?php echo lang('vehicle_number');?></h5>
-           <input type="text" placeholder="Vechicle Number" class="disable" name="txtvechicle" id="txtvechicle" value="<?=$txtvechicle?>" />
+           <input type="text" placeholder= <?php echo lang('vehicle_number_immat'); ?> class="disable" name="txtvechicle" id="txtvechicle" value="<?=$txtvechicle?>" />
         </div>
       </div>
 
@@ -91,7 +91,7 @@ var param = 'tid='+type_id+'&cid=<?php echo $vechiclecategory_id; ?>'
        <div class="fright pro-tab-cont">
           <h5><?php echo lang('comfort');?></h5>
           <?php
-		  $vcdata	= array('' => '-- Select --','1' => 'Normal','2' => 'Basic','3' => 'Comfortable','4' => 'Luxury');
+		  $vcdata	= array('' => lang('select_vechiclecomfort'),'1' => lang('normal'),'2' => lang('basic'),'3' => lang('comfortable'),'4' => lang('luxury'));
 		 
           echo form_dropdown('vechiclecomfort', $vcdata, $vechiclecomfort,' id="vechiclecomfort"'); ?>
           

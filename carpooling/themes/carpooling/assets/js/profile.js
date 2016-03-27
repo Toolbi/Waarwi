@@ -156,7 +156,7 @@ $(document).ready(function() {
 				//alert();
 				// $('#property_cat_id').empty();
 				   $('#vechicletype').find('option').remove().end();
-				   $('#vechicletype').append('<option value="">-Select Type-</option>');
+				   $('#vechicletype').append("<option value=\"\"><?php echo lang('select_type'); ?></option>"); // Anciennement '<option value="">-Select type-</option>'
                     $.each(locations,function(id,location) 
                     {
 						//alert(id);
