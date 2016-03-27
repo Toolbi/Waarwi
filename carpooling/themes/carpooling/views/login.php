@@ -68,10 +68,7 @@ $(document).ready(function() {
         <ul class="reg-cont margintop40">
           <li class="margintop40">
             <h3><?php echo lang('road_travel_made_easy');?> !</h3><br>
-            <p>A connecting site for online search for Car Poolers.</p><br/> 
-           <p> Sign up and meet drivers who are travelling in the same direction. 
-           Get in touch with them to reach the common destination at the same time, through the same ride. </p><br/>
-           <p>Post your travel need and find fastest and easiest way for reaching your destination.</p> 
+            <?php echo lang('road_travel_made_easy_text'); ?> 
           </li>
         </ul>
       </div>      
@@ -90,13 +87,13 @@ $(document).ready(function() {
         <ul class="rowrec reg-inp">
           <li>
             <span><?php echo lang('email_username');?></span>
-            <input type="text" placeholder="Email / Username" name="txtUserName" id="txtUserName"/>
+            <input type="text" placeholder="<?php echo lang('email_username');?>" name="txtUserName" id="txtUserName"/>
           </li>
           <li>
             <span><?php echo lang('password'); ?></span>
-            <input type="password" placeholder="Password" name="txtPassword" id="txtPassword" />
+            <input type="password" placeholder="<?php echo lang('password'); ?>" name="txtPassword" id="txtPassword" />
           </li>
-          <li> <p> <a href="<?php echo base_url('login/forget_password'); ?>"><?php echo lang('forgot_password');?>?</a> </p> </li>
+          <li> <p> <a href="<?php echo base_url('login/forget_password'); ?>"><?php echo lang('forgot_password') . " ?";?></a> </p> </li>
           <li>       
             <input type="Submit" value="<?php echo lang('sign_in');?>" class="fright reg-sbmt" >
           </li>
@@ -110,7 +107,7 @@ $(document).ready(function() {
 <div class="container-fluid cs-blue-bg margintop40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
-      <h2 class="colorwhite"> <?php echo lang('got_a_question');?>? </h2>
+      <h2 class="colorwhite"> <?php echo lang('got_a_question') . " ?";?></h2>
       <p class="padding20 row colorwhite">We're here to help. Check out our FAQs, Send us an email or call us at 1800 555 555</p>
       <a href="#"> <?php echo lang('contact_now');?> </a> </div>
   </div>

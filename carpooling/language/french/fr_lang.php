@@ -243,9 +243,12 @@ $lang['sign_in_to_carpooling']					= 'Se connecter';
 $lang['login']					                = 'CONNEXION';
 $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
-$lang['forgot_password']						= 'Mot de passe oublié ';
+$lang['forgot_password']						= 'Mot de passe oublié';
 $lang['sign_in']								= 'Se connecter';
 $lang['road_travel_made_easy']					= 'Voyager facilement, dans les meilleures conditions';
+$lang['road_travel_made_easy_text']				= "<p>Vous êtes particulier ou professionnel, proposez vos services de transport.</p><br/> 
+           <p>Vous cherchez un trajet dans les transports, réservez votre trajet en avance et gagnez du temps.</p>
+           <p>Inscriver-vous et rejoignez-nous, nou n'attendons que vous ! </p><br/>";
 $lang['got_a_question']					        = 'Une question?';
 $lang['contact_now']				         	= 'Contactez-nous maintenant';
 //Home Language
