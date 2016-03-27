@@ -504,39 +504,39 @@ class Admin extends Admin_Controller {
                 $upload_data = $this->upload->data();
 
 
-                $this->load->library('image_lib');
-                //this is the larger image
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = $this->config->item('logo_upload_dir') . 'full/' . $upload_data['file_name'];
-                $config['new_image'] = $this->config->item('logo_upload_dir') . 'medium/' . $upload_data['file_name'];
-                $config['maintain_ratio'] = TRUE;
-                $config['width'] = 600;
-                $config['height'] = 500;
-                $this->image_lib->initialize($config);
-                $this->image_lib->resize();
-                $this->image_lib->clear();
+                // $this->load->library('image_lib');
+                // //this is the larger image
+                // $config['image_library'] = 'gd2';
+                // $config['source_image'] = $this->config->item('logo_upload_dir') . 'full/' . $upload_data['file_name'];
+                // $config['new_image'] = $this->config->item('logo_upload_dir') . 'medium/' . $upload_data['file_name'];
+                // $config['maintain_ratio'] = TRUE;
+                // // $config['width'] = 600;
+                // // $config['height'] = 500;
+                // $this->image_lib->initialize($config);
+                // $this->image_lib->resize();
+                // $this->image_lib->clear();
 
-                //small image
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = $this->config->item('logo_upload_dir') . 'medium/' . $upload_data['file_name'];
-                $config['new_image'] = $this->config->item('logo_upload_dir') . 'small/' . $upload_data['file_name'];
-                $config['maintain_ratio'] = TRUE;
-                $config['width'] = 235;
-                $config['height'] = 235;
-                $this->image_lib->initialize($config);
-                $this->image_lib->resize();
-                $this->image_lib->clear();
+                // //small image
+                // $config['image_library'] = 'gd2';
+                // $config['source_image'] = $this->config->item('logo_upload_dir') . 'medium/' . $upload_data['file_name'];
+                // $config['new_image'] = $this->config->item('logo_upload_dir') . 'small/' . $upload_data['file_name'];
+                // $config['maintain_ratio'] = TRUE;
+                // $config['width'] = 235;
+                // $config['height'] = 235;
+                // $this->image_lib->initialize($config);
+                // $this->image_lib->resize();
+                // $this->image_lib->clear();
 
-                //cropped thumbnail
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = $this->config->item('logo_upload_dir') . 'small/' . $upload_data['file_name'];
-                $config['new_image'] = $this->config->item('logo_upload_dir') . 'thumbnails/' . $upload_data['file_name'];
-                $config['maintain_ratio'] = TRUE;
-                $config['width'] = 235;
-                $config['height'] = 53;
-                $this->image_lib->initialize($config);
-                $this->image_lib->resize();
-                $this->image_lib->clear();
+                // //cropped thumbnail
+                // $config['image_library'] = 'gd2';
+                // $config['source_image'] = $this->config->item('logo_upload_dir') . 'small/' . $upload_data['file_name'];
+                // $config['new_image'] = $this->config->item('logo_upload_dir') . 'thumbnails/' . $upload_data['file_name'];
+                // $config['maintain_ratio'] = TRUE;
+                // $config['width'] = 235;
+                // $config['height'] = 53;
+                // $this->image_lib->initialize($config);
+                // $this->image_lib->resize();
+                // $this->image_lib->clear();
 
                 if ($upload_data) {
 

@@ -590,4 +590,7 @@ $lang['change_size_text']				= "Ensure that your image size is exactly 225px in 
 // copyright 
 $lang['copyright']					= 'All right reserved';
 $lang['newsletters']				= 'Subscribe to Newsletter';
+
+// client
+$lang['do_you_have_car']				= 'Do you have a car?';
 ?>
