@@ -28,38 +28,44 @@ $('#slider1').tinycarousel({
 <div class="container-fluid">
 <div class="container">
   <div class="row">
-    <div class="col-lg-7 margintop20 hideall">
-      <h2 class="rec-ride margintop20"><?php echo lang('recent_rides');?></h2>
+    <div class="col-lg-7">
       <div class="row margintop20">
-        <div id="slider1">
-          <div class="row margintop20 marginbottom25 nomargin">
-            <div class="arr"> <a class="buttons prev" href="#"><img src="<?php echo theme_img('up-arrow.png'); ?>"></a> </div>
+      <!-- TRAJETS RECENTS -->
+      <div id="slider1" class="info info-panel">
+          <div class="panel-heading">
+              <h3 class="panel-title rec-ride margintop20">
+                  <span class="fa fa-cab"></span> <?php echo lang('recent_rides');?></h3>
           </div>
+           <div class="row margintop20 marginbottom25 nomargin">
+            <div class="arr"> <a class="buttons prev" href="#"><img class="arrow-up" src="<?php echo theme_img('up-arrow.png'); ?>"></a>
+            </div>
+          </div>
+          <div>
+         
           <div class="row nomargin">
             <div class="rec-rid-tbl">
               <div class="viewport">
                 <ul class="overview">
                   <?php 
-					 if($recent_trips){
-						foreach($recent_trips as $trip) { ?>
-                  <li>
-                      <a href="<?php echo base_url('trip/tripdetails/'.$trip['trip_led_id']);?>" target="blank">   
-                        <div class="slid_inner">
-                          <div class="slid_first"> <img src="<?php if($trip['user_profile_img']) { echo theme_profile_img($trip['user_profile_img']); } else { echo theme_img('default.png');  }?>" width="40">
+                    if($recent_trips){
+                      foreach($recent_trips as $trip) { ?>
+                      <li>
+                        <a href="<?php echo base_url('trip/tripdetails/'.$trip['trip_led_id']);?>" target="blank">   
+                          <div class="slid_inner">
+                            <div class="slid_first"> <img src="<?php if($trip['user_profile_img']) { echo theme_profile_img($trip['user_profile_img']); } else { echo theme_img('default.png');  }?>" width="40">
                             <h3>
                               <?=$trip['user_first_name'].' '.$trip['user_last_name']?>
                             </h3>
                             <p>
-                              <?php 
-                                            $source = explode(',',$trip['source']);
-                                            echo (!empty($source[0])?$source[0]:'').(!empty($source[1])?','.$source[1]:''); ?>
+                              <?php $source = explode(',',$trip['source']);echo (!empty($source[0])?$source[0]:'').(!empty($source[1])?','.$source[1]:''); 
+                              ?>
                             </p>
                           </div>
                           <div class="slid_second"> <img src="<?php echo theme_img('place-marker-ico.png') ?>">
                             <h4>
-                              <?php 
-                                            $destination = explode(',',$trip['destination']);
-                                            echo (!empty($destination[0])?$destination[0]:'').(!empty($destination[1])?','.$destination[1]:''); ?>
+                              <p>
+                                <?php $destination = explode(',',$trip['destination']); echo (!empty($destination[0])?$destination[0]:'').(!empty($destination[1])?','.$destination[1]:''); 
+                                ?>
                               </p>
                             </h4>
                           </div>
@@ -74,49 +80,58 @@ $('#slider1').tinycarousel({
                               </span> </h5>
                             <?php } ?>
                           </div>
-                        </div>
-                    </a>    
-                  </li>
-                  <?php } 
-					 }
-				?>
+                          </div>
+                        </a>    
+                      </li>
+                      <?php } 
+                    }?>
                 </ul>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="arr barr"> <a class="buttons next" href="#"><img src="<?php echo theme_img('down-arrow.png'); ?>"></a> </div>
+            <div class="arr barr"> <a class="buttons next" href="#"><img class="arrow-down" src="<?php echo theme_img('down-arrow.png'); ?>"></a> </div>
           </div>
-        </div>
+        </div>         
+      </div>  
+        
       </div>
-      </div>
-      <!-- End Recent Rides -->
-      
-     <div class="col-lg-5 margintop20">
-            		<div class="recent-rides rrecent margintop20">
-				        <h2> <?php echo lang('testimonials');?> </h2>
-
-				        <ul>
-                        <?php 
-		 if(!empty($testimonials)){
-		 foreach($testimonials as $testimonial) { ?>       
-       
-				          <li>
-				            <div class="rr-lft re-lft fleft">
-				              <div class="recent-img rrimg"> <img src="<?php if(!empty($testimonial['image'])) { echo theme_testimonials_img($testimonial['image']); } else {  echo theme_img('mem-img1.jpg'); } ?>"> </div>
-				              <h3><?=$testimonial['name']?></h3>
-				            </div>
-				            <p class="test-rht-bx">
-				              <span class="lft-arr-ic"> <img src="<?php echo theme_img('left-arrow-ico.png') ?>"></span> <span style="font-family:Arial;"> " </span>   <?= character_limiter($testimonial['description'], 75) ; ?> 
-				            </p>
-				          </li>
-				          
-                           <?php } } ?>
-				        </ul>
-				      </div>
-            	</div>
     </div>
-  </div>
+      <!-- FIN TRAJETS RECENTS -->
+      
+      <!-- TEMOIGNAGES -->      
+
+
+
+    <div class="col-lg-5 margintop20">
+      <div class="info info-panel">
+        <div class="panel-heading">
+            <h3 class="panel-title rec-ride margintop20">
+                <span class="fa fa-quote-left"></span> <?php echo lang('testimonials');?></h3>
+        </div>
+    		<div class="recent-rides rrecent margintop20">
+          <ul>
+            <?php 
+            if(!empty($testimonials)){
+    		      foreach($testimonials as $testimonial) { ?>
+                <li>
+                  <div class="rr-lft re-lft fleft">
+                    <div class="recent-img rrimg"> <img src="<?php if(!empty($testimonial['image'])) { echo theme_testimonials_img($testimonial['image']); } else {  echo theme_img('mem-img1.jpg'); } ?>"> </div>
+                    <h3><?=$testimonial['name']?></h3>
+                  </div>
+                  <p class="test-rht-bx">
+                    <span class="lft-arr-ic"> <img src="<?php echo theme_img('left-arrow-ico.png') ?>"></span> <span style="font-family:Arial;"> " </span>   <?= character_limiter($testimonial['description'], 75) ; ?> 
+                  </p>
+                </li>
+    				          
+              <?php } 
+            } ?>
+  				</ul>
+				</div>
+      </div>
+    </div>
+</div>
+
 <div class="container-fluid">
   <div class="container">
     <div class="row line4 margintop40"></div>
