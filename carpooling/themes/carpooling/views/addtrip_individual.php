@@ -145,7 +145,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
        <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('travel_type');?></span>
            <?php				
-				$data	= array('' => lang('select_your_car'));				
+				$data	= array('' => 'Select your car');				
 				foreach($vehicle as $parent)
 				{ 
 				   $data[$parent->vechicle_id ] = strtoupper($parent->vechicle_type_name) .' - '. $parent->vechicle_number; 
@@ -164,12 +164,12 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('from');?></span>          
-          <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('from_placeholder');?>"   name="txtsource" id="txtsource"class="frt_src" value="<?=$txtsource?>" >
+          <input type="text" class="fleft width100 padding10" placeholder="your departure point (address,city,station...)"   name="txtsource" id="txtsource"class="frt_src" value="<?=$txtsource?>" >
                     <input type="hidden" name="source_ids" id="source_ids"  value="<?=$source_ids?>"/>
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('to');?></span>          
-            <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('from_placeholder');?>"  name="txtdestination" id="txtdestination"  value="<?=$txtdestination?>"/>
+            <input type="text" class="fleft width100 padding10" placeholder="your arrival point (address,city,station...)"  name="txtdestination" id="txtdestination"  value="<?=$txtdestination?>"/>
                     <input type="hidden" name="destination_ids" id="destination_ids"  value="<?=$destination_ids?>"/>
         </div>
         <div class="fleft width100 margintop20">
@@ -188,18 +188,18 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
             <span class="fleft size14 marginleft30"> <input type="radio" name="trip_type" id="casu" onclick="change_type(2)"/> <?php echo lang('one_time');?>  </span>
           </p>
           <p class="row paddingtop10 bold" id="regular"> 
-            <span class="fleft size14"> <input type="checkbox" name="frequency[]" value="0" onchange="filter_result()"/> <?php echo lang('mon'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="1" onchange="filter_result()"/> <?php echo lang('tue'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="2" onchange="filter_result()"/> <?php echo lang('wed'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="3" onchange="filter_result()"/> <?php echo lang('thu'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="4" onchange="filter_result()"/> <?php echo lang('fri'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="5" onchange="filter_result()"/> <?php echo lang('sat'); ?> </span>
-            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="6" onchange="filter_result()"/> <?php echo lang('sun'); ?> </span>
+            <span class="fleft size14"> <input type="checkbox" name="frequency[]" value="0" onchange="filter_result()"/> Sun </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="1" onchange="filter_result()"/> Mon </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="2" onchange="filter_result()"/> Tue </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="3" onchange="filter_result()"/> Wed </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="4" onchange="filter_result()"/> Thu </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="5" onchange="filter_result()"/> Fri </span>
+            <span class="fleft size14 marginleft30"> <input type="checkbox" name="frequency[]" value="6" onchange="filter_result()"/> Sat </span>
              <input type="hidden" name="frequency_ids" id="frequency_ids" value="<?=$frequency_ids?>" />
           </p>
           <p class="row paddingtop10 bold" id="casuals"> 
             <span class="size14 bold"> </span>    
-             <input type="text" id="rpt_from_date" placeholder="<?php echo lang('date_of_journey'); ?>" class="fleft width100 padding10 row" name="rpt_from_date" onchange="clearnow();" value="<?=$rpt_from_date?>">        
+             <input type="text" id="rpt_from_date" placeholder="Date Of Journey " class="fleft width100 padding10 row" name="rpt_from_date" onchange="clearnow();" value="<?=$rpt_from_date?>">        
           </p>
         </div>
        <div class="fleft width100 margintop20">           
@@ -215,18 +215,36 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
           <ul class="trp-step">
             <li id="departure"> 
               <span class="row size14 bold"><?php echo lang('departure_time');?></span>              
-              <?php $options = createTime();
-				echo form_dropdown('fhh', $options['hh'], set_value('fhh',$fhh),' id="fhh" class="fleft padding10 " onchange="clearnow();"  placeholder="hh"');?>
+              <?php  $options = array(
+			'' => 'HH',
+			'1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10','11'=>'11','12'=>'12' );
+			echo form_dropdown('fhh', $options, set_value('fhh',$fhh),' id="fhh" class="fleft padding10 " onchange="clearnow();"  placeholder="hh"');?>
               <p class="marginleft10 paddingtop6 size16 fleft">:</p>
-              <?php echo form_dropdown('fmm', $options['mm'], set_value('fmm',$fmm),' id="fmm" class="fleft padding10 marginleft10" onchange="clearnow();" ');?>
+              <?php  $options = array(
+						'' => 'MM','00'=>'00',
+						'15'=>'15','30'=>'30','45'=>'45');
+				echo form_dropdown('fmm', $options, set_value('fmm',$fmm),' id="fmm" class="fleft padding10 marginleft10" onchange="clearnow();" ');?>
               <p class="marginleft10 paddingtop6 size16 fleft"> </p>
-            </li>
+              		<?php  $options = array(
+						'' => 'AM/PM',
+						'am'=>'AM','pm'=>'PM');
+						echo form_dropdown('fzone', $options, set_value('fzone',$fzone),' id="fzone" class="fleft padding10 marginleft10" onchange="clearnow();" ');?>            </li>
             <li id="return"> 
               <span class="row size14 bold"><?php echo lang('return_time');?></span>
-              <?php  echo form_dropdown('thh', $options['hh'], set_value('thh',$thh),' id="thh" class="fleft padding10 " onchange="clearnow();"  placeholder="hh"');?>
+              <?php  $options = array(
+			'' => 'HH',
+			'1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10','11'=>'11','12'=>'12' );
+			echo form_dropdown('thh', $options, set_value('thh',$thh),' id="thh" class="fleft padding10 " onchange="clearnow();"  placeholder="hh"');?>
               <p class="marginleft10 paddingtop6 size16 fleft">:</p>
-              <?php  echo form_dropdown('tmm', $options['mm'], set_value('tmm',$tmm),'id="tmm" class="fleft padding10 marginleft10" onchange="clearnow();" ');?>
+              <?php  $options = array(
+						'' => 'MM','00'=>'00',
+						'15'=>'15','30'=>'30','45'=>'45');
+						echo form_dropdown('tmm', $options, set_value('tmm',$tmm),'id="tmm" class="fleft padding10 marginleft10" onchange="clearnow();" ');?>
               <p class="marginleft10 paddingtop6 size16 fleft"> </p>
+              <?php  $options = array(
+				'' => 'AM/PM',
+				'am'=>'AM','pm'=>'PM');
+				echo form_dropdown('tzone', $options,'1', '  id="tzone" class="fleft padding10 marginleft10"');?>
             </li>
             <input type="hidden" name="depature_time" id="depature_time" value="<?=$depature_time?>" />
             <input type="hidden" name="arrival_time" id="arrival_time" value="<?=$arrival_time?>" />
@@ -237,13 +255,13 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
 				        <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('available_seat');?></span>          
           <?php
-		$data	= array('name'=>'avail_seats','id'=>'avail_seats','class'=>'fleft width100 padding10 row', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
+		$data	= array('name'=>'avail_seats','id'=>'avail_seats','class'=>'fleft width100 padding10 row', 'placeholder'=>'Available Seat', 'value'=>set_value('avail_seats', $avail_seats));
 		echo form_input($data);?>
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('phone_number');?></span>
           <?php
-		$data	= array('name'=>'number', 'id'=>'number','class'=>'fleft width100 padding10 row',  'placeholder'=>lang('contact_person_number'), 'value'=>set_value('number', $number));
+		$data	= array('name'=>'number', 'id'=>'number','class'=>'fleft width100 padding10 row',  'placeholder'=>'Contact Person Number', 'value'=>set_value('number', $number));
 		echo form_input($data);?>
         </div>
         <div class="fleft width100 margintop20">

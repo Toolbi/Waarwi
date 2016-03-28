@@ -125,41 +125,25 @@ $lang['part_1_of_2']						= 'Partie 1 sur 2';
 $lang['part_2_of_2']						= 'Partie 2 sur 2';
 $lang['step_1']								= 'Etape 1';
 $lang['add_vehicle_info']					= 'Ajouter les informations du véhicule';
-$lang['travel_type']						= 'Véhicule:';
-$lang['select_your_car']					= 'Sélectionnez le véhicule';
+$lang['travel_type']						= 'Type de voyage:';
 $lang['vehicle_number']						= 'Numéro du véhicule:';
 $lang['step_2']								= 'Etape 2';
 $lang['add_trip']							= 'Ajouter un trajet';
 $lang['from']								= 'De :';
-$lang['from_placeholder']					= 'Votre point de départ (adresse, ville, arrêt...)';
 $lang['to']									= 'A :';
-$lang['to_placeholder']						= "Votre point de d'arrivée (adresse, ville, arrêt...)";
 $lang['add_route']							= 'Ajouter un parcours :';
 $lang['frequency']							= 'Fréquence :';
 $lang['recurring']							= 'Fréquent';
 $lang['one_time']							= "Cet fois seulement";
 $lang['type_of_trip']						= 'Type de trajet :';
 $lang['one_way_trip']						= 'Aller simple';
-$lang['return_trip']						= 'Aller - retour';
+$lang['return_trip']						= 'Retour';
 $lang['departure_time']						= 'Heure de départ :';
 $lang['return_time']						= 'Heure de départ :';
 $lang['available_seat']						= 'Places disponibles :';
-$lang['available_seat_placeholder']			= 'Nombre de places disponibles';
 $lang['phone_number']						= 'Tel :';
 $lang['comments']							= 'Commentaires :';
 $lang['post']								= 'Publier';
-$lang['contact_person_number']				= 'Nombre de contacts';
-$lang['date_of_journey']					= 'Date du trajet';
-
-// Week days
-$lang['sun']									= 'Dim';
-$lang['mon']									= 'Lun';
-$lang['tue']									= 'Mar';
-$lang['wed']									= 'Mer';
-$lang['thu']									= 'Jeu';
-$lang['fri']									= 'Ven';
-$lang['sat']									= 'Sam';
-
 //Profile Language
 $lang['my_account']					    = 'Mon compte';
 $lang['personal_information']			= 'Mes informations personelles';
