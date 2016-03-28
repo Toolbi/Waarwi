@@ -20,6 +20,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
 <?php  echo theme_css('bootstrap.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 <?php  echo theme_css('bannerscollection_kenburns.css', true);?>
+<?php echo admin_css('libs/font-awesome.css', true); ?>
 
 <?php  echo theme_css('bootstrap-theme.css', true);?>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -38,7 +39,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         skin: 'generous',
         responsive:true,
         width: 1920,
-        height: 680,
+        height: 580,
         width100Proc:true,
         thumbsOnMarginTop:14,
         thumbsWrapperMarginTop: -110,
