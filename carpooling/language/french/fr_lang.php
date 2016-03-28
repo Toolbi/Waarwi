@@ -80,7 +80,7 @@ $lang['female_only']					    = 'Femme seulement';
 $lang['return_journy']						= 'Trajet de retour';
 $lang['yes']						        = 'Oui';
 $lang['no']						            = 'Non';
-$lang['search']						        = 'Recherche';
+$lang['search']						        = 'Rechercher';
 $lang['no_more_trips']						= 'Aucun trajet correspondant à votre recherche !';
 $lang['departure']						    = 'Départ:';
 $lang['arrival']						    = 'Arrivée:';
@@ -88,7 +88,7 @@ $lang['per_passenger']					    = 'Par passager';
 $lang['available_seat']					    = 'Places disponibles';
 $lang['comfort_level']					    = 'Confort';
 //Trip Detail Language
-$lang['search']					        = 'Recherche';
+$lang['search']					        = 'Rechercher';
 $lang['trip_detail']					= 'Détails du trajet';
 $lang['published_at']					= 'Publié le';
 $lang['preferences']					= 'Choix :';
@@ -269,7 +269,7 @@ $lang['got_a_question']					        = 'Une question?';
 $lang['contact_now']				         	= 'Contactez-nous maintenant';
 //Home Language
 $lang['find_a_ride']					= 'Trouver un trajet';
-$lang['search']							= 'Recherche';
+$lang['search']							= 'Rechercher';
 $lang['recent_rides']					= 'Trajets récents';
 $lang['testimonials']					= 'Témoignages';
 $lang['how_it_works']					= 'Comment ça marche';
