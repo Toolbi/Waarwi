@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 -- Base de données :  `waarwi3`
 --
 
+CREATE DATABASE IF NOT EXISTS waarwi3;
+USE waarwi3;
 -- --------------------------------------------------------
 
 --

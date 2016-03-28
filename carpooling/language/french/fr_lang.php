@@ -64,6 +64,7 @@ $lang['normal']	                    = 'Normal';
 $lang['save']	                    = 'Enregistrer';
 $lang['select_brand']				= '-- Sélectionner la marque --';
 $lang['vehicle_number_immat']	    = 'Immatriculation';
+$lang['select_your_vechicle_type']  = 'Merci de sélectionner votre type de véhicule';
 
 //Search Language
 $lang['find_your_carpool']					= 'Choissisez votre trajet';
@@ -235,6 +236,7 @@ $lang['edit_profile']						= 'Gestion de profil';
 $lang['change_password_page']				= 'Changement du mot de passe';
 $lang['settings']							= 'Paramètres';
 //header
+$lang['waarwi']							= 'Waarwi';
 $lang['post_a_trip']					= 'PUBLIER UN TRAJET';
 $lang['login']							= 'CONNEXION';
 $lang['register']						= 'S\'INSCRIRE';
@@ -248,6 +250,7 @@ $lang['logout']							= 'DECONNEXION';
 //footer
 $lang['subscribe_to_newsletter']		= "S'incrire aux lettres d'informations";
 $lang['sign_up']		                = 'S\'inscrire';
+$lang['newsletter_below_text']			= "Nous utiliserons cette adresse pour vous tenir informé de nos offres";
 $lang['sitemap']		                = 'Plan du site';
 $lang['blog']		                	= 'Blog';
 $lang['company_directory']        		= "Répertoire de l'entreprise";
