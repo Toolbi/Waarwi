@@ -8,6 +8,7 @@
 <?php echo theme_js('jquery-1.7.1.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
+<?php echo theme_js('bootstrap-datepicker.js',true); ?>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>">
 </script>
 <script type="text/javascript">
@@ -15,9 +16,11 @@ var baseurl = "<?php print base_url(); ?>";
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
 </script>
 
+
 <script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
 <!-- CSS -->
 <?php  echo theme_css('bootstrap.css', true);?>
+<?php  echo theme_css('bootstrap-datepicker.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 <?php  echo theme_css('bannerscollection_kenburns.css', true);?>
 <!-- <?php echo admin_css('libs/font-awesome.css', true); ?> -->
@@ -211,7 +214,11 @@ $(document).ready(function(){
             <input type="hidden" name="formlatlng" id="formlatlng"  value=""/>
             <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="destination" class="srcdes marker-ico-to" />
             <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
-            <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
+           <!--  <input type="text" placeholder="<?php echo lang('date-format');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" > -->
+            <div id="datepicker" class="input-group date" data-date-format="<?php echo lang('date-format');?>">
+                <input class="form-control srcdes" type="text" />
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
              
              <input type="hidden" name="frequency" id="frequency"  value=""/>
              <button class="top-login ride search-bouton" type="submit"><span class="fa fa-search"></span>   <?php echo lang('search');?></button>      
@@ -247,3 +254,12 @@ $(document).ready(function(){
       </div>
 
     </div>
+<script type="text/javascript">
+  $(function () {
+  $("#datepicker").datepicker({ 
+        autoclose: true, 
+        todayHighlight: true
+  }).datepicker('update', new Date());;
+});
+
+</script>

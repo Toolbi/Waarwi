@@ -143,6 +143,7 @@ $lang['add_trip']							= 'Add Trip';
 $lang['from']								= 'From :';
 $lang['from_placeholder']					= 'Your departure point (address,city,station...)';
 $lang['to']									= 'To :';
+$lang['date-format']						= 'mm/dd/yyyy';
 $lang['to_placeholder']						= 'Your arrival point (address,city,station...)';
 $lang['add_route']							= 'Add Route :';
 $lang['frequency']							= 'Frequency :';

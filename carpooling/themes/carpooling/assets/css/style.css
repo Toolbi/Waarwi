@@ -865,3 +865,5 @@ a:link {
   padding : 5px 15px;
 }
 
+#datepicker{width: 98%;margin: 0 2px 20px;}
+#datepicker > span:hover{cursor: pointer;}
