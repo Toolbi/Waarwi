@@ -6,6 +6,7 @@
 <title><?php echo lang('head_title'); ?> </title>
 <!-- JS -->
 <?php echo theme_js('jquery-1.9.1.js', true);?>
+<?php echo theme_js('jquery-ui-1.9.2.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
@@ -14,8 +15,16 @@
 <script type="text/javascript">
 var baseurl = "<?php print base_url(); ?>";  
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
-</script>
 
+// Date picker FR 
+$(function () {
+      $("#datepicker").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true,
+            language: "fr",
+      }).datepicker('update', new Date());;
+    });
+</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
 <!-- CSS -->
@@ -70,16 +79,7 @@ $(document).ready(function(){
   });
 });
 </script>  
-<!-- Date picker FR -->
-<script type="text/javascript">
-    $(function () {
-      $("#datepicker").datepicker({ 
-            autoclose: true, 
-            todayHighlight: true,
-            language: "fr",
-      }).datepicker('update', new Date());;
-    });
-  </script>
+
 <link rel="shortcut icon" href="<?php echo theme_img('favicon.ico');?>">  
   
 </head>
