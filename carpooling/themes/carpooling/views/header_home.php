@@ -5,8 +5,7 @@
 <head>
 <title><?php echo lang('head_title'); ?> </title>
 <!-- JS -->
-<?php echo theme_js('jquery-1.7.1.min.js', true);?>
-<?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
+<?php echo theme_js('jquery-1.9.1.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
