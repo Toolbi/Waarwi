@@ -534,5 +534,7 @@ $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 //client
 $lang['do_you_have_car']				= 'Vous avez déjà une voiture ?';
+$lang['particular']						= 'Vous êtes particulier ?';
+$lang['professional']						= 'Vous êtes professionnel ?';
 
 ?>

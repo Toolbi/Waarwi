@@ -593,4 +593,6 @@ $lang['newsletters']				= 'Subscribe to Newsletter';
 
 // client
 $lang['do_you_have_car']				= 'Do you have a car?';
+$lang['particular']						= 'Particular ?';
+$lang['professional']					= 'Professional ?';
 ?>

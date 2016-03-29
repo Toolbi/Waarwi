@@ -139,12 +139,12 @@ $('#slider1').tinycarousel({
 </div>
 <div class="container-fluid">
   <div class="container">
-    <div class="row margintop40">
+    <div class="row">
       <div class="how-but"> <?php echo lang('how_it_works');?> </div>
       <div class="marginbot10">
-        <div class="how-it-lft fleft dplnon"> <img src="<?php echo theme_img('car-img.png') ?>"> </div>
+        <div class="how-it-lft fleft dplnon"> <img class="how-it-img" src="<?php echo theme_img('pro-img.png') ?>"> </div>
         <div class="how-it-lft fright rrecent how-it">
-          <h4 class="size22 marginbot10"> <?php echo lang('for_car_owners');?> </h4>
+          <h4 class="size22 marginbot10"> <?php echo lang('professional');?> </h4>
           <ul class="hw-it-wks">
             <li>
               <div class="how-i-img how-search-ico"> </div>
@@ -177,9 +177,9 @@ $('#slider1').tinycarousel({
     </div>
     <div class="row line4 margintop40 marginbot40"></div>
     <div class="row">
-      <div class="how-it-lft fright dplnon"> <img src="<?php echo theme_img('index-how-it-img.png') ?>"> </div>
+      <div class="how-it-lft fright dplnon"> <img src="<?php echo theme_img('part-img.png') ?>"> </div>
       <div class="how-it-lft fleft rrecent how-it">
-        <h4 class="size22 marginbot10"> <?php echo lang('for_car_travellers');?> </h4>
+        <h4 class="size22 marginbot10"> <?php echo lang('particular');?> </h4>
         <ul class="hw-it-wks">
           <li>
             <div class="how-i-img how-edit-ico"> </div>
@@ -209,6 +209,7 @@ $('#slider1').tinycarousel({
     </div>
   </div>
 </div>
+</div>
 <div class="container-fluid cs-blue-bg margintop40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
@@ -217,14 +218,15 @@ $('#slider1').tinycarousel({
       <!--<a href="#"> <?php echo lang('contact_now');?> </a>--> </div>
   </div>
 </div>
+
 <link rel="stylesheet" type="text/css" href="<?php echo  theme_js('jquery.datepick/redmond.datepick.css');?>">
 <?php echo  theme_js('jquery.datepick/jquery.plugin.js',true);?> <?php echo  theme_js('jquery.datepick/jquery.datepick.js',true);?> 
 <script type="text/javascript">
 
 $('#journey_date').datepick({
-	 changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'});
-	 
-	 $('#journey_dater').datepick({
-	 changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'});
+   changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'});
+   
+   $('#journey_dater').datepick({
+   changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'});
 </script>
 <?php include('footer_home.php'); ?>
