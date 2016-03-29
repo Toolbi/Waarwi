@@ -6,7 +6,7 @@
       
             <div class="col-lg-4 col-md-6 col-sm-6  col-xs-12 log-subs fleft">
            <!--  <div class="logo"> <a href="<?=base_url();?>"> <img src="<?php echo logo_path('full/logo.png')?>"> </a> </div> -->
-          <div class="logo"> <a href="<?php echo base_url('home');?>" id="logo" class="navbar-brand"> 
+            <div class="logo"> <a href="<?php echo base_url('home');?>" id="logo" class="navbar-brand"> 
             <img src="<?php echo theme_logo_img($this->logo->name)?>" style="width: 180px;height: 80px;"> </a> 
           </div>
             <div class="ftr-subs margintop20 marginbot10 fleft lgrey-text">

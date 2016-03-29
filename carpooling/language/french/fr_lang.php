@@ -236,7 +236,7 @@ $lang['edit_profile']						= 'Gestion de profil';
 $lang['change_password_page']				= 'Changement du mot de passe';
 $lang['settings']							= 'Paramètres';
 //header
-$lang['title']							= 'Waarwi';
+$lang['head_title']							= 'Waarwi';
 $lang['post_a_trip']					= 'PUBLIER UN TRAJET';
 $lang['login']							= 'CONNEXION';
 $lang['register']						= 'S\'INSCRIRE';

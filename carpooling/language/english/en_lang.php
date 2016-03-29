@@ -263,7 +263,7 @@ $lang['change_password']					= 'Change Password';
 $lang['settings']							= 'Settings';
 
 //header
-$lang['title']							= 'Waarwi';
+$lang['head_title']							= 'Waarwi';
 $lang['post_a_trip']					= 'POST A TRIP';
 $lang['login']							= 'LOGIN';
 $lang['register']						= 'REGISTER';
