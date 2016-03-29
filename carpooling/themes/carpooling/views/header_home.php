@@ -9,6 +9,7 @@
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
+<?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>">
 </script>
 <script type="text/javascript">
@@ -70,6 +71,16 @@ $(document).ready(function(){
   });
 });
 </script>  
+<!-- Date picker FR -->
+<script type="text/javascript">
+    $(function () {
+      $("#datepicker").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true,
+            language: "fr",
+      }).datepicker('update', new Date());;
+    });
+  </script>
 <link rel="shortcut icon" href="<?php echo theme_img('favicon.ico');?>">  
   
 </head>
@@ -254,12 +265,4 @@ $(document).ready(function(){
       </div>
 
     </div>
-<script type="text/javascript">
-  $(function () {
-  $("#datepicker").datepicker({ 
-        autoclose: true, 
-        todayHighlight: true
-  }).datepicker('update', new Date());;
-});
-
-</script>
+  
