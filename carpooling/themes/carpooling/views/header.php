@@ -22,8 +22,7 @@ if(!empty($description)){
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-<?php echo theme_js('jquery-1.7.1.min.js', true);?>
-<?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
+<?php echo theme_js('jquery-1.9.1.js', true);?>
 <script type="text/javascript">
 $(document).ready(function(){
   $(".my-account-button").click(function(){
