@@ -30,8 +30,7 @@ class Multilanguage extends Front_Controller
 	function select_language($language = 'french')
 	{
 		$this->session->set_userdata('current_language', $language);
-		redirect(base_url(), 'refresh');
-	}
+		redirect(base_url(), 'refresh');	}
 	
 	
 	
