@@ -16,7 +16,7 @@
 	        </form>
       </div>
       
-      <p class="colorwhite margintop20 size14 fleft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges:</p>
+      <p class="colorwhite margintop20 size14 fleft"><?php echo lang('newsletter_below_text'); ?></p>
     </div>
 
 			    <div class="col-lg-2 col-md-6 col-sm-6  col-xs-12">
@@ -30,7 +30,7 @@
       </ul>
     </div>
     
-<div class="hideall">
+<!--div class="hideall">
    <div class="fleft width20p ftr-arti">
       <div class="fb-page" data-href="https://www.facebook.com/pages/Carpoolingscript/807705419319976?ref=aymt_homepage_panel" data-width="180" data-height="370" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
       <div class="fb-xfbml-parse-ignore">
@@ -44,7 +44,7 @@
     <a class="twitter-timeline" href="https://twitter.com/carpoolingscrip" data-widget-id="588318601595125760">@waarwi</a> 
     </div>
 
-</div>
+</div-->
 
     </div>
   </div>
@@ -54,7 +54,7 @@
     <div class="container-fluid ftrbg padding10">
   <div class="container">
     <div class="row footer colorwhite">
-      <p class="size14 fleft"> &copy; Copyright 2016 - Waarwi - <?php echo lang('copyright');?> </p>
+      <p class="size14 fleft"> &copy; <?php echo lang('copyright');?> </p>
       <div class="fright">
         <ul class="fleft soc-ico">
         </ul>
