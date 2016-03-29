@@ -55,7 +55,7 @@
     <div class="container-fluid ftrbg padding10">
   <div class="container">
     <div class="row footer colorwhite">
-      <p class="size14 fleft"> &copy; Copyright 2016 - Waarwi - <?php echo lang('copyright');?> </p>
+      <p class="size14 fleft"> &copy; <?php echo lang('copyright');?> </p>
       <div class="fright">
         
       </div>

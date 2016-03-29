@@ -550,7 +550,7 @@ $lang['change_size_text']				= "Assurez-vous que la taille de l'image est exacte
 $lang['logo_image']						= "Logo";
 
 //copyright 
-$lang['copyright']				= 'Tous droits réservés';
+$lang['copyright']				= 'Copyright 2016 - Waarwi - Tous droits réservés';
 $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 
