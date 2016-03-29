@@ -40,6 +40,12 @@ function theme_url($uri)
 	return $CI->config->base_url('carpooling/themes/'.$CI->config->item('theme').'/'.$uri);
 }
 
+function logo_path($uri)
+{
+	$CI =& get_instance();
+	return $CI->config->base_url('uploads/logo'.'/'.$uri);
+}
+
 //to generate an image tag, set tag to true. you can also put a string in tag to generate the alt tag
 function theme_img($uri, $tag=false)
 {
