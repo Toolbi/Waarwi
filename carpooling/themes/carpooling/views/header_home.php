@@ -30,6 +30,7 @@ $(function () {
 <!-- CSS -->
 <?php  echo theme_css('bootstrap.css', true);?>
 <?php  echo theme_css('bootstrap-datepicker.css', true);?>
+<?php  echo theme_css('half-slider.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 <?php  echo theme_css('bannerscollection_kenburns.css', true);?>
 <!-- <?php echo admin_css('libs/font-awesome.css', true); ?> -->
@@ -43,27 +44,7 @@ $(function () {
 
 
 <?php echo theme_js('jquery.ui.touch-punch.min.js', true);?>
-<?php echo theme_js('bannerscollection_kenburns.js', true);?>
-<!--[if IE]><?php echo theme_js('excanvas.compiled', true);?><![endif]-->
-<!-- must have -->
-  <script>
-    jQuery(function() {
-      jQuery('#bannerscollection_kenburns_generous').bannerscollection_kenburns({
-        skin: 'generous',
-        responsive:true,
-        width: 1920,
-        height: 580,
-        width100Proc:true,
-        thumbsOnMarginTop:14,
-        thumbsWrapperMarginTop: -110,
-        autoHideBottomNav:false,
-        showBottomNav: false,
-        showCircleTimer:false,
-        showCircleTimerIE8IE7:false,
-        showAllControllers:false
-      });         
-    });
-  </script>
+
     <?php echo theme_js('jquery.ddslick.js', true);?>
     <?php echo theme_js('script.js', true);?>
     
@@ -159,60 +140,57 @@ $(document).ready(function(){
 
     <div id="bannerscollection_kenburns_generous">
 
-      <div class="myloader"></div>
-        <!-- CONTENT -->
-        <ul class="bannerscollection_kenburns_list">
-
-            <li data-initialZoom="1" data-finalZoom="1" data-horizontalPosition="center" data-verticalPosition="left" data-text-id="#bannerscollection_kenburns_photoText1" ><img src="<?php echo theme_img('slider001.jpg')?>" alt="" width="2500" height="919" /></li>
-            
-            <li data-initialZoom="1" data-finalZoom="1" data-horizontalPosition="center" data-verticalPosition="left" data-text-id="#bannerscollection_kenburns_photoText2" ><img src="<?php echo theme_img('slider002.jpg')?>" alt="" width="2500" height="919" /></li>
-
-            <li data-text-id="#bannerscollection_kenburns_photoText3" data-horizontalPosition="center" data-verticalPosition="top" data-initialZoom="1" data-finalZoom="1"><img src="<?php echo theme_img('slider003.jpg')?>" alt="" width="2500" height="782" /></li>       
-        
-        </ul>        
-        <!-- TEXTS -->
-
-        <div id="bannerscollection_kenburns_photoText1" class="bannerscollection_kenburns_texts">
-          <div class="bannerscollection_kenburns_text_line textElement11_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0"><?php echo lang('home_slide1');?></div>
-       </div>   
-                 
-        <div id="bannerscollection_kenburns_photoText2" class="bannerscollection_kenburns_texts">
-          <div class="bannerscollection_kenburns_text_line textElement21_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="280" data-duration="0.5" data-fade-start="0" data-delay="0.5"><?php echo lang('home_slide2');?></div>         
+      <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicateurs -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+      <!-- slide 1 -->
+        <div class="item active">
+          <img class="first-slide" src="<?php echo theme_img('slider001.jpg')?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><?php echo lang('home_slide1');?></p>
+            </div>
+          </div>
         </div>
-       
-        <div id="bannerscollection_kenburns_photoText3" class="bannerscollection_kenburns_texts">
-          <div class="bannerscollection_kenburns_text_line textElement31_generousFullWidth" data-initial-left="200" data-initial-top="50" data-final-left="200" data-final-top="320" data-duration="0.5" data-fade-start="0" data-delay="0"><?php echo lang('home_slide3');?></div>
-        </div> 
+        <!-- slide 2 -->
+        <div class="item">
+          <img class="second-slide" src="<?php echo theme_img('slider002.jpg')?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><?php echo lang('home_slide2');?></p>
+            </div>
+          </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="item">
+          <img class="third-slide" src="<?php echo theme_img('slider003.jpg')?>">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><?php echo lang('home_slide3');?></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only"><?php echo lang('previous');?></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only"><?php echo lang('next');?></span>
+      </a>
+    </div>
+    <!-- /.carousel -->
     
-                                            
-    
-    <!-- test vertical -->
-    <!-- <div class="bottom-bar-vert padding10-vert">           
-        <div class="search-bar-vert">
-          <h2> <?php echo lang('find_a_ride');?> </h2>
-          <form class="form-inline">
-            <div class="form-group">
-              <input  type="text" placeholder="<?php echo lang('from');?>"  
-                      name="source" id="source" class="form-control srcdes marker-ico-from">
-              <input type="hidden" name="formlatlng" id="formlatlng"  value=""/>
-            </div>
-            <div class="form-group">
-              <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="destination" class="form-control srcdes marker-ico-to" />
-              <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="form-control srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
-              <input type="hidden" name="frequency" id="frequency"  value=""/>
-            </div>
-            <div class="form-group">
-              <button class="btn btn-success search-bouton-vert" type="submit" ng-disabled="!Simpleform.$valid" ng-click="save()"><span class="glyphicon glyphicon-search"></span>   <?php echo lang('search');?></button>
-            </div>
-          
-            
-          </form>
-        </div>      
-    </div> -->
-    <!-- test horizontal -->
+                     
+    <!-- Recherche trajet horizontal -->
     <div class="bottom-bar padding10">
 
         <div class="search-bar">
@@ -224,7 +202,7 @@ $(document).ready(function(){
             <input type="hidden" name="formlatlng" id="formlatlng"  value=""/>
             <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="destination" class="srcdes marker-ico-to" />
             <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
-           <!--  <input type="text" placeholder="<?php echo lang('date-format');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" > -->
+
             <div id="datepicker" class="input-group date" data-date-format="<?php echo lang('date-format');?>">
                 <input class="form-control srcdes" type="text" />
                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
@@ -239,6 +217,7 @@ $(document).ready(function(){
 
 </div>  
 </div> 
+<!--  Recherche de trajet pour mobile -->
  <div class="container-fluid padding0 banner-search">
       <div class="bottom-bar padding10">  
 
@@ -253,7 +232,11 @@ $(document).ready(function(){
             <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="mob_destination" class="srcdes marker-ico" />
            <input type="hidden" name="tolatlng" id="mob_tolatlng"  value=""/>
             
-            <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_dater" class="srcdes cal-ico" onchange="getfrequencymob();"  name="journey_date" >
+            
+            <div id="datepicker" class="input-group date" data-date-format="<?php echo lang('date-format');?>">
+                <input class="form-control srcdes" type="text" />
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
              
              <input type="hidden" name="frequency" id="mob_frequency"  value=""/>
       <input type="submit"  value="<?php echo lang('recherche');?>"   class="ind-src-but"/>       
