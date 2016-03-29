@@ -1,11 +1,9 @@
 <?php
-
 function ssl_support()
 {
 	$CI =& get_instance();
     return $CI->config->item('ssl_support');
 }
-
 if ( ! function_exists('force_ssl'))
 {
 	function force_ssl()
@@ -18,7 +16,6 @@ if ( ! function_exists('force_ssl'))
 		}
 	}
 }
-
 //thanks C4iO [PyroDEV]
 if ( ! function_exists('remove_ssl'))
 {
@@ -33,13 +30,16 @@ if ( ! function_exists('remove_ssl'))
 		}
 	}
 }
-
 function theme_url($uri)
 {
 	$CI =& get_instance();
 	return $CI->config->base_url('carpooling/themes/'.$CI->config->item('theme').'/'.$uri);
 }
-
+function logo_path($uri)
+{
+	$CI =& get_instance();
+	return $CI->config->base_url('uploads/logo'.'/'.$uri);
+}
 //to generate an image tag, set tag to true. you can also put a string in tag to generate the alt tag
 function theme_img($uri, $tag=false)
 {
@@ -53,7 +53,6 @@ function theme_img($uri, $tag=false)
 	}
 	
 }
-
 function theme_js($uri, $tag=false)
 {
 	if($tag)
@@ -65,7 +64,6 @@ function theme_js($uri, $tag=false)
 		return theme_url('assets/js/'.$uri);
 	}
 }
-
 //you can fill the tag field in to spit out a link tag, setting tag to a string will fill in the media attribute
 function theme_css($uri, $tag=false)
 {
@@ -81,7 +79,6 @@ function theme_css($uri, $tag=false)
 	
 	return theme_url('assets/css/'.$uri);
 }
-
 //profile image tag
 function theme_profile_img($uri)
 {
@@ -90,7 +87,6 @@ function theme_profile_img($uri)
 		return $CI->config->base_url('uploads/profile/source/'.$uri);
 	
 }
-
 //image tag
 function theme_vehicles_img($uri)
 {
@@ -99,8 +95,6 @@ function theme_vehicles_img($uri)
 		return $CI->config->base_url('uploads/vehicle/thumbnails/'.$uri);
 	
 }
-
-
 function theme_logo_img($uri)
 {
 	
@@ -108,7 +102,6 @@ function theme_logo_img($uri)
 		return $CI->config->base_url('uploads/logo/full/'.$uri);
 	
 }
-
 //admin profile image tag
 function admin_profile_img($uri)
 {
@@ -117,7 +110,6 @@ function admin_profile_img($uri)
 		return $CI->config->base_url('uploads/admin/source/'.$uri);
 	
 }
-
 //testimonials image
 function theme_testimonials_img($uri,$size='small')
 {
@@ -126,7 +118,6 @@ function theme_testimonials_img($uri,$size='small')
 		return $CI->config->base_url('uploads/testimonials/'.$size.'/'.$uri);
 	
 }
-
 function admin_js($uri, $tag=false)
 {
 	$CI =& get_instance();
@@ -139,7 +130,6 @@ function admin_js($uri, $tag=false)
 		return $CI->config->base_url('assets/js/'.$uri);
 	}
 }
-
 function admin_img($uri, $tag=false)
 {
 	$CI =& get_instance();
@@ -153,7 +143,6 @@ function admin_img($uri, $tag=false)
 	}
 	
 }
-
 function admin_css($uri, $tag=false)
 {
 	$CI =& get_instance();
@@ -169,9 +158,6 @@ function admin_css($uri, $tag=false)
 	
 	return $CI->config->base_url('assets/css/'.$uri);
 }
-
-
-
 if ( ! function_exists('get_random_password'))
 {
     /**
@@ -207,5 +193,4 @@ if ( ! function_exists('get_random_password'))
         
         return $password;
     }
-
 }

@@ -14,9 +14,6 @@
 |
 */
 $config['base_url']			= '';
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -28,7 +25,6 @@ $config['base_url']			= '';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
@@ -46,7 +42,6 @@ $config['index_page'] = '';
 |
 */
 $config['uri_protocol']	= 'AUTO';
-
 /*
 |--------------------------------------------------------------------------
 | URL suffix
@@ -57,9 +52,7 @@ $config['uri_protocol']	= 'AUTO';
 |
 | http://codeigniter.com/user_guide/general/urls.html
 */
-
 $config['url_suffix'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | Default Language
@@ -71,7 +64,6 @@ $config['url_suffix'] = '';
 |
 */
 $config['language']	= 'french';
-
 /*
 |--------------------------------------------------------------------------
 | Default Character Set
@@ -82,7 +74,6 @@ $config['language']	= 'french';
 |
 */
 $config['charset'] = 'UTF-8';
-
 /*
 |--------------------------------------------------------------------------
 | Enable/Disable System Hooks
@@ -93,8 +84,6 @@ $config['charset'] = 'UTF-8';
 |
 */
 $config['enable_hooks'] = FALSE;
-
-
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix
@@ -108,8 +97,6 @@ $config['enable_hooks'] = FALSE;
 |
 */
 $config['subclass_prefix'] = 'MY_';
-
-
 /*
 |--------------------------------------------------------------------------
 | Allowed URL Characters
@@ -128,8 +115,6 @@ $config['subclass_prefix'] = 'MY_';
 |
 */
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
-
-
 /*
 |--------------------------------------------------------------------------
 | Enable Query Strings
@@ -160,7 +145,6 @@ $config['enable_query_strings'] = FALSE;
 $config['controller_trigger']	= 'c';
 $config['function_trigger']		= 'm';
 $config['directory_trigger']	= 'd'; // experimental not currently in use
-
 /*
 |--------------------------------------------------------------------------
 | Error Logging Threshold
@@ -182,7 +166,6 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 |
 */
 $config['log_threshold'] = 0;
-
 /*
 |--------------------------------------------------------------------------
 | Error Logging Directory Path
@@ -193,7 +176,6 @@ $config['log_threshold'] = 0;
 |
 */
 $config['log_path'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | Date Format for Logs
@@ -204,7 +186,6 @@ $config['log_path'] = '';
 |
 */
 $config['log_date_format'] = 'Y-m-d H:i:s';
-
 /*
 |--------------------------------------------------------------------------
 | Cache Directory Path
@@ -215,7 +196,6 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 |
 */
 $config['cache_path'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | Encryption Key
@@ -226,7 +206,6 @@ $config['cache_path'] = '';
 |
 */
 $config['encryption_key'] = '554c66873afb21bec89f8af359d1af77';
-
 /*
 |--------------------------------------------------------------------------
 | Session Variables
@@ -245,7 +224,7 @@ $config['encryption_key'] = '554c66873afb21bec89f8af359d1af77';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'Carpooling';
+$config['sess_cookie_name']		= 'Waarwi';
 $config['sess_expiration']		= 0;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
@@ -254,7 +233,6 @@ $config['sess_table_name']		= 'sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
-
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables
@@ -268,7 +246,6 @@ $config['sess_time_to_update']	= 300;
 $config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
-
 /*
 |--------------------------------------------------------------------------
 | Global XSS Filtering
@@ -279,7 +256,6 @@ $config['cookie_path']		= '/';
 |
 */
 $config['global_xss_filtering'] = FALSE;
-
 /*
 |--------------------------------------------------------------------------
 | Cross Site Request Forgery
@@ -296,7 +272,6 @@ $config['csrf_protection'] = FALSE;
 $config['csrf_token_name'] = 'gc_csrf_token';
 $config['csrf_cookie_name'] = 'gc_csrf';
 $config['csrf_expire'] = 7200;
-
 /*
 |--------------------------------------------------------------------------
 | Output Compression
@@ -315,7 +290,6 @@ $config['csrf_expire'] = 7200;
 |
 */
 $config['compress_output'] = FALSE;
-
 /*
 |--------------------------------------------------------------------------
 | Master Time Reference
@@ -328,8 +302,6 @@ $config['compress_output'] = FALSE;
 |
 */
 $config['time_reference'] = 'local';
-
-
 /*
 |--------------------------------------------------------------------------
 | Rewrite PHP Short Tags
@@ -341,8 +313,6 @@ $config['time_reference'] = 'local';
 |
 */
 $config['rewrite_short_tags'] = FALSE;
-
-
 /*
 |--------------------------------------------------------------------------
 | Reverse Proxy IPs
@@ -355,7 +325,5 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
-
-
 /* End of file config.php */
 /* Location: ./Carpooling/config/config.php */

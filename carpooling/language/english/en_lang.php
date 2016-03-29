@@ -66,6 +66,7 @@ $lang['comfort']	                = 'Comfort';
 $lang['normal']	                    = 'Normal';
 $lang['save']	                    = 'Save';
 $lang['vehicle_number_immat']	    = 'Vehicle Number';
+$lang['select_your_vechicle_type']  = 'Select your vechicle type';
 
 //Search Language
 $lang['find_your_carpool']					= 'Find your carpool';
@@ -248,6 +249,7 @@ $lang['change_password']					= 'Change Password';
 $lang['settings']							= 'Settings';
 
 //header
+$lang['title']							= 'Waarwi';
 $lang['post_a_trip']					= 'POST A TRIP';
 $lang['login']							= 'LOGIN';
 $lang['register']						= 'REGISTER';
@@ -263,6 +265,7 @@ $lang['edit_options']                    = '(Edit your trip date and rate here.)
 //footer
 $lang['subscribe_to_newsletter']		= 'Subscribe to Newsletter';
 $lang['sign_up']		                = 'Sign Up';
+$lang['newsletter_below_text']			= 'We use this email to let you know about our offers';
 $lang['sitemap']		                = 'Sitemap';
 $lang['blog']		                	= 'Blog';
 $lang['company_directory']        		= 'Company Directory';
