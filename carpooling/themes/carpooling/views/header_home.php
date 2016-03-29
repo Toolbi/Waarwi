@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <head>
-<title>Waarwi</title>
+<title><?php echo lang('head_title'); ?> </title>
 <!-- JS -->
 <?php echo theme_js('jquery-1.7.1.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>

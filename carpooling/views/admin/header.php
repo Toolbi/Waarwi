@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title> Waarwi </title>
+        <title><?php echo lang('head_title'); ?> </title>
 
         <script type="text/javascript">
             var baseurl = "<?php print base_url(); ?>";

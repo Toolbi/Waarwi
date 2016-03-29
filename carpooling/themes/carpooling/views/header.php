@@ -10,7 +10,7 @@ if(!empty($description)){
 <?php
 }
 ?>
-<title><?php echo lang('waarwi'); ?> </title>
+<title><?php echo lang('head_title'); ?> </title>
 <!-- must have -->
     <?php  echo theme_css('bootstrap.css', true);?>
 	<?php  echo theme_css('bootstrap-theme.css', true);?>

@@ -12,9 +12,7 @@
  * @since		Version 1.0
  * @filesource
  */
-
 // ------------------------------------------------------------------------
-
 /**
  * CodeIgniter Language Helpers
  *
@@ -24,35 +22,30 @@
  * @author		ExpressionEngine Dev Team
  * @link		http://codeigniter.com/user_guide/helpers/language_helper.html
  */
-
 // ------------------------------------------------------------------------
-
-/**
- * Lang
- *
- * Fetches a language variable and optionally outputs a form label
- *
- * @access	public
- * @param	string	the language line
- * @param	string	the id of the form element
- * @return	string
- */
 if ( ! function_exists('lang'))
 {
+	/**
+	 * Lang
+	 *
+	 * Fetches a language variable and optionally outputs a form label
+	 *
+	 * @access	public
+	 * @param	string	the language line
+	 * @param	string	the id of the form element
+	 * @return	string
+	 */
 	function lang($line, $id = '')
 	{
 		$CI =& get_instance();
 		$line = $CI->lang->line($line);
-
 		if ($id != '')
 		{
 			$line = '<label for="'.$id.'">'.$line."</label>";
 		}
-
 		return $line;
 	}
 }
-
 // ------------------------------------------------------------------------
 /* End of file language_helper.php */
 /* Location: ./system/helpers/language_helper.php */
