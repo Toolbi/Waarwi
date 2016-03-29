@@ -2,18 +2,20 @@
 <div class="container-fluid footerbg paddingtopbot40">
   <div class="container">
     <div class="row footer">
-      
-        		<div class="col-lg-4 col-md-6 col-sm-6  col-xs-12 log-subs fleft">
-			      <div class="logo"> <a href="<?=base_url();?>"> <img src="<?php echo theme_img('logo.png')?>"> </a> </div>
-			      <div class="ftr-subs margintop20 marginbot10 fleft lgrey-text">
-			        <form id="subscribe">   
-                        <p class="margintop20 colorwhite size17"><?php echo lang('newsletters');?> </p>
-                        <input type="text" placeholder="<?php echo lang('email');?>" id="email_id" name="email_id" class="emaddr">
-                        <div id="send">
-                            <input type="submit" value="<?php echo lang('sign_up');?>" class="blue-bg white-text subs-brd">
-                        </div>
-                    </form>
+    	<div class="col-lg-4 col-md-6 col-sm-6  col-xs-12 log-subs fleft">
+      	<div class="logo"> <a href="<?php echo base_url('home');?>" id="logo" class="navbar-brand"> 
+			<img src="<?php echo theme_logo_img($this->logo->name)?>" style="width: 180px;height: 80px;"> </a> 
+		</div>
+      	<div class="ftr-subs margintop20 marginbot10 fleft lgrey-text">
+	        <form id="subscribe">   
+	            <p class="margintop20 colorwhite size17"><?php echo lang('newsletters');?> </p>
+	            <input type="text" placeholder="<?php echo lang('email');?>" id="email_id" name="email_id" class="emaddr">
+	            <div id="send">
+	                <input type="submit" value="<?php echo lang('sign_up');?>" class="blue-bg white-text subs-brd">
+	            </div>
+	        </form>
       </div>
+      
       <p class="colorwhite margintop20 size14 fleft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges:</p>
     </div>
 
