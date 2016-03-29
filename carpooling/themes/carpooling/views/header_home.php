@@ -20,7 +20,8 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
 <?php  echo theme_css('bootstrap.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 <?php  echo theme_css('bannerscollection_kenburns.css', true);?>
-<?php echo admin_css('libs/font-awesome.css', true); ?>
+<!-- <?php echo admin_css('libs/font-awesome.css', true); ?> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <?php  echo theme_css('bootstrap-theme.css', true);?>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -118,8 +119,8 @@ $(document).ready(function(){
               
               <?php else: ?>
             <ul class="top-nav new-top-nav pull-right">              
-              <li> <a href="<?php echo base_url('login');?>" class="top-login ride"> <?php echo lang('login');?> </a> </li>
-              <li> <a href="<?php echo base_url('register');?>" class="top-signup ride"> <?php echo lang('register');?> </a> </li>
+              <li> <a href="<?php echo base_url('login');?>" class="top-login ride"><i class="fa fa-user"></i> <?php echo lang('login');?> </a> </li>
+              <li> <a href="<?php echo base_url('register');?>" class="top-signup ride"><i class="fa fa-plus"></i> <?php echo lang('register');?> </a> </li>
               <!-- <li>  </li> -->
             </ul>
             
@@ -133,9 +134,11 @@ $(document).ready(function(){
 <div class="top-trip-add">
   <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
     <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
+
     <p class="size20">
       <strong><?php echo lang('post_a_trip');?></strong>
     </p>
+    <i class=" size16 fa fa-car"></i> <i class="size16 fa fa-bus"></i>
   </a>  
 </div>
 
@@ -211,7 +214,7 @@ $(document).ready(function(){
             <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
              
              <input type="hidden" name="frequency" id="frequency"  value=""/>
-             <button class="btn btn-success search-bouton" type="submit" ng-disabled="!Simpleform.$valid" ng-click="save()"><span class="glyphicon glyphicon-search"></span>   <?php echo lang('search');?></button>      
+             <button class="top-login ride search-bouton" type="submit"><span class="fa fa-search"></span>   <?php echo lang('search');?></button>      
           </form>
         </div>      
     </div> 

@@ -30,7 +30,7 @@
 
 	<!-- libraries -->
      
-	 <link type="text/css" href="<?php echo base_url('assets/css/libs/font-awesome.css');?>" rel="stylesheet" />
+	 <!-- <link type="text/css" href="<?php echo base_url('assets/css/libs/font-awesome.css');?>" rel="stylesheet" /> -->
 	 <link type="text/css" href="<?php echo base_url('assets/css/libs/nanoscroller.css');?>" rel="stylesheet" />
   
 
@@ -44,6 +44,8 @@
     <link type="text/css" href="<?php echo base_url('assets/css/libs/daterangepicker.css');?>" rel="stylesheet" />
     <link type="text/css" href="<?php echo base_url('assets/css/libs/bootstrap-timepicker.css');?>" rel="stylesheet" />
     <link type="text/css" href="<?php echo base_url('assets/css/libs/select2.css');?>" rel="stylesheet" />
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  
 
 	

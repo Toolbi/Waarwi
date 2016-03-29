@@ -13,6 +13,8 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <style type="text/css">
 
 /* fix some bootstrap problems */
