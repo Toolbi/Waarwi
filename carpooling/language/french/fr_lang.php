@@ -32,6 +32,7 @@ $lang['passenger_name']			    = 'Nom du passager';
 $lang['passenger_number']		    = 'Numéro du passager';
 $lang['passenger_email']		    = 'Email du passager';
 $lang['there_is_no']			    = "Il n'y a pas de demande fournie";
+$lang['deviation_holder']           = 'Passez-vous par une autre ville ? (adresse, ville, gare ...)';
 //Enquiry Language
 $lang['vehicle_information']		= 'Les informations du véhicule';
 $lang['enquiry_date']			    = 'Date de la demande';

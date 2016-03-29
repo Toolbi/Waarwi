@@ -30,6 +30,7 @@ $lang['passenger_number']		    = 'Passenger Number';
 $lang['passenger_email']		    = 'Passenger Email';
 $lang['there_is_no']			    = 'There is no Enquiry';
 $lang['rides_passanger']            = 'As a passenger';
+$lang['deviation_placeholder']      = 'Your passing through point (address,city,station...)';
 
 
 //Enquiry Language

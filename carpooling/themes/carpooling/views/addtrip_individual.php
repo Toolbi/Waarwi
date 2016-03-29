@@ -1,4 +1,5 @@
 ﻿<?php include('header.php');?>
+<?php include ('jquery.tagbox.php');?>
 <style type="text/css">
  .mandatory,spnerror { color:red; }
 </style>
@@ -93,8 +94,8 @@ $(document).ready(function() {
   });
   
 </script>
-<?php  echo theme_css('jquery.tagbox.css', true);?>
-<?php  echo theme_js('jquery.tagbox.js', true);?>
+<!-- <?php  echo theme_css('jquery.tagbox.css', true);?> -->
+<!-- <?php  echo theme_js('jquery.tagbox.js', true);?> -->
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <script type="text/javascript">
 var baseurl = "<?php print base_url(); ?>";
@@ -168,12 +169,12 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('to');?></span>          
-            <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('from_placeholder');?>"  name="txtdestination" id="txtdestination"  value="<?=$txtdestination?>"/>
+            <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('to_placeholder');?>"  name="txtdestination" id="txtdestination"  value="<?=$txtdestination?>"/>
                     <input type="hidden" name="destination_ids" id="destination_ids"  value="<?=$destination_ids?>"/>
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('add_route');?></span>
-          <input  type="text" id="jquerytagboxtext" class="fleft padding10 width51" name="jquerytagboxtext"  value="<?=$jquerytagboxtext?>"/>
+          <input  type="text" id="jquerytagboxtext" class="fleft padding10 width51" name="jquerytagboxtext"  value="<?=$jquerytagboxtext?>" placeholder="fdfdjk"/>
            <input type="hidden" name="routes" id="routes" value="<?=$routes?>" />
           <input type="hidden" name="routesdata" id="routesdata" value="<?=$routesdata?>" />
          <input type="hidden" name="route_lanlat" id="route_lanlat" value="<?=$route_lanlat?>" />         
