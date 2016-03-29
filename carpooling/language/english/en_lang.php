@@ -136,11 +136,14 @@ $lang['part_2_of_2']						= 'Part 2 Of 2';
 $lang['step_1']								= 'Step: 1';
 $lang['add_vehicle_info']					= 'Add Vehicle Info';
 $lang['travel_type']						= 'Vehicle:';
+$lang['select_your_car']					= 'Select your car';
 $lang['vehicle_number']						= 'Vehicle Number:';
 $lang['step_2']								= 'Step: 2';
 $lang['add_trip']							= 'Add Trip';
 $lang['from']								= 'From :';
+$lang['from_placeholder']					= 'Your departure point (address,city,station...)';
 $lang['to']									= 'To :';
+$lang['to_placeholder']						= 'Your arrival point (address,city,station...)';
 $lang['add_route']							= 'Add Route :';
 $lang['frequency']							= 'Frequency :';
 $lang['recurring']							= 'Recurring';
@@ -151,9 +154,20 @@ $lang['return_trip']						= 'Return Trip';
 $lang['departure_time']						= 'Departure Time :';
 $lang['return_time']						= 'Departure Time :';
 $lang['available_seat']						= 'Available Seat :';
+$lang['available_seat_placeholder']			= 'Number of available seats';
 $lang['phone_number']						= 'Phone Number :';
 $lang['comments']							= 'Comments :';
 $lang['post']								= 'Post';
+$lang['contact_person_number']				= 'Contact Person Number';
+$lang['date_of_journey']					= 'Date Of Journey';
+// Week days
+$lang['sun']									= 'Sun';
+$lang['mon']									= 'Mon';
+$lang['tue']									= 'Tue';
+$lang['wed']									= 'Wed';
+$lang['thu']									= 'Thu';
+$lang['fri']									= 'Fri';
+$lang['sat']									= 'Sat';
 
 //Profile Language
 $lang['my_account']					    = 'My Account';
