@@ -34,7 +34,7 @@ $('#slider1').tinycarousel({
       <div id="slider1" class="info info-panel">
           <div class="panel-heading">
               <h3 class="panel-title rec-ride margintop20">
-                  <span class="fa fa-cab"></span> <?php echo lang('recent_rides');?></h3>
+                  <span class="fa fa-car"></span> <span class="fa fa-bus"></span> <?php echo lang('recent_rides');?></h3>
           </div>
            <div class="row margintop20 marginbottom25 nomargin">
             <div class="arr"> <a class="buttons prev" href="#"><img class="arrow-up" src="<?php echo theme_img('up-arrow.png'); ?>"></a>

@@ -134,6 +134,7 @@ $lang['from_placeholder']					= 'Votre point de départ (adresse, ville, arrêt.
 $lang['add_trip']							= 'Ajouter un trajet';
 $lang['from']								= 'De :';
 $lang['to']									= 'A :';
+$lang['date-format']						= 'dd/mm/yyyy';
 $lang['to_placeholder']						= "Votre point de d'arrivée (adresse, ville, arrêt...)";
 $lang['add_route']							= 'Ajouter un parcours :';
 $lang['frequency']							= 'Fréquence :';

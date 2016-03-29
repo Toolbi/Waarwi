@@ -798,10 +798,20 @@ a:link {
 }
 
 /*bouton recherche*/
-.search-bouton { 
-  width: 100%; 
-  font-size: 20px!important; 
-} 
+.search-bouton {
+  width: 100%;
+  font-size: 20px!important;
+  background-color: #FFF;
+  transition: all 200ms linear 0s;
+  color: #c6412e!important;
+}
+.search-bouton:hover { 
+  border: 1px #a6260e; 
+  background-color: #FFF;
+  color:#13988a!important;
+}
+
+/*from*/ 
 .from {
     color: #58B20D !important;
 }
@@ -855,3 +865,5 @@ a:link {
   padding : 5px 15px;
 }
 
+#datepicker{width: 98%;margin: 0 2px 20px;}
+#datepicker > span:hover{cursor: pointer;}

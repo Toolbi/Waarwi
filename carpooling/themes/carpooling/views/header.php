@@ -19,6 +19,8 @@ if(!empty($description)){
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
 <?php echo theme_js('jquery-1.7.1.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
@@ -87,9 +89,9 @@ $(document).ready(function(){
               
               <?php else: ?>
                 <ul class="top-nav new-top-nav pull-right">
-                <li>  <a href="<?php echo base_url('register');?>" class="btn ride bouton"> <?php echo lang('post_a_trip');?> </a> </li>
-                <!-- <li> <a href="<?php echo base_url('login');?>" class="btn ride top-login"> <?php echo lang('login');?> </a> </li> -->
-                <li> <a href="<?php echo base_url('register');?>" class="btn ride top-signup"> <?php echo lang('register');?> </a> </li>
+                <li>  <a href="<?php echo base_url('register');?>" class="btn ride bouton"><i class="fa fa-car"></i> <?php echo lang('post_a_trip');?> </a> </li>
+                <!-- <li> <a href="<?php echo base_url('login');?>" class="btn ride top-login"><i class="fa fa-user"></i> <?php echo lang('login');?> </a> </li> -->
+                <li> <a href="<?php echo base_url('register');?>" class="btn ride top-signup"><i class="fa fa-plus"></i> <?php echo lang('register');?> </a> </li>
                 
                 </ul>
             <?php endif; ?>

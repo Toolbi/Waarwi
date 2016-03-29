@@ -8,6 +8,8 @@
 <?php echo theme_js('jquery-1.7.1.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.8.23.min.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
+<?php echo theme_js('bootstrap-datepicker.js',true); ?>
+<?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>">
 </script>
 <script type="text/javascript">
@@ -15,12 +17,15 @@ var baseurl = "<?php print base_url(); ?>";
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
 </script>
 
+
 <script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
 <!-- CSS -->
 <?php  echo theme_css('bootstrap.css', true);?>
+<?php  echo theme_css('bootstrap-datepicker.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 <?php  echo theme_css('bannerscollection_kenburns.css', true);?>
-<?php echo admin_css('libs/font-awesome.css', true); ?>
+<!-- <?php echo admin_css('libs/font-awesome.css', true); ?> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <?php  echo theme_css('bootstrap-theme.css', true);?>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -66,6 +71,16 @@ $(document).ready(function(){
   });
 });
 </script>  
+<!-- Date picker FR -->
+<script type="text/javascript">
+    $(function () {
+      $("#datepicker").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true,
+            language: "fr",
+      }).datepicker('update', new Date());;
+    });
+  </script>
 <link rel="shortcut icon" href="<?php echo theme_img('favicon.ico');?>">  
   
 </head>
@@ -118,8 +133,8 @@ $(document).ready(function(){
               
               <?php else: ?>
             <ul class="top-nav new-top-nav pull-right">              
-              <li> <a href="<?php echo base_url('login');?>" class="top-login ride"> <?php echo lang('login');?> </a> </li>
-              <li> <a href="<?php echo base_url('register');?>" class="top-signup ride"> <?php echo lang('register');?> </a> </li>
+              <li> <a href="<?php echo base_url('login');?>" class="top-login ride"><i class="fa fa-user"></i> <?php echo lang('login');?> </a> </li>
+              <li> <a href="<?php echo base_url('register');?>" class="top-signup ride"><i class="fa fa-plus"></i> <?php echo lang('register');?> </a> </li>
               <!-- <li>  </li> -->
             </ul>
             
@@ -133,9 +148,11 @@ $(document).ready(function(){
 <div class="top-trip-add">
   <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
     <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
+
     <p class="size20">
       <strong><?php echo lang('post_a_trip');?></strong>
     </p>
+    <i class=" size16 fa fa-car"></i> <i class="size16 fa fa-bus"></i>
   </a>  
 </div>
 
@@ -208,10 +225,14 @@ $(document).ready(function(){
             <input type="hidden" name="formlatlng" id="formlatlng"  value=""/>
             <input type="text"  placeholder="<?php echo lang('to');?>"   name="destination" id="destination" class="srcdes marker-ico-to" />
             <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
-            <input type="text" placeholder="<?php echo lang('dd/mm/yyyy');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" >
+           <!--  <input type="text" placeholder="<?php echo lang('date-format');?>" id="journey_date" class="srcdes cal-ico" onchange="getfrequency();"  name="journey_date" > -->
+            <div id="datepicker" class="input-group date" data-date-format="<?php echo lang('date-format');?>">
+                <input class="form-control srcdes" type="text" />
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
              
              <input type="hidden" name="frequency" id="frequency"  value=""/>
-             <button class="btn btn-success search-bouton" type="submit" ng-disabled="!Simpleform.$valid" ng-click="save()"><span class="glyphicon glyphicon-search"></span>   <?php echo lang('search');?></button>      
+             <button class="top-login ride search-bouton" type="submit"><span class="fa fa-search"></span>   <?php echo lang('search');?></button>      
           </form>
         </div>      
     </div> 
@@ -244,3 +265,4 @@ $(document).ready(function(){
       </div>
 
     </div>
+  
