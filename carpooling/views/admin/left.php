@@ -13,59 +13,23 @@ else
 	
 
 ?>
-<script type="text/javascript">
-  $(document).ready(function() {  
-    /* Uploading Profile Image */
-	$('body').on('click','#profile_pic', function()
-	{
-		$( "#profilephotoimg" ).trigger( "click" );
-	});
-	
-	/* Uploading timelineProfile  Image left menu */
-	$('body').on('change','#profilephotoimg', function()
-	{
-		$("#profileimageform").ajaxForm({target: '#ProfilePic',
-			beforeSubmit:function(){
-			},
-			success:function(){
-				$("#previousImage").hide();				
-			},
-			error:function(){
-			
-			} }).submit();
-	});
-   });
-</script>
+
 <?php echo theme_js('jquery.wallform.js',true) ?>
 <div id="nav-col">
 <section id="col-left" class="col-left-nano">
     <div id="col-left-inner" class="col-left-nano-content">
-        <div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
-            <div id="ProfilePic">
-            <img alt="" id="previousImage" src="<?php if(!empty($admin_img['admin_img'])){ echo admin_profile_img($admin_img['admin_img']); }else { echo theme_img('default.png'); }?>" />
-            </div>
-            <div class="user-box">
-                <span class="name">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <?php echo lang('welcome');?>  <?= $name; ?> 
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" id="profile_pic"><i class="fa fa-user"></i><?php echo lang('edit_photo');?></a></li>						
-                    </ul>
-                </span>
-                
-            </div>
-             <?php 
-			$attributes = array('id' => 'profileimageform');
-			echo form_open_multipart(base_url('admin/admin/profile_image_upload'),$attributes);?>
-			<div style="display:none;">
-			<input type="file"  name="photoimg" id="profilephotoimg" class="custom-file-input " original-title="Upload Profile Picture">
-			</div>			     
-			</form>
-			</div>
+            
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
+       
             <ul class="nav nav-pills nav-stacked">                
+                
+                <li>
+                    <a href="<?php echo $admin_url;?>dashboard/">
+                        <i class="fa fa-dashboard"></i>
+                        <span><?php echo lang('admin_dashboard');?></span>
+                        <span class="label label-primary label-circle pull-right"></span>
+                    </a>
+                </li>
                 <li>
                     <a href="<?php echo $admin_url;?>dashboard/">
                         <i class="fa fa-dashboard"></i>

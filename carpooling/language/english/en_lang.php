@@ -478,7 +478,7 @@ $lang['booking_information']  = 'Booking Information';
 // admin navigation left/top, centre
 $lang['dashboard']                           	= 'Dashboard';
 $lang['welcome']                           	  	= 'Welcome';
-$lang['edit_photo']                           	= 'Edit picture';
+$lang['edit_photo']                           	= 'Edit profile picture';
 $lang['master']                           		= 'Master';
 $lang['country']                           		= 'Country';
 $lang['currency']                           	= 'Currency';	
