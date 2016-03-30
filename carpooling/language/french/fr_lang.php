@@ -412,7 +412,7 @@ $lang['booking_information']  = 'Booking Information';
 // admin navigation gauche, top, centre
 $lang['dashboard']                           	= 'Tableau de board';
 $lang['welcome']                           	  	= 'Bienvenue';
-$lang['edit_photo']                           	= 'Modifier la photo';
+$lang['edit_photo']                           	= 'Modifier la photo de profil';
 $lang['master']                           		= 'Principal';
 $lang['country']                           		= 'Pays';
 $lang['currency']                           	= 'Monnaies';
