@@ -30,13 +30,6 @@ else
                         <span class="label label-primary label-circle pull-right"></span>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo $admin_url;?>dashboard/">
-                        <i class="fa fa-dashboard"></i>
-                        <span><?php echo lang('admin_dashboard');?></span>
-                        <span class="label label-primary label-circle pull-right"></span>
-                    </a>
-                </li>
           
                    <li> 
                     <a href="#" class="dropdown-toggle">
