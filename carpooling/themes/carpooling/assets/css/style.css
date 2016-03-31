@@ -87,7 +87,7 @@ transition: all 200ms ease-in-out; }
 .rtest { position: relative; }
 .bbarr { left: 48%; }
 .footer-margin { padding: 30px 0; color: #fff; text-align: center; }
-.footerbg { background: #34495e; }
+.footerbg { background: #13988a; }
 
 .header-bg { background-color: #13988a; }
 .in-top { background-color: rgba(255,255,255,0)!important; }

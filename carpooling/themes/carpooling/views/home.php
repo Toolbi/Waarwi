@@ -170,7 +170,7 @@ $('#slider1').tinycarousel({
           </ul>
           <div class="how-i-link"> 
               <a href="<?php echo base_url('login'); ?>" class="cs-blue-bg" style="color: #fff !important;"> 
-                  <?php echo lang('view_all_car_travellers');?> </a> <span> <?php echo lang('or'); ?> </span>
+                  <?php echo lang('contact_car_travellers');?> </a> <span> <?php echo lang('or'); ?> </span>
                   <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg"  style="color: #fff !important;"> <?php echo lang('post_a_car');?> </a> </div>
         </div>
       </div>
