@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header_register.php');?>
 <?php  $this->load->helper('html');?>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <script type="text/javascript" src="<?php echo theme_js('travel-details-rules.js');?>"></script>
@@ -91,34 +91,34 @@ $(document).ready(function() {
              <input type="hidden" name="submitted" value="submitted" />
 			<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
         <ul class="top-nav reg-nav">
-          <li> <a href="<?php echo base_url('login/facebooklogin');?>" class="flogin regflogin"> <?php echo lang('login');?> </a> </li>
-          <li class="reg-rht"> <a href="<?php echo base_url('login/googlelogin');?>" class="gplogin regglogin"> <?php echo lang('login');?> </a> </li>
+          <li> <a href="<?php echo base_url('login/facebooklogin');?>" class="btn fb-login"><i class="fa fa-facebook"></i> <?php echo lang('fb-login');?> </a> </li>
+          <li class="reg-rht"> <a href="<?php echo base_url('login/googlelogin');?>" class="btn gl-login"><i class="fa fa-google"></i> <?php echo lang('gl-login');?> </a> </li>
         </ul>
         <ul class="rowrec reg-inp">
           <li>
             <span><?php echo lang('first_name');?></span>
-            <input type="text" placeholder="First name" name="txtfirstname" id="txtfirstname" value="<?=$txtfirstname?>"/> 
+            <input type="text" placeholder="<?php echo lang('first_name');?>" name="txtfirstname" id="txtfirstname" value="<?=$txtfirstname?>"/> 
           </li>
            <li>
             <span><?php echo lang('last_name');?></span>
-            <input type="text" placeholder="Last name"  name="txtlastname" id="txtlastname" value="<?=$txtlastname?>" />
+            <input type="text" placeholder="<?php echo lang('last_name');?>"  name="txtlastname" id="txtlastname" value="<?=$txtlastname?>" />
           </li>
           <li>
             <span><?php echo lang('email_id');?></span>
-             <input type="text" placeholder="Email Id" name="txtemail" id="txtemail" value="<?=$txtemail?>" />
+             <input type="text" placeholder="<?php echo lang('email_id');?>" name="txtemail" id="txtemail" value="<?=$txtemail?>" />
           </li>
           <li>
             <span><?php echo lang('mobile_no');?></span>
-             <input type="text" placeholder="Mobile no." name="txtphone" id="txtphone" value="<?=$txtphone?>"/>
+             <input type="text" placeholder="<?php echo lang('mobile_no');?>" name="txtphone" id="txtphone" value="<?=$txtphone?>"/>
           </li>
           
           <li>
             <span><?php echo lang('password');?></span>
-            <input type="password" placeholder="Password" name="txtpassword" id="txtpassword" value="<?=$txtpassword?>" />
+            <input type="password" placeholder="<?php echo lang('password');?>" name="txtpassword" id="txtpassword" value="<?=$txtpassword?>" />
           </li>
           <li> <p> <?php echo lang('by_joining');?> <a href="#"><?php echo lang('terms');?></a>, <a href="#"><?php echo lang('privacy');?></a> <?php echo lang('and');?> <a href="#"><?php echo lang('ip_policy');?></a>. </p> </li>
-          <li>
-            <input type="submit" value="<?php echo lang('register');?>" class="fright reg-sbmt">
+           <li>       
+            <button type="submit" class="btn login-btn fright reg-sbmt"><?php echo lang('register');?></button>
           </li>
         </ul>
         </form>
@@ -127,10 +127,10 @@ $(document).ready(function() {
     </div>
   </div>
 </div>
-<div class="container-fluid cs-blue-bg margintop40">
+<div class="container-fluid question paddingtopbot40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
-      <h2 class="colorwhite"> <?php echo lang('got_a_question');?>? </h2>
+      <h2 class="colorwhite"> <?php echo lang('got_a_question') . " ?";?></h2>
       <p class="padding20 row colorwhite">We're here to help. Check out our FAQs, Send us an email or call us at 1800 555 555</p>
       <a href="#"> <?php echo lang('contact_now');?> </a> </div>
   </div>

@@ -186,6 +186,8 @@ $lang['share_the_follow']				=  "Partager ces informations avec les persones qui
 $lang['mobile_phone']					= 'Portable';
 $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Profil Facebook';
+$lang['fb-login']						= 'Se connecter avec facebook';
+$lang['gl-login']						= 'Se connecter avec Google';
 $lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from Carpooling
 $lang['submit']							= 'Valider';
 $lang['settings']						= 'Paramètres';
@@ -267,6 +269,10 @@ $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
 $lang['forgot_password']						= 'Mot de passe oublié';
 $lang['sign_in']								= 'Se connecter';
+$lang['trouble_signup']							= 'Des difficultés à se connecter ?';
+$lang['trouble_enter_mail']						= "Entrez votre adresse email pour récupérer votre mot de passe.";
+$lang['trouble_error_mail']						= 'Vous ne pouvez pas accéder à votre e-mail ?';
+$lang['password_not_receive']					= 'Mot de passe non reçu? ? ';
 $lang['road_travel_made_easy']					= 'Voyager facilement, dans les meilleures conditions';
 $lang['road_travel_made_easy_text']				= "<p>Vous êtes particulier ou professionnel, proposez vos services de transport.</p><br/> 
            <p>Vous cherchez un trajet dans les transports, réservez votre trajet en avance et gagnez du temps.</p>
@@ -561,6 +567,8 @@ $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 //client
 $lang['do_you_have_car']				= 'Vous avez déjà une voiture ?';
 $lang['particular']						= 'Vous êtes particulier ?';
-$lang['professional']						= 'Vous êtes professionnel ?';
+$lang['professional']					= 'Vous êtes professionnel ?';
+$lang['send']							= 'Envoyer';
+$lang['please_wait']					= 'Veuillez patienter...';
 
 ?>

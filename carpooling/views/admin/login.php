@@ -6,7 +6,8 @@
 
     <div class="container">
         <div class="row">
-        	<div class="main-box-body clearfix">
+        <!-- A mettre dans un modal -->
+        	<!-- <div class="main-box-body clearfix">
             <?php if ($this->session->flashdata('message')):?>
                 <div class="alert alert-success fade in">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -29,7 +30,7 @@
                     <strong>Oh snap!</strong> <?php echo $error;?>
                 </div>
                 <?php endif;?>
-            </div>
+            </div> -->
             <div class="col-xs-12">
                 <div id="login-box">
                     <div id="login-box-holder">
@@ -37,7 +38,7 @@
                             <div class="col-xs-12">
                                 <header id="login-header">
                                     <div id="login-logo">
-                                        <img src="<?php echo theme_logo_img($logo->name); ?>" style="width:131px; height:30px;" alt=""/>
+                                        <img src="<?php echo theme_logo_img($logo->name); ?>" style="width:250px; height:100px;" alt=""/>
                                     </div>
                                 </header>
                                 <div id="login-box-inner">
@@ -72,7 +73,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <button type="submit" class="btn btn-success col-xs-12"><?php echo lang('login');?></button>
+                                                <button type="submit" class="btn login-btn col-xs-12"><?php echo lang('login');?></button>
                                                 <input type="hidden" value="<?php echo $redirect; ?>" name="redirect"/>
 												<input type="hidden" value="submitted" name="submitted"/>			
                                             </div>
