@@ -329,6 +329,7 @@ $lang['contact_owner']					= 'Contact Car Owners ';
 $lang['become_a_star']					= 'Become a Star';
 $lang['with_cofidence']					= 'Hire with Confidence';
 $lang['view_all_profiles']				= 'View All Profiles';
+$lang['view_your_profile']				= 'View your profil';
 $lang['got_a_question']					= 'Got a Question';
 $lang['contact_now']					= 'Contact Now';
 $lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an email on <strong>contac@waarwi.com</strong>";

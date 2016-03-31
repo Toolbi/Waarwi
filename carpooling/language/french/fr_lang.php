@@ -291,6 +291,7 @@ $lang['or']								= 'ou';
 $lang['got_a_job']						= "Obtenez un travail";
 $lang['become_a_star']					= 'Devenez une star';
 $lang['view_all_profiles']				= 'Afficher tous les profils';
+$lang['view_your_profile']				= 'Afficher votre profil';
 $lang['got_a_question']					= 'Une Question ?';
 $lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nous un email à <strong>contac@waarwi.com</strong>";
 $lang['contact_now']					= 'Contactez-nous maintenant';

@@ -204,7 +204,7 @@ $('#slider1').tinycarousel({
           </li>
         </ul>
         <div class="row how-i-link"> <a href="<?php echo base_url('register'); ?>" class="cs-blue-bg" style="color: #fff !important;"> 
-            <?php echo lang('create_a_profile');?> </a> <span> <?php echo lang('or'); ?> </span> <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg" style="color: #fff !important;"> <?php echo lang('view_all_profiles');?> </a> </div>
+            <?php echo lang('create_a_profile');?> </a> <span> <?php echo lang('or'); ?> </span> <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg" style="color: #fff !important;"> <?php echo lang('view_your_profile');?> </a> </div>
       </div>
     </div>
   </div>
