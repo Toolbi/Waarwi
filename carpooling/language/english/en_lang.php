@@ -322,6 +322,7 @@ $lang['view_all_car_travellers']		= 'View all Car Travelers';
 $lang['post_a_car']						= 'Post a Car';
 $lang['for_car_travellers']				= 'For Car Travelers';
 $lang['create_a_profile']				= 'Create a Profile';
+$lang['or']								= 'or';
 $lang['find_the_trip']				    = 'Find perfect trips';
 $lang['got_a_job']						= 'Got a Job';
 $lang['contact_owner']					= 'Contact Car Owners ';
@@ -330,6 +331,7 @@ $lang['with_cofidence']					= 'Hire with Confidence';
 $lang['view_all_profiles']				= 'View All Profiles';
 $lang['got_a_question']					= 'Got a Question';
 $lang['contact_now']					= 'Contact Now';
+$lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an email on <strong>contac@waarwi.com</strong>";
 
 
 $lang['find_para_ride']					= 'Find a perfect ride based on your travel needs and share a ride with drivers travelling towards same destination.';

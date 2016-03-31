@@ -287,10 +287,12 @@ $lang['view_all_car_travellers']		= 'Afficher tous les voyageurs';
 $lang['post_a_car']						= 'Publier un véhicule';
 $lang['for_car_travellers']				= 'Pour les voyageurs en voiture';
 $lang['create_a_profile']				= 'Créer un profil';
+$lang['or']								= 'ou';
 $lang['got_a_job']						= "Obtenez un travail";
 $lang['become_a_star']					= 'Devenez une star';
 $lang['view_all_profiles']				= 'Afficher tous les profils';
 $lang['got_a_question']					= 'Une Question?';
+$lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nou un email à <strong>contac@waarwi.com</strong>";
 $lang['contact_now']					= 'Contactez-nous maintenant';
 //Error Messages
 $lang['error_cheack_email']                   = 'Cette adresse email est déjà utilisée.';
@@ -550,7 +552,7 @@ $lang['change_size_text']				= "Assurez-vous que la taille de l'image est exacte
 $lang['logo_image']						= "Logo";
 
 //copyright 
-$lang['copyright']				= 'Copyright 2016 - Waarwi - Tous droits réservés';
+$lang['copyright']					= 'Copyright 2016 - Waarwi - Tous droits réservés';
 $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 
