@@ -1,13 +1,13 @@
-<div id="splitresult">
+<?php echo lang('how_it_works');?><div id="splitresult">
  <div class="table-responsive">                                             
 <table class="table user-list table-hover">
     <thead>
         <tr>
             <th><span>Id</span></th>
-            <th><span>Testimonials Name</span></th>
-            <th><span>Testimonials Description</span></th>            
-            <th><span>Created</span></th>
-            <th class="text-center"><span>Status</span></th>															
+            <th><span><?php echo lang('testimonials_name');?></span></th>
+            <th><span><?php echo lang('testimonials_description');?></span></th>            
+            <th><span><?php echo lang('created');?></span></th>
+            <th class="text-center"><span><?php echo lang('status');?></span></th>															
             <th>&nbsp;</th>
         </tr>
     </thead>
@@ -29,21 +29,21 @@
             </td>
             <td class="text-center">
                                                             <?php if($testimonial['isactive'] == 0) { ?>
-                <span class="label label-default" id="label-<?=$testimonial['id']?>">Inactive</span>
+                <span class="label label-default" id="label-<?=$testimonial['id']?>"><?php echo lang('inactive');?></span>
                                                             <?php } else { ?>
-                                                             <span class="label label-success" id="label-<?=$testimonial['id']?>">Active</span>
+                                                             <span class="label label-success" id="label-<?=$testimonial['id']?>"><?php echo lang('active');?></span>
                                                             <?php } ?>
                </td>
                                                             <td class="text-center">
                                                                 <div class="btn-group" id="btn-<?=$testimonial['id']?>">
                                                                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                                        Change Status <span class="caret"></span>
+                                                                        <?php echo lang('change_status');?> <span class="caret"></span>
                                                                     </button>
                                                                     <ul class="dropdown-menu" role="menu">
                                                                     <?php if($testimonial['isactive'] == 0) { ?>
-                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$testimonial['id']?>" class="change-status-testimonials" rel="<?=$testimonial['id']?>">Enable</a></li>
+                                                                        <li style="border:0px; height:auto; padding:0px;"><a href="#" id="enable-<?=$testimonial['id']?>" class="change-status-testimonials" rel="<?=$testimonial['id']?>"><?php echo lang('disable');?></a></li>
                                                                     <?php } else { ?>
-                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$testimonial['id']?>" class="change-status-testimonials" rel="<?=$testimonial['id']?>">Disable</a></li>
+                                                                     <li style="border:0px; height:auto; padding:0px;"><a href="#" id="disable-<?=$testimonial['id']?>" class="change-status-testimonials" rel="<?=$testimonial['id']?>"><?php echo lang('enable');?></a></li>
                  <?php } ?>
                                                                         
                                                                         <li class="divider"></li>

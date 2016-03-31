@@ -594,6 +594,10 @@ $lang['email_name']							= 'Mail name';
 $lang['email_message']						= 'Message mail';
 $lang['add_new_mail']						= 'Add new template';
 
+//admin gestion des temoignages
+$lang['add_testimonial']					= 'Add testimonial';
+$lang['testimonials_description']			= 'Description';
+
 //admin subcribers
 $lang['all_subscribers']					= 'All subscriber';
 $lang['subscriber_mail']					= 'Email';
