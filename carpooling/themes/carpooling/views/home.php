@@ -213,7 +213,7 @@ $('#slider1').tinycarousel({
 <div class="container-fluid cs-blue-bg margintop40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
-      <h2 class="colorwhite"> <?php echo lang('got_a_question');?>? </h2>
+      <h2 class="colorwhite"> <?php echo lang('got_a_question');?></h2>
       <p class="padding20 row colorwhite"><?php echo lang('help_faqs'); ?> </p>
       <!--<a href="#"> <?php echo lang('contact_now');?> </a>--> </div>
   </div>

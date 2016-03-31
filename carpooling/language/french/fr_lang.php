@@ -271,7 +271,7 @@ $lang['road_travel_made_easy']					= 'Voyager facilement, dans les meilleures co
 $lang['road_travel_made_easy_text']				= "<p>Vous êtes particulier ou professionnel, proposez vos services de transport.</p><br/> 
            <p>Vous cherchez un trajet dans les transports, réservez votre trajet en avance et gagnez du temps.</p>
            <p>Inscriver-vous et rejoignez-nous, nou n'attendons que vous ! </p><br/>";
-$lang['got_a_question']					        = 'Une question?';
+$lang['got_a_question']					        = 'Une question ?';
 $lang['contact_now']				         	= 'Contactez-nous maintenant';
 //Home Language
 $lang['find_a_ride']					= 'Trouver un trajet';
@@ -291,7 +291,7 @@ $lang['or']								= 'ou';
 $lang['got_a_job']						= "Obtenez un travail";
 $lang['become_a_star']					= 'Devenez une star';
 $lang['view_all_profiles']				= 'Afficher tous les profils';
-$lang['got_a_question']					= 'Une Question?';
+$lang['got_a_question']					= 'Une Question ?';
 $lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nou un email à <strong>contac@waarwi.com</strong>";
 $lang['contact_now']					= 'Contactez-nous maintenant';
 //Error Messages
