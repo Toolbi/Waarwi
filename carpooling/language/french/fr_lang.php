@@ -541,6 +541,10 @@ $lang['email_name']							= 'Nom du mail';
 $lang['email_message']						= 'Message du mail';
 $lang['add_new_mail']						= 'Ajout d\'une nouvelle template';
 
+//admin gestion des temoignages
+$lang['add_testimonial']					= 'Ajouter un témoignage';
+$lang['testimonials_description']			= 'Description';
+
 //admin modif. profil
 $lang['company_name']					= 'Nom de l\'entreprise';
 $lang['company_email']					= 'E-mail  l\'entreprise';
