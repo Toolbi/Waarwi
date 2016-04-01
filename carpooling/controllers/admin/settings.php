@@ -38,6 +38,7 @@ class Settings extends Admin_Controller {
 	
 	function canned_message_ajax()
 	{
+		
 		$this->load->library('Pagination_admin');
 		$config['is_ajax_paging']   = true;
 		$config['paging_function'] 	= 'canned_message_ajax';
@@ -59,7 +60,7 @@ class Settings extends Admin_Controller {
 	function canned_message_form($id=false)
 	{
 		$data['page_title'] = lang('canned_message_form');
-
+		$data['page_title']	= lang('email_template_form');
 		$data['id']			= $id;
 		$data['email_name']		= '';
 		$data['subject']	= '';

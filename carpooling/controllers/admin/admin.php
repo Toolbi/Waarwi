@@ -51,7 +51,7 @@ class Admin extends Admin_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
-        $data['page_title'] = lang('new_admin');
+        $data['page_title'] = lang('admins_form');
 
         //default values are empty if the customer is new
         $data['id'] = '';

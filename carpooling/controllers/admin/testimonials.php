@@ -60,7 +60,7 @@ class Testimonials extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = lang('testtimonials_form');
+        $data['page_title'] = lang('testimonials_form');
 
         $data['id'] = '';
         $data['name'] = '';

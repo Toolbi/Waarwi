@@ -284,6 +284,9 @@ $lang['find_a_ride']					= 'Trouver un trajet';
 $lang['search']							= 'Rechercher';
 $lang['recent_rides']					= 'Trajets récents';
 $lang['testimonials']					= 'Témoignages';
+$lang['testimonials_form']				= 'Gestion des témoignages';
+$lang['add_new_testimonial']			= 'Ajouter un témoignage';
+$lang['testimonials_name']				= 'Nom';
 $lang['how_it_works']					= 'Comment ça marche';
 $lang['for_car_owners']					= 'Pour les propriétaires de véhicule';
 $lang['find_your_perfect_car_travellers'] = 'Trouver vos voyageurs parfaits';
@@ -429,6 +432,7 @@ $lang['currency']                           	= 'Monnaies';
 $lang['language']                           	= 'Langues';
 $lang['vehicle_brand']                          = 'Marque des voitures';
 $lang['vehicle']                          		= 'Voitures';
+$lang['vehicles']                          		= 'Voitures';
 $lang['radius']                          		= 'Rayons';
 $lang['users']                          		= 'Utilisateurs';
 $lang['admin_management']                       = 'Administrateurs';
@@ -447,6 +451,7 @@ $lang['new_message']                           	= ' notifications';
 $lang['list_site_users_details']                = 'Détails des utilisateurs';
 $lang['notification']                			= 'Notification';
 $lang['email_template']                			= 'Template des mails';
+$lang['email_template_form']                	= 'Ajout d\'une template mail';
 $lang['subscriber']                				= 'Abonnés';
 $lang['edit_settings']                			= 'Modifier les paramètres';
 $lang['change_logo']                			= 'Changer le logo';
@@ -471,25 +476,26 @@ $lang['active']                					= 'Active';
 $lang['change_status']                			= 'Changer le status';
 $lang['enable']                					= 'Activer';
 $lang['disable']                				= 'Desactiver';
-$lang['add_new_country']                		= 'Ajout d\'un nouveau pays';
+$lang['country_form']                		= 'Ajout d\'un nouveau pays';
 $lang['save_form']                				= 'Enregistrer';
 
 // admin monnaie
 $lang['all_currencies']                			= 'Toutes les monnaies';
 $lang['add_currency']                			= ' Ajouter une monnaie';
-$lang['add_new_currency']                		= ' Ajouter d\'une nouvelle monnaie';
+$lang['currency_form']                		= ' Ajouter d\'une nouvelle monnaie';
 $lang['currency_name']                			= 'Nom de la monnaie';
 $lang['currency_symbol']                		= 'Symbole de la monnaie';
 $lang['created']                				= 'Date de création';
 
 // admin langage
-$lang['add_new_language']                		= 'Ajout d\'une nouvelle langue';
+$lang['language_form']                		= 'Ajout d\'une nouvelle langue';
 $lang['language_name']                			= 'Nom de la langue';
 $lang['language_prefix']                		= 'Prefixe de la langue';
 $lang['add_language']                			= 'Ajouter une langue';
 
 // admin voitures
-$lang['add_new_vehicule']                		= 'Ajout d\'une nouvelle voiture';
+$lang['vehicles_form']                			= 'Ajout d\'une nouvelle voiture';
+$lang['add_new_vehicle']                			= 'Ajouter une nouvelle voiture';
 $lang['vehicle_list']                			= 'Liste des voitures';
 $lang['vehicle_brand_name']                		= 'Nom de la marque de la voiture';
 $lang['top_level_category']                		= 'Liste des catégories';
@@ -503,6 +509,7 @@ $lang['add_vehicle_brand']                	= 'Ajout une nouvelle marque';
 
 // admin rayons
 $lang['radius_page']                		= 'Gestion des rayons';
+$lang['radius_form']                		= 'Ajout d\'un rayon';
 $lang['all_radius']                			= 'Liste des rayons';
 $lang['add_radius']                			= ' Ajouter un rayon';
 $lang['distance_from']                		= 'De la distance de';
@@ -512,6 +519,7 @@ $lang['distance_to']                		= 'A la distance de';
 $lang['all_traveller_list']					= 'Tous les utilisateurs';
 $lang['add_new_traveller']					= 'Ajout d\'un nouveau utilisateur';
 $lang['traveller']							= 'Utilisateurs';
+$lang['add_traveller']						= 'Ajouter un utilisateur';
 $lang['telephone']							= 'Téléphone';
 $lang['user_pass']							= 'Mot de passe';
 $lang['user_pass_confirm']					= 'Confirmer le mot de passe';
@@ -520,6 +528,7 @@ $lang['email_flag']							= 'Email flottante?';
 // admin admin
 $lang['admin_name']							= 'Nom de l\'admin';
 $lang['add_admin']							= ' Ajouter un admin';
+$lang['admins_form']							= ' Ajouter un admin';
 $lang['admin_manage']						= 'Gestion des admins';
 $lang['admins_list']						= 'Liste des admins';
 $lang['new_admin']						    = 'Ajout d\'un nouveau admin';
@@ -527,6 +536,7 @@ $lang['new_admin']						    = 'Ajout d\'un nouveau admin';
 // admin page CMS
 $lang['link_form']							= 'Lien formulaire';
 $lang['page_manage']						= 'Gestion des pages';
+$lang['page_form']							= 'Ajout d\'une page';
 $lang['new_page']							= 'Ajouter une page';
 $lang['title_page']							= 'Titre de la page';
 $lang['go_to_page_']						= 'Voir la page';

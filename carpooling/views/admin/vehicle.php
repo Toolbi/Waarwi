@@ -74,7 +74,7 @@ $('body').on("click",'.change-status',function(e){
                 <?php echo  $page_title; ?>
                 <?php endif; ?>
               </h1>
-              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/vehicle/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_new_vehicule');?></a> </div>
+              <div class="pull-right top-page-ui"> <a href="<?php echo base_url('admin/vehicle/form');?>" class="btn btn-primary pull-right"> <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_new_vehicle');?></a> </div>
             </div>
           </div>
           <div class="row">

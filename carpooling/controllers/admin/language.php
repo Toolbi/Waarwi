@@ -60,7 +60,7 @@ class Language extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = lang('add_new_language');
+        $data['page_title'] = lang('language_form');
 
         //default values are empty if the language is new
         $data['languageid'] = '';

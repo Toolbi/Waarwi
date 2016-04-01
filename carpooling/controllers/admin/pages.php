@@ -81,8 +81,7 @@ class Pages extends Admin_Controller
 		$data['seo_title']	= '';
 		$data['meta']		= '';
 		
-		// $data['page_title']	= lang('page_manage');
-		$data['page_title']	= lang('page_manage');
+		$data['page_title']	= lang('page_form');
 		$data['pages']		= $this->Page_model->get_pages();
 		
 		if($id)
