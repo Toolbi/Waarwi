@@ -170,7 +170,7 @@ $('#slider1').tinycarousel({
           </ul>
           <div class="how-i-link"> 
               <a href="<?php echo base_url('login'); ?>" class="cs-blue-bg" style="color: #fff !important;"> 
-                  <?php echo lang('view_all_car_travellers');?> </a> <span> or </span>
+                  <?php echo lang('contact_car_travellers');?> </a> <span> <?php echo lang('or'); ?> </span>
                   <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg"  style="color: #fff !important;"> <?php echo lang('post_a_car');?> </a> </div>
         </div>
       </div>
@@ -203,8 +203,8 @@ $('#slider1').tinycarousel({
             </div>
           </li>
         </ul>
-        <div class="row how-i-link"> <a href="<?php echo base_url('login'); ?>" class="cs-blue-bg" style="color: #fff !important;"> 
-            <?php echo lang('create_a_profile');?> </a> <span> or </span> <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg" style="color: #fff !important;"> <?php echo lang('view_all_profiles');?> </a> </div>
+        <div class="row how-i-link"> <a href="<?php echo base_url('register'); ?>" class="cs-blue-bg" style="color: #fff !important;"> 
+            <?php echo lang('create_a_profile');?> </a> <span> <?php echo lang('or'); ?> </span> <a href="<?php echo base_url('login'); ?>" class="cs-grey-bg" style="color: #fff !important;"> <?php echo lang('view_your_profile');?> </a> </div>
       </div>
     </div>
   </div>
@@ -213,8 +213,8 @@ $('#slider1').tinycarousel({
 <div class="container-fluid question paddingtopbot40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
-      <h2 class="colorwhite"> <?php echo lang('got_a_question') . " ?";?></h2>
-      <p class="padding20 row colorwhite">We're here to help. Check out our FAQs, Send us an email or call us at 1800 555 555</p>
+      <h2 class="colorwhite"> <?php echo lang('got_a_question');?></h2>
+      <p class="padding20 row colorwhite"><?php echo lang('help_faqs'); ?> </p>
       <a href="#"> <?php echo lang('contact_now');?> </a> </div>
   </div>
 </div>

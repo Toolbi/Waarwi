@@ -17,7 +17,7 @@ $lang['trip_leg']					= 'Partie du trajet';
 $lang['trip_type']					= 'Type de trajet';
 $lang['expected_departure']			= 'Départ prévu:';
 $lang['edit_time']					= 'Modifier le temps';
-$lang['edit_rate']					= 'Modifier la note'; // Taux / taxt / vitesse
+$lang['edit_rate']					= 'Modifier le prix'; // Taux / taxt / vitesse
 $lang['price']						= 'Prix';
 $lang['inr']						= '(INR) Par passager'; //  International Normalised Ratio
 $lang['available_seats']			= 'Places disponibles :';
@@ -277,7 +277,7 @@ $lang['road_travel_made_easy']					= 'Voyager facilement, dans les meilleures co
 $lang['road_travel_made_easy_text']				= "<p>Vous êtes particulier ou professionnel, proposez vos services de transport.</p><br/> 
            <p>Vous cherchez un trajet dans les transports, réservez votre trajet en avance et gagnez du temps.</p>
            <p>Inscriver-vous et rejoignez-nous, nou n'attendons que vous ! </p><br/>";
-$lang['got_a_question']					        = 'Une question?';
+$lang['got_a_question']					        = 'Une question ?';
 $lang['contact_now']				         	= 'Contactez-nous maintenant';
 //Home Language
 $lang['find_a_ride']					= 'Trouver un trajet';
@@ -290,13 +290,17 @@ $lang['find_your_perfect_car_travellers'] = 'Trouver vos voyageurs parfaits';
 $lang['contact_car_travellers']			= 'Contacter les voyageurs';
 $lang['hire_with_confidence']			= 'Réserver en privé';
 $lang['view_all_car_travellers']		= 'Afficher tous les voyageurs';
+$lang['contact_car_travellers']			= 'Contacter tous les voyageurs';
 $lang['post_a_car']						= 'Publier un véhicule';
 $lang['for_car_travellers']				= 'Pour les voyageurs en voiture';
 $lang['create_a_profile']				= 'Créer un profil';
+$lang['or']								= 'ou';
 $lang['got_a_job']						= "Obtenez un travail";
 $lang['become_a_star']					= 'Devenez une star';
 $lang['view_all_profiles']				= 'Afficher tous les profils';
-$lang['got_a_question']					= 'Une Question?';
+$lang['view_your_profile']				= 'Afficher votre profil';
+$lang['got_a_question']					= 'Une Question ?';
+$lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nous un email à <strong>contac@waarwi.com</strong>";
 $lang['contact_now']					= 'Contactez-nous maintenant';
 //Error Messages
 $lang['error_cheack_email']                   = 'Cette adresse email est déjà utilisée.';
@@ -560,7 +564,7 @@ $lang['change_size_text']				= "Assurez-vous que la taille de l'image est exacte
 $lang['logo_image']						= "Logo";
 
 //copyright 
-$lang['copyright']				= 'Copyright 2016 - Waarwi - Tous droits réservés';
+$lang['copyright']					= 'Copyright 2016 - Waarwi - Tous droits réservés';
 $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 
