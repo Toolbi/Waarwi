@@ -98,43 +98,50 @@
                                         </li>
                                     </ul>
                                 </li>                       
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('country')      || 
+                                                $page_title ==  lang('currency')     || 
+                                                $page_title ==  lang('language')     || 
+                                                $page_title ==  lang('vehicle_brand')|| 
+                                                $page_title ==  lang('vehicule')     || 
+                                                $page_title ==  lang('radius_page') ) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('master');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('country')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>country">
                                                 <i class="fa  fa-arrows-alt"></i> 
                                                 <?php echo lang('country');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('currency')) echo 'active'; ?>">
                                                 <a href="<?php echo $admin_url; ?>currency">
                                                         <i class="fa fa-archive"></i> 
                                                         <?php echo lang('currency');?>
                                                 </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('language')) echo 'active'; ?>">
                                                 <a href="<?php echo $admin_url; ?>language">
                                                         <i class="fa fa-archive"></i> 
                                                         <?php echo lang('language');?>
                                                 </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('vehicle_brand')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>category">
                                                 <i class="fa  fa-arrows-alt"></i> 
                                                 <?php echo lang('vehicle_brand');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('vehicle')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>vehicle">
                                                 <i class="fa  fa-car"></i> 
                                                 <?php echo lang('vehicle');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('radius')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>radius">
                                                 <i class="fa fa-circle-o-notch"></i> 
                                                 <?php echo lang('radius');?>
@@ -142,57 +149,66 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('traveller_form')      || 
+                                                $page_title ==  lang('traveler_user_list')  ) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('users');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('traveller_form')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>traveller/form">
                                                 <i class="fa fa-plus"></i>
                                                  <?php echo lang('add_site_user');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('traveler_user_list')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>traveller">
                                                 <i class="fa fa-male"></i>
                                                  <?php echo lang('list_site_users');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <!-- <li class="item <?php if ($page_title ==  lang('list_site_users_details')) echo 'active'; ?>">
                                                 <a href="<?php echo $admin_url; ?>traveller/details">
                                                          <?php echo lang('list_site_users_details');?>
                                                 </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
 
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('admins')) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('admin_management');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('admins')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>admin"><i class="fa fa-users"></i> <?php echo lang('admin');?></a>
                                         </li>
 
                                     </ul>
                                 </li>
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('banners')    || 
+                                                $page_title ==  lang('pages')      || 
+                                                $page_title ==  lang('testimonials')) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('cms');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('pages')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>pages">
                                                 <i class="fa fa-file"></i> 
                                                 <?php echo lang('pages');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('testimonials')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>testimonials">
                                                 <i class="fa fa-sliders"></i> 
                                                 <?php echo lang('testimonials');?>
@@ -201,13 +217,15 @@
 
                                     </ul>
                                 </li>
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('trips')) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('trips');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('trips')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>trip">
                                                 <i class="fa  fa-map-marker"></i> 
                                                 <?php echo lang('list_of_trips');?>
@@ -216,19 +234,22 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown hidden-xs">
+                                <li class="dropdown hidden-xs 
+                                    <?php if (  $page_title ==  lang('email_template') || 
+                                                $page_title ==  lang('subscriber')) 
+                                                echo 'active'; ?>">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                        <?php echo lang('notification');?>
                                         <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('email_template')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>settings">
                                                 <i class="fa fa-inbox"></i> 
                                                 <?php echo lang('email_template');?>
                                             </a>
                                         </li>
-                                        <li class="item">
+                                        <li class="item <?php if ($page_title ==  lang('subscriber')) echo 'active'; ?>">
                                             <a href="<?php echo $admin_url; ?>subscriber">
                                                 <i class="fa fa-bookmark-o"></i> 
                                                  <?php echo lang('subscriber');?>

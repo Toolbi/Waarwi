@@ -26,7 +26,7 @@ class Widgets extends Admin_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		
-		$data['page_title']		= 'Widget Form';
+		$data['page_title'] = ('widget_form');
 				
 		if ($id)
 		{	

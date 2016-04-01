@@ -8,7 +8,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                        <li><a href="<?php echo base_url('admin/dashboard'); ?>"><?php echo lang('admin_home'); ?></a></li>
+                        <li><a href="<?php echo base_url('admin/language'); ?>"><?php echo lang('language'); ?></a></li>
                         <li class="active"><span><?php echo lang('add_new_language');?></span></li>
                     </ol>
 
@@ -19,8 +20,12 @@
 
                 <div class="col-lg-12">
                     <div class="main-box">
-                        <header class="main-box-header clearfix">
-                            <h2><?php echo lang('add_new_language');?></h2>
+                        <header class="main-box-header clearfix">                            
+                            <h1 class="pull-left">
+                                <?php if(!empty($page_title)):?>
+                                <?php echo  $page_title; ?>
+                                <?php endif; ?>
+                            </h1>
                         </header>
                         <?php echo form_open($this->config->item('admin_folder') . '/language/form/' . $languageid, ' id="req-form"'); ?>
                         <div class="main-box-body clearfix">

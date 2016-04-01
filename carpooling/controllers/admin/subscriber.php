@@ -19,7 +19,7 @@ class Subscriber extends Admin_Controller {
 		
 		
 		$this->load->library('Pagination_admin');
-		$data['page_title']	= ('Subscriber');
+		$data['page_title']	= lang('subscriber');
 		$config['is_ajax_paging']   = true;
 		$config['paging_function'] 	= 'subscriber_ajax';
 		$config['base_url'] 		=  base_url('admin/subscriber');

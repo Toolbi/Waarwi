@@ -4,6 +4,7 @@ class Communication extends Traveller_Controller {
 
     var $CI;
     var $user;
+    
 
     function __construct() {
         parent::__construct();

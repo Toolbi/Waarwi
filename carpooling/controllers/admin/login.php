@@ -63,7 +63,7 @@ class Login extends CI_Controller {
         if ($redirect) {
             redirect($this->config->item('admin_folder') . '/dashboard');
         }
-        $data['page_title'] = 'Login Verify';
+        $data['page_title'] = lang('login_verify');
         //$data['gift_cards_enabled'] = $this->gift_cards_enabled;
 
         $this->load->helper('form');

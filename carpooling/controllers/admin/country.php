@@ -14,12 +14,11 @@ class Country extends Admin_Controller {
 
     function index() {
 
-
-        $data['page_title'] = ('Category');
+        $data['page_title'] =  lang('country');
 
 
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('Category');
+        $data['page_title'] = lang('country');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'country_ajax';
         $config['base_url'] = base_url('admin/country');
@@ -59,7 +58,7 @@ class Country extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('Country Form');
+        $data['page_title'] = lang('country_form');
 
         //default values are empty if the country is new
         $data['countryid'] = '';

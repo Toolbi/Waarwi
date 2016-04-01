@@ -14,11 +14,11 @@ class Currency extends Admin_Controller {
     function index() {
 
 
-        $data['page_title'] = ('Currency');
+        $data['page_title'] = lang('currency');
 
 
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('currency');
+        $data['page_title'] = lang('currency');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'currency_ajax';
         $config['base_url'] = base_url('admin/currency');
@@ -58,7 +58,7 @@ class Currency extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('currency Form');
+        $data['page_title'] = lang('currency_form');
 
         //default values are empty if the currency is new
         $data['currencyid'] = '';

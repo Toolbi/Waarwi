@@ -6,14 +6,15 @@
 						<div class="col-lg-12">
 							
 							<div class="row">
-								<div class="col-lg-12">
-									<ol class="breadcrumb">
-										<li><a href="#"><?php echo lang('admin_home');?></a></li>
-										<li class="active"><span><?php echo lang('admin_dashboard');?></span></li>
-									</ol>
-									
+								<div class="col-lg-12">									
+									<h1 class="pull-left">
+										<?php if(!empty($page_title)):?>
+										<?php echo  $page_title; ?>
+										<?php endif; ?>
+									</h1>
 									
 								</div>
+								
 							</div>
                             
                             <div class="row">								

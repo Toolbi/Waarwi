@@ -269,6 +269,7 @@ class Admin extends Admin_Controller {
         $data['redirect'] = '';
         $data['error'] = '';
        
+        $data['page_title'] = lang('edition_settings');
         $data['currency_id'] ='';
         $data['countries'] = $this->country_model->getcountry_list();
         $data['currencies'] = $this->currency_model->getcurrency_list();

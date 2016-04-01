@@ -65,7 +65,7 @@ $('body').on("click",'.change-status',function(e){
         <div class="row">
           <div class="col-lg-12">
             <ol class="breadcrumb">
-              <li><a href="#"><?php echo lang('admin_home');?></a></li>
+              <li><a href="<?php echo base_url('admin/dashboard'); ?>"><?php echo lang('admin_home'); ?></a></li>
               <li class="active"><span><?php echo lang('vehicle_list');?></span></li>
             </ol>
             <div class="clearfix">

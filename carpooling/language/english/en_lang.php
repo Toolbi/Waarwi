@@ -630,4 +630,21 @@ $lang['particular']						= 'Particular ?';
 $lang['professional']					= 'Professional ?';
 $lang['send']							= 'Send';
 $lang['please_wait']					= 'Please wait...';
+
+// admin parametres 
+$lang['edition_settings']					= 'Settings';
+$lang['admins_information']					= 'Admin informations';
+$lang['site_admin_mail']					= 'Application admin email';
+$lang['country_information']				= 'Country Informations';
+$lang['select_all_country']					= 'Select all country';
+$lang['select_language']					= 'Select language';
+$lang['OAuth_detail_information']			= 'OAuth details';
+$lang['facebook_app_id']					= 'Facebook app ID';
+$lang['facebook_app_secret']				= 'Facebook app ID Secret';
+$lang['google_app_id']						= 'Google app ID';
+$lang['google_app_secret']					= 'Google app ID Secret';
+$lang['currency_information']				= 'Currency informations';
+$lang['select_currency']					= 'Select currency';
+$lang['website_mail']						= 'Application email';
+$lang['traveler_user_list']					= 'All users';
 ?>
