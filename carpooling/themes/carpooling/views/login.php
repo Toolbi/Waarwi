@@ -81,8 +81,8 @@ $(document).ready(function() {
            <input type="hidden" value="1" name="submitted" />
 			<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
         <ul class="top-nav reg-nav">
-          <li> <a href="<?php echo base_url('login/facebooklogin');?>" class="flogin regflogin"> <?php echo lang('login');?> </a> </li>
-          <li class="reg-rht"> <a href="<?php echo base_url('login/googlelogin');?>" class="gplogin regglogin"> <?php echo lang('login');?> </a> </li>
+           <li> <a href="<?php echo base_url('login/facebooklogin');?>" class="btn fb-login"><i class="fa fa-facebook"></i> <?php echo lang('fb-login');?> </a> </li>
+          <li class="reg-rht"> <a href="<?php echo base_url('login/googlelogin');?>" class="btn gl-login"><i class="fa fa-google"></i> <?php echo lang('gl-login');?> </a> </li>
         </ul>
         <ul class="rowrec reg-inp">
           <li>
@@ -95,7 +95,7 @@ $(document).ready(function() {
           </li>
           <li> <p> <a href="<?php echo base_url('login/forget_password'); ?>"><?php echo lang('forgot_password') . " ?";?></a> </p> </li>
           <li>       
-            <input type="Submit" value="<?php echo lang('sign_in');?>" class="fright reg-sbmt" >
+            <button type="submit" class="btn login-btn fright reg-sbmt"><?php echo lang('login');?></button>
           </li>
         </ul>
         </form>
@@ -104,7 +104,7 @@ $(document).ready(function() {
     </div>
   </div>
 </div>
-<div class="container-fluid cs-blue-bg margintop40">
+<div class="container-fluid question paddingtopbot40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
       <h2 class="colorwhite"> <?php echo lang('got_a_question') . " ?";?></h2>

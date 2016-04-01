@@ -10,8 +10,8 @@ html, body {
 
 body {
   color: #212121;
-  background: url("../../img/whitey.jpg") repeat scroll 0 0 #fff;
-  background-size: 220px 220px;
+  /*background: url("../../img/whitey.jpg") repeat scroll 0 0 #fff;*/
+  /*background-size: 220px 220px;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2566,8 +2566,8 @@ input[type="radio"] {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #689f38;
 }
 .has-success .input-group-addon {
-  color: #8bc34a;
-  background-color: #dff0d8;
+  color: #FFF;
+  background-color: #13988a;
   border-color: #8bc34a;
 }
 
@@ -2617,7 +2617,7 @@ input[type="radio"] {
 }
 
 .input-group-addon {
-  background: transparent;
+  background: #c6412e;
   border-color: #e7ebee;
   border-width: 2px;
 }
@@ -8658,3 +8658,16 @@ svg {
 width: 100px;height: 50px;padding-top: -10px;margin-top: -10%;z-index: initial;position: absolute;
 }
 
+.login-btn { 
+  border: 1px #c6412e;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #c6412e;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+}
+.login-btn:hover { 
+  border: 1px #13988a; 
+  background-color: #13988a ;
+  color:#FFF;
+}

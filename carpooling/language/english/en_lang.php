@@ -194,6 +194,8 @@ $lang['share_the_follow']				= 'Share the following information with users that 
 $lang['mobile_phone']					= 'Mobile Phone';
 $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Facebook Profile';
+$lang['fb-login']						= 'Login with facebook';
+$lang['gl-login']						= 'Login with Google';
 $lang['i_agree_to']						= 'I agree upon receiving newsletters from Carpooling';
 $lang['submit']							= 'Submit';
 $lang['settings']						= 'Settings';
@@ -300,6 +302,10 @@ $lang['email_username']							= 'Email / Username';
 $lang['password']								= 'Password';
 $lang['forgot_password']						= 'Forgot password?';
 $lang['sign_in']								= 'Sign in';
+$lang['trouble_signup']							= 'Trouble Signing In ?';
+$lang['trouble_enter_mail']						= 'Enter your email address to retrieve your username and password.';
+$lang['trouble_error_mail']						= 'Can’t access your email ?';
+$lang['password_not_receive']					= 'Password not received ? ';
 $lang['road_travel_made_easy']					= 'Road travel made easy';
 $lang['road_travel_made_easy_text']				= '<p>A connecting site for online search for Car Poolers.</p><br/> 
            <p> Sign up and meet drivers who are travelling in the same direction. 
@@ -618,4 +624,6 @@ $lang['newsletters']				= 'Subscribe to Newsletter';
 $lang['do_you_have_car']				= 'Do you have a car?';
 $lang['particular']						= 'Particular ?';
 $lang['professional']					= 'Professional ?';
+$lang['send']							= 'Send';
+$lang['please_wait']					= 'Please wait...';
 ?>
