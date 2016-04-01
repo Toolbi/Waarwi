@@ -297,7 +297,7 @@
         echo form_open_multipart(base_url('admin/admin/profile_image_upload'),$attributes);?>
     <div style="display:none;">
         <input type="file"  name="photoimg" id="profilephotoimg" class="custom-file-input " original-title="Upload Profile Picture">
-    </div>
+    </div></form>
                                 </li>
                                 <li class="hidden-xxs" >
                                     <a class="btn" href="<?php echo base_url('admin/login/logout'); ?>" >
