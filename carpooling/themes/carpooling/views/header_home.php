@@ -4,67 +4,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <head>
 <title><?php echo lang('head_title'); ?> </title>
-<!-- JS -->
+<!-- Librairies -->
 <?php echo theme_js('jquery-1.9.1.js', true);?>
 <?php echo theme_js('jquery-ui-1.9.2.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
-<script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>">
-</script>
+<?php echo theme_js('jquery.validate.js',true); ?>
+<?php echo admin_js('maps-googleapis.js', true); ?>
+<?php echo theme_css('bootstrap.css', true);?>
+<?php echo theme_css('bootstrap-datepicker.css', true);?>
+<?php echo theme_css('half-slider.css', true);?>
+<?php echo theme_css('style.css', true);?>
+<?php echo theme_css('bannerscollection_kenburns.css', true);?>
+<?php echo theme_css('font-awesome.min.css', true); ?>
+<?php echo theme_css('bootstrap-theme.css', true);?>
+<?php echo admin_css('libs/google-fonts-droid-sans.css', true);?>
+<?php echo admin_css('libs/google-fonts-lato.css', true);?>
+<?php echo theme_js('jquery.ui.touch-punch.min.js', true);?>
+<?php echo theme_js('jquery.ddslick.js', true);?>
+<?php echo theme_js('script.js', true);?>
+<!-- Date picker FR -->
 <script type="text/javascript">
 var baseurl = "<?php print base_url(); ?>";  
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
-
-// Date picker FR 
 $(function () {
-      $("#datepicker").datepicker({ 
-            autoclose: true, 
-            todayHighlight: true,
-            language: "fr",
-      }).datepicker('update', new Date());;
-    });
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
-<!-- CSS -->
-<?php  echo theme_css('bootstrap.css', true);?>
-<?php  echo theme_css('bootstrap-datepicker.css', true);?>
-<?php  echo theme_css('half-slider.css', true);?>
-<?php  echo theme_css('style.css', true);?>
-<?php  echo theme_css('bannerscollection_kenburns.css', true);?>
-<!-- <?php echo admin_css('libs/font-awesome.css', true); ?> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-<?php  echo theme_css('bootstrap-theme.css', true);?>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
-
-<?php  echo theme_js('home.js', true);?>
-
-
-<?php echo theme_js('jquery.ui.touch-punch.min.js', true);?>
-
-    <?php echo theme_js('jquery.ddslick.js', true);?>
-    <?php echo theme_js('script.js', true);?>
-    
-<script type="text/javascript">
+  $("#datepicker").datepicker({ 
+    autoclose: true, 
+    todayHighlight: true,
+    language: "fr",
+  }).datepicker('update', new Date());;
+});
+/* Bouton user fonction */
 $(document).ready(function(){
   $(".my-account-button").click(function(){
-  $(".my-account-details").fadeToggle("fast", function(){
-    if($(".my-account-details").css('display') == "none")
-    $(".my-account-button").removeClass("active");
-    else
-    $(".my-account-button").addClass("active");
-  });
+    $(".my-account-details").fadeToggle("fast", function(){
+      if($(".my-account-details").css('display') == "none")
+      $(".my-account-button").removeClass("active");
+      else
+      $(".my-account-button").addClass("active");
+    });
   });
 });
-</script>  
-
+</script>
+<?php echo theme_js('home.js', true);?>
+<!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo theme_img('favicon.ico');?>">  
-  
 </head>
 
+<!-- Body -->
 <body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

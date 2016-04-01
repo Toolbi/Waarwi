@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 28 Mars 2016 à 00:49
+-- Généré le :  Mer 30 Mars 2016 à 23:44
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 -- Base de données :  `waarwi3`
 --
 
-CREATE DATABASE IF NOT EXISTS waarwi3;
-USE waarwi3;
 -- --------------------------------------------------------
 
 --
@@ -122,9 +120,82 @@ INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity
 ('a12261dae64a04fa649b5133488637ab', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015501, 'a:1:{s:9:"user_data";s:0:"";}'),
 ('ef07411b18fbc2845f98bd2eeae3bc00', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015501, ''),
 ('70cc7846a921367e92ef67b4193406de', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36', 1459015511, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";b:0;s:6:"expire";i:1459016121;}}'),
-('42279874aa6cbc5461b09ab051432173', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459118698, ''),
-('7f9c11bb0fd1fd143b2ac76988f5375b', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459118698, ''),
-('9f9b6c57d2942059b4168365fb93f381', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459118698, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459117690;}}');
+('77d4f216b7820a0315d236e4778ad7a7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459166226, ''),
+('80ff3c6190f02a2837a14ccfeaa3f0f4', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459168664, ''),
+('831f8bb14dabaa7bc342e67c8f591c0e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459166226, ''),
+('d0f53c0876a6bc25ef31c50a88c1630d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459168664, ''),
+('7195d9534dfca4a25bc757ef54b1518b', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459166226, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459117690;}}'),
+('b5d128e0c8b1e5bae7410323ef3a4655', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459168664, ''),
+('effe6ba7a0ddd647a29d8805528e25b6', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180413, 'a:1:{s:11:"journeyDate";s:10:"29/03/2016";}'),
+('ea3a08bfa5ffeda0f90e7032225a3de4', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180413, ''),
+('f61ffd2f627bea857a324da6dd4eb603', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180413, 'a:1:{s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";b:0;s:6:"expire";i:1459181210;}}'),
+('deeacf033fdb6ada20569019284ea62a', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180660, ''),
+('c172b88edd2bcb028cae6d420ecec4a2', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180660, ''),
+('137238690f72407b648bfb25b52b8c4f', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180660, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";b:0;s:6:"expire";i:1459181296;}}'),
+('b420d5dac8582a77930718c50d094325', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180791, ''),
+('de7160cb693f01cb7c776735db3e781b', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180791, ''),
+('e56eb8c6f9266203f41e14259d02dbba', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459180791, ''),
+('2cb14d65a03b45540e288f0c46fb4ef6', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180881, ''),
+('5ead4d8e06bf776ea2a9a14a8d580b68', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180881, ''),
+('889b0f31c7bc05d474c79fbe081953bb', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459180881, ''),
+('3ea212a8025bc1de9a7ee7ce96f1b5cd', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459181704, ''),
+('fc082725dc769587955a9a23c9bb4219', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459181704, ''),
+('0272475b7cebd4244886b47663b4d5f9', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459181704, ''),
+('202f47ef6f6641946fb46112b2a4237a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185435, ''),
+('30fced94c8d0a8e7b3b5dcdb96095ece', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185435, 'a:1:{s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459183520;}}'),
+('948858eb850eaaf24ca7d1274e19572d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185435, ''),
+('74e54ff045763139fb34ac476565ee63', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185810, ''),
+('2d6130905951516f70523fbb9781e508', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185810, ''),
+('42faff53216a0c26ba37156a801bc37c', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185810, ''),
+('ca8e9c0b456f2b1e7d0f06af3e98fff2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185837, ''),
+('21a449ad719029ec7cbc8594ae394215', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185837, ''),
+('0daaa55d0fdac3efbd17d817ab44415c', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185837, ''),
+('a2672acad77806d13f09e4cf32f60f77', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185871, ''),
+('ecaf6b9d0aa7b62d8ed001b3d115d91b', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185871, ''),
+('2e34660872e5ac7dacf60527b7489a81', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185871, ''),
+('6b7419fdac955b02e46e794b64b4c7dd', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185906, ''),
+('c737f237facdf8061e858d6c95cde109', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185906, ''),
+('7f26620f79fc327f59af20c645462f77', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459185906, ''),
+('497a56c6dc5e056ae5f773c526225eee', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185954, ''),
+('ba527fd7231829ced51718eba25eca21', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185954, ''),
+('7a6b52e0a0c8c5be7c39146e273d5992', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459185954, ''),
+('a8af2ce335fdf85654eb78f0da779046', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459186327, ''),
+('7fe3a9cf622b906a6344c519c55bdbbb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459186327, ''),
+('f7b52cc3c89390b7d4752c4a04aff96a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459186327, ''),
+('6664375b59ec72c835f459342866ba29', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459186499, ''),
+('bbb43340ec0e4e9cd30d9028520b642f', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459186499, ''),
+('d8e965de775b193e901cba1e5c9e2ba0', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459186499, ''),
+('ff347a2be22767db1a29c443a8ede40d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459190646, ''),
+('0a2fa1edfbed72caa257cb4799262c68', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459190646, ''),
+('da781b6c6964b48847e48149425b84eb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459190646, ''),
+('3d9debaa4e0c7c9641bf2c6143adbbca', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459190830, ''),
+('a58b22bd9f9dde3392a3ec665840cfba', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459190830, ''),
+('248cb9a3f50eeab62c6bada62ee4b5e5', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459190830, ''),
+('12fb968ef14da89fc3f1dab860410112', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459191845, ''),
+('9b4b3db0a94aa10f58722b79dd317dc2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459191845, ''),
+('d38fe727daeb57bdef4965b60964313d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459191845, ''),
+('52c6a79c567f46356ddf8125b980d5ee', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459192104, ''),
+('28d077e40928242633dafdb4c438de68', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459192104, ''),
+('4dbd52f4814c40246e8ad849ad26bdb8', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459192104, ''),
+('9738e05a56f4828403ec17d46646ed5c', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459251872, ''),
+('aee4fc2b869b8daf361418257e21bfd2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459281999, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459269533;}}'),
+('5eb642ac84e0861a87c570c0506042c8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0.1) Gecko/20100101 Firefox/9.0.1', 1459282991, ''),
+('924983cb52a7117f580c3499551d1f2d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459281998, ''),
+('ecae70df00905797d828d40fa449e691', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0.1) Gecko/20100101 Firefox/9.0.1', 1459282991, ''),
+('c5de91936c83b7f70321701c137c2076', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459282070, ''),
+('980e817a0c6566718d10d11e64997971', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0.1) Gecko/20100101 Firefox/9.0.1', 1459282991, ''),
+('784940a845f279e76e9cac75204c0ddf', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459281999, ''),
+('9e95baf50ad67c0d8aa3278f2ec86d4e', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459282070, ''),
+('a56b2bdc3ae52e2d0c8065e9cc6f152c', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459282070, ''),
+('dbfd104304261422dde69e2365764fac', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355597, ''),
+('a854e79346cd1212b1d4d4b4f670a388', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, 'a:1:{s:9:"user_data";s:0:"";}'),
+('883dfd4133656b6b3ddc184da189794d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355600, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459356241;}}'),
+('fb25d3ea06b3ae393ea996ba8ec8b236', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355683, 'a:1:{s:9:"user_data";s:0:"";}'),
+('3488b3d2f2a1c96f36218aee48a8f6e2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355597, ''),
+('27a83030b1bed2aaeab44473e0b0f550', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355684, ''),
+('336f83a9cf357910ec1b8b9185627827', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355684, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459356288;}}'),
+('c9960439907ca7b9e4236ecb1d645387', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, ''),
+('f05856bfe9575ebc60800788e59635c9', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459374823;}}');
 
 -- --------------------------------------------------------
 
@@ -194,7 +265,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `admin_email`, `admin_password`, `admin_name`, `first_name`, `last_name`, `company_name`, `company_email`, `company_mobile`, `admin_img`, `access`, `admin_createddate`) VALUES
-(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', 'KhadimFallou MbackeFall', NULL, NULL, NULL, NULL, NULL, NULL, 'Admin', NULL);
+(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', 'KhadimFallou MbackeFall', NULL, NULL, NULL, NULL, NULL, 'admin1_cover_1459374223.png', 'Admin', NULL);
 
 -- --------------------------------------------------------
 
@@ -494,9 +565,9 @@ CREATE TABLE IF NOT EXISTS `tbl_testimonials` (
 --
 
 INSERT INTO `tbl_testimonials` (`id`, `name`, `image`, `description`, `isactive`, `created_date`) VALUES
-(6, 'carpoolingscript', 'user1_testimonials_1428056433.jpg', 'Carpooling is great, I have never again travelled alone to my city on weekends. And it''s much cheaper way to travel !', 1, '2015-04-03 20:50:39'),
-(7, 'carpool', 'user1_testimonials_1428654758.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges', 1, '2015-04-10 19:02:43'),
-(8, 'carpool', 'user1_testimonials_1428654875.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges', 1, '2015-04-10 19:04:45');
+(6, 'carpoolingscript', 'user1_testimonials_1428056433.jpg', 'Carpooling is great, I have never again travelled alone to my city on weekends. And it''s much cheaper way to travel !', 0, '2015-04-03 20:50:39'),
+(7, 'carpool', 'user1_testimonials_1428654758.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges', 0, '2015-04-10 19:02:43'),
+(8, 'carpool', 'user1_testimonials_1428654875.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, vitiose. Non laboro, inquit, de nomine. Duo Reges', 0, '2015-04-10 19:04:45');
 
 -- --------------------------------------------------------
 
@@ -731,6 +802,19 @@ INSERT INTO `tbl_t_login_logs` (`login_log_id`, `login_id`, `login_ip`, `login_t
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
@@ -1619,7 +1703,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 
 INSERT INTO `tbl_users` (`user_id`, `user_email`, `user_password`, `user_type`, `user_company_name`, `user_first_name`, `user_last_name`, `user_about_us`, `user_profile_img`, `user_mobile`, `user_secondary_phone`, `user_secondary_mail`, `user_company_id`, `user_url`, `user_street`, `user_city`, `postal_code`, `user_occupation`, `marital_status`, `isverified`, `show_number`, `send_sms`, `allowed_food`, `allowed_pet`, `allowed_smoke`, `allowed_chat`, `allowed_music`, `user_gender`, `user_country`, `user_dob`, `communication_mobile`, `communication_email`, `login_type`, `isactive`, `user_admin_status`, `user_created_date`, `user_lost_login`) VALUES
 (1, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', 'Simple et gentil', 'user1_profile_1458760441.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '7b0254d50421e95bda45d5c5eed38276d7af8964', '1', '0', 0, 0, 0, 1, 1, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:09:12', '2016-03-23 20:36:31'),
-(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-03-28 00:15:01'),
+(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-03-30 13:32:22'),
 (3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-03-26 19:06:56');
 
 -- --------------------------------------------------------

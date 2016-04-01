@@ -4,83 +4,56 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
         <title><?php echo lang('head_title'); ?> </title>
-
-        <script type="text/javascript">
-            var baseurl = "<?php print base_url(); ?>";
-        </script>
-        <!-- bootstrap -->
-
-        <script src="<?php echo admin_js('jquery.js'); ?>"></script>
-        <?php echo admin_css('bootstrap/bootstrap.min.css', true); ?>
-
-
-        <!-- RTL support - for demo only -->
-
-        <?php echo admin_js('demo-rtl.js', true); ?>
-
-        <!-- 
-        If you need RTL support just include here RTL CSS file <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-rtl.min.css" />
-        And add "rtl" class to <body> element - e.g. <body class="rtl"> 
-        -->
-
-        <!-- libraries -->
-        <?php echo admin_css('libs/font-awesome.css', true); ?>
-
-
+        <!-- Librairies -->
+        <?php echo theme_js('jquery-1.9.1.js', true);?>
+        <?php  echo theme_css('bootstrap.css', true);?>       
+        <?php  echo theme_css('font-awesome.min.css', true); ?>
         <?php echo admin_css('libs/nanoscroller.css', true); ?>
-
-        <!-- global styles -->
-
         <?php echo admin_css('compiled/theme_styles.css', true); ?>
-        <!-- this page specific styles -->
         <?php echo admin_css('libs/datepicker.css', true); ?>
         <?php echo admin_css('libs/daterangepicker.css', true); ?>
         <?php echo admin_css('libs/bootstrap-timepicker.css', true); ?>
         <?php echo admin_css('libs/select2.css', true); ?>
-
-
-        <!-- Favicon -->
-
-        <!-- google font libraries -->
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
-
-        <!--[if lt IE 9]>
-                <script src="js/html5shiv.js"></script>
-                <script src="js/respond.min.js"></script>
-        <![endif]-->
-        
+        <?php echo admin_css('libs/google-fonts.css', true); ?>
+        <!-- Favicon -->        
         <link rel="shortcut icon" href="<?php echo theme_img('favicon.ico');?>">
+        <script type="text/javascript">
+        var baseurl = "<?php print base_url(); ?>";
+
+        </script>
     </head>
     <body>
-
         <?php
-        $this->CI = & get_instance();
-        $admin_session['admin_session'] = $this->CI->admin_session->userdata('admin');
-        $name = $admin_session['admin_session']['name'];
-        $admin_img = (array) $this->auth->get_admin($admin_session['admin_session']['id']);
+            $this->CI = & get_instance();
+            $admin_session['admin_session'] = $this->CI->admin_session->userdata('admin');
+            $name = $admin_session['admin_session']['name'];
+            $admin_img = (array) $this->auth->get_admin($admin_session['admin_session']['id']);
         ?>
         <?php $admin_url = base_url($this->config->item('admin_folder')) . '/'; ?>
         <!--Smooth Scroll-->
         <?php echo admin_js('jquery.livequery.js', true); ?>
         <?php echo admin_js('jquery.timeago.js', true); ?>
         <script type="text/javascript" language="javascript">
-
-                    $("span.time").livequery(function () {
-                        $(this).timeago();
-                    });
-
+            $("span.time").livequery(function () {
+                $(this).timeago();
+            });
         </script>
 
         <div id="theme-wrapper">
+
             <header class="navbar" id="header-navbar">
                 <div class="container">
-                    <a href="<?php echo base_url('admin/dashboard'); ?>" id="logo" class="navbar-brand">
-                        <img src="<?php echo theme_logo_img($this->logo->name); ?>" style="width:131px; height:30px;" alt="" class="normal-logo logo-white"/>
-                    </a>
-
-                    <div class="clearfix">
+                
+                   
+                        <div id="logo" class="navbar-brand dropdown-toggle">
+                            <a href="<?php echo base_url('admin/dashboard'); ?>" id="logo">
+    <img src="<?php echo theme_logo_img($this->logo->name); ?>" style="width:200px; height:90px;" alt="" class="normal-logo logo-white"/>
+</a>
+ 
+                        </div>
+                             
+                        <div class="clearfix">
                         <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
                             <span class="sr-only"><?php echo lang('toggle_navigation');?></span>
                             <span class="fa fa-bars"></span>
@@ -120,11 +93,11 @@
                                             <?php }
                                         } ?>
                                         <li class="item-footer">
-                                            <a href="#">										
+                                            <a href="#">                                        
                                             </a>
                                         </li>
                                     </ul>
-                                </li>						
+                                </li>                       
                                 <li class="dropdown hidden-xs">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown">
                                         <?php echo lang('master');?>
@@ -268,20 +241,33 @@
 
                         <div class="nav-no-collapse pull-right" id="header-nav">
                             <ul class="nav navbar-nav pull-right">
-
+                                <!-- Profile image admin-->
+                               <span id="user-left-box" >
+                                    <span id="ProfilePic">    
+                                    <img class="admin-picture" alt="" id="previousImage" src="<?php if(!empty($admin_img['admin_img'])){ echo admin_profile_img($admin_img['admin_img']); }else { echo theme_img('default.png'); }?>" />
+                                    </span>  
+                                </span>  
                                 <li class="dropdown profile-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                                        <span class="hidden-xs"><?php echo lang('welcome');?> <?= $name; ?> </span> <b class="caret"></b>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="hidden-xs">
+                                        <?php echo lang('welcome');?> <?= $name; ?> </span> <b class="caret"></b>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="<?php echo base_url('admin/admin/edit_profile'); ?>"><i class="fa fa-user"></i><?php echo lang('edit_profile');?></a></li>
-                                        <li><a href="<?php echo base_url('admin/admin/edit_settings'); ?>"><i class="fa fa-wrench"></i><?php echo lang('edit_settings');?></a></li>	
-                                        <li><a href="<?php echo base_url('admin/admin/changepwd_form'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_password');?></a></li>						
-                                         <li><a href="<?php echo base_url('admin/admin/change_logo'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_logo');?></a></li>
-                                        		
+                                        <li><a href="<?php echo base_url('admin/admin/edit_settings'); ?>"><i class="fa fa-wrench"></i><?php echo lang('edit_settings');?></a></li> 
+                                        <li><a href="<?php echo base_url('admin/admin/changepwd_form'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_password');?></a></li>                     
+                                        <li><a href="<?php echo base_url('admin/admin/change_logo'); ?>"><i class="fa fa-cog"></i><?php echo lang('change_logo');?></a></li>
+                                        <li><a href="#" id="profile_pic"><i class="fa fa-user"></i><?php echo lang('edit_photo');?></a>
+                                        </li>                                                
                                         <li><a href="<?php echo base_url('admin/login/logout'); ?>"><i class="fa fa-power-off"></i><?php echo lang('logout');?></a></li>
-                                    </ul>
+                               </ul>
+ <?php 
+        $attributes = array('id' => 'profileimageform');
+        echo form_open_multipart(base_url('admin/admin/profile_image_upload'),$attributes);?>
+    <div style="display:none;">
+        <input type="file"  name="photoimg" id="profilephotoimg" class="custom-file-input " original-title="Upload Profile Picture">
+    </div>
                                 </li>
                                 <li class="hidden-xxs" >
                                     <a class="btn" href="<?php echo base_url('admin/login/logout'); ?>" >
@@ -292,9 +278,35 @@
                         </div>
                     </div>
                 </div>
+
             </header>
 
+            <script type="text/javascript">
+  $(document).ready(function() {  
+    /* Uploading Profile Image */
+    $('body').on('click','#profile_pic', function()
+    {
+        $( "#profilephotoimg" ).trigger( "click" );
+    });
+    
+    /* Uploading timelineProfile  Image left menu */
+    $('body').on('change','#profilephotoimg', function()
+    {
+        $("#profileimageform").ajaxForm({target: '#ProfilePic',
+            beforeSubmit:function(){
+            },
+            success:function(){
+                $("#previousImage").hide();             
+            },
+            error:function(){
+            
+            } }).submit();
+    });
+   });
+</script>
+<?php echo theme_js('jquery.wallform.js',true) ?>
             <div id="page-wrapper" class="container">
+
                 <div class="row">
                     <?php
                     //lets have the flashdata overright "$message" if it exists

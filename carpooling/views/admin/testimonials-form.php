@@ -10,8 +10,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active"><span>Add New Testimonials</span></li>
+                        <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                        <li class="active"><span><?php echo lang('add_testimonial');?></span></li>
                     </ol>
 
 
@@ -24,7 +24,7 @@
                 <div class="col-lg-12">
                     <div class="main-box">
                         <header class="main-box-header clearfix">
-                            <h2>Add Testimonials</h2>
+                            <h2><?php echo lang('add_testimonial');?></h2>
                         </header>
                         <?php echo form_open($this->config->item('admin_folder') . '/testimonials/form/' . $id, ' id="req-form"'); ?>
                         <div class="main-box-body clearfix">
@@ -32,7 +32,7 @@
 
                             <div class="row">
                                 <div class="form-group col-xs-3">
-                                    <label><b>Testimonials Name</b></label>
+                                    <label><b><?php echo lang('testimonials_name');?></b></label>
 <?php
 $data = array('name' => 'name', 'value' => set_value('name', $test_name), 'class' => 'form-control');
 echo form_input($data);
@@ -42,7 +42,7 @@ echo form_input($data);
 
                             <div class="row">
                                 <div class="form-group col-xs-5">
-                                    <label><b>Testimonials Description</b></label>
+                                    <label><b><?php echo lang('testimonials_description');?></b></label>
 <?php
 $data = array('name' => 'description', 'value' => set_value('description', $description), 'class' => 'form-control', 'rows' => '3');
 echo form_textarea($data);
@@ -52,7 +52,7 @@ echo form_textarea($data);
 
                             <div class="row">										
                                 <div class="form-group col-xs-5">
-                                    <label><b>Testimonials Image</b></label>
+                                    <label><b><?php echo lang('testimonials_image');?></b></label>
                                     <div id='preview' class="img-preview">
                                         <?php if (!empty($id)) {
                                             if (!empty($uploadvalues)) {
@@ -78,11 +78,11 @@ echo form_textarea($data);
                                         } ?>
                                     </div>
                                     <div id='imageloadstatus' style="display:none">
-                                        <img src='<?php echo theme_img('loader.gif'); ?>'/> Uploading please wait ....
+                                        <img src='<?php echo theme_img('loader.gif'); ?>'/> <?php echo lang('uploading_message');?>
                                     </div>                                    
                                     <div id="uploadlink" <?= !empty($uploadvalues) ? 'style="display: none"' : '' ?>>
                                         <a href="javascript:void(0);" class="btn btn-link" id="camera" title="Upload Image">
-                                            upload image
+                                            <?php echo lang('upload_image');?>
                                         </a>
                                     </div>
                                         
@@ -91,7 +91,7 @@ echo form_textarea($data);
 
                             <div class="row">
                                 <div class="form-group col-xs-5">
-                                    <label><b>Testimonials Status</b></label>
+                                    <label><b><?php echo lang('status');?></b></label>
                                     <div class="checkbox-nice">
                                         <?php
                                         $data = array('name' => 'isactive', 'value' => 1, 'id' => 'checkbox-1', 'checked' => $isactive);
@@ -115,8 +115,8 @@ echo form_textarea($data);
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form');?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel');?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
 								</form>
                             </div>
