@@ -575,4 +575,28 @@ $lang['professional']					= 'Vous êtes professionnel ?';
 $lang['send']							= 'Envoyer';
 $lang['please_wait']					= 'Veuillez patienter...';
 
+// titre des pages depuis les controleurs
+$lang['canned_message_form']					= 'Veuillez patienter...';
+$lang['canned_message_form']					= 'Veuillez patienter...';
+
+
+
+// admin parametres 
+$lang['edition_settings']					= 'Modification des paramètres';
+$lang['admins_information']					= 'Informations sur l\'administrateur';
+$lang['site_admin_mail']					= 'Email de l\'administrateur de l\'application';
+$lang['country_information']				= 'Information sur le pays';
+$lang['select_all_country']					= 'Sélectionner tous les pays';
+$lang['select_language']					= 'Sélectionner une langue';
+$lang['OAuth_detail_information']			= ' Détails des OAuthentifications';
+$lang['facebook_app_id']					= 'Facebook app ID';
+$lang['facebook_app_secret']				= 'Facebook app ID Secret';
+$lang['google_app_id']						= 'Google app ID';
+$lang['google_app_secret']					= 'Google app ID Secret';
+$lang['currency_information']				= 'Information sur la monnaie';
+$lang['select_currency']					= 'Sélectionner une monnaie';
+$lang['website_mail']						= 'Email de l\'application';
+$lang['traveler_user_list']					= 'Liste des utilisateurs / voyageurs';
+
+
 ?>

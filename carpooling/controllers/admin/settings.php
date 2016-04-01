@@ -19,7 +19,7 @@ class Settings extends Admin_Controller {
 	{
 		
 		$this->load->library('Pagination_admin');
-		$data['page_title']	= ('Category');
+		$data['page_title']	= lang('email_template');
 		$config['is_ajax_paging']   = true;
 		$config['paging_function'] 	= 'canned_message_ajax';
 		$config['base_url'] 		=  base_url('admin/settings');

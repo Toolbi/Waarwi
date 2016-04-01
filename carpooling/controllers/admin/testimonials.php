@@ -19,7 +19,7 @@ class Testimonials extends Admin_Controller {
 
     function index() {
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('Group');
+        $data['page_title'] = lang('testimonials');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'testimonials_ajax';
         $config['base_url'] = base_url('admin/group');
@@ -38,7 +38,7 @@ class Testimonials extends Admin_Controller {
 
     function testimonials_ajax() {
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('Group');
+        $data['page_title'] = lang('testimonials');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'testimonials_ajax';
         $config['base_url'] = base_url('admin/group');
@@ -60,7 +60,7 @@ class Testimonials extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('Group Form');
+        $data['page_title'] = lang('testtimonials_form');
 
         $data['id'] = '';
         $data['name'] = '';

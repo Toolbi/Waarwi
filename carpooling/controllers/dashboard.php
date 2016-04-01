@@ -13,7 +13,7 @@ class Dashboard extends Traveller_Controller {
 	}
 	function index()
 	{
-					
+			$data['page_title'] = lang('dashboard')
 			$carpool_session['carpool_session']		= $this->CI->carpool_session->userdata('carpool');
 			$id	= $carpool_session['carpool_session']['user_id'];
 			$data['customer'] = $this->Customer_model->get_customer($id);

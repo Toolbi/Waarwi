@@ -26,7 +26,7 @@ class Payment extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('Payment Form');
+        $data['page_title'] = lng('payment_form');
 
         //default values are empty if the country is new
         $data['id'] = '';

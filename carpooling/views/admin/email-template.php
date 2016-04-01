@@ -25,13 +25,16 @@ function areyousure()
 					<div class="row">
 						<div class="col-lg-12">
                                 <ol class="breadcrumb">
-                                    <li><a href="#"><?php echo lang('admin_home');?></a></li>
+                                    <li><a href="<?php echo base_url('admin/dashboard'); ?>"><?php echo lang('admin_home'); ?></a></li>
                                     <li class="active"><span><?php echo lang('email_template');?></span></li>
                                 </ol>
                                 
                                 <div class="clearfix">
-                                    <h1 class="pull-left"><?php echo lang('email_template');?></h1>
-                                    
+                                    <h1 class="pull-left">
+										<?php if(!empty($page_title)):?>
+										<?php echo  $page_title; ?>
+										<?php endif; ?>
+									</h1>                                    
                                     <div class="pull-right top-page-ui">
                                         <a href="<?php echo base_url('admin/settings/canned_message_form');?>" class="btn btn-primary pull-right">
                                             <i class="fa fa-plus-circle fa-lg"></i> <?php echo lang('add_email_template');?>

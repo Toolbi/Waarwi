@@ -16,11 +16,11 @@ class Language extends Admin_Controller {
     function index() {
 
 
-        $data['page_title'] = ('Language');
+        $data['page_title'] = lang('language');
 
 
         $this->load->library('Pagination_admin');
-        $data['page_title'] = ('language');
+        $data['page_title'] = lang('language');
         $config['is_ajax_paging'] = true;
         $config['paging_function'] = 'language_ajax';
         $config['base_url'] = base_url('admin/language');
@@ -60,7 +60,7 @@ class Language extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = ('language Form');
+        $data['page_title'] = lang('add_new_language');
 
         //default values are empty if the language is new
         $data['languageid'] = '';

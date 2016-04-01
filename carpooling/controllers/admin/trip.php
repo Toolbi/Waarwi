@@ -17,7 +17,7 @@ class Trip extends Admin_Controller {
 	function index()
 	{
 				
-		$data['page_title']	= ('Trip');
+		$data['page_title']	= lang('trips');
 		
 		$this->load->library('Pagination_admin');
 		

@@ -23,7 +23,7 @@ class Traveller extends Admin_Controller {
 
 
 
-        $data['page_title'] = ('Travel User list');
+        $data['page_title'] = lang('traveler_user_list');
 
 
 

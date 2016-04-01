@@ -22,112 +22,134 @@ else
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
        
             <ul class="nav nav-pills nav-stacked">                
-                
-                <li>
+                <!-- Tableau de bord -->
+               <!--  <li>
                     <a href="<?php echo $admin_url;?>dashboard/">
                         <i class="fa fa-dashboard"></i>
                         <span><?php echo lang('admin_dashboard');?></span>
                         <span class="label label-primary label-circle pull-right"></span>
                     </a>
-                </li>
-          
-                   <li> 
+                </li> -->
+
+                <li class="<?php if ($page_title ==  lang('dashboard')) echo 'active'; ?>">
+                    <a href="<?php echo $admin_url;?>dashboard/">
+                        <i class="fa fa-dashboard"></i>
+                        <span><?php echo lang('admin_dashboard');?></span>
+                        <span class="label label-primary label-circle pull-right"></span>
+                    </a>
+                </li>    
+                    <!-- Principal -->
+                   <li class="<?php if ($page_title ==  lang('country')      || 
+                                        $page_title ==  lang('currency')     || 
+                                        $page_title ==  lang('language')     || 
+                                        $page_title ==  lang('vehicle_brand')|| 
+                                        $page_title ==  lang('vehicule')     || 
+                                        $page_title ==  lang('radius_page') ) 
+                                        echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-table"></i>
                         <span><?php echo lang('master');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>                   
                      <ul class="submenu">
-                     	<li>
+                     	<li class="<?php if ($page_title ==  lang('country')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>country">                                
                                 <?php echo lang('country');?>
                             </a>
                         </li>
                         
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('currency')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>currency">                                
                                 <?php echo lang('currency');?>
                             </a>
                         </li>                    
                                             
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('language')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>language">                                
                                 <?php echo lang('language');?>
                             </a>
                         </li>
-                         <li>
+                         <li class="<?php if ($page_title ==  lang('vehicle_brand')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>category">                                
                                 <?php echo lang('vehicle_brand');?>
                             </a>
                         </li>
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('vehicule')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>vehicle">                               
                                 <?php echo lang('vehicule');?>
                             </a>
                         </li>
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('radius_page')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>radius">                               
                                 <?php echo lang('radius');?>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- Utilisateurs -->
+                <li class="<?php if ($page_title ==  lang('traveller_form')|| 
+                                     $page_title ==  lang('traveler_user_list')) 
+                                    echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-child"></i>
                         <span><?php echo lang('users');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('traveller_form')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>traveller/form"><?php echo lang('add_site_user');?></a>
                         </li>
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('traveler_user_list')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>traveller"><?php echo lang('list_site_users');?></a>
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- Administrateurs -->
+                <li class="<?php if (  $page_title ==  lang('admins') ) 
+                                        echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-users"></i>
                         <span><?php echo lang('admin_management');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('admins')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>admin"><?php echo lang('admin');?></a>
 						</li>
                     </ul>
                 </li>
-            
-                <li>
+                <!-- Pages CMS -->
+                <li class="<?php if (   $page_title ==  lang('banners')          || 
+                                        $page_title ==  lang('pages')            || 
+                                        $page_title ==  lang('testimonials')      ) 
+                                        echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa  fa-file-text"></i>
                         <span><?php echo lang('cms');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
-                        <li>
+                        <!-- <li class="<?php if ($page_title ==  lang('banners')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>banner"><?php echo lang('banners');?></a>
-						</li>
-						<li>
+						</li> -->
+						<li class="<?php if ($page_title ==  lang('pages')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>pages"><?php echo lang('pages');?></a>
 						</li>
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('testimonials')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>testimonials"><?php echo lang('testimonials');?></a>
 						</li>
                     </ul>
                 </li>
-                
-                
-                <li>
+                <!-- Trajets -->
+                <li class="<?php if ($page_title ==  lang('trips')) 
+                                    echo 'active'; ?>">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-cab"></i>
                         <span><?php echo lang('trips');?></span>
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>
                     <ul class="submenu">
-                        <li>
+                        <li class="<?php if ($page_title ==  lang('trips')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>trip"><?php echo lang('list_of_trips');?></a>
 						</li>
                     </ul>

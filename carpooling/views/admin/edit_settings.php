@@ -19,8 +19,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active"><span>Edit Settings</span></li>
+                        <li><a href="<?php echo base_url('admin/dashboard'); ?>"><?php echo lang('admin_home'); ?></a></li>
+                        <li class="active"><span><?php echo lang('edition_settings')?></span></li>
                     </ol>
                 </div>
             </div>
@@ -32,19 +32,26 @@
                         <?php echo form_open($this->config->item('admin_folder') . '/admin/edit_settings'); ?>
                         <div class="main-box-body clearfix">
                             <header class="main-box-header clearfix">
-                                <h2><b> Communication </b></h2>
+                                <h1 class="pull-left">
+                                    <?php if(!empty($page_title)):?>
+                                    <?php echo  $page_title; ?>
+                                    <?php endif; ?>
+                                </h1>
+                            </header>
+                            <header class="main-box-header clearfix">
+                                <h2><b><?php echo lang('admins_information')?></b></h2>
                             </header>
                             <div class="row">                                
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Website Email'; ?></b></label>
-                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=>'Website Email', 'name'=>'email', 'value'=>set_value('email',$email) ));?>
+                                    <label><b><?php echo lang('website_mail')?></b></label>
+                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=> lang('website_mail'), 'name'=>'email', 'value'=>set_value('email',$email) ));?>
                                     <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Registration Email, and updates to the Script will be intimated to this Email ID" data-original-title="" title="">
                                             <i class="fa fa-question"></i>
                                     </a>
                                 </div>                                   
                                 <div class="col-xs-5 clearfix bacis clearfix bacis">
-                                    <label><b><?php echo 'Site Admin Email' ?></b></label>                                    
-                                    <?php echo form_input(array('class'=>'form-control txt-input', 'placeholder'=>'Site Admin Email', 'name'=>'admin_email', 'value'=>set_value('admin_email',$admin_email) ));?>
+                                    <label><b><?php echo lang('site_admin_mail')?></b></label>                                    
+                                    <?php echo form_input(array('class'=>'form-control txt-input', 'placeholder'=>lang('site_admin_mail'), 'name'=>'admin_email', 'value'=>set_value('admin_email',$admin_email) ));?>
                                     
                                     <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Email ID provided by you during installation of this Script." data-original-title="" title="">
                                             <i class="fa fa-question"></i>
@@ -54,13 +61,13 @@
                             </div>
                             
                             <header class="main-box-header clearfix">
-                                <h2><b> Country information </b></h2>
+                                <h2><b><?php echo lang('country_information')?></b></h2>
                             </header>
                             <div class="row">                                                               
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Country'; ?></b></label>
+                                    <label><b><?php echo lang('country')?></b></label>
                                     <?php				
-                                    $data	= array(''=> 'Select All Country');
+                                    $data	= array(''=> "<?php echo lang('select_all_country')?>");
                                     foreach($countries as $cat)
                                     {                                                    
                                         $data[$cat->country_code] = $cat->country_name;
@@ -73,9 +80,9 @@
 
                                 </div>
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Language'; ?></b></label>
+                                    <label><b><?php echo lang('language')?></b></label>
                                     <?php				
-                                    $data	= array(''=> 'Select Language');
+                                    $data	= array(''=> "<?php echo lang('select_language')?>");
                                     foreach($languages as $cat)
                                     {                                                    
                                         $data[$cat->language_code] = $cat->language_name;
@@ -90,12 +97,12 @@
                             </div>
                             
                             <header class="main-box-header clearfix">
-                                <h2><b> OAuth Detail Information </b></h2>
+                                <h2><b><?php echo lang('OAuth_detail_information')?></b></h2>
                             </header>
                             <div class="row">
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Facebook App Id'; ?></b></label>
-                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=>'Facebook App Id', 'name'=>'fb_appid', 'value'=>set_value('fb_appid',$fb_appid) ));?>
+                                    <label><b><?php echo lang('facebook_app_id')?></b></label>
+                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=> lang('facebook_app_id'), 'name'=>'fb_appid', 'value'=>set_value('fb_appid',$fb_appid) ));?>
                                     
                                     <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="This is the ID you will receive when you register with Facebook to obtain a Facebook API for your site. " data-original-title="" title="">
                                             <i class="fa fa-question"></i>
@@ -104,8 +111,8 @@
                                 </div>
 
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Facebook App Secret Id'; ?></b></label>
-                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=>'Facebook App Secret Id', 'name'=>'fb_appsecret', 'value'=>set_value('fb_appsecret',$fb_appsecret) ));?>
+                                    <label><b><?php echo lang('facebook_app_secret')?></b></label>
+                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=> lang('facebook_app_secret'), 'name'=>'fb_appsecret', 'value'=>set_value('fb_appsecret',$fb_appsecret) ));?>
                                     
                                     <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="This is the Secret ID you will receive when you register with Facebook to obtain a Facebook API for your site. " data-original-title="" title="">
                                             <i class="fa fa-question"></i>
@@ -113,8 +120,8 @@
                                     
                                 </div>                                   
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Google App Id' ?></b></label>
-                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=>'Google App Id', 'name'=>'googleplus_appid', 'value'=>set_value('googleplus_appid',$googleplus_appid) ));?>
+                                    <label><b><?php echo lang('google_app_id')?></b></label>
+                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=> lang('google_app_id'), 'name'=>'googleplus_appid', 'value'=>set_value('googleplus_appid',$googleplus_appid) ));?>
                                     
                                     <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="This is the ID you will receive when you register with Google to obtain a Google API for your site." data-original-title="" title="">
                                             <i class="fa fa-question"></i></a>
@@ -122,8 +129,8 @@
                                     </div>                                   
 
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Google App Secret Id'; ?></b></label>
-                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=>'Google App Secret Id', 'name'=>'googleplus_appsecret', 'value'=>set_value('googleplus_appsecret',$googleplus_appsecret) ));?>
+                                    <label><b><?php echo lang('google_app_secret')?></b></label>
+                                    <?php echo form_input(array('class'=>'form-control', 'placeholder'=> lang('google_app_secret'), 'name'=>'googleplus_appsecret', 'value'=>set_value('googleplus_appsecret',$googleplus_appsecret) ));?>
                                     
                                      <a href="javascript:void(0)" class="table-link icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="This is the Secret ID you will receive when you register with Google to obtain a Google API for your site." data-original-title="" title="">
                                             <i class="fa fa-question"></i>
@@ -134,13 +141,13 @@
                             </div>
                             
                             <header class="main-box-header clearfix">
-                                <h2><b> Currency Information </b></h2>
+                                <h2><b> <?php echo lang('currency_information')?> </b></h2>
                             </header>
                             <div class="row">
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Currency'; ?></b></label>
+                                    <label><b><?php echo lang('currency'); ?></b></label>
                                     <?php				
-                                    $data	= array(''=> 'Select Currency');
+                                    $data	= array(''=> "<?php echo lang('select_currency')?>");
                                     foreach($currencies as $cat)
                                     {                                                    
                                         $data[$cat->currency_id] = $cat->currency_name;
@@ -154,7 +161,7 @@
                                 </div>
 
                                 <div class="form-group col-xs-5 clearfix bacis">
-                                    <label><b><?php echo 'Currency Symbol'; ?></b>                                        
+                                    <label><b><?php echo lang('currency_symbol')?></b>                                        
                                     </label>
                                     <input type="text" id="symbol" value="<?=$currency_symbol?>" disabled="disabled" class = "form-control"/>
                                     
@@ -184,8 +191,8 @@
                         <div class="row">
                             <div class="row actions">
                                 <div class="col-md-3">&nbsp;</div>
-                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary">Save</button></div>
-                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default">Cancel</button></div>
+                                <div class="col-md-3"><button type="submit" style="margin-left: 35px;" class="col-md-9 btn btn-primary"><?php echo lang('save_form')?></button></div>
+                                <div class="col-md-3"><button type="button" onClick="redirect();" style="margin-left: 35px;" class="col-md-9 btn btn-default"><?php echo lang('cancel')?></button></div>
                                 <div class="col-md-3">&nbsp;</div>
 								</form>
                             </div>

@@ -2639,7 +2639,13 @@ input[type="radio"] {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-color: #13988a;
+  background-color: #a6260e;
+}
+
+.theme-whbl #header-navbar .nav > .active > a,
+.theme-whbl #header-navbar .nav > .active > a:hover,
+.theme-whbl #header-navbar .nav > .active > a:focus {
+  background-color: #a6260e;
 }
 
 .bootstrap-timepicker-widget table td input {
@@ -8102,7 +8108,7 @@ svg {
   color: #FFF;
 }
 .theme-whbl #sidebar-nav .nav-pills > li.active > a > i {
-  color: #2980b9;
+  color: #FFF;
 }
 .theme-whbl #sidebar-nav .nav > li > a:hover {
   background-color: #a6260e;
