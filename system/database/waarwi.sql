@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 30 Mars 2016 à 23:44
+-- Généré le :  Ven 01 Avril 2016 à 21:18
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -188,14 +188,17 @@ INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity
 ('9e95baf50ad67c0d8aa3278f2ec86d4e', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459282070, ''),
 ('a56b2bdc3ae52e2d0c8065e9cc6f152c', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459282070, ''),
 ('dbfd104304261422dde69e2365764fac', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355597, ''),
-('a854e79346cd1212b1d4d4b4f670a388', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, 'a:1:{s:9:"user_data";s:0:"";}'),
+('6b3dacf3377a3b18c4ec7533c133dd36', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374513, 'a:1:{s:9:"user_data";s:0:"";}'),
 ('883dfd4133656b6b3ddc184da189794d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355600, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459356241;}}'),
 ('fb25d3ea06b3ae393ea996ba8ec8b236', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355683, 'a:1:{s:9:"user_data";s:0:"";}'),
 ('3488b3d2f2a1c96f36218aee48a8f6e2', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459355597, ''),
 ('27a83030b1bed2aaeab44473e0b0f550', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355684, ''),
 ('336f83a9cf357910ec1b8b9185627827', '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile', 1459355684, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459356288;}}'),
-('c9960439907ca7b9e4236ecb1d645387', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, ''),
-('f05856bfe9575ebc60800788e59635c9', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374201, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459374823;}}');
+('6765280ccdf9d0827d82143901d58ed1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374513, ''),
+('83c18ba4f5cb724d00d6194ea292bc81', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 1459537992, ''),
+('65a001696ef2078dc7cd9bfd11f773dd', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 1459374645, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";i:1459375248;}}'),
+('63f1a933f8cc98d5b8f0c6b3635d94f7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 1459537992, ''),
+('c15a644918d3918d8a1a6c95bc5619ea', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36', 1459537992, 'a:2:{s:9:"user_data";s:0:"";s:5:"admin";a:4:{s:2:"id";s:1:"1";s:4:"name";s:23:"KhadimFallou MbackeFall";s:5:"email";s:19:"yobaalema@gmail.com";s:6:"expire";b:0;}}');
 
 -- --------------------------------------------------------
 
@@ -265,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `admin_email`, `admin_password`, `admin_name`, `first_name`, `last_name`, `company_name`, `company_email`, `company_mobile`, `admin_img`, `access`, `admin_createddate`) VALUES
-(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', 'KhadimFallou MbackeFall', NULL, NULL, NULL, NULL, NULL, 'admin1_cover_1459374223.png', 'Admin', NULL);
+(1, 'yobaalema@gmail.com', '291f2182dbe1fa03832efa95b4452f28ca1b601f', 'KhadimFallou MbackeFall', NULL, NULL, NULL, NULL, NULL, 'admin1_cover_1459537689.png', 'Admin', NULL);
 
 -- --------------------------------------------------------
 
@@ -339,17 +342,15 @@ CREATE TABLE IF NOT EXISTS `tbl_country` (
   `is_active` int(11) DEFAULT '0',
   `created_date` datetime DEFAULT NULL,
   PRIMARY KEY (`country_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `tbl_country`
 --
 
 INSERT INTO `tbl_country` (`country_id`, `country_name`, `country_code`, `currency`, `is_active`, `created_date`) VALUES
-(1, 'India', 'IN', '', 1, NULL),
-(2, 'Malaysia', 'MAL', '', 1, NULL),
-(3, 'united state', 'us', '', 1, NULL),
-(4, 'Sénégal', 'sn', '', 1, '2016-03-26 17:18:39');
+(5, 'Mali', 'MAL', '', 1, '2016-04-01 21:12:36'),
+(4, 'Sénégal', 'SEN', '', 1, '2016-03-26 17:18:39');
 
 -- --------------------------------------------------------
 
@@ -802,6 +803,7 @@ INSERT INTO `tbl_t_login_logs` (`login_log_id`, `login_id`, `login_ip`, `login_t
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
@@ -1702,8 +1704,8 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`user_id`, `user_email`, `user_password`, `user_type`, `user_company_name`, `user_first_name`, `user_last_name`, `user_about_us`, `user_profile_img`, `user_mobile`, `user_secondary_phone`, `user_secondary_mail`, `user_company_id`, `user_url`, `user_street`, `user_city`, `postal_code`, `user_occupation`, `marital_status`, `isverified`, `show_number`, `send_sms`, `allowed_food`, `allowed_pet`, `allowed_smoke`, `allowed_chat`, `allowed_music`, `user_gender`, `user_country`, `user_dob`, `communication_mobile`, `communication_email`, `login_type`, `isactive`, `user_admin_status`, `user_created_date`, `user_lost_login`) VALUES
-(1, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', 'Simple et gentil', 'user1_profile_1458760441.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '7b0254d50421e95bda45d5c5eed38276d7af8964', '1', '0', 0, 0, 0, 1, 1, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:09:12', '2016-03-23 20:36:31'),
-(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-03-30 13:32:22'),
+(1, 'khadimbacke@gmail.com', '5ab3e6e271c31de49d48442d17971352e2d9c3e2', '0', NULL, 'Khadim', 'Mbacké', 'Simple et gentil', 'user1_profile_1458760441.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '7b0254d50421e95bda45d5c5eed38276d7af8964', '1', '0', 0, 0, 0, 1, 1, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:09:12', '2016-03-23 20:36:31'),
+(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Fallou', 'Fall', '', 'user3_profile_1458761585.jpg', '06333336565', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-23 19:30:28', '2016-04-01 12:33:52'),
 (3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-03-26 19:06:56');
 
 -- --------------------------------------------------------

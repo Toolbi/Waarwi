@@ -475,7 +475,7 @@ $lang['inactive']                				= 'Inactive';
 $lang['active']                					= 'Active';
 $lang['change_status']                			= 'Changer le status';
 $lang['enable']                					= 'Activer';
-$lang['disable']                				= 'Desactiver';
+$lang['disable']                				= 'Désactiver';
 $lang['country_form']                		= 'Ajout d\'un nouveau pays';
 $lang['save_form']                				= 'Enregistrer';
 
