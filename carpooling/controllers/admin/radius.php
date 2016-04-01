@@ -61,7 +61,7 @@ class Radius extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['page_title'] = lang('radius_page');
+        $data['page_title'] = lang('radius_form');
 
         //default values are empty if the radius is new
         $data['radiusid'] = '';

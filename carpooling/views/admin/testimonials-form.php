@@ -11,7 +11,8 @@
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
                         <li><a href="<?php echo base_url('admin/dashboard'); ?>"><?php echo lang('admin_home'); ?></a></li>
-                        <li class="active"><span><?php echo lang('add_testimonial');?></span></li>
+                        <li><a href="<?php echo base_url('admin/testimonials'); ?>"><?php echo lang('testimonials'); ?></a></li>
+                        <li class="active"><span><?php echo lang('add_new_testimonial');?></span></li>
                     </ol>
 
 
@@ -24,7 +25,11 @@
                 <div class="col-lg-12">
                     <div class="main-box">
                         <header class="main-box-header clearfix">
-                            <h2><?php echo lang('add_testimonial');?></h2>
+                            <h1 class="pull-left">
+               
+                <?php echo  lang('add_new_testimonial'); ?>
+               
+              </h1>
                         </header>
                         <?php echo form_open($this->config->item('admin_folder') . '/testimonials/form/' . $id, ' id="req-form"'); ?>
                         <div class="main-box-body clearfix">

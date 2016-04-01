@@ -319,6 +319,9 @@ $lang['find_a_ride']					= 'Find a Ride';
 $lang['search']							= 'Search';
 $lang['recent_rides']					= 'Recent Rides';
 $lang['testimonials']					= 'Testimonials';
+$lang['testimonials_form']				= 'Testimonials manage';
+$lang['add_new_testimonial']			= 'Add testimonial';
+$lang['testimonials_name']				= 'Testimonial name';
 $lang['how_it_works']					= 'How It Works';
 $lang['for_car_owners']					= 'For Car Owners';
 $lang['find_your_perfect_car_travellers'] = 'Find your Perfect Car Travelers ';
@@ -449,7 +452,8 @@ $lang['admin_cat_save']                       = 'Save';
 
 //Admin Languages Vehicle
 $lang['admin_vehicles']                       = 'Vehicles';
-$lang['admin_add_vehicle']                    = 'Add New Vehicle';
+$lang['add_new_vehicle']                    = 'Add New Vehicle';
+$lang['vehicles_form']                    = 'Add New Vehicle';
 $lang['admin_vehicle_id']                     = 'Vehicle Type Id';
 $lang['admin_vehicle_type']                   = 'Vehicle Type Name';
 $lang['admin_veh_cat']                        = 'Vehicle Category name';
@@ -495,6 +499,7 @@ $lang['currency']                           	= 'Currency';
 $lang['language']                           	= 'Languages';
 $lang['vehicle_brand']                          = 'Vehicle Brand';
 $lang['vehicle']                          		= 'Vehicles';
+$lang['vehicles']                          		= 'Vehicles';
 $lang['radius']                          		= 'Radius';
 $lang['users']                          		= 'Users';
 $lang['admin_management']                       = 'Admins';
@@ -513,6 +518,7 @@ $lang['new_message']                           	= ' notifications';
 $lang['list_site_users_details']                = 'Users list details';
 $lang['notification']                			= 'Notification';
 $lang['email_template']                			= 'Email template';
+$lang['email_template_form']                	= 'New email template';
 $lang['subscriber']                				= 'Subscribers';
 $lang['edit_settings']                			= 'Edit settings';
 $lang['change_logo']                			= 'Change logo';
@@ -537,25 +543,26 @@ $lang['active']                					= 'Active';
 $lang['change_status']                			= 'Change status';
 $lang['enable']                					= 'Enable';
 $lang['disable']                				= 'Disable';
-$lang['add_new_country']                		= 'Add new country';
+$lang['country_form']                		= 'Add new country';
 $lang['save_form']                				= 'Save';
 
 // admin currency
 $lang['all_currencies']                			= 'All currencies';
 $lang['add_currency']                			= 'Add currency';
-$lang['add_new_currency']                		= ' Add group currency';
+$lang['currency_form']                		= ' Add group currency';
 $lang['currency_name']                			= 'Currency name';
 $lang['currency_symbol']                		= 'Currency symbol';
 $lang['created']                				= 'Created';
 
 // admin language
-$lang['add_new_language']                		= 'Add new language';
+$lang['language_form']                		= 'Add new language';
 $lang['language_name']                			= 'language name';
 $lang['language_prefix']                		= 'language prefix';
 $lang['add_language']                			= 'Add language';
 
 // admin radius
 $lang['radius_page']                		= 'Radius manage';
+$lang['radius_form']                		= 'Add new radius';
 $lang['all_radius']                			= 'List of radius';
 $lang['add_radius']                			= 'Add radius ';
 $lang['distance_from']                		= 'Distance from';
@@ -564,6 +571,7 @@ $lang['distance_to']                		= 'Distance to';
 //admin travellers
 $lang['all_traveller_list']					= 'All travellers';
 $lang['add_new_traveller']					= 'Add new traveller';
+$lang['add_traveller']						= 'Add new traveller';
 $lang['traveller']							= 'Travelers';
 $lang['telephone']							= 'Phone';
 $lang['user_pass']							= 'Password';
@@ -573,6 +581,7 @@ $lang['email_flag']							= 'Email flag?';
 // admin admin
 $lang['admin_name']							= 'Admin name';
 $lang['add_admin']							= ' Add admin';
+$lang['admins_form']						= ' Add admin';
 $lang['admin_manage']						= 'Admin manage';
 $lang['admins_list']						= 'Admins list';
 $lang['new_admin']							= 'Add new admin';
@@ -580,6 +589,7 @@ $lang['new_admin']							= 'Add new admin';
 // admin page cms
 $lang['link_form']							= 'Link from';
 $lang['page_manage']						= 'Page manage';
+$lang['page_form']							= 'Page manage';
 $lang['new_page']							= 'New page';
 $lang['title_page']							= 'Page title';
 $lang['go_to_page_']						= 'View the page';

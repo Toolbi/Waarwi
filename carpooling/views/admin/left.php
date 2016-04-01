@@ -40,11 +40,17 @@ else
                 </li>    
                     <!-- Principal -->
                    <li class="<?php if ($page_title ==  lang('country')      || 
+                                        $page_title ==  lang('country_form')     || 
                                         $page_title ==  lang('currency')     || 
+                                        $page_title ==  lang('currency_form')     || 
                                         $page_title ==  lang('language')     || 
+                                        $page_title ==  lang('language_form')     || 
                                         $page_title ==  lang('vehicle_brand')|| 
-                                        $page_title ==  lang('vehicule')     || 
-                                        $page_title ==  lang('radius_page') ) 
+                                        $page_title ==  lang('vehicle_brand_forms')|| 
+                                        $page_title ==  lang('vehicles')     || 
+                                        $page_title ==  lang('vehicles_form')  || 
+                                        $page_title ==  lang('radius_page')  || 
+                                        $page_title ==  lang('radius_form') ) 
                                         echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-table"></i>
@@ -52,34 +58,34 @@ else
                         <i class="fa fa-angle-right drop-icon"></i>
                     </a>                   
                      <ul class="submenu">
-                     	<li class="<?php if ($page_title ==  lang('country')) echo 'active'; ?>">
+                     	<li class="<?php if ($page_title ==  lang('country')||$page_title ==  lang('country_form')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>country">                                
                                 <?php echo lang('country');?>
                             </a>
                         </li>
                         
-                        <li class="<?php if ($page_title ==  lang('currency')) echo 'active'; ?>">
+                        <li class="<?php if ($page_title ==  lang('currency')||$page_title ==  lang('currency_form')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>currency">                                
                                 <?php echo lang('currency');?>
                             </a>
                         </li>                    
                                             
-                        <li class="<?php if ($page_title ==  lang('language')) echo 'active'; ?>">
+                        <li class="<?php if ($page_title ==  lang('language')||$page_title ==  lang('language_form'))  echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>language">                                
                                 <?php echo lang('language');?>
                             </a>
                         </li>
-                         <li class="<?php if ($page_title ==  lang('vehicle_brand')) echo 'active'; ?>">
+                         <li class="<?php if ($page_title ==  lang('vehicle_brand')||$page_title ==  lang('vehicle_brand_forms')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>category">                                
                                 <?php echo lang('vehicle_brand');?>
                             </a>
                         </li>
-                        <li class="<?php if ($page_title ==  lang('vehicule')) echo 'active'; ?>">
+                        <li class="<?php if ($page_title ==  lang('vehicles')||$page_title ==  lang('vehicles_form')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>vehicle">                               
-                                <?php echo lang('vehicule');?>
+                                <?php echo lang('vehicles');?>
                             </a>
                         </li>
-                        <li class="<?php if ($page_title ==  lang('radius_page')) echo 'active'; ?>">
+                        <li class="<?php if ($page_title ==  lang('radius_page')||$page_title ==  lang('radius_form')) echo 'active'; ?>">
                             <a href="<?php echo $admin_url;?>radius">                               
                                 <?php echo lang('radius');?>
                             </a>
@@ -105,7 +111,7 @@ else
                     </ul>
                 </li>
                 <!-- Administrateurs -->
-                <li class="<?php if (  $page_title ==  lang('admins') ) 
+                <li class="<?php if (  $page_title ==  lang('admins') || $page_title ==  lang('admins_form')) 
                                         echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-users"></i>
@@ -121,6 +127,8 @@ else
                 <!-- Pages CMS -->
                 <li class="<?php if (   $page_title ==  lang('banners')          || 
                                         $page_title ==  lang('pages')            || 
+                                        $page_title ==  lang('page_form')            || 
+                                        $page_title ==  lang('testimonials_form')            || 
                                         $page_title ==  lang('testimonials')      ) 
                                         echo 'active'; ?>"> 
                     <a href="#" class="dropdown-toggle">
@@ -132,10 +140,10 @@ else
                         <!-- <li class="<?php if ($page_title ==  lang('banners')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>banner"><?php echo lang('banners');?></a>
 						</li> -->
-						<li class="<?php if ($page_title ==  lang('pages')) echo 'active'; ?>">
+						<li class="<?php if ($page_title ==  lang('pages') || $page_title ==  lang('page_form')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>pages"><?php echo lang('pages');?></a>
 						</li>
-                        <li class="<?php if ($page_title ==  lang('testimonials')) echo 'active'; ?>">
+                        <li class="<?php if ($page_title ==  lang('testimonials')|| $page_title ==  lang('testimonials_form')) echo 'active'; ?>">
 							<a href="<?php echo $admin_url;?>testimonials"><?php echo lang('testimonials');?></a>
 						</li>
                     </ul>
