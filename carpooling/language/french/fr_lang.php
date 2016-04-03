@@ -246,7 +246,7 @@ $lang['login']							= 'CONNEXION';
 $lang['register']						= 'S\'INSCRIRE';
 $lang['profile']						= 'PROFIL';
 $lang['settings']						= 'PARAMETRES';
-$lang['my_vehicles']					= 'MES VOITURES';
+$lang['my_vehicles']					= 'MES VEHICULES';
 $lang['my_trips']						= 'MES ANNONCES';
 $lang['my_ratings']						= 'MES AVIS';
 $lang['my_enquiries']					= 'MES DEMANDES';
@@ -425,7 +425,7 @@ $lang['booking_information']  = 'Booking Information';
 // admin navigation gauche, top, centre
 $lang['dashboard']                           	= 'Tableau de board';
 $lang['welcome']                           	  	= 'Bienvenue';
-$lang['edit_photo']                           	= 'Modifier la photo de profil';
+$lang['edit_photo']                           	= 'Modifier la photo';
 $lang['master']                           		= 'Principal';
 $lang['country']                           		= 'Pays';
 $lang['currency']                           	= 'Monnaies';

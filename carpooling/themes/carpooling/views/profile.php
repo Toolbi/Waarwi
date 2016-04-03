@@ -94,51 +94,126 @@ var baseurl = "<?php print base_url(); ?>";
 </style>
 <div class="container-fluid margintop40">
   <div class="container">
-     <div class="row"> 
-    <ul class="row brd-crmb">
-      <li><a href="<?php echo base_url('home');?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
-      <li> / </li>
-      <li><a href="<?php echo base_url('user_account');?>"><?php echo lang('my_account');?></a></li>
-      <li> / </li>
-      <li><a href="#"><?php echo lang('personal_information');?></a></li>
-    </ul>
+    <div class="row"> 
+    <!-- Breadcrumb -->
+        <ul class="row brd-crmb">
+          <li><a href="<?php echo base_url('home');?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
+          <li> / </li>
+          <li><a href="#"><?php echo lang('personal_information');?></a></li>
+        </ul>
     </div>
+    <!-- Photo de profil -->
+    <div>
+      <span><a class="add-picture btn btn-info" href="javascript:void(0)" id="edit-profile">
+      <?php echo lang('edit_photo');?> </a></span>
+      <div class="profile-pic" id="ProfilePic"> 
+        <img src="<?php if($customer->user_profile_img) { echo theme_profile_img($customer->user_profile_img); } else { echo theme_img('default.png');  }?>" id="old-image" width="100" height="100">
+      </div>
+      <h3 class="profile-hd-tit"> <?=$customer->user_first_name ?></h3> 
+      <div id='imageloadstatus' style="display:none">
+        <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> Uploading please wait ....
+      </div>
     </div>
-    </div>
-   <div class="container-fluid">
+    <!-- Navigation haut  -->
+    <!-- Profil  -->
+    <a href="profile#personal-info">
+      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('profile');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+    <!-- Parametres -->
+    <a href="profile#settings">
+      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('settings');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+    <!-- Infos voitures -->
+    <a href="profile#my-cars-info">
+      <div tab="my-cars-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('my_vehicles');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+    <!-- Voyages -->
+    <a href="profile#my-cars-info">
+      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('my_trips');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+    <!-- Avis -->
+    <a href="profile#my-cars-info">
+      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('my_ratings');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+    <!-- Demandes -->
+    <a href="profile#my-cars-info">
+      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+          <i class="fa fa-user"></i>
+          <span class="headline"><?php echo lang('my_enquiries');?></span>
+          <span class="value">1</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- FIN NAV HAUT -->
+
+</div>
+
+<div class="container-fluid">
   <div class="container">
     <div class="row">
-      
+    <!-- Navigation gauche -->
       <div id="v-nav">
-        <ul>
-            <li tab="personal-info" class="first current vtab"> <span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li>
-            <li tab="settings" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
-            <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
-        </ul>
-        
-        <?php 
-		$attributes = array('id' => 'profileimageform');
-		echo form_open_multipart(base_url('profile/profile_image_upload'),$attributes);?>
-		<div  class="uploadFile timelineUploadImg" style="display:none">
-		<input type="file"  name="profileimg" id="profileimg">
-		</div>		      
-		</form>
 
-        <div class="tab-content" style="display: block;">
-                 <?php 
-							 $attributes = array('id' => 'changepwd');	
-							echo form_open('profile/edit/'.$id,$attributes); ?>
-               
-            
-            <div class="rowrec">
-              <div class="profile-pic" id="ProfilePic"> 
-              <img src="<?php if($customer->user_profile_img) { echo theme_profile_img($customer->user_profile_img); } else { echo theme_img('default.png');  }?>" id="old-image" width="100" height="100"> </div>
-              <h3 class="profile-hd-tit"> <?=$customer->user_first_name ?>  <a href="javascript:void(0)" id="edit-profile"> (Edit Photo) </a> </h3>
-              <div id='imageloadstatus' style="display:none">
-                <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> Uploading please wait ....
-              </div>   
-              <div class="rowrec line4"></div>
-            <div class="rowrec">
+        <ul>
+          <li tab="personal-info" class="first current vtab"> <span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li>
+          <li tab="settings" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
+          <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
+          <!-- <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
+          <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
+          <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li> -->
+        </ul>
+
+        <!-- Formulaire cachée pour la modification de l'image de profil -->
+        <?php 
+      		$attributes = array('id' => 'profileimageform');
+      		  echo form_open_multipart(base_url('profile/profile_image_upload'),$attributes);
+          ?>
+        		<div  class="uploadFile timelineUploadImg" style="display:none">
+        		  <input type="file"  name="profileimg" id="profileimg">
+        		</div>		      
+      		</form>
+          <div class="tab-content" style="display: block;">
+          <?php 
+						$attributes = array('id' => 'changepwd');	
+						echo form_open('profile/edit/'.$id,$attributes); 
+          ?>
+          
+         <!-- BLOC 1 -->
+          <div class="rowrec">   
+            <div class="rowrec line4"></div>
+              <div class="rowrec">
                 <div class="inner-trip-det marginbot10">
                   <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
                     <?php echo lang('mobile_number');?>
@@ -148,9 +223,9 @@ var baseurl = "<?php print base_url(); ?>";
                       <input type="text" placeholder="Mobile No." class="disable" name="txtphone" id="txtphone"  value="<?=$txtphone?>"/>                  
                     </div>
                   </div>
+                  </div>
                 </div>
-              </div>
-              <!-- End1 -->
+              <!-- FIN BLOC 1 -->
 
               <div class="rowrec">
                 <div class="inner-trip-det marginbot10">

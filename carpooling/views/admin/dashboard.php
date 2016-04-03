@@ -33,20 +33,6 @@
 										<span class="headline"><?php echo lang('trips');?></span>
 										<span class="value"><?=$total_trips?></span>
 									</div>
-								</div><div class="col-lg-3 col-sm-6 col-xs-12">
-									<div class="main-box infographic-box colored emerald-bg">
-										<i class="fa fa-user"></i>
-										<span class="headline"><?php echo lang('users');?></span>
-										<span class="value"><?=$total_users?></span>
-									</div>
-								</div>
-
-								<div class="col-lg-3 col-sm-6 col-xs-12">
-									<div class="main-box infographic-box colored green-bg">
-										<i class="fa fa-map-marker"></i>
-										<span class="headline"><?php echo lang('trips');?></span>
-										<span class="value"><?=$total_trips?></span>
-									</div>
 								</div>
 								<div class="col-lg-3 col-sm-6 col-xs-12">
 									<div class="main-box infographic-box colored purple-bg">
