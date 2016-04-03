@@ -917,3 +917,283 @@ a:link {
   background-color: rgba(206, 61, 42, 1);
   color:#FFF;
 }
+
+
+.tile-stats.tile-neon-red {
+background: #FF4E50;
+}
+.tile-stats .icon {
+color: rgba(0, 0, 0, 0.1);
+position: absolute;
+right: 5px;
+bottom: 5px;
+z-index: 1;
+}
+
+.tile-stats .icon i {
+font-size: 100px;
+line-height: 0;
+margin: 0;
+padding: 0;
+vertical-align: bottom;
+}
+.tile-stats {
+/* position: relative; */
+display: block;
+background: #303641;
+padding: 20px;
+margin-bottom: 10px;
+overflow: hidden;
+-webkit-border-radius: 5px;
+-webkit-background-clip: padding-box;
+-moz-border-radius: 5px;
+-moz-background-clip: padding;
+border-radius: 5px;
+background-clip: padding-box;
+-moz-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;
+-webkit-transition: all 300ms ease-in-out;
+transition: all 300ms ease-in-out;
+}
+
+
+/* BACKGROUNDS */
+.emerald-bg {
+  background-color: #0088cc !important;
+}
+
+.red-bg {
+  background-color: #e84e40 !important;
+}
+
+.yellow-bg {
+  background-color: #ffc107 !important;
+}
+
+.green-bg {
+  background-color: #8bc34a !important;
+}
+
+.purple-bg {
+  background-color: #9c27b0 !important;
+}
+
+.gray-bg {
+  background-color: #90a4ae !important;
+}
+
+.white-bg {
+  background-color: #ffffff !important;
+}
+
+/* COLORS */
+.emerald {
+  color: #13988a !important;
+}
+
+.red {
+  color: #e84e40 !important;
+}
+
+.yellow {
+  color: #ffc107 !important;
+}
+
+.green {
+  color: #8bc34a !important;
+}
+
+.purple {
+  color: #9c27b0 !important;
+}
+
+.gray {
+  color: #90a4ae !important;
+}
+
+
+
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media (max-width: 767px) {
+  .col-xs-1,
+  .col-sm-1,
+  .col-md-1,
+  .col-lg-1,
+  .col-xs-2,
+  .col-sm-2,
+  .col-md-2,
+  .col-lg-2,
+  .col-xs-3,
+  .col-sm-3,
+  .col-md-3,
+  .col-lg-3,
+  .col-xs-4,
+  .col-sm-4,
+  .col-md-4,
+  .col-lg-4,
+  .col-xs-5,
+  .col-sm-5,
+  .col-md-5,
+  .col-lg-5,
+  .col-xs-6,
+  .col-sm-6,
+  .col-md-6,
+  .col-lg-6,
+  .col-xs-7,
+  .col-sm-7,
+  .col-md-7,
+  .col-lg-7,
+  .col-xs-8,
+  .col-sm-8,
+  .col-md-8,
+  .col-lg-8,
+  .col-xs-9,
+  .col-sm-9,
+  .col-md-9,
+  .col-lg-9,
+  .col-xs-10,
+  .col-sm-10,
+  .col-md-10,
+  .col-lg-10,
+  .col-xs-11,
+  .col-sm-11,
+  .col-md-11,
+  .col-lg-11,
+  .col-xs-12,
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+/* INFOGRAPHIC BOX */
+.infographic-box {
+  padding: 20px;
+}
+.infographic-box i {
+  font-size: 2.4em;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  color: #fff;
+}
+.infographic-box .headline {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: right;
+}
+.infographic-box .value {
+  font-size: 2.1em;
+  font-weight: 600;
+  margin-top: -5px;
+  display: block;
+  text-align: right;
+}
+.infographic-box.merged {
+  border-top: 2px solid #e7ebee;
+  border-right: 2px solid #e7ebee;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .infographic-box.merged {
+    width: 100%;
+    border-right: none;
+  }
+}
+.infographic-box.merged .headline {
+  text-align: left;
+  font-size: 0.8em;
+  margin-top: -2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.infographic-box.merged .value {
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.infographic-box.merged.merged-top {
+  border-top: none;
+}
+.infographic-box.merged.merged-right {
+  border-right: none;
+}
+@media (max-width: 767px) {
+  .infographic-box.merged.merged-top.merged-right {
+    border-top: 1px solid #e7ebee;
+  }
+}
+.infographic-box.colored {
+  color: #fff;
+  border: 0 !important;
+}
+.infographic-box.colored i {
+  font-size: 4.6em;
+  margin-left: 7px;
+  color: #fff;
+}
+.infographic-box.colored .headline {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}

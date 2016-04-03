@@ -19,7 +19,7 @@ class Login extends Front_Controller {
         $redirect = $this->auth_travel->is_logged_in(false, false);
         //if they are logged in, we send them back to the dashboard by default, if they are not logging in
         if ($redirect) {
-            redirect('profile#personal-info');
+            redirect('home');
         }
 
         $data['seo_title'] = '';
@@ -36,7 +36,7 @@ class Login extends Front_Controller {
             $login = $this->auth_travel->login_travel($email, $password, $remember);
             if ($login) {
                 if ($redirect == '') {
-                    $redirect = 'profile#personal-info';
+                    $redirect = 'home';
                 }
                 redirect($redirect);
             } else {
@@ -53,7 +53,7 @@ class Login extends Front_Controller {
         $redirect = $this->auth_travel->is_logged_in(false, false);
         //if they are logged in, we send them back to the dashboard by default, if they are not logging in
         if ($redirect) {
-            redirect('profile#personal-info');
+            redirect('home');
         }
 
 
@@ -115,7 +115,7 @@ class Login extends Front_Controller {
         $redirect = $this->auth_travel->is_logged_in(false, false);
         //if they are logged in, we send them back to the my_account by default, if they are not logging in
         if ($redirect) {
-            redirect('profile#personal-info');
+            redirect('home');
         }
 
         $data['page_title'] = 'Login Verify';

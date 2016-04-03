@@ -96,9 +96,9 @@ var baseurl = "<?php print base_url(); ?>";
   <div class="container">
      <div class="row"> 
     <ul class="row brd-crmb">
-      <li><a href="#"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
+      <li><a href="<?php echo base_url('home');?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
       <li> / </li>
-      <li><a href="#"><?php echo lang('my_account');?></a></li>
+      <li><a href="<?php echo base_url('user_account');?>"><?php echo lang('my_account');?></a></li>
       <li> / </li>
       <li><a href="#"><?php echo lang('personal_information');?></a></li>
     </ul>

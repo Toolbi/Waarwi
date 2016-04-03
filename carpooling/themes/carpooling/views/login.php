@@ -79,7 +79,7 @@ $(document).ready(function() {
 				  $attributes = array('id' => 'frmlogin');
 				 echo form_open('login',$attributes); ?>
            <input type="hidden" value="1" name="submitted" />
-			<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+			<!-- <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" /> -->
         <ul class="top-nav reg-nav">
            <li> <a href="<?php echo base_url('login/facebooklogin');?>" class="btn fb-login"><i class="fa fa-facebook"></i> <?php echo lang('fb-login');?> </a> </li>
           <li class="reg-rht"> <a href="<?php echo base_url('login/googlelogin');?>" class="btn gl-login"><i class="fa fa-google"></i> <?php echo lang('gl-login');?> </a> </li>
