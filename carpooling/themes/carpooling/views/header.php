@@ -13,13 +13,12 @@ if(!empty($description)){
 <title><?php echo lang('head_title'); ?> </title>
 <!-- must have -->
     <?php  echo theme_css('bootstrap.css', true);?>
+    <?php  echo theme_css('font-awesome.min.css', true);?>
 	<?php  echo theme_css('bootstrap-theme.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
 <?php echo theme_js('jquery-1.9.1.js', true);?>
@@ -55,7 +54,8 @@ $(document).ready(function(){
   <div class="container">
      <div class="logo"> 
      
-     <a href="<?php echo base_url('home');?>"id="logo" class="navbar-brand"><img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:115px;"> </a> </div>
+     <a href="<?php echo base_url('home');?>"id="logo" class="navbar-brand">
+     <img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:180px;"> </a> </div>
         <div class="pull-right head-rht">  
                   
        	 <?php 
@@ -67,7 +67,18 @@ $(document).ready(function(){
 				if($this->auth_travel->is_logged_in(false, false)):				
 				?>	
             <ul class="top-nav new-top-nav pull-right">
-              <li>  <a href="<?php echo base_url('addtrip/form');?>" class="ride btn defaut-bouton"><?php echo lang('post_a_trip');?></a> </li>
+            <!-- Publier un trajet -->
+              <div class="top-trip-add">
+                <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
+                  <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
+
+                  <p class="size20">
+                    <strong><?php echo lang('post_a_trip');?></strong>
+                  </p>
+                  <i class=" size16 fa fa-car"></i> <i class="size16 fa fa-bus"></i>
+                </a>  
+              </div>
+
               <li>
                 <div id="my-account">
                   <div class="my-account-button">  <div class="profile-img"> <img src="<?php if($profile->user_profile_img) { echo theme_profile_img($profile->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> </div> <span> <?=$profile->user_first_name.' '.$profile->user_last_name ?> </span> <p> <img src="<?php echo theme_img('drop-white.png')?>"> </p>  </div>

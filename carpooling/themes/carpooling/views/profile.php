@@ -86,202 +86,158 @@ var baseurl = "<?php print base_url(); ?>";
 </script>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <?php echo theme_js('profile.js',true) ?>
-<style>
-.size14 {
-    font-size: 14px;
-    margin-left: 20px;
-}
-</style>
+
 <div class="container-fluid margintop40">
   <div class="container">
-     <div class="row"> 
-    <ul class="row brd-crmb">
-      <li><a href="#"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
-      <li> / </li>
-      <li><a href="#"><?php echo lang('my_account');?></a></li>
-      <li> / </li>
-      <li><a href="#"><?php echo lang('personal_information');?></a></li>
-    </ul>
+    <div class="row"> 
+    <!-- Breadcrumb -->
+        <ul class="row brd-crmb">
+          <li><a href="<?php echo base_url('home');?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
+          <li> / </li>
+          <li><a href="<?php echo base_url('profile');?>"><?php echo lang('personal_information');?></a></li>
+          <div class="col-lg-12">                 
+            <h2 class="pull-right">
+              <?php echo lang('dashboard');?>  <?=$customer->user_first_name ?>
+            </h2>            
+          </div>
+        </ul>
+       
     </div>
+    <!-- Photo de profil -->
+    <div class="profile-picture">
+      <div class="profile-pic" id="ProfilePic"> 
+        <img src="<?php if($customer->user_profile_img) { echo theme_profile_img($customer->user_profile_img); } else { echo theme_img('default.png');  }?>" id="old-image" width="100" height="100">
+      </div>
+      <span><a class="add-picture-btn btn btn-info" href="javascript:void(0)" id="edit-profile">
+      <?php echo lang('edit_photo');?> </a></span>
+      
+      <div id='imageloadstatus' style="display:none">
+        <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> <?php echo lang('uploading_message');?>
+      </div>
     </div>
-    </div>
-   <div class="container-fluid">
+     <!-- Formulaire cachée pour la modification de l'image de profil -->
+    <?php 
+      $attributes = array('id' => 'profileimageform');
+        echo form_open_multipart(base_url('profile/profile_image_upload'),$attributes);
+      ?>
+    <div  class="uploadFile timelineUploadImg" style="display:none">
+      <input type="file"  name="profileimg" id="profileimg">
+    </div>          
+    </form>
+    <!-- Navigation haut  -->
+    <!-- Profil  -->
+    <div class="row">
+    <a href="profile#personal-infos">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored emerald-bg">
+           <i class="fa fa-user"></i>
+           <span><?php echo lang('profile');?></span>
+        </div>
+      </div>
+    </a>
+    <!-- Parametres -->
+    <a href="profile#settings">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored green-bg">
+          <i class="fa fa-cogs"></i>
+          <span><?php echo lang('settings');?></span>
+        </div>
+      </div>
+    </a>
+    <!-- Infos voitures -->
+    <a href="profile#my-cars-info">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored purple-bg">
+          <i class="fa fa-car"></i>
+          <span><?php echo lang('my_vehicles');?></span>
+        </div>
+      </div>
+    </a>
+    <!-- Voyages -->
+    <a href="profile#my-trips">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored red-bg">
+          <i class="fa fa-road"></i>
+          <span><?php echo lang('my_trips');?></span>
+        </div>
+      </div>
+    </a>
+    <!-- Avis -->
+    <a href="profile#my-ratings">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored yellow-bg">
+          <i class="fa fa-star"></i>
+          <span><?php echo lang('my_ratings');?></span>
+        </div>
+      </div>
+    </a>
+    <!-- Demandes -->
+    <a href="profile#my-enquiries">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored gray-bg">
+          <i class="fa fa-question"></i>
+          <span><?php echo lang('my_enquiries');?></span>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div> 
+</div>
+ <!-- FIN NAV HAUT -->
+
+<div class="container-fluid">
   <div class="container">
     <div class="row">
-      
-      <div id="v-nav">
-        <ul>
-            <li tab="personal-info" class="first current vtab"> <span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li>
-            <li tab="settings" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
-            <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
+    <!-- Navigation gauche -->
+      <div id="v-nav" >
+
+        <ul style="display: none">
+          <!-- Profil -->
+          <li tab="personal-infos"><span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li> 
+          <!-- Paramètres -->
+          <li tab="settings" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
+          <!-- Voitures -->
+          <li tab="my-cars-info" ><span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
+          <!-- Trajets/Annonces -->
+           <li tab="my-trips" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_trips');?></li> 
+           <!-- Avis -->
+           <li tab="my-ratings" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_ratings');?></li> 
+           <!-- Demandes -->
+           <li tab="my-enquiries"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_enquiries');?></li>
         </ul>
+      
+        <!-- Tab info.personnelles -->
+        <div class="tab-content" style="display: block;">       
+        	<?php include('personal-infos.php');?>
+        </div>
+        <!-- Tab paramètres  -->
+        <div class="tab-content" style="display: none;">
+          <?php include('settings.php');?>
+        </div>
+
+        <!-- Tab voitures -->
+        <div class="tab-content" style="display: none;">
+          <div id="vehicle-list">
+           	<?php include('vechicles.php');?>
+          </div>   
+          <div id="vehicle-from-content" style="display:none"></div>           
+			  </div>
+        <!-- Tab annonces/trajets -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('trips');?> </h4>
+          En cours de développement...
+        </div>
+
+        <!-- Tab avis -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('ratings');?> </h4>
+          En cours de développement...
+        </div>
         
-        <?php 
-		$attributes = array('id' => 'profileimageform');
-		echo form_open_multipart(base_url('profile/profile_image_upload'),$attributes);?>
-		<div  class="uploadFile timelineUploadImg" style="display:none">
-		<input type="file"  name="profileimg" id="profileimg">
-		</div>		      
-		</form>
-
-        <div class="tab-content" style="display: block;">
-                 <?php 
-							 $attributes = array('id' => 'changepwd');	
-							echo form_open('profile/edit/'.$id,$attributes); ?>
-               
-            
-            <div class="rowrec">
-              <div class="profile-pic" id="ProfilePic"> 
-              <img src="<?php if($customer->user_profile_img) { echo theme_profile_img($customer->user_profile_img); } else { echo theme_img('default.png');  }?>" id="old-image" width="100" height="100"> </div>
-              <h3 class="profile-hd-tit"> <?=$customer->user_first_name ?>  <a href="javascript:void(0)" id="edit-profile"> (Edit Photo) </a> </h3>
-              <div id='imageloadstatus' style="display:none">
-                <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> Uploading please wait ....
-              </div>   
-              <div class="rowrec line4"></div>
-            <div class="rowrec">
-                <div class="inner-trip-det marginbot10">
-                  <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-                    <?php echo lang('mobile_number');?>
-                  </div>
-                  <div class="padding20 row">
-                    <div class="fleft pro-tab-cont">
-                      <input type="text" placeholder="Mobile No." class="disable" name="txtphone" id="txtphone"  value="<?=$txtphone?>"/>                  
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End1 -->
-
-              <div class="rowrec">
-                <div class="inner-trip-det marginbot10">
-                  <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-                    <?php echo lang('email');?>
-                  </div>
-                  <div class="padding20 rowrec">
-                    <h5><?php echo lang('main_email');?></h5>
-                    <div class="fleft pro-tab-cont full-width paddingtop10">
-                      <input type="text" placeholder="Email Id" class="disable" name="txtemail" id="txtemail" readonly value="<?=$txtemail?>" />
-                    </div>                   
-                  </div>
-
-                  <div class="padding20 rowrec">
-                    <h5><?php echo lang('official_email');?></h5>
-                    <div class="fleft pro-tab-cont full-width paddingtop10">
-                      <input type="text" placeholder="Alternative Email Id" name="atxtemail" id="atxtemail" value="<?=$atxtemail?>" />
-                    </div>                  
-                  </div>
-                  
-                   <div class="padding20 rowrec">
-                    <h5><?php echo lang('official_email_as_communication');?></h5>
-                    <div class="fleft paddingtop10">
-                       <?php
-							$data	= array('name'=>'mail_flg', 'value'=>1 ,'class'=>'chkml' ,'checked'=>$mail_flg);
-							echo form_checkbox($data); ?>
-                    </div>                  
-                  </div>                  
-
-                </div>
-              </div>
-              <!-- End2 -->
-
-              <div class="rowrec">
-                <div class="inner-trip-det marginbot10">
-                  <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-                    <?php echo lang('personal_info');?>
-                  </div>
-                  <div class="padding20 rowrec">
-                    <div class="fleft pro-tab-cont">
-                      <h5><?php echo lang('first_name');?></h5>
-                     <input type="text" placeholder="First Name" name="txtfirstname" id="txtfirstname" value="<?=$txtfirstname?>"/>
-                    </div>
-                    <div class="fright pro-tab-cont">
-                      <h5><?php echo lang('birthdate');?></h5>
-                      <div class="sea-city-city rowrec perso-inf fright cs-grey-text size14 ed-tme"> 
-                        <span><?php echo lang('day');?></span>
-                        <?php 
-						$days = array();
-						for($day = 1; $day <= 31; $day++): 
-							$days[$day] = $day;
-							 endfor;
-							 echo form_dropdown('day', $days, $selday, ' id="day" ');
-							 ?>
-                        <span><?php echo lang('month') ; ?></span>
-                        <?php $data = array(
-						'' => lang('month'),
-						'January'=>lang('january'),
-						'February'=>lang('february'),
-						'March'=>lang('march'),
-						'April'=>lang('april'),
-						'May'=>lang('may'),
-						'June'=>lang('june'),
-						'August'=>lang('august'),
-						'September'=>lang('september'),
-						'October'=>lang('october'),
-						'November'=>lang('november'),
-						'December'=>lang('december'));
-						 echo form_dropdown('month', $data, $month, ' id="month" ');?>
-
-                        <span><?php echo lang('year');?></span>
-                        <?php 
-						$years = array();
-						for($iYear = date('Y'); $iYear >= date('Y') - 50; $iYear--): 
-							$years[$iYear] = $iYear;
-							 endfor;
-							  echo form_dropdown('year', $years, $year, ' id="year" ');
-                    	?>    
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="padding20 rowrec">
-                    <div class="fleft pro-tab-cont">
-                      <h5><?php echo lang('last_name');?> </h5>
-                       <input type="text" placeholder="Last Name"  name="txtlastname" id="txtlastname" value="<?=$txtlastname?>" />
-                    </div>
-                    <div class="fright pro-tab-cont">
-                      <h5> <?php echo lang('about_you');?> </h5>
-                      <textarea rows="4" name="txtaboutus" placeholder="Tell me about you"><?=$txtaboutus?></textarea>
-                    </div>
-                  </div>
-
-                  <div class="padding20 rowrec">
-                    <div class="fleft row pro-tab-chk">
-                     <!-- <h5><?php echo lang('share_the_follow');?></h5>
-                      <label><input type="checkbox"><?php echo lang('mobile_phone');?></label>
-                      <label><input type="checkbox"><?php echo lang('email');?></label>
-                      <label><input type="checkbox"><?php echo lang('facebook_profile');?></label>
-                      <p><label><input type="checkbox"> <?php echo lang('i_agree_to');?> </label> -->
-                        <div class="fright row size14 sea-trp-view"> 
-                        <input type="hidden" value="<?php echo $redirect; ?>" name="redirect"/>
-                        <input type="hidden" value="1" name="submitted" />
-                        <input type="Submit" value="<?php echo lang('submit');?>" class="green-bg padchg">
-                         
-                        </div>
-                      </p>
-                    </div>
-                  </div>
-
-                </div>                 
-
-
-              </div>
-            </div>
-            <!-- End3 -->
-			</form>
-        </div>
-
-        <div class="tab-content" style="display: none;">
-        	<?php include('settings.php');?>
-        </div>
-
-        <div class="tab-content" style="display: none;">
-            <div id="vehicle-list">
-            	<?php include('vechicles.php');?>
-            </div>   
-            <div id="vehicle-from-content" style="display:none">
-            	
-            </div>           
-			
+        <!-- Tab demandes -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('enquiry');?> </h4>
+          En cours de développement...
         </div>
 
 

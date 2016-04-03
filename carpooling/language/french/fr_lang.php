@@ -170,10 +170,11 @@ $lang['personal_info']					= 'Mes informations personelles';
 $lang['settings']						= 'Paramètres';
 $lang['my_cars']						= 'Mes véhicules';
 $lang['mobile_number']					= 'Portable';
+$lang['mobile_no']						= 'Numéro de téléphone';
 $lang['email']							= 'Email';
 $lang['main_email']						= 'Email principale';
 $lang['official_email']					= 'Email officiel';
-$lang['official_email_as_communication'] = 'Email de contact';
+$lang['official_email_as_communication'] = 'Est ce votre email de contact ?';
 $lang['personal_info']					= 'Informations personelles';
 $lang['first_name']						= 'Prénom';
 $lang['birthdate']						= 'Date de naissance';
@@ -182,6 +183,7 @@ $lang['month']							= 'Mois :';
 $lang['year']							= 'Année :';
 $lang['last_name']						= 'Nom'; // (il ne sera pa visible sur votre profil)
 $lang['about_you']						= 'A propos de vous';
+$lang['tell_about_you']					= 'Dites nous quelque chose à propos de vous';
 $lang['share_the_follow']				=  "Partager ces informations avec les persones qui ont réservé"; //'Share the following information with users that booked rides with me'
 $lang['mobile_phone']					= 'Portable';
 $lang['email']					        = 'Email';
@@ -218,7 +220,7 @@ $lang['login']			                = 'CONNEXION';
 $lang['first_name']				     	= 'Prénom';
 $lang['last_name']					    = 'Nom';
 $lang['email_id']					    = 'Email';
-$lang['mobile_no']					    = 'Portable';
+// $lang['mobile_no']					    = 'Portable';
 $lang['password']					    = 'Mot de passe';
 $lang['register']					    = "S'incrire";
 $lang['welcome_to_car_pooling']		    = 'Bienvenue sur Waarwi';
@@ -246,7 +248,7 @@ $lang['login']							= 'CONNEXION';
 $lang['register']						= 'S\'INSCRIRE';
 $lang['profile']						= 'PROFIL';
 $lang['settings']						= 'PARAMETRES';
-$lang['my_vehicles']					= 'MES VOITURES';
+$lang['my_vehicles']					= 'MES VEHICULES';
 $lang['my_trips']						= 'MES ANNONCES';
 $lang['my_ratings']						= 'MES AVIS';
 $lang['my_enquiries']					= 'MES DEMANDES';
@@ -352,7 +354,7 @@ $lang['reject']                               = 'Rejeter';
 
 //Admin Languages Dashboard
 $lang['admin_home']                           = 'Accueil';
-$lang['admin_dashboard']                      = 'Tableau de board';
+$lang['admin_dashboard']                      = 'Tableau de bord';
 $lang['admin_users']                          = 'Users';
 $lang['admin_trips']                          = 'Trips';
 $lang['admin_subscribers']                    = 'Subscribers';
@@ -402,10 +404,10 @@ $lang['ixn_id']                               = 'IXN ID';
 $lang['owner_name']                           = 'Owner Name';
 $lang['owner_number']                         = 'Owner Number';
 $lang['owner_email']                          = 'Owner Email';
-$lang['accept']                               = 'Accept';
-$lang['accepted']                               = 'Accepted';
+// $lang['accept']                               = 'Accept';
+// $lang['accepted']                               = 'Accepted';
 $lang['pending']                               = 'Pending';
-$lang['reject']                               = 'Reject';
+// $lang['reject']                               = 'Reject';
 $lang['enquery_information']                  = 'Enquery Information';
 $lang['payment_information']                  = 'Payment Information';
 $lang['ratings']                              = 'Avis';
@@ -423,9 +425,9 @@ $lang['booking_information']  = 'Booking Information';
 
 //***************** NOUVELLES TRADUCTIONS **************************************
 // admin navigation gauche, top, centre
-$lang['dashboard']                           	= 'Tableau de board';
+$lang['dashboard']                           	= 'Tableau de bord';
 $lang['welcome']                           	  	= 'Bienvenue';
-$lang['edit_photo']                           	= 'Modifier la photo de profil';
+$lang['edit_photo']                           	= 'Modifier la photo';
 $lang['master']                           		= 'Principal';
 $lang['country']                           		= 'Pays';
 $lang['currency']                           	= 'Monnaies';
@@ -607,6 +609,10 @@ $lang['currency_information']				= 'Information sur la monnaie';
 $lang['select_currency']					= 'Sélectionner une monnaie';
 $lang['website_mail']						= 'Email de l\'application';
 $lang['traveler_user_list']					= 'Liste des utilisateurs / voyageurs';
+$lang['profile_update_msg']					= 'Votre profil a été mis à jour.';
+$lang['pass_update_msg']					= 'Votre mot de passe a été changé avec succès.';
+$lang['pass_check_msg']						= 'Mot de passe invalide, merci de réessayer plus tard!';
+$lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succès.';
 
 
 ?>
