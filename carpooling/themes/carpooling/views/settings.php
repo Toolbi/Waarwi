@@ -11,13 +11,13 @@
  <label>
  </div>
  </li>
- <!--<li class="width55"> <label class="swith_class"><?php echo lang('send_sms');?></label>
+ <li class="width55"> <label class="swith_class"><?php echo lang('send_sms');?></label>
  <div class="ios-input">
  <label>
  	<input type="checkbox" class="ios-switch" <?php if(!empty($sms)){ echo 'checked'; } ?> name="sms" value="1"/>
  <label>
  </div>
- </li>-->
+ </li>
  <li class="width55"> <label class="swith_class"><?php echo lang('chat');?></label>
  <div class="ios-input">
  <label>

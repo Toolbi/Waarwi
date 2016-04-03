@@ -352,7 +352,7 @@ $lang['reject']                               = 'Rejeter';
 
 //Admin Languages Dashboard
 $lang['admin_home']                           = 'Accueil';
-$lang['admin_dashboard']                      = 'Tableau de board';
+$lang['admin_dashboard']                      = 'Tableau de bord';
 $lang['admin_users']                          = 'Users';
 $lang['admin_trips']                          = 'Trips';
 $lang['admin_subscribers']                    = 'Subscribers';
@@ -423,7 +423,7 @@ $lang['booking_information']  = 'Booking Information';
 
 //***************** NOUVELLES TRADUCTIONS **************************************
 // admin navigation gauche, top, centre
-$lang['dashboard']                           	= 'Tableau de board';
+$lang['dashboard']                           	= 'Tableau de bord';
 $lang['welcome']                           	  	= 'Bienvenue';
 $lang['edit_photo']                           	= 'Modifier la photo';
 $lang['master']                           		= 'Principal';

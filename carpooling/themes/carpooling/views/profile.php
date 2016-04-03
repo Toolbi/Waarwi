@@ -86,12 +86,7 @@ var baseurl = "<?php print base_url(); ?>";
 </script>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <?php echo theme_js('profile.js',true) ?>
-<style>
-.size14 {
-    font-size: 14px;
-    margin-left: 20px;
-}
-</style>
+
 <div class="container-fluid margintop40">
   <div class="container">
     <div class="row"> 
@@ -99,82 +94,84 @@ var baseurl = "<?php print base_url(); ?>";
         <ul class="row brd-crmb">
           <li><a href="<?php echo base_url('home');?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
           <li> / </li>
-          <li><a href="#"><?php echo lang('personal_information');?></a></li>
+          <li><a href="<?php echo base_url('profile');?>"><?php echo lang('personal_information');?></a></li>
+          <div class="col-lg-12">                 
+            <h2 class="pull-right">
+              <?php echo lang('dashboard');?>  <?=$customer->user_first_name ?>
+            </h2>            
+          </div>
         </ul>
+       
     </div>
     <!-- Photo de profil -->
-    <div>
-      <span><a class="add-picture btn btn-info" href="javascript:void(0)" id="edit-profile">
-      <?php echo lang('edit_photo');?> </a></span>
+    <div class="profile-picture">
       <div class="profile-pic" id="ProfilePic"> 
         <img src="<?php if($customer->user_profile_img) { echo theme_profile_img($customer->user_profile_img); } else { echo theme_img('default.png');  }?>" id="old-image" width="100" height="100">
       </div>
-      <h3 class="profile-hd-tit"> <?=$customer->user_first_name ?></h3> 
+      <span><a class="add-picture-btn btn btn-info" href="javascript:void(0)" id="edit-profile">
+      <?php echo lang('edit_photo');?> </a></span>
+      
       <div id='imageloadstatus' style="display:none">
-        <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> Uploading please wait ....
+        <img src='<?php echo theme_img('ajaxloader.gif'); ?>'/> <?php echo lang('uploading_message');?>
       </div>
     </div>
     <!-- Navigation haut  -->
     <!-- Profil  -->
+    <div class="row">
     <a href="profile#personal-info">
-      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('profile');?></span>
-          <span class="value">1</span>
+           <i class="fa fa-user"></i>
+           <span><?php echo lang('profile');?></span>
         </div>
       </div>
     </a>
     <!-- Parametres -->
     <a href="profile#settings">
-      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('settings');?></span>
-          <span class="value">1</span>
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored green-bg">
+          <i class="fa fa-cogs"></i>
+          <span><?php echo lang('settings');?></span>
         </div>
       </div>
     </a>
     <!-- Infos voitures -->
     <a href="profile#my-cars-info">
-      <div tab="my-cars-info" class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('my_vehicles');?></span>
-          <span class="value">1</span>
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored purple-bg">
+          <i class="fa fa-car"></i>
+          <span><?php echo lang('my_vehicles');?></span>
         </div>
       </div>
     </a>
     <!-- Voyages -->
-    <a href="profile#my-cars-info">
-      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('my_trips');?></span>
-          <span class="value">1</span>
+    <a href="profile#my-trips">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored red-bg">
+          <i class="fa fa-road"></i>
+          <span><?php echo lang('my_trips');?></span>
         </div>
       </div>
     </a>
     <!-- Avis -->
-    <a href="profile#my-cars-info">
-      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('my_ratings');?></span>
-          <span class="value">1</span>
+    <a href="profile#my-ratings">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored yellow-bg">
+          <i class="fa fa-star"></i>
+          <span><?php echo lang('my_ratings');?></span>
         </div>
       </div>
     </a>
     <!-- Demandes -->
-    <a href="profile#my-cars-info">
-      <div tab="personal-info" class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-          <i class="fa fa-user"></i>
-          <span class="headline"><?php echo lang('my_enquiries');?></span>
-          <span class="value">1</span>
+    <a href="profile#my-enquiries">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="main-box infographic-box colored gray-bg">
+          <i class="fa fa-question"></i>
+          <span><?php echo lang('my_enquiries');?></span>
         </div>
       </div>
     </a>
+  </div>
   </div>
   <!-- FIN NAV HAUT -->
 
@@ -184,15 +181,21 @@ var baseurl = "<?php print base_url(); ?>";
   <div class="container">
     <div class="row">
     <!-- Navigation gauche -->
-      <div id="v-nav">
+      <div id="v-nav" >
 
-        <ul>
+        <ul style="display:none">
+          <!-- Profil -->
           <li tab="personal-info" class="first current vtab"> <span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li>
+          <!-- Paramètres -->
           <li tab="settings" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
+          <!-- Voitures -->
           <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
-          <!-- <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
-          <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
-          <li tab="my-cars-info" class="last vtab"> <span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li> -->
+          <!-- Trajets/Annonces -->
+           <li tab="my-trips" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_trips');?></li> 
+           <!-- Avis -->
+           <li tab="my-ratings" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_ratings');?></li> 
+           <!-- Demandes -->
+           <li tab="my-enquiries" class="vtab"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_enquiries');?></li>
         </ul>
 
         <!-- Formulaire cachée pour la modification de l'image de profil -->
@@ -345,10 +348,11 @@ var baseurl = "<?php print base_url(); ?>";
 			</form>
         </div>
 
+        <!-- Tab parametres -->
         <div class="tab-content" style="display: none;">
         	<?php include('settings.php');?>
         </div>
-
+        <!-- Tab voitures -->
         <div class="tab-content" style="display: none;">
             <div id="vehicle-list">
             	<?php include('vechicles.php');?>
@@ -357,6 +361,23 @@ var baseurl = "<?php print base_url(); ?>";
             	
             </div>           
 			
+        </div>
+        <!-- Tab annonces/trajets -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('trips');?> </h4>
+          En cours de développement...
+        </div>
+
+        <!-- Tab avis -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('ratings');?> </h4>
+          En cours de développement...
+        </div>
+        
+        <!-- Tab demandes -->
+         <div class="tab-content" style="display: none;">
+          <h4> <?php echo lang('enquiry');?> </h4>
+          En cours de développement...
         </div>
 
 
