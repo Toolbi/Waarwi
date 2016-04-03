@@ -183,6 +183,7 @@ $lang['month']							= 'Mois :';
 $lang['year']							= 'Année :';
 $lang['last_name']						= 'Nom'; // (il ne sera pa visible sur votre profil)
 $lang['about_you']						= 'A propos de vous';
+$lang['tell_about_you']					= 'Dites nous quelque chose à propos de vous';
 $lang['share_the_follow']				=  "Partager ces informations avec les persones qui ont réservé"; //'Share the following information with users that booked rides with me'
 $lang['mobile_phone']					= 'Portable';
 $lang['email']					        = 'Email';
@@ -403,10 +404,10 @@ $lang['ixn_id']                               = 'IXN ID';
 $lang['owner_name']                           = 'Owner Name';
 $lang['owner_number']                         = 'Owner Number';
 $lang['owner_email']                          = 'Owner Email';
-$lang['accept']                               = 'Accept';
-$lang['accepted']                               = 'Accepted';
+// $lang['accept']                               = 'Accept';
+// $lang['accepted']                               = 'Accepted';
 $lang['pending']                               = 'Pending';
-$lang['reject']                               = 'Reject';
+// $lang['reject']                               = 'Reject';
 $lang['enquery_information']                  = 'Enquery Information';
 $lang['payment_information']                  = 'Payment Information';
 $lang['ratings']                              = 'Avis';
@@ -608,6 +609,10 @@ $lang['currency_information']				= 'Information sur la monnaie';
 $lang['select_currency']					= 'Sélectionner une monnaie';
 $lang['website_mail']						= 'Email de l\'application';
 $lang['traveler_user_list']					= 'Liste des utilisateurs / voyageurs';
+$lang['profile_update_msg']					= 'Votre profil a été mis à jour.';
+$lang['pass_update_msg']					= 'Votre mot de passe a été changé avec succès.';
+$lang['pass_check_msg']						= 'Mot de passe invalide, merci de réessayer plus tard!';
+$lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succès.';
 
 
 ?>

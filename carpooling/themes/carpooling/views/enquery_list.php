@@ -161,8 +161,8 @@ if (function_exists('validation_errors') && validation_errors() != '') {
                                                     <td class="lst"> <?= $enquiry->user_email ?></td>
                                                     <td id="enquirySuccess-<?=$enquiry->enquiry_id?>">
                                                         <?php if ($enquiry->enquiry_trip_status == 0){ ?>
-                                                        <a href="javascript:void(0)" class="enquiryAction" data-action="accept" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('accept'); ?></a>
-                                                        <a href="javascript:void(0)" class="enquiryAction" data-action="reject" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('reject'); ?></a>
+                                                        <a class="btn btn-success" href="javascript:void(0)" data-action="accept" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('accept'); ?></a>
+                                                        <a class="btn btn-danger"href="javascript:void(0)" class="enquiryAction" data-action="reject" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('reject'); ?></a>
                                                         <?php } else {?>                                                        
                                                         <p> Accepted </p>
                                                         <?php } ?>

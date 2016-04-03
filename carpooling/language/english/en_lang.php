@@ -190,6 +190,7 @@ $lang['month']							= 'Month :';
 $lang['year']							= 'Year :';
 $lang['last_name']						= 'Last Name (This will not appear in you Public Profile)';
 $lang['about_you']						= 'About You';
+$lang['tell_about_you']					= 'Tell us something about you';
 $lang['share_the_follow']				= 'Share the following information with users that booked rides with me';
 $lang['mobile_phone']					= 'Mobile Phone';
 $lang['email']					        = 'Email';
@@ -413,8 +414,8 @@ $lang['there_is_no']			              = 'There is no enquiry';
 $lang['enquniry_status']                      = 'Enquiry status';
 $lang['no_enquiry']                           = 'There is no enquiry ';
 $lang['enquiry_status']                       = 'Enquiry status';
-$lang['accept']                               = 'Accept';
-$lang['reject']                               = 'Reject';
+// $lang['accept']                               = 'Accept';
+// $lang['reject']                               = 'Reject';
 
 //Admin Languages Dashboard
 
@@ -657,4 +658,8 @@ $lang['currency_information']				= 'Currency informations';
 $lang['select_currency']					= 'Select currency';
 $lang['website_mail']						= 'Application email';
 $lang['traveler_user_list']					= 'All users';
+$lang['profile_update_msg']					= 'Your profile has been updated.';
+$lang['pass_update_msg']					= 'Your password has been updated..';
+$lang['pass_check_msg']						= 'Invalid current password, please try again';
+$lang['settings_update_msg']					= 'Your setting changed';
 ?>

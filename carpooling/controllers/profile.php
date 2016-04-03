@@ -252,7 +252,7 @@ class Profile extends Traveller_Controller
 
 
 
-            $this->session->set_flashdata('message', 'Your profile has been updated.');
+            $this->session->set_flashdata('message', lang('profile_update_msg'));
             redirect('profile#personal-info');
         }
     }
@@ -316,7 +316,7 @@ class Profile extends Traveller_Controller
             // save password 
             $profile_id = $this->Customer_model->save($save);
 
-            $this->session->set_flashdata('message', 'Your password has been changed');
+            $this->session->set_flashdata('message', lang('pass_update_msg'));
 
             redirect('profile/changepwd_form');
         }
@@ -460,7 +460,7 @@ class Profile extends Traveller_Controller
             //print_r($save); die();
             $profile_id = $this->Customer_model->save($save);
             //print_r($profile_id); die();
-            $this->session->set_flashdata('message', 'Your setting changed');
+            $this->session->set_flashdata('message', lang('settings_update_msg'));
 
             redirect('profile#settings');
         }
@@ -481,7 +481,7 @@ class Profile extends Traveller_Controller
         } 
 		else 
 		{
-            $this->form_validation->set_message('passwordCheck', 'Invalid current password, please try again');
+            $this->form_validation->set_message('passwordCheck', lang('pass_check_msg'));
             return false;
         }
     }
