@@ -127,78 +127,98 @@ var baseurl = "<?php print base_url(); ?>";
 
     <!-- test nav tab  -->
     <div class="panel panel-tabs">
-      <div class="panel-heading">
+      <div class="panel-heading">  
+      <!-- Navigation haut -->   
         <ul class="nav nav-tabs">
-            <li class="emerald-bg active"><a href="#tab1primary" data-toggle="tab">
+            <li class="emerald-bg active"><a href="profile#personal-infos">
               <i class="fa fa-user"></i>
               <span><?php echo lang('profile');?></span>
             </a></li>
-            <li class="colored green-bg"><a href="#tab2primary" data-toggle="tab">
+            <li class="colored green-bg"><a href="profile#settings">
               <i class="fa fa-cogs"></i>
               <span><?php echo lang('settings');?></span>
             </a></li>
-            <li class="colored purple-bg"><a href="#tab3primary" data-toggle="tab">
+            <li class="colored purple-bg"><a href="#my-cars-info">
               <i class="fa fa-car"></i>
               <span><?php echo lang('my_vehicles');?></span>
             </a></li>
-            <li class="colored red-bg"><a href="#tab4primary" data-toggle="tab">
+            <li class="colored red-bg"><a href="#my-trips">
               <i class="fa fa-road"></i>
               <span><?php echo lang('my_trips');?></span>
             </a></li>
-            <li class="colored yellow-bg"><a href="#tab5primary" data-toggle="tab">
+            <li class="colored yellow-bg"><a href="#my-ratings">
               <i class="fa fa-star"></i>
               <span><?php echo lang('my_ratings');?></span>
               </a></li>
-            <li class="colored gray-bg"><a href="#tab6primary" data-toggle="tab">
+            <li class="colored gray-bg"><a href="#my-enquiries">
               <i class="fa fa-question"></i>
               <span><?php echo lang('my_enquiries');?></span>
             </a></li>
         </ul>
-      </div>
+      <!-- passage des urls dans la barre d'adresse pour revenir sur une tab  -->
+      <div id="v-nav" >
+        <ul style="display: none">
+          <!-- Profil -->
+          <li tab="personal-infos"></li> 
+          <!-- Paramètres -->
+          <li tab="settings"></li>
+          <!-- Voitures -->
+          <li tab="my-cars-info"></li>
+          <!-- Trajets/Annonces -->
+           <li tab="my-trips"><span></li> 
+           <!-- Avis -->
+           <li tab="my-ratings"></li> 
+           <!-- Demandes -->
+           <li tab="my-enquiries"></li>
+        </ul>
 
-      <div class="container-fluid">
-        <div class="container">
-          <div class="row">
-            <div id="v-nav" >
-            <!-- Tab info.personnelles -->
-            <div class="tab-content" style="display: block;"> 
-              <div class="tab-pane fade in active" id="tab1primary">
-                <?php include('personal-infos.php');?>
-              </div>
-              <!-- Tab paramètres  -->
-              <div class="tab-pane fade" id="tab2primary">
-                <?php include('settings.php');?>
-              </div>
-              <!-- Tab voitures -->
-              <div class="tab-pane fade" id="tab3primary">
-                <?php include('vechicles.php');?>
-              </div>
-              <!-- Tab annonces/trajets -->
-              <div class="tab-pane fade" id="tab4primary">
-                <div class="active-red padding10">
-                  <h4> <?php echo lang('trips');?> </h4>
-                </div>
-                En cours de développement...
-              </div>
-              <!-- Tab avis -->
-              <div class="tab-pane fade" id="tab5primary">
-                <div class="active-yellow padding10">
-                  <h4> <?php echo lang('ratings');?> </h4>
-                </div>
-              En cours de développement...
-              </div>
-              <!-- Tab demandes -->
-              <div class="tab-pane fade" id="tab6primary">
-                <div class="active-gray padding10">
-                  <h4> <?php echo lang('enquiry');?> </h4>
-                </div>
-              En cours de développement...
-              </div>
-            </div>
-          </div>
+        <!-- Contenus des tabs  -->
+      
+        <!-- Tab info.personnelles -->
+        <div class="tab-content" style="display: block;">       
+          <?php include('personal-infos.php');?>
         </div>
-      </div>
+        <!-- Tab paramètres  -->
+        <div class="tab-content" style="display: none;">
+          <?php include('settings.php');?>
+        </div>
+        <!-- Tab voitures -->
+        <div class="tab-content" style="display: none;">
+          <div id="vehicle-list">
+            <?php include('vechicles.php');?>
+          </div>   
+          <div id="vehicle-from-content" style="display:none"></div>           
+        </div>
+        <!-- Tab annonces/trajets -->
+         <div class="tab-content" style="display: none;">
+          <div class="active-red padding10">
+            <h4> <?php echo lang('trips');?></h4>
+          </div>
+          En cours de développement...
+        </div>
+        <!-- Tab avis -->
+         <div class="tab-content" style="display: none;">
+          <div class="active-yellow padding10">
+            <h4> <?php echo lang('ratings');?></h4>
+          </div>
+          En cours de développement...
+        </div>
+        
+        <!-- Tab demandes -->
+         <div class="tab-content" style="display: none;">
+          <div class="active-gray padding10">
+            <h4> <?php echo lang('enquiry');?></h4>
+          </div>
+          En cours de développement...
+        </div>
     </div>
+    <!-- End V Tab -->
+    </div>
+    <!-- End -->
+    </div>
+  </div>
+</div>
+<div class="modal"></div>
   </div>
 </div>
 <!-- Modal des messages -->  
