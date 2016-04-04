@@ -12,6 +12,9 @@ if(!empty($description)){
 ?>
 <title><?php echo lang('head_title'); ?> </title>
 <!-- must have -->
+<?php echo theme_js('jquery-1.9.1.js', true);?>
+<?php echo theme_js('bootstrap.js', true);?>
+
     <?php  echo theme_css('bootstrap.css', true);?>
     <?php  echo theme_css('font-awesome.min.css', true);?>
 	<?php  echo theme_css('bootstrap-theme.css', true);?>
@@ -21,7 +24,7 @@ if(!empty($description)){
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
 
 
-<?php echo theme_js('jquery-1.9.1.js', true);?>
+
 <script type="text/javascript">
 $(document).ready(function(){
   $(".my-account-button").click(function(){

@@ -1,5 +1,7 @@
-<h4> <?php echo lang('my_cars');?> </h4>
-<div class="row margintop20 marginleft20">
+<div class="active-purple padding10">
+  <h4> <?php echo lang('my_cars');?> </h4>
+</div>
+<div class="row margintop20 marginleft20 ">
   <table cellspacing="0" cellpadding="0" width="100%" border="0" class="margintop20 tab-table"  valign="middle">
     <tr>
       <th> <?php echo lang('photo');?> </th>

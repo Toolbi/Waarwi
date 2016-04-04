@@ -124,133 +124,82 @@ var baseurl = "<?php print base_url(); ?>";
       <input type="file"  name="profileimg" id="profileimg">
     </div>          
     </form>
-    <!-- Navigation haut  -->
-    <!-- Profil  -->
-    <div class="row">
-    <a href="profile#personal-infos">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored emerald-bg">
-           <i class="fa fa-user"></i>
-           <span><?php echo lang('profile');?></span>
-        </div>
-      </div>
-    </a>
-    <!-- Parametres -->
-    <a href="profile#settings">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored green-bg">
-          <i class="fa fa-cogs"></i>
-          <span><?php echo lang('settings');?></span>
-        </div>
-      </div>
-    </a>
-    <!-- Infos voitures -->
-    <a href="profile#my-cars-info">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored purple-bg">
-          <i class="fa fa-car"></i>
-          <span><?php echo lang('my_vehicles');?></span>
-        </div>
-      </div>
-    </a>
-    <!-- Voyages -->
-    <a href="profile#my-trips">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored red-bg">
-          <i class="fa fa-road"></i>
-          <span><?php echo lang('my_trips');?></span>
-        </div>
-      </div>
-    </a>
-    <!-- Avis -->
-    <a href="profile#my-ratings">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored yellow-bg">
-          <i class="fa fa-star"></i>
-          <span><?php echo lang('my_ratings');?></span>
-        </div>
-      </div>
-    </a>
-    <!-- Demandes -->
-    <a href="profile#my-enquiries">
-      <div class="col-lg-3 col-sm-6 col-xs-12">
-        <div class="main-box infographic-box colored gray-bg">
-          <i class="fa fa-question"></i>
-          <span><?php echo lang('my_enquiries');?></span>
-        </div>
-      </div>
-    </a>
-  </div>
-  </div> 
-</div>
- <!-- FIN NAV HAUT -->
 
-<div class="container-fluid">
-  <div class="container">
-    <div class="row">
-    <!-- Navigation gauche -->
-      <div id="v-nav" >
-
-        <ul style="display: none">
-          <!-- Profil -->
-          <li tab="personal-infos"><span> <img src="<?php echo theme_img('profile-tab-ico.png') ?>"> </span> <?php echo lang('personal_info');?></li> 
-          <!-- Paramètres -->
-          <li tab="settings" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('settings');?></li>
-          <!-- Voitures -->
-          <li tab="my-cars-info" ><span> <img src="<?php echo theme_img('my-car-tab-ico.png') ?>"> </span> <?php echo lang('my_cars');?></li>
-          <!-- Trajets/Annonces -->
-           <li tab="my-trips" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_trips');?></li> 
-           <!-- Avis -->
-           <li tab="my-ratings" ><span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_ratings');?></li> 
-           <!-- Demandes -->
-           <li tab="my-enquiries"> <span> <img src="<?php echo theme_img('preference-tab-ico.png') ?>"> </span> <?php echo lang('my_enquiries');?></li>
+    <!-- test nav tab  -->
+    <div class="panel panel-tabs">
+      <div class="panel-heading">
+        <ul class="nav nav-tabs">
+            <li class="emerald-bg active"><a href="#tab1primary" data-toggle="tab">
+              <i class="fa fa-user"></i>
+              <span><?php echo lang('profile');?></span>
+            </a></li>
+            <li class="colored green-bg"><a href="#tab2primary" data-toggle="tab">
+              <i class="fa fa-cogs"></i>
+              <span><?php echo lang('settings');?></span>
+            </a></li>
+            <li class="colored purple-bg"><a href="#tab3primary" data-toggle="tab">
+              <i class="fa fa-car"></i>
+              <span><?php echo lang('my_vehicles');?></span>
+            </a></li>
+            <li class="colored red-bg"><a href="#tab4primary" data-toggle="tab">
+              <i class="fa fa-road"></i>
+              <span><?php echo lang('my_trips');?></span>
+            </a></li>
+            <li class="colored yellow-bg"><a href="#tab5primary" data-toggle="tab">
+              <i class="fa fa-star"></i>
+              <span><?php echo lang('my_ratings');?></span>
+              </a></li>
+            <li class="colored gray-bg"><a href="#tab6primary" data-toggle="tab">
+              <i class="fa fa-question"></i>
+              <span><?php echo lang('my_enquiries');?></span>
+            </a></li>
         </ul>
-      
-        <!-- Tab info.personnelles -->
-        <div class="tab-content" style="display: block;">       
-        	<?php include('personal-infos.php');?>
-        </div>
-        <!-- Tab paramètres  -->
-        <div class="tab-content" style="display: none;">
-          <?php include('settings.php');?>
-        </div>
+      </div>
 
-        <!-- Tab voitures -->
-        <div class="tab-content" style="display: none;">
-          <div id="vehicle-list">
-           	<?php include('vechicles.php');?>
-          </div>   
-          <div id="vehicle-from-content" style="display:none"></div>           
-			  </div>
-        <!-- Tab annonces/trajets -->
-         <div class="tab-content" style="display: none;">
-          <h4> <?php echo lang('trips');?> </h4>
-          En cours de développement...
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div id="v-nav" >
+            <!-- Tab info.personnelles -->
+            <div class="tab-content" style="display: block;"> 
+              <div class="tab-pane fade in active" id="tab1primary">
+                <?php include('personal-infos.php');?>
+              </div>
+              <!-- Tab paramètres  -->
+              <div class="tab-pane fade" id="tab2primary">
+                <?php include('settings.php');?>
+              </div>
+              <!-- Tab voitures -->
+              <div class="tab-pane fade" id="tab3primary">
+                <?php include('vechicles.php');?>
+              </div>
+              <!-- Tab annonces/trajets -->
+              <div class="tab-pane fade" id="tab4primary">
+                <div class="active-red padding10">
+                  <h4> <?php echo lang('trips');?> </h4>
+                </div>
+                En cours de développement...
+              </div>
+              <!-- Tab avis -->
+              <div class="tab-pane fade" id="tab5primary">
+                <div class="active-yellow padding10">
+                  <h4> <?php echo lang('ratings');?> </h4>
+                </div>
+              En cours de développement...
+              </div>
+              <!-- Tab demandes -->
+              <div class="tab-pane fade" id="tab6primary">
+                <div class="active-gray padding10">
+                  <h4> <?php echo lang('enquiry');?> </h4>
+                </div>
+              En cours de développement...
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Tab avis -->
-         <div class="tab-content" style="display: none;">
-          <h4> <?php echo lang('ratings');?> </h4>
-          En cours de développement...
-        </div>
-        
-        <!-- Tab demandes -->
-         <div class="tab-content" style="display: none;">
-          <h4> <?php echo lang('enquiry');?> </h4>
-          En cours de développement...
-        </div>
-
-
-
+      </div>
     </div>
-    <!-- End V Tab -->
-
-    </div>
-    <!-- End -->
-
-    </div>
-
-
   </div>
 </div>
+<!-- Modal des messages -->  
 <div class="modal"></div>
