@@ -4,13 +4,12 @@
 ?>
           
 <!-- Bloc 1 no tel-->
-<h4> <?php echo lang('personal_info');?> </h4>
+<div class="active-emerald padding10">
+  <h4> <?php echo lang('personal_info');?> </h4>
+</div>
 <div class="rowrec">   
   <div class="rowrec">
-    <div class="inner-trip-det marginbot10">
-      <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-        <?php echo lang('mobile_number');?>
-      </div>
+    <div class="inner-emerald marginbot10">
       <div class="padding20 row">
       <h5><?php echo lang('mobile_no');?></h5>
         <div class="fleft pro-tab-cont full-width paddingtop10">
@@ -21,10 +20,7 @@
   </div>
   <!-- Bloc 2 email -->
   <div class="rowrec">
-    <div class="inner-trip-det marginbot10">
-      <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-        <?php echo lang('email');?>
-      </div>
+    <div class="inner-emerald marginbot10">
       <div class="padding20 rowrec">
         <h5><?php echo lang('main_email');?></h5>
         <div class="fleft pro-tab-cont full-width paddingtop10">
@@ -51,10 +47,7 @@
   </div>
     <!-- bloc 3 noms-->
   <div class="rowrec">
-    <div class="inner-trip-det marginbot10">
-      <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-        <?php echo lang('personal_info');?>
-      </div>
+    <div class="inner-emerald marginbot10">
       <div class="padding20 rowrec">
         <div class="fleft pro-tab-cont">
           <h5><?php echo lang('first_name');?></h5>

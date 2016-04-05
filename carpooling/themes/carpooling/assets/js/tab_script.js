@@ -1,16 +1,16 @@
 ﻿$(function () {
-    var items = $('#v-nav>ul>li').each(function () {
+    var items = $('#user-tabs>ul>li').each(function () {
         $(this).click(function () {
             //remove previous class and add it to clicked tab
             items.removeClass('current');
             $(this).addClass('current');
 
             //hide all content divs and show current one
-            //$('#v-nav>div.tab-content').hide().eq(items.index($(this))).show();
+            //$('#user-tabs>div.tab-content').hide().eq(items.index($(this))).show();
 
-            //$('#v-nav>div.tab-content').hide().eq(items.index($(this))).fadeIn(100);    
+            //$('#user-tabs>div.tab-content').hide().eq(items.index($(this))).fadeIn(100);    
 
-            $('#v-nav>div.tab-content').hide().eq(items.index($(this))).show();
+            $('#user-tabs>div.tab-content').hide().eq(items.index($(this))).show();
             window.location.hash = $(this).attr('tab');
         });
     });
@@ -19,11 +19,11 @@
         showTab(location.hash);
     }
     else {
-        showTab("personal-info");
+        showTab("personal-infos");
     }
 
     function showTab(tab) {		
-        $("#v-nav ul li:[tab*=" + tab + "]").click();
+        $("#user-tabs ul li:[tab*=" + tab + "]").click();
 		
     }
 
