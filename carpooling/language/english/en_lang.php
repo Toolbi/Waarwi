@@ -662,4 +662,7 @@ $lang['profile_update_msg']					= 'Your profile has been updated.';
 $lang['pass_update_msg']					= 'Your password has been updated..';
 $lang['pass_check_msg']						= 'Invalid current password, please try again';
 $lang['settings_update_msg']					= 'Your setting changed';
+
+$lang['home']								= 'Home';
+$lang['dashboard_message']					= 'Hi';
 ?>

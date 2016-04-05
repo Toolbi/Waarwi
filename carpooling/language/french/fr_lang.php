@@ -614,5 +614,6 @@ $lang['pass_update_msg']					= 'Votre mot de passe a été changé avec succès.
 $lang['pass_check_msg']						= 'Mot de passe invalide, merci de réessayer plus tard!';
 $lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succès.';
 
-
+$lang['home']								= 'Accueil';
+$lang['dashboard_message']					= 'Bonjour';
 ?>
