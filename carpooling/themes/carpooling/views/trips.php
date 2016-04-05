@@ -238,7 +238,8 @@ $(document).ready(function() {
               </div>
             </div>
              <?php $i++; } } ?>
-            <!-- Ena Main Trip -->           
+            <!-- Ena Main Trip -->
+           
           </div>
         </div>        
         

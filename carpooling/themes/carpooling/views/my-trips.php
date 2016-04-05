@@ -34,7 +34,8 @@
             $(this).addClass('close').removeClass('open');
              $(this).slideToggle('slow');
         });
-    }	
+    }
+	
 	
 		<?php
 		//lets have the flashdata overright "$message" if it exists
