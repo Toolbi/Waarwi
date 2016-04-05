@@ -1,6 +1,7 @@
 <?php 
-		 $attributes = array('id' => 'settings');	
-		echo form_open('profile/settings/'.$id,$attributes); ?>
+	$attributes = array('id' => 'settings');	
+	echo form_open('profile/settings/'.$id,$attributes); 
+?>
 <div class="active-green padding10">
 <h4> <?php echo lang('settings');?></h4>
 </div>

@@ -971,15 +971,16 @@ transition: all 300ms ease-in-out;
   solid thin #0088cc;border-radius: 
   4px;margin-top: 10px;
 }
-.nav-tabs > li.emerald-bg.active > a,
-.nav-tabs > li.emerald-bg > a:hover,
-.nav-tabs > li.emerald-bg > a:focus {
+#user-tabs > ul> li.emerald-bg.current > a,
+#user-tabs > ul> li.emerald-bg > a:hover,
+#user-tabs > ul> li.emerald-bg > a:focus {
   color: #0088cc;
   cursor: pointer;
   background-color: #FFF;
   border: 1px solid #0088cc;
   border-bottom-color: transparent;
 }
+
 
 .red-bg {
   background-color: #e84e40 !important;
@@ -995,9 +996,9 @@ transition: all 300ms ease-in-out;
   4px;margin-top: 10px;
 }
 
-.nav-tabs > li.red-bg.active > a,
-.nav-tabs > li.red-bg > a:hover,
-.nav-tabs > li.red-bg > a:focus {
+#user-tabs > ul> li.red-bg.current > a,
+#user-tabs > ul> li.red-bg > a:hover,
+#user-tabs > ul> li.red-bg > a:focus {
   color: #e84e40;
   cursor: pointer;
   background-color: #FFF;
@@ -1018,9 +1019,10 @@ transition: all 300ms ease-in-out;
   solid thin #ffc107;border-radius: 
   4px;margin-top: 10px;
 }
-.nav-tabs > li.yellow-bg.active > a,
-.nav-tabs > li.yellow-bg > a:hover,
-.nav-tabs > li.yellow-bg > a:focus {
+
+#user-tabs > ul> li.yellow-bg.current > a,
+#user-tabs > ul> li.yellow-bg > a:hover,
+#user-tabs > ul> li.yellow-bg > a:focus {
   color: #ffc107;
   cursor: pointer;
   background-color: #FFF;
@@ -1043,9 +1045,9 @@ transition: all 300ms ease-in-out;
   4px;margin-top: 10px;
 }
 
-.nav-tabs > li.green-bg.active > a,
-.nav-tabs > li.green-bg > a:hover,
-.nav-tabs > li.green-bg > a:focus {
+#user-tabs > ul> li.green-bg.current > a,
+#user-tabs > ul> li.green-bg > a:hover,
+#user-tabs > ul> li.green-bg > a:focus {
   color: #8bc34a;
   cursor: pointer;
   background-color: #FFF;
@@ -1068,9 +1070,9 @@ transition: all 300ms ease-in-out;
   4px;margin-top: 10px;
 }
 
-.nav-tabs > li.purple-bg.active > a,
-.nav-tabs > li.purple-bg > a:hover,
-.nav-tabs > li.purple-bg > a:focus {
+#user-tabs > ul> li.purple-bg.current > a,
+#user-tabs > ul> li.purple-bg > a:hover,
+#user-tabs > ul> li.purple-bg > a:focus {
   color: #9c27b0;
   cursor: pointer;
   background-color: #FFF;
@@ -1093,9 +1095,9 @@ transition: all 300ms ease-in-out;
   4px;margin-top: 10px;
 }
 
-.nav-tabs > li.gray-bg.active > a,
-.nav-tabs > li.gray-bg > a:hover,
-.nav-tabs > li.gray-bg > a:focus {
+#user-tabs > ul> li.gray-bg.current > a,
+#user-tabs > ul> li.gray-bg > a:hover,
+#user-tabs > ul> li.gray-bg > a:focus {
   color: #90a4ae;
   cursor: pointer;
   background-color: #FFF;
@@ -1209,3 +1211,9 @@ transition: all 300ms ease-in-out;
 .panel.panel-tabs .nav-justified{
   margin-bottom: -1px;
 }
+
+#user-tabs {/* height: 100%; *//* margin: auto; *//* color: #333; */}
+
+#user-tabs >div.tab-content { margin-left: 130px; border: 1px solid #ddd; background-color: #FFF; min-height: 1210px; position: relative; z-index: 9; padding: 12px; 
+-moz-box-shadow: inset 0 0 35px 5px #fafbfd;  -webkit-box-shadow: inset 0 0 35px 5px #fafbfd; box-shadow: inset 0 0 35px 5px #fafbfd; display: none; padding: 25px; }
+#user-tabs >div.tab-content >h4 { font-size: 1.2em; color: Black; text-shadow: 0px 1px 1px #F2F1F0; border-bottom: 1px dotted #EEEDED; padding-top: 5px; padding-bottom: 5px; }

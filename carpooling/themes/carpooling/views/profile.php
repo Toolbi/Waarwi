@@ -16,77 +16,74 @@
 
 
 <script>
-$(document).ready(function() {	
-	
-		<?php if (empty($txtphone)){ ?>
-		$('#txtphone').attr('readonly', false);
-		$('#txtphone').removeClass('disable');
-		<?php } ?>
-		
-		<?php
-		//lets have the flashdata overright "$message" if it exists
-		if($this->session->flashdata('message'))
-		{
-			$message	= $this->session->flashdata('message'); ?>
-			$.goNotification('<?=$message?>', { 
-			type: 'success', // success | warning | error | info | loading
-			position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-			timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-			animation: 'fade', // fade | slide
-			animationSpeed: 'slow', // slow | normal | fast
-			allowClose: true, // display shadow?true | false
-			});
-		<?php }
-		
-		if($this->session->flashdata('error'))
-		{
-			$error	= $this->session->flashdata('error'); 
-			?>
-			$.goNotification("<?=trim($error)?>", { 
-			type: 'error', // success | warning | error | info | loading
-			position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-			timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-			animation: 'fade', // fade | slide
-			animationSpeed: 'slow', // slow | normal | fast
-			allowClose: true, // display shadow?true | false
-			});
-		<?php
-		}
-		
-		if(function_exists('validation_errors') && validation_errors() != '')
-		{
-			$error	= validation_errors();
-			?>
-			$.goNotification('<?=trim($error)?>', { 
-			type: 'error', // success | warning | error | info | loading
-			position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-			timeout: 200000, // time in milliseconds to self-close; false for disable 4000 | false
-			animation: 'fade', // fade | slide
-			animationSpeed: 'slow', // slow | normal | fast
-			allowClose: true, // display shadow?true | false
-			});
-		<?php
-		}
-		?>
-		
-			
-	});
-	
-
+$(document).ready(function() {  
+  
+    <?php if (empty($txtphone)){ ?>
+    $('#txtphone').attr('readonly', false);
+    $('#txtphone').removeClass('disable');
+    <?php } ?>
+    
+    <?php
+    //lets have the flashdata overright "$message" if it exists
+    if($this->session->flashdata('message'))
+    {
+      $message  = $this->session->flashdata('message'); ?>
+      $.goNotification('<?=$message?>', { 
+      type: 'success', // success | warning | error | info | loading
+      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
+      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
+      animation: 'fade', // fade | slide
+      animationSpeed: 'slow', // slow | normal | fast
+      allowClose: true, // display shadow?true | false
+      });
+    <?php }
+    
+    if($this->session->flashdata('error'))
+    {
+      $error  = $this->session->flashdata('error'); 
+      ?>
+      $.goNotification("<?=trim($error)?>", { 
+      type: 'error', // success | warning | error | info | loading
+      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
+      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
+      animation: 'fade', // fade | slide
+      animationSpeed: 'slow', // slow | normal | fast
+      allowClose: true, // display shadow?true | false
+      });
+    <?php
+    }
+    
+    if(function_exists('validation_errors') && validation_errors() != '')
+    {
+      $error  = validation_errors();
+      ?>
+      $.goNotification('<?=trim($error)?>', { 
+      type: 'error', // success | warning | error | info | loading
+      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
+      timeout: 200000, // time in milliseconds to self-close; false for disable 4000 | false
+      animation: 'fade', // fade | slide
+      animationSpeed: 'slow', // slow | normal | fast
+      allowClose: true, // display shadow?true | false
+      });
+    <?php
+    }
+    ?>
+    
+      
+  });
+  
 <?php /*?>function areyousure()
 {
-	//return confirm('<?php echo 'Are you want to delete this Vehicle';?>');
-	 Boxy.confirm("Please confirm:", function() { return true; }, {title: 'Message'});
+  //return confirm('<?php echo 'Are you want to delete this Vehicle';?>');
+   Boxy.confirm("Please confirm:", function() { return true; }, {title: 'Message'});
     //return false;
-
-}	<?php */?>
-	
+} <?php */?>
+  
  
 var baseurl = "<?php print base_url(); ?>";  
 </script>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <?php echo theme_js('profile.js',true) ?>
-
 <div class="container-fluid margintop40">
   <div class="container">
     <div class="row"> 
@@ -124,13 +121,13 @@ var baseurl = "<?php print base_url(); ?>";
       <input type="file"  name="profileimg" id="profileimg">
     </div>          
     </form>
-
     <!-- test nav tab  -->
     <div class="panel panel-tabs">
       <div class="panel-heading">  
-      <!-- Navigation haut -->   
+      <!-- Navigation haut -->
+      <div id="user-tabs"> 
         <ul class="nav nav-tabs">
-            <li class="emerald-bg active"><a href="profile#personal-infos">
+            <li class="emerald-bg current"><a href="profile#personal-infos">
               <i class="fa fa-user"></i>
               <span><?php echo lang('profile');?></span>
             </a></li>
@@ -155,8 +152,9 @@ var baseurl = "<?php print base_url(); ?>";
               <span><?php echo lang('my_enquiries');?></span>
             </a></li>
         </ul>
+      </div> 
       <!-- passage des urls dans la barre d'adresse pour revenir sur une tab  -->
-      <div id="v-nav" >
+      <div id="user-tabs">
         <ul style="display: none">
           <!-- Profil -->
           <li tab="personal-infos"></li> 
@@ -171,7 +169,6 @@ var baseurl = "<?php print base_url(); ?>";
            <!-- Demandes -->
            <li tab="my-enquiries"></li>
         </ul>
-
         <!-- Contenus des tabs  -->
       
         <!-- Tab info.personnelles -->
@@ -218,8 +215,4 @@ var baseurl = "<?php print base_url(); ?>";
     </div>
   </div>
 </div>
-<div class="modal"></div>
-  </div>
-</div>
-<!-- Modal des messages -->  
 <div class="modal"></div>
