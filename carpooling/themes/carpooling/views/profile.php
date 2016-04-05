@@ -127,50 +127,32 @@ var baseurl = "<?php print base_url(); ?>";
       <!-- Navigation haut -->
       <div id="user-tabs"> 
         <ul class="nav nav-tabs">
-            <li class="emerald-bg current"><a href="profile#personal-infos">
+            <li tab="personal-infos" class="emerald-bg current"><a href="profile#personal-infos">
               <i class="fa fa-user"></i>
               <span><?php echo lang('profile');?></span>
             </a></li>
-            <li class="colored green-bg"><a href="profile#settings">
+            <li tab="settings" class="colored green-bg"><a href="profile#settings">
               <i class="fa fa-cogs"></i>
               <span><?php echo lang('settings');?></span>
             </a></li>
-            <li class="colored purple-bg"><a href="#my-cars-info">
+            <li tab="my-cars-info" class="colored purple-bg"><a href="#my-cars-info">
               <i class="fa fa-car"></i>
               <span><?php echo lang('my_vehicles');?></span>
             </a></li>
-            <li class="colored red-bg"><a href="#my-trips">
+            <li tab="my-trips" class="colored red-bg"><a href="#my-trips">
               <i class="fa fa-road"></i>
               <span><?php echo lang('my_trips');?></span>
             </a></li>
-            <li class="colored yellow-bg"><a href="#my-ratings">
+            <li tab="my-ratings" class="colored yellow-bg"><a href="#my-ratings">
               <i class="fa fa-star"></i>
               <span><?php echo lang('my_ratings');?></span>
               </a></li>
-            <li class="colored gray-bg"><a href="#my-enquiries">
+            <li tab="my-enquiries" class="colored gray-bg"><a href="#my-enquiries">
               <i class="fa fa-question"></i>
               <span><?php echo lang('my_enquiries');?></span>
             </a></li>
         </ul>
-      </div> 
-      <!-- passage des urls dans la barre d'adresse pour revenir sur une tab  -->
-      <div id="user-tabs">
-        <ul style="display: none">
-          <!-- Profil -->
-          <li tab="personal-infos"></li> 
-          <!-- Paramètres -->
-          <li tab="settings"></li>
-          <!-- Voitures -->
-          <li tab="my-cars-info"></li>
-          <!-- Trajets/Annonces -->
-           <li tab="my-trips"><span></li> 
-           <!-- Avis -->
-           <li tab="my-ratings"></li> 
-           <!-- Demandes -->
-           <li tab="my-enquiries"></li>
-        </ul>
-        <!-- Contenus des tabs  -->
-      
+     
         <!-- Tab info.personnelles -->
         <div class="tab-content" style="display: block;">       
           <?php include('personal-infos.php');?>
