@@ -665,4 +665,5 @@ $lang['settings_update_msg']					= 'Your setting changed';
 
 $lang['home']								= 'Home';
 $lang['dashboard_message']					= 'Hi';
+
 ?>

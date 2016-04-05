@@ -72,8 +72,7 @@ $(document).ready(function() {
   //return confirm('<?php echo 'Are you want to delete this Vehicle';?>');
    Boxy.confirm("Please confirm:", function() { return true; }, {title: 'Message'});
     //return false;
-} <?php */?>
-  
+} <?php */?>  
  
 var baseurl = "<?php print base_url(); ?>";  
 </script>

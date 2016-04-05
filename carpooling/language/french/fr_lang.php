@@ -616,4 +616,5 @@ $lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succ�
 
 $lang['home']								= 'Accueil';
 $lang['dashboard_message']					= 'Bonjour';
+
 ?>
