@@ -107,8 +107,8 @@ $(document).ready(function() {
 <div class="container-fluid question paddingtopbot40">
   <div class="container">
     <div class="margintop40 marginbot40 center gtcont">
-      <h2 class="colorwhite"> <?php echo lang('got_a_question') . " ?";?></h2>
-      <p class="padding20 row colorwhite">We're here to help. Check out our FAQs, Send us an email or call us at 1800 555 555</p>
+      <h2 class="colorwhite"> <?php echo lang('got_a_question');?></h2>
+      <p class="padding20 row colorwhite"><?php echo lang('help_faqs'); ?></p>
       <a href="#"> <?php echo lang('contact_now');?> </a> </div>
   </div>
 </div>

@@ -6,7 +6,7 @@
 <meta content="carpooling, rideshare, travel, car pool, car pooling, car, commute, vanpools, carpools, commuter services, dynamic ridesharing" name="keywords">
 <meta content="carpoolingscript.com | India's largest ridesharing network" name="description">
 <link type="image/png; charset=binary" href="http://carpoolingscript.com/carpooling/themes/carpooling/assets/img/favicon.ico" rel="shortcut icon">
-<title>carpoolingscript.com-Pay only for distance traveled</title>
+<title><?php echo lang('waarwi'); ?></title>
 
 <?php  echo theme_css('style.css', true);?>
 <?php echo theme_js('jquery-1.6.1.js', true);?>
@@ -38,18 +38,18 @@
 			   $id	= $carpool_session['carpool_session']['user_id'];
 			   $profile	= $this->auth_travel->get_travel($id);
 				if($this->auth_travel->is_logged_in(false, false)):				
-				?>	<div class="welcome"><a href="<?php echo base_url('profile');?>"> Welcome <?=$profile->user_first_name?></a></div> <ul> 
+				?>	<div class="welcome"><a href="<?php echo base_url('profile');?>"> <?php lang('welcome'); ?> <?=$profile->user_first_name?></a></div> <ul> 
                     <?php /*?><li> <a href="#">Sign In</a> </li><?php */?>
-					<li><a href="/" alt="home">Home</a></li>
-					<li> <a href="<?php echo base_url('vechicle/vechicleform');?>">Add Vehicle</a> </li>
-                    <li class="post_ride"> <a href="<?php echo base_url('addtrip/form');?>">Post a Ride</a> </li> 
-					<li> <a href="<?php echo base_url('login/logout');?>">Logout</a> </li></ul> 
+					<li><a href="/" alt="home"><?php lang('admin_home'); ?></a></li>
+					<li> <a href="<?php echo base_url('vechicle/vechicleform');?>"><?php echo lang('add_vehicle'); ?></a> </li>
+                    <li class="post_ride"> <a href="<?php echo base_url('addtrip/form');?>"><?php echo lang('post_a_ride'); ?></a> </li> 
+					<li> <a href="<?php echo base_url('login/logout');?>"><?php lang('logout'); ?></a> </li></ul> 
                 <?php else: ?>
                  <ul class="notregi">
-				    <li><a href="/" alt="home">Home</a></li>
-                    <li> <a href="<?php echo base_url('register');?>">Sign up</a> </li>
-                    <li> <a href="<?php echo base_url('login');?>">Sign in</a> </li>
-                    <li class="post_ride"> <a href="<?php echo base_url('register');?>">Post a Ride</a> </li>
+				    <li><a href="/" alt="home"><?php lang('admin_home'); ?></a></li>
+                    <li> <a href="<?php echo base_url('register');?>"><?php echo lang('login'); ?></a> </li>
+                    <li> <a href="<?php echo base_url('login');?>"><?php echo lang('login'); ?></a> </li>
+                    <li class="post_ride"> <a href="<?php echo base_url('register');?>"><?php echo lang('post_a_ride'); ?></a> </li>
                 </ul>
             <?php endif; ?>
 			</div>
