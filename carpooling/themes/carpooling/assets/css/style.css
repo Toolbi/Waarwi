@@ -232,7 +232,8 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .p_top a { display: block; float:left; line-height: 28px; font-size: 14px; font-weight: 400; color: #666; cursor: pointer; border-radius: 4px 4px 0 0; margin: 0;}
 .p_top a.b_t_top {display:block;float:left;line-height:36px;font-size:12px; font-weight:700;color:#fff;cursor:pointer;padding:0 35px; cursor: default;}
 .p_top a:hover.b_t_top { color: #fff; }
-.p_top a.b_t_1{ padding: 5px 24px; }
+.p_top a.b_t_1{ padding: 5px 24px; background-color: #000 }
+.past_trip{ background-color: #000 }
 .p_top a:hover { background: #fff; color: #1b5891; }
 .p_top a.active { background: #fff; color:#4BAAD3; font-weight: 700; border: solid thin #ccc; border-radius: 4px 4px 0 0; margin: 2px 2px 0 8px; border-bottom: none; }
 .p_block_bottom { width: 100%; border: solid thin #ccc; border-radius: 4px; padding: 35px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
@@ -1208,6 +1209,7 @@ transition: all 300ms ease-in-out;
 .profile-picture { 
   float:left; 
   width:150px;  
+  margin-top: -6%;
 }
 
 .size14 {
@@ -1228,7 +1230,9 @@ transition: all 300ms ease-in-out;
   margin-bottom: -1px;
 }
 
-#user-tabs {/* height: 100%; *//* margin: auto; *//* color: #333; */}
+#user-tabs {
+  padding-top:2%;
+}
 
 #user-tabs >div.tab-content { margin-left: 130px;  min-height: 1210px; position: relative; z-index: 9; padding: 12px; 
 -moz-box-shadow: inset 0 0 35px 5px #fafbfd;  -webkit-box-shadow: inset 0 0 35px 5px #fafbfd; box-shadow: inset 0 0 35px 5px #fafbfd; display: none; padding: 25px; }

@@ -83,6 +83,11 @@ var baseurl = "<?php print base_url(); ?>";
   <div class="row"> 
   <!--  nav tab  -->
     <div class="panel panel-tabs text-center">
+      
+    </div>
+  </div>
+  <div class="row"> 
+  <div class="panel panel-tabs text-center">
       <div class="panel-heading">  
       <!-- Navigation haut -->
       <div id="user-tabs"> 
@@ -119,7 +124,6 @@ var baseurl = "<?php print base_url(); ?>";
         </div>
       </div>
     </div>
-  </div>
   <div class="container">
     <div class="row"> 
     
@@ -171,7 +175,7 @@ var baseurl = "<?php print base_url(); ?>";
         </div>
         <!-- Tab annonces/trajets -->
          <div class="tab-content" style="display: none;">
-           <?php include('settings.php');?>
+           <?php include('my-trips.php');?>
         </div>
         <!-- Tab avis -->
          <div class="tab-content" style="display: none;">
