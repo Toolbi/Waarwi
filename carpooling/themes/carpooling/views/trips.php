@@ -74,8 +74,7 @@ $(document).ready(function() {
     //return false;
 } <?php */?>
   
- 
-var baseurl = "<?php print base_url(); ?>";  
+
 </script>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <?php echo theme_js('profile.js',true) ?>
@@ -205,18 +204,18 @@ $(document).ready(function() {
             <li tab="my-trips" class="dropdown hidden-xs colored red-bg">
               <a class="drop dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-road"></i>
-                <span><?php echo lang('my_trips');?></span>
+                <span><?php echo lang('my_trip');?></span>
                 <i class="fa fa-caret-down"></i>
               </a>
               <ul class="dropdown-menu">
                 <li class="item">
-                  <a href="addtrip">
+                  <a href="#">
                       <i class="fa fa-car"></i> 
                       <?php echo lang('rides_offered');?>
                   </a>
                 </li>
                 <li class="item">
-                  <a href="addtrip/upcoming_trip_passenger">
+                  <a href="<?php print base_url(); ?>addtrip/past_trip_passenger">
                     <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
                       <?php echo lang('enquiry');?>
                   </a>
@@ -287,8 +286,20 @@ $(document).ready(function() {
     </form>
 
   <div class="trips">    
+
+    <ul class="brd-crmb">
+      <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
+      <li> / </li>
+      <li><a href="addtrip"><?php echo lang('my_trip');?></a></li>
+      <li> / </li>
+      <li><a href="addtrip#my-trips"><?php echo lang('rides_offered');?></a></li>
+      <li> / </li>
+      <li><?php echo lang('upcoming_trips');?></li>
+    </ul>
+             
  <div class="active-red padding10">
-<h4> <?php echo lang('my_trips');?>: <?php echo lang('rides_offered');?></h4>
+<h4> <?php echo lang('my_trip');?>: <?php echo lang('rides_offered');?></h4>
+
 </div>
 <div class="inner-red"> 
  <div class="tab-container">
@@ -301,6 +312,9 @@ $(document).ready(function() {
             <a href="<?=base_url('addtrip/past_trip')?>" class="ride btn-tab"><?php echo lang('past_trips');?></a>
           </div>
           <div class="my-trp-content rowrec" id="pageresult">
+          <div>
+            <h5 align="center"> <?php echo lang('upcoming_trips_description');?></h5>
+          </div>
             <p class="para"><?php echo lang('up_this_page');?></p>
 
 
@@ -336,7 +350,7 @@ $(document).ready(function() {
                   <span class=""><?php echo lang('trip_type');?>: <?php if(!empty($trip['trip_casual_date'])){ echo lang('casual'); } else { echo lang('regular');} ?></span> 
                 </div>
               </div>
-              <h5 class="fleft width100 inner-in-trp"> <img src="<?php echo theme_img('trip-icon.png') ?>"> <?php echo lang('trip_leg');?>: </h5>
+              <h5 class="fleft width100 inner-in-trp"> <img src="<?php echo theme_img('trip-icon.png') ?>"> <?php echo lang('trip_detail');?>: </h5>
                <?php  
                if(!empty($legdetails['leg_'.$trip['trip_id']])){
                foreach ($legdetails['leg_'.$trip['trip_id']] as $trip_leg){ 

@@ -6,9 +6,12 @@ Langue du tableau de bord utilisateur
 
 //Add Trip Language
 $lang['my_trips']					= 'Mes trajets';
+$lang['my_trip']					= 'Mes trajets';
 $lang['rides_offered']				= 'Trajets proposés';
 $lang['enquiry']				    = 'Demandes';
 $lang['upcoming_trips']				= 'Voyages à venir';
+$lang['upcoming_trips_description'] = 'Cliquer sur un trajet pour modifier les informations.';
+$lang['past_trips_description'] 	= 'Cliquer sur un trajet pour voir les détails.';
 $lang['past_trips']					= 'Derniers trajets';
 $lang['trip_legs']					= 'Parties du trajet:';
 $lang['edit_trips']					= 'Modifier les trajets';
@@ -18,6 +21,7 @@ $lang['trip_type']					= 'Type de trajet';
 $lang['expected_departure']			= 'Départ prévu:';
 $lang['edit_time']					= 'Modifier le temps';
 $lang['edit_rate']					= 'Modifier le prix'; // Taux / taxt / vitesse
+$lang['price']						= 'Prix';
 $lang['price']						= 'Prix';
 $lang['inr']						= '(INR) Par passager'; //  International Normalised Ratio
 $lang['available_seats']			= 'Places disponibles :';
@@ -419,8 +423,8 @@ $lang['book_now']                   = 'Book Now';
 $lang['for_book']                   = 'For Book';
 $lang['already_booked']             = 'Already Booked';
 $lang['booking_confirmation']       = 'Booking Confirmation';
-$lang['departure_time']       = 'Departure Time';
-$lang['departure_date']       = 'Departure Date';
+// $lang['departure_time']       = 'Departure Time';
+// $lang['departure_date']       = 'Departure Date';
 $lang['booking_information']  = 'Booking Information';
 
 //***************** NOUVELLES TRADUCTIONS **************************************

@@ -123,7 +123,7 @@ var baseurl = "<?php print base_url(); ?>";
                   </a>
                 </li>
                 <li class="item">
-                  <a href="addtrip/upcoming_trip_passenger">
+                  <a href="addtrip/past_trip_passenger">
                     <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
                       <?php echo lang('enquiry');?>
                   </a>
@@ -138,19 +138,19 @@ var baseurl = "<?php print base_url(); ?>";
               </a>
               <ul class="dropdown-menu">
                 <li class="item">
-                  <a href="rating">
+                  <a href="<?php print base_url(); ?>rating">
                       <i class="fa fa-star-o"></i> 
                       <?php echo lang('ratings_pending'); ?>
                   </a>
                 </li>
                 <li class="item">
-                  <a href="rating/received_rating">
+                  <a href="<?php print base_url(); ?>rating/received_rating">
                     <i class="fa fa-star"></i> 
                       <?php echo lang('received_ratings'); ?>
                   </a>
                 </li> 
                 <li class="item">
-                  <a href="rating/given_rating">
+                  <a href="<?php print base_url(); ?>rating/given_rating">
                     <i class="fa fa-star-half-o"></i> 
                       <?php echo lang('rating_given'); ?>
                   </a>
@@ -220,7 +220,7 @@ var baseurl = "<?php print base_url(); ?>";
             <h4> <?php echo lang('my_trips');?></h4>
           </div><br>
           <div class="row button"> 
-            <a href="addtrip">
+            <a href="<?php print base_url(); ?>addtrip">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-red-bg">
                   <i class="fa fa-car"></i> 
@@ -228,7 +228,7 @@ var baseurl = "<?php print base_url(); ?>";
                 </div>
               </div>
             </a>
-            <a href="addtrip/upcoming_trip_passenger">
+            <a href="<?php print base_url(); ?>addtrip/past_trip_passenger">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-red-bg">
                   <i class="fa fa-question"></i> 
@@ -247,14 +247,14 @@ var baseurl = "<?php print base_url(); ?>";
           <ul class="dropdown-menu">
                
                 <li class="item">
-                  <a href="rating/given_rating">
+                  <a href="<?php print base_url(); ?>rating/given_rating">
                     <i class="fa fa-star-half-o"></i> 
                       <?php echo lang('rating_given'); ?>
                   </a>
                 </li>                   
               </ul>
           <div class="row button"> 
-            <a href="rating">
+            <a href="<?php print base_url(); ?>rating">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-yellow-bg">
                   <i class="fa fa-star-o"></i> 
@@ -262,7 +262,7 @@ var baseurl = "<?php print base_url(); ?>";
                 </div>
               </div>
             </a>
-            <a href="rating/received_rating">
+            <a href="<?php print base_url(); ?>rating/received_rating">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-yellow-bg">
                   <i class="fa fa-star"></i> 
@@ -270,7 +270,7 @@ var baseurl = "<?php print base_url(); ?>";
                 </div>
               </div>
             </a>
-            <a href="rating/given_rating">
+            <a href="<?php print base_url(); ?>rating/given_rating">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-yellow-bg">
                   <i class="fa fa-star"></i> 

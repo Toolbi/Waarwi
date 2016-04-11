@@ -3,9 +3,12 @@
 //Add Trip Language
 
 $lang['my_trips']					= 'My Trips';
+$lang['my_trip']					= 'My Trips';
 $lang['rides_offered']				= 'As a car owner';
 $lang['enquiry']				    = 'As a passenger';
 $lang['upcoming_trips']				= 'Upcoming Trips';
+$lang['upcoming_trips_description'] = 'Click on a trip to edit.';
+$lang['past_trips_description'] 	= 'Click on a trip view details.';
 $lang['past_trips']					= 'Past Trip';
 $lang['trip_legs']					= 'Trip legs:';
 $lang['edit_trips']					= 'Edit trips';

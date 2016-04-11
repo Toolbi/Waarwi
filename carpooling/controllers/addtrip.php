@@ -721,7 +721,9 @@ class Addtrip extends Traveller_Controller {
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $id = $carpool_session['carpool_session']['user_id'];
         $data = $this->Trip_model->past_trip($this->user_id, $data);
+        $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('past_trip', $data);
     }
 
