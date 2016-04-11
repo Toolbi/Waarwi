@@ -123,7 +123,7 @@ var baseurl = "<?php print base_url(); ?>";
                   </a>
                 </li>
                 <li class="item">
-                  <a href="addtrip/past_trip_passenger">
+                  <a href="addtrip/upcoming_trip_passenger">
                     <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
                       <?php echo lang('enquiry');?>
                   </a>
@@ -228,7 +228,7 @@ var baseurl = "<?php print base_url(); ?>";
                 </div>
               </div>
             </a>
-            <a href="<?php print base_url(); ?>addtrip/past_trip_passenger">
+            <a href="<?php print base_url(); ?>addtrip/upcoming_trip_passenger">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-red-bg">
                   <i class="fa fa-question"></i> 

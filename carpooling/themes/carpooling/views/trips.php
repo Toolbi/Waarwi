@@ -215,7 +215,7 @@ $(document).ready(function() {
                   </a>
                 </li>
                 <li class="item">
-                  <a href="<?php print base_url(); ?>addtrip/past_trip_passenger">
+                  <a href="<?php print base_url(); ?>addtrip/upcoming_trip_passenger">
                     <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
                       <?php echo lang('enquiry');?>
                   </a>
