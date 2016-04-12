@@ -361,7 +361,7 @@ $(document).ready(function() {
                   <div class="sea-city-city topbg2 colorwhite padding5 cs-blue-text size14"> 
                     <b><span><?php echo lang('trip_leg');?>:</span> 
                     <img src="<?php echo theme_img('marker-from.png') ?>"> </span>
-                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('arrow-right-white.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
+                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
                   </div>
                   <div class="padding20 fleft width100">
                     <div class="inn-in-left fleft">

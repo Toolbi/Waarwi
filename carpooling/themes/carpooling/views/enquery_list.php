@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('header_home.php'); ?>
 
 <?php echo theme_js('tab.js', true); ?>
 <?php echo theme_js('notification/goNotification.js', true) ?>
@@ -26,7 +26,7 @@
                     return false;
                 } else if (json.result == 1) {                    
                     if(action == 'accept'){
-                        $('#enquirySuccess-'+id).html('<p> Accepted </p>');
+                        $('#enquirySuccess-'+id).html("<p> <?php echo lang('accept'); ?> </p>");
                     }else if(action == 'reject'){
                         $('#enquiry-'+id).fadeOut().remove();
                     }                    
@@ -141,6 +141,7 @@ if (function_exists('validation_errors') && validation_errors() != '') {
                                 <?php if ($enquiries) { ?>         	
                                     <table valign="center" cellpadding="0" cellspacing="0"  width="100%">
                                         <tbody><tr bgcolor="#01acf1">
+                                                <th> test ID</th> 
                                                 <th> <?php echo lang('enquiry_date'); ?></th> 
                                                 <th> <?php echo lang('trip_date'); ?></th>  
                                                 <th> <?php echo lang('vehicle_number'); ?> </th>                            
@@ -153,6 +154,7 @@ if (function_exists('validation_errors') && validation_errors() != '') {
                                             <?php foreach ($enquiries as $enquiry) { ?>
 
                                                 <tr id="enquiry-<?=$enquiry->enquiry_id?>">                        	
+                                                    <td> <?php echo $enquiry->enquiry_id?> </td>
                                                     <td> <?= date('d, M Y', strtotime($enquiry->enquiry_date_time)) ?> </td>
                                                     <td> <?= date('d, M Y', strtotime($enquiry->enquiry_trip_date)) ?> </td>
                                                     <td> <?= $enquiry->vechicle_number ?> </td>
@@ -161,10 +163,10 @@ if (function_exists('validation_errors') && validation_errors() != '') {
                                                     <td class="lst"> <?= $enquiry->user_email ?></td>
                                                     <td id="enquirySuccess-<?=$enquiry->enquiry_id?>">
                                                         <?php if ($enquiry->enquiry_trip_status == 0){ ?>
-                                                        <a class="btn btn-success" href="javascript:void(0)" data-action="accept" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('accept'); ?></a>
-                                                        <a class="btn btn-danger"href="javascript:void(0)" class="enquiryAction" data-action="reject" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('reject'); ?></a>
+            <a  href="javascript:void(0)" class="enquiryAction" data-action="accept" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('accept'); ?></a>
+            <a href="javascript:void(0)" class="enquiryAction" data-action="reject" data-id="<?=$enquiry->enquiry_id?>"><?php echo lang('reject'); ?></a>
                                                         <?php } else {?>                                                        
-                                                        <p> Accepted </p>
+                                                        <p> <?php echo lang('accept'); ?> </p>
                                                         <?php } ?>
                                                     </td>                             
                                                 </tr>   

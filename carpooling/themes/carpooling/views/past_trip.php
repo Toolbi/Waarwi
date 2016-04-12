@@ -166,7 +166,7 @@ $(document).ready(function() {
                   </a>
                 </li>
                 <li class="item">
-                  <a href="addtrip/past_trip_passenger">
+                  <a href="<?php print base_url(); ?>addtrip/upcoming_trip_passenger">
                     <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
                       <?php echo lang('enquiry');?>
                   </a>
@@ -241,9 +241,9 @@ $(document).ready(function() {
     <ul class="brd-crmb">
       <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
       <li> / </li>
-      <li><a href="addtrip"><?php echo lang('my_trip');?></a></li>
+      <li><a href="<?php print base_url(); ?>addtrip"><?php echo lang('my_trip');?></a></li>
       <li> / </li>
-      <li><a href="addtrip/past_trip"><?php echo lang('rides_offered');?></a></li>
+      <li><a href="<?php print base_url(); ?>addtrip/past_trip"><?php echo lang('rides_offered');?></a></li>
       <li> / </li>
       <li><?php echo lang('past_trips');?></li>
     </ul>
@@ -307,7 +307,7 @@ $(document).ready(function() {
                   <div class="sea-city-city topbg2 colorwhite padding5 cs-blue-text size14"> 
                     <b><span><?php echo lang('trip_leg');?>:</span> 
                     <img src="<?php echo theme_img('marker-from.png') ?>"> </span>
-                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('arrow-right-white.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
+                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
                   </div>
 			                  <div class="padding20 fleft width100">
                     <div class="inn-in-left fleft">

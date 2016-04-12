@@ -281,9 +281,9 @@ $(document).ready(function() {
     <ul class="brd-crmb">
       <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
       <li> / </li>
-      <li><a href="addtrip"><?php echo lang('my_trip');?></a></li>
+      <li><a href="<?php print base_url(); ?>addtrip"><?php echo lang('my_trip');?></a></li>
       <li> / </li>
-      <li><a href="addtrip/past_trip"><?php echo lang('enquiry');?></a></li>
+      <li><a href="<?php print base_url(); ?>addtrip/upcoming_trip_passenger"><?php echo lang('enquiry');?></a></li>
       <li> / </li>
       <li><?php echo lang('past_trips');?></li>
     </ul>
@@ -311,48 +311,45 @@ $(document).ready(function() {
         foreach ($trip_details as $trip) {
             ?>
             <div class="inner-trip-det">
-                <div class="sea-city-city topbg colorwhite padding10 cs-blue-text size16"> 
-                    <b><?= $trip['source'] ?> <span> <img src="<?php echo theme_img('arrow-right-white.png') ?>"> </span> <?= $trip['destination'] ?> <span class="edit_option"> </span>   </b> 
-                    <span class="trp-para"><?php echo lang('trip_type'); ?> <?php if (!empty($trip['trip_casual_date'])) {
-        echo $trip['trip_casual_date'];
-    } else {
-        echo 'Regular';
-    } ?></span> 
-                    <a href="javascript:void(0)" class="fright trp-acc-arr slider" rel="<?= $i ?>"> <img src="<?php echo theme_img('arr-ver-down.png') ?>"> </a>
+                <div class="topbg padding10"> 
+                <a href="javascript:void(0)" class="trp-acc-arr slider" rel="<?=$i?>">
+                <b><?=$trip['source']?> <span> <img src="<?php echo theme_img('arrow-right-white.png') ?>"> </span> <?=$trip['destination']?><span class="edit_option"> <?php echo lang('edit_options');?></span> </b> </a>
+                <a href="javascript:void(0)" class="fright trp-acc-arr slider" rel="<?=$i?>">
+                  <span class="trp-para">
+                  <?php echo lang('trip_date');?>: 
+                    <?php echo date('d - m - y',strtotime ($trip['trip_created_date']));?>  |
+                  <?php echo lang('trip_type');?>: <?php if(!empty($trip['trip_casual_date'])){ echo lang('casual'); } else { echo lang('regular');} ?></span> 
+                  <img src="<?php echo theme_img('arr-ver-down.png') ?>"> </a>
+              </div>
+                  <div id="slide<?=$i?>" style="display:none">
+                    <div class="fleft width100 margintop20 padding20">
+                <span class="fleft"> <img src="<?php echo theme_img('marker-from.png') ?>"> </span>
+                      <div class="sea-city-city fleft cs-grey-text size14 mar-min fleftnon"> 
+                        <b><?=$trip['source']?></b> <?php  
+               if(!empty($legdetails['route_'.$trip['trip_id']])){
+               foreach ($legdetails['route_'.$trip['trip_id']] as $trip_routes){ 
+              ?>
+                 <span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_routes?> <span> 
+                 <?php } } ?>
+                 <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <b><?=$trip['destination']?> </b>
+                 <span class=""> <img src="<?php echo theme_img('marker-to.png') ?>"> </span>
+                  
+                 <span class=""><?php echo lang('trip_type');?>: <?php if(!empty($trip['trip_casual_date'])){ echo lang('casual'); } else { echo lang('regular');} ?></span> 
                 </div>
-                <div id="slide<?= $i ?>" style="display:none">
-                    <div class="row margintop20 padding20">
-                        <span class="fleft"> <img src="<?php echo theme_img('src-dest-ico.png') ?>"> </span>
-                        <div class="sea-city-city fleft cs-grey-text size14 mar-min fleftnon"> 
-                            <b><?= $trip['source'] ?></b> 
-                            <?php
-                            if (!empty($legdetails['route_' . $trip['trip_id']])) {
-                                foreach ($legdetails['route_' . $trip['trip_id']] as $trip_routes) {
-                                    ?>
-                                    <span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?= $trip_routes ?> <span> 
-                                <?php }
-                            } ?>
-                                <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <b><?= $trip['destination'] ?> </b>
-
-                            <span class="trp-para"><?php echo lang('trip_type'); ?> <?php if (!empty($trip['trip_casual_date'])) {
-                        echo $trip['trip_casual_date'];
-                    } else {
-                        echo 'Regular';
-                    } ?></span> 
-                        </div>
-                    </div>
-                    <h5 class="fleft width100 inner-in-trp"> <img src="<?php echo theme_img('trip-icon.png') ?>"> <?php echo lang('trip_leg'); ?>: </h5>
-                    <?php
-                    if (!empty($legdetails['leg_' . $trip['trip_id']])) {
-                        foreach ($legdetails['leg_' . $trip['trip_id']] as $trip_leg) {
-                            //print_r($trip_leg); die;
-                            ?>
-                            <div class="fleft width100 inner-in-trp">
-                                <div class="inner-trip-det marginbot10">
-                                    <div class="sea-city-city topbg colorwhite padding5 cs-blue-text size14"> 
-                                        <span><?php echo lang('trip_leg'); ?></span> 
-                                        <b><?= $trip_leg['source_leg'] ?><span> <img src="<?php echo theme_img('arrow-right-white.png') ?>"> </span> <?= $trip_leg['destination_leg'] ?> </b> 
-                                    </div>
+              </div>
+                    <h5 class="fleft width100 inner-in-trp"> <img src="<?php echo theme_img('trip-icon.png') ?>"> <?php echo lang('trip_detail');?>: </h5>
+               <?php  
+               if(!empty($legdetails['leg_'.$trip['trip_id']])){
+               foreach ($legdetails['leg_'.$trip['trip_id']] as $trip_leg){ 
+               //print_r($trip_leg); die;
+              ?>
+                              <div class="fleft width100 inner-in-trp">
+                                  <div class="inner-trip-det marginbot10">
+                                       <div class="sea-city-city topbg2 colorwhite padding5 cs-blue-text size14"> 
+                    <b><span><?php echo lang('trip_leg');?>:</span> 
+                    <img src="<?php echo theme_img('marker-from.png') ?>"> </span>
+                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
+                  </div>
                                     <div class="padding20 fleft width100">
                                         <div class="inn-in-left fleft">
                                             <div class="sea-city-city row cs-grey-text size14"> 
