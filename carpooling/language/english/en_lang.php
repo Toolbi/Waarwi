@@ -280,7 +280,8 @@ $lang['settings']						= 'SETTINGS';
 $lang['my_vehicles']					= 'MY VEHICLES';
 $lang['my_trips']						= 'MY TRIPS';
 $lang['my_ratings']                     = 'MY RATINGS';
-$lang['my_enquiries']                     = 'MY ENQUIRY';
+$lang['my_enquiries']                   = 'MY ENQUIRY';
+$lang['my_enquiries_message']			= 'MES MESSAGES';
 $lang['logout']							= 'LOGOUT';
 $lang['edit_options']                    = '(Edit your trip date and rate here.)';
 
@@ -407,6 +408,9 @@ $lang['no_ratings']                           = 'No ratings';
 //Enquiry
 
 $lang['my_enquiry']                           = 'My enquiry';
+$lang['my_enquiry_message']                   = 'My message';
+$lang['view_trip']                   		  = 'Voir l\'annonce';
+$lang['my_enquiries_description']		      = 'List of enquiries by users';
 $lang['enquiry_date']                         = 'Enquiry date';
 $lang['trip_date']                            = 'Trip date';
 $lang['vehicle_number']				          = 'Vehicle number';

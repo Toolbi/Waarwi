@@ -202,7 +202,7 @@ $(document).ready(function() {
             </li>
             <li class="colored gray-bg"><a href="<?php print base_url(); ?>profile#my-enquiries">
               <i class="fa fa-question"></i>
-              <span><?php echo lang('my_enquiries');?></span>
+              <span><?php echo lang('my_enquiries_message');?></span>
             </a></li>
           </ul>
         </div>

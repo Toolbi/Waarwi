@@ -92,7 +92,7 @@ $(document).ready(function(){
                       <li><a href="<?php echo base_url('profile#my-cars-info');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_vehicles');?> </a></li>
                        <li><a href="<?php echo base_url('addtrip');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_trips');?> </a></li>
 						<li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
-						<li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries'); ?> </a></li>
+						<li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> </a></li>
 						
                       <li><a href="<?php echo base_url('login/logout');?>"> <img src="<?php echo theme_img('logout-ico.png')?>" width="13"> <?php echo lang('logout');?> </a></li>
                     </ul>

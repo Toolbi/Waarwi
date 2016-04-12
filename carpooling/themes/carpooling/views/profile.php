@@ -157,9 +157,9 @@ var baseurl = "<?php print base_url(); ?>";
                 </li>                   
               </ul>
             </li>
-            <li tab="my-enquiries" class="colored gray-bg"><a href="profile#my-enquiries">
+            <li class="colored gray-bg"><a href="<?php print base_url(); ?>addtrip/enquery_list">
               <i class="fa fa-question"></i>
-              <span><?php echo lang('my_enquiries');?></span>
+              <span><?php echo lang('my_enquiries_message');?></span>
             </a></li>
           </ul>
         </div>
