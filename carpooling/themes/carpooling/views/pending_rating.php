@@ -259,7 +259,7 @@ $(document).ready(function() {
         </ul>
              
          <div class="active-yellow padding10">
-        <h4> <?php echo lang('my_trip');?>: <?php echo lang('rides_offered');?></h4>
+        <h4> <?php echo lang('my_rating');?>: <?php echo lang('ratings_pending');?></h4>
 
         </div>
             <div class="inner-yellow">
