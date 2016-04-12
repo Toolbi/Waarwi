@@ -166,15 +166,15 @@ $(document).ready(function() {
               <i class="fa fa-home"></i>
               <span><?php echo lang('home');?></span>
             </a></li> 
-            <li  class="emerald-bg"><a href="profile#personal-infos">
+            <li  class="emerald-bg"><a href="<?php print base_url(); ?>profile#personal-infos">
               <i class="fa fa-user"></i>
               <span><?php echo lang('profile');?></span>
             </a></li>
-            <li class="colored green-bg"><a href="profile#settings">
+            <li class="colored green-bg"><a href="<?php print base_url(); ?>profile#settings">
               <i class="fa fa-cogs"></i>
               <span><?php echo lang('settings');?></span>
             </a></li>
-            <li class="colored purple-bg"><a href="profile#my-cars-info">
+            <li class="colored purple-bg"><a href="<?php print base_url(); ?>profile#my-cars-info">
               <i class="fa fa-car"></i>
               <span><?php echo lang('my_vehicles');?></span>
             </a></li>

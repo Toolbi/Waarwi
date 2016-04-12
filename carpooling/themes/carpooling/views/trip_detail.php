@@ -18,16 +18,17 @@ function viewPopcontact(pmId)
          success: function(json) {
 
           if (json.result == 0){                                                                   
-           $('#enquiry_'+pmId).addClass(".book-active-success");
-           $('#enquiry_'+pmId).removeClass("book-button");
-           $('#enquiry_'+pmId).text('Your request already sent. You may call if required')     
+           $('#enquiry_'+pmId).addClass(".success-request");
+           $('#enquiry_'+pmId).removeClass("btn btn-success");
+           $('#enquiry_'+pmId).removeAttr("href");   
+           $('#enquiry_'+pmId).html("<?php echo lang('enquiry_request')?>")     
            //$('#spnError').show();
 
            return false;
           } else if (json.result == 1) {
-               $('#enquiry_'+pmId).addClass(".book-active-success");
-               $('#enquiry_'+pmId).removeClass("book-button");
-           $('#enquiry_'+pmId).text('Your Enquiry has been submitted successfully!')
+               $('#enquiry_'+pmId).addClass(".badge badge-danger");
+               $('#enquiry_'+pmId).removeClass("btn btn-success");
+           $('#enquiry_'+pmId).text("<?php echo lang('enquiry_confirm')?>")
           }
          }
         });
@@ -36,10 +37,10 @@ function viewPopcontact(pmId)
         return false;
     }
 }
-	
-	
-	
-	
+  
+  
+  
+  
 </script>
 
 
@@ -54,34 +55,34 @@ function viewPopcontact(pmId)
       <li><a href="javascript:void(0)"><?php echo lang('search');?></a></li>
       <li> / </li>
       <li><a href="javascript:void(0)">
-	  				<?php $source = explode(",", $tripdetails['source_leg']); 
+            <?php $source = explode(",", $tripdetails['source_leg']); 
                     echo  $source[0]; ?> <span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> 
                     <?php $destination = explode(",", $tripdetails['destination_leg']); 
                     echo  $destination[0]; ?>
-					
-	</a></li>
+          
+  </a></li>
     </ul>
-	  </div></div></div>		
-			<div class="container-fluid margintop40">
+    </div></div></div>    
+      <div class="container-fluid margintop40">
   <div class="container">
-            <div class="row">	
-		<div class="col-lg-8 col-md-8 col-sm-9 ">
+            <div class="row"> 
+    <div class="col-lg-8 col-md-8 col-sm-9 ">
 <div class="share-post">
 <ul>
-	
+  
 <li><a href="javascript:void(0)" class="twitter share-tooltip share-tooltip-top social_icon" rel="nofollow" data_action="twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
 <li><a href="javascript:void(0)" class="facebook share-tooltip share-tooltip-top social_icon" rel="nofollow" data_action="facebook"><i class="fa fa-facebook" data_action="facebook"></i>Facebook</a></li>
 <li><a href="javascript:void(0)" class="gplus share-tooltip share-tooltip-top social_icon"  rel="nofollow"  data_action="google"><i class="fa fa-google-plus"></i>Google</a></li>
-<li><a href="javascript:void(0)" class="tumblr share-tooltip share-tooltip-top social_icon" rel="nofollow" data_action="tumblr"><i class="fa fa-tumblr"></i>Tumblr</a></li>	
+<li><a href="javascript:void(0)" class="tumblr share-tooltip share-tooltip-top social_icon" rel="nofollow" data_action="tumblr"><i class="fa fa-tumblr"></i>Tumblr</a></li> 
 <li><a href="javascript:void(0)" class="pinterest share-tooltip share-tooltip-top social_icon" rel="nofollow"  data_action="pinterest"><i class="fa fa-pinterest"></i>Pinterest</a></li>
 </ul>
 </div>
-						
+            
     <div class="rowrec margin">
       <div class="trip-lft">
         
       <div class="rowrec view-map"><?php echo $map['js']; 
-							echo $map['html']; ?>
+              echo $map['html']; ?>
                             <div id="directionsDiv"></div></div>
 
       <div class="row margin">
@@ -96,8 +97,8 @@ function viewPopcontact(pmId)
       <div class="rowrec line4"></div>
 
       <div class="sea-city-city cs-blue-text cs-lgrey-bg padding10"> <b><?= $tripdetails['source_leg'] ?> 
-    	<span> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
-	  <?= $tripdetails['destination_leg'] ?> </b> </div>
+      <span> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
+    <?= $tripdetails['destination_leg'] ?> </b> </div>
 
       <div class="rowrec line4"></div>
 
@@ -143,11 +144,11 @@ function viewPopcontact(pmId)
       <div class="rowrec trp-top padding10">
           <strong class="cs-blue-text"><?= $tripdetails['user_first_name'] .' '.$tripdetails['user_last_name'] ?></strong> <span><?php echo lang('offer');?> </span>
           <h4 class="paddingtop10 cs-blue-text">
-		  <?php $source = explode(",", $tripdetails['source_leg']); 
-			echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
-			<?php $destination = explode(",", $tripdetails['destination_leg']); 
-			echo  $destination[0]; ?>
-		  </h4>
+      <?php $source = explode(",", $tripdetails['source_leg']); 
+      echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
+      <?php $destination = explode(",", $tripdetails['destination_leg']); 
+      echo  $destination[0]; ?>
+      </h4>
       </div>
 
       <div class="rowrec line4"></div>
@@ -158,7 +159,7 @@ function viewPopcontact(pmId)
       </div>
 
       <div class="row">
-		<?php if($tripdetails['trip_casual_date']){ ?>
+    <?php if($tripdetails['trip_casual_date']){ ?>
         <div class="colmd6">
             <?php echo lang('departure_date');?><br>
             <span class="size20"><span><img src="<?php echo theme_img('cal-14-14.png');?>"></span> <?php echo date('d/m/Y',strtotime($tripdetails['trip_casual_date']));?>
@@ -199,39 +200,39 @@ function viewPopcontact(pmId)
       
       <div class="rowrec center margin padding10">
       
-      	<?php 
-			
-			if($islogin){
-				
-				if($tripdetails['trip_user_id'] == $user['user_id'])
-				{?>
-					<!--<a href="javascript:void(0)" class="book-button padding10 row">  <?php echo lang('your_trip');?> </a>-->
-				
-		<?php }else if($status == 1){ 
+        <?php 
+      
+      if($islogin){
+        
+        if($tripdetails['trip_user_id'] == $user['user_id'])
+        {?>
+          <!-- <a href="javascript:void(0)" class="book-button padding10 row">  <?php echo lang('your_trip');?> </a> -->
+        
+    <?php }else if($status == 1){ 
                         if($tripdetails['trip_casual_date']){
                 ?>
                                         <input type="hidden" name="tripDate" id="tripDate" value="<?=date('d/m/Y', strtotime($tripdetails['trip_casual_date']));?>"/>                
-                        <a href="javascript:void(0)" class="book-button padding10 rowrec"  id="enquiry_<?=$tripdetails['trip_id']?>"onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?></a> 
+                        <a href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?></a> 
                 <?php     
-                        }else{		
-		?>      
+                        }else{    
+    ?>      
                         <input type="texte" name="tripDate" id="tripDate" value="<?=$journeyDate?>"/>
-                        <a href="javascript:void(0)" class="book-button padding10 rowrec"  id="enquiry_<?=$tripdetails['trip_id']?>"onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?></a> 
+                        <a href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?></a> 
             
             <?php
                         }
                     }else{ ?> 
-                <a href="javascript:void(0)" class="book-button padding10 rowrec">  <?php echo lang('already');?> </a>
+                <a href="javascript:void(0)" class="btn btn-success padding10 ">  <?php echo lang('already');?> </a>
                 
                 <?php
-					
-				}
-			}else {
-				?>
-                <a href="<?=base_url('login')?>" class="book-button padding10 rowrec"> <?php echo lang('get_enquiry');?> </a> 
+          
+        }
+      }else {
+        ?>
+                <a href="<?=base_url('login')?>" class="btn btn-success padding10 "> <?php echo lang('get_enquiry');?> </a> 
                 <?php
-			}
-			?>
+      }
+      ?>
       </div>
 
       <div class="rowrec line4"></div>
@@ -270,10 +271,10 @@ function viewPopcontact(pmId)
               <strong class="size16">
                   <a href="javascript:void(0)" class="cs-blue-text"><?= $tripdetails['user_first_name'] .' '.$tripdetails['user_last_name'] ?></a>
               </strong><br>
-			  
+        
               <small class="size13" > 
-				DOB : 
-				  <?php
+        DOB : 
+          <?php
  
                if (!empty($tripdetails['show_number']))
                 {
@@ -284,26 +285,26 @@ function viewPopcontact(pmId)
                   echo "User is not specified";
                }
  ?></small><br>
-			  <small class="size14" >
-				Age:  
-				  <?php
+        <small class="size14" >
+        Age:  
+          <?php
  
                if (!empty($tripdetails['show_number']))
-			   {
-				  $from = new DateTime($tripdetails['user_dob']);
-					$to   = new DateTime('today');
-				  echo $from->diff($to)->y; 
-			   }
+         {
+          $from = new DateTime($tripdetails['user_dob']);
+          $to   = new DateTime('today');
+          echo $from->diff($to)->y; 
+         }
                   else
-				  {
-					  echo "User is not specified";
-				  }
+          {
+            echo "User is not specified";
+          }
                  ?>
-				  </small>
-			  
+          </small>
+        
               <span class="rowrec size14"> 
                 <span class="fleft"> Ratings: </span>
-                  <div class="starrow fleft marginleft10">					 
+                  <div class="starrow fleft marginleft10">           
                     <script>rate(<?=getOverallRating($tripdetails['user_id'])?>);</script>                
                  </div>
               </span>
@@ -321,65 +322,65 @@ function viewPopcontact(pmId)
         <ul class="rowrec trp-cont-rht">
             <li>
                 <span class="trp-imge paddingtop5"><img src="<?php echo theme_img('mobile-ico.png');?>"></span> <strong class="size14 paddingleft8"><?php echo lang('phone');?> </strong>
-				
-				<?php  if($tripdetails['show_number'] == 1)
-				{ ?>  
+        
+        <?php  if($tripdetails['show_number'] == 1)
+        { ?>  
                 <span class="fright paddingtop5"><img src="<?php echo theme_img('verified-ico-green.png ');?>"></span>
-				
-				<?php }
+        
+        <?php }
               
                 else
-			  { ?>
-				<span class="fright paddingtop5"><img src="<?php echo theme_img('verified-ico-red.png ');?>"></span>
-				 <?php	} ?>
+        { ?>
+        <span class="fright paddingtop5"><img src="<?php echo theme_img('verified-ico-red.png ');?>"></span>
+         <?php  } ?>
             </li>
             <li>
               <span class="trp-imge paddingtop5"><img src="<?php echo theme_img('mail-ico.png');?>"></span> <strong class="size14 paddingleft8"><?php echo lang('email');?> </strong>            
               <span class="fright paddingtop5"><img src="<?php echo theme_img('verified-ico-green.png');?>"></span>
             </li>
         </ul>
-		  
-		  <div class="trip-icons">
-			  
-			  <?php  if($tripdetails['allowed_chat'] == 1)
+      
+      <div class="trip-icons">
+        
+        <?php  if($tripdetails['allowed_chat'] == 1)
                  { ?>  
                     <li><span class="chat-green"></span></li>
-			   <?php }
-			  else
-			  { ?>
-			  
-		            <li><span class="chat-red"></span></li>
-			  <?php	} ?>
-			  
-			 <?php  if($tripdetails['allowed_food'] == 1)
-			  { ?>
+         <?php }
+        else
+        { ?>
+        
+                <li><span class="chat-red"></span></li>
+        <?php } ?>
+        
+       <?php  if($tripdetails['allowed_food'] == 1)
+        { ?>
                     <li><span class="food-green"></span></li>
-			 <?php }
-			  else
-			  { ?>
-			  
-			 <li><span class="food-red"></span></li>
-		<?php	} ?>
-			  
-			  <?php  if($tripdetails['allowed_music'] == 1)
-			  { ?>
+       <?php }
+        else
+        { ?>
+        
+       <li><span class="food-red"></span></li>
+    <?php } ?>
+        
+        <?php  if($tripdetails['allowed_music'] == 1)
+        { ?>
                     <li><span class="music-green"></span></li>
-			  <?php }
-			  else
-			  { ?>
-			  <li><span class="music-red"></span></li>
-			  <?php	} ?>
-			  <?php  if($tripdetails['allowed_smoke'] == 1)
-			  { ?>
+        <?php }
+        else
+        { ?>
+        <li><span class="music-red"></span></li>
+        <?php } ?>
+        <?php  if($tripdetails['allowed_smoke'] == 1)
+        { ?>
                     <li><span class="smoke-green"></span></li>
                <?php }
-			  else
-			  { ?> 
-			      <li><span class="smoke-red"></span></li>
-			  <?php	} ?>
+        else
+        { ?> 
+            <li><span class="smoke-red"></span></li>
+        <?php } ?>
                     </div>
-		  
-		  
+      
+      
 
         <div class="rowrec line4"></div>
 
@@ -422,33 +423,34 @@ function viewPopcontact(pmId)
 $('#tripDate').datepick({
  changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'
 });
-	
+  
 
-	 var baseurl = "<?php print base_url(); ?>";
+   var baseurl = "<?php print base_url(); ?>";
 $(document).ready(function() {
-	
-	/* Slider Expand Click */
-	$('body').on("click",'.social_icon',function()
-	{
-		var action = $(this).attr("data_action");
-		var url = window.location.href;
-		if(action == 'facebook'){
-			window.open("https://www.facebook.com/sharer/sharer.php?u="+url, '_blank');
-		}
-		if(action == 'twitter'){
-			window.open("https://twitter.com/intent/tweet?url="+url, '_blank');
-		}
-		if(action == 'google'){
-			window.open("https://plus.google.com/share?url="+url, '_blank');
-		}
-		if(action == 'tumblr'){
-			window.open("http://www.tumblr.com/share?url="+url, '_blank');
-		}
-		if(action == 'pinterest'){
-			window.open("http://pinterest.com/pin/create/button/?url="+url, '_blank');
-		}
-	});
+  
+  /* Slider Expand Click */
+  $('body').on("click",'.social_icon',function()
+  {
+    var action = $(this).attr("data_action");
+    var url = window.location.href;
+    if(action == 'facebook'){
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+url, '_blank');
+    }
+    if(action == 'twitter'){
+      window.open("https://twitter.com/intent/tweet?url="+url, '_blank');
+    }
+    if(action == 'google'){
+      window.open("https://plus.google.com/share?url="+url, '_blank');
+    }
+    if(action == 'tumblr'){
+      window.open("http://www.tumblr.com/share?url="+url, '_blank');
+    }
+    if(action == 'pinterest'){
+      window.open("http://pinterest.com/pin/create/button/?url="+url, '_blank');
+    }
+  });
 });
-	
+  
 </script>
 <?php include('footer.php'); ?>
+

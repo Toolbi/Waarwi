@@ -1453,3 +1453,9 @@ a.drop{
   background-color: #5cb85c;
    border-color: #4cae4c;
   }
+
+  .badge.badge-danger {
+    color: #fff;
+  background-color: #e84e40;
+  border-color: #4cae4c;
+}
