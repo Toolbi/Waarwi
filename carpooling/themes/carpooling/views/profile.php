@@ -273,8 +273,8 @@ var baseurl = "<?php print base_url(); ?>";
             <a href="<?php print base_url(); ?>rating/given_rating">
               <div class="col-lg-3 col-sm-6 col-xs-12">
                 <div class="main-box infographic-box  white-yellow-bg">
-                  <i class="fa fa-star"></i> 
-                  <span class="headline"><?php echo lang('enquiry');?></span>
+                  <i class="fa fa-star-half-o"></i> 
+                  <span class="headline"><?php echo lang('rating_given');?></span>
                 </div>
               </div>
             </a>

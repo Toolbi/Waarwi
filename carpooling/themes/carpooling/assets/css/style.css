@@ -1421,3 +1421,25 @@ a.drop{
   background-color: #a6260e ;
   color:#FFF;
 }
+
+/*btn yellow*/
+.btn-tab-y.active{
+  border-radius: 4px; 
+  background: #e1ab0a; 
+  color: #fff!important; 
+  font-weight: 700; 
+}
+
+.btn-tab-y {
+  border-radius: 4px; 
+  border: 1px #ffc107;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #ffc107;
+  transition: all 200ms linear 0s; 
+}
+.btn-tab-y:hover { 
+  border: 1px #ffc107; 
+  background-color: #ffc107 ;
+  color:#FFF;
+}
