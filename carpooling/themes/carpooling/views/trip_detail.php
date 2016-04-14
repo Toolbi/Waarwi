@@ -195,59 +195,70 @@ function viewPopcontact(pmId)
       <div class="rowrec center margin padding10">
       <!-- On vérifie si l'utilisateur est connecté: -->      
         <?php if($islogin){        
-          if($tripdetails['trip_user_id'] == $user['user_id'])
-            {?>
-            <!-- Si oui et que c'est son annonce, il peut pas réserver -->
-            <a href="javascript:void(0)" class="badge badge-success your-trip">  <?php echo lang('your_trip');?></a>        
-            <?php }
-          /*On vérifie si l'utilisateur a déjà réservé pour ce trajet*/
-            /*S'il n'a pas encore envoyé de demande de réservation:*/
-          else if(!isset ($tripenquirydetail['enquiry_passanger_id'])){           
-            /*On vérifie s'il y a une date: occasionnel*/
-            if($tripdetails['trip_casual_date']){
-            ?>
-            <!-- Si c'est occasionnel, il peut réserver en cliquant sur le bouton -->
-              <input type="hidden" name="tripDate" id="tripDate" value="<?=date('d/m/Y', strtotime($tripdetails['trip_casual_date']));?>"/>  
-              <button  href="#" class="btn btn-success padding10 " id="enquiry_<?=$tripdetails['trip_id']?>" 
-                  onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
-              </button>  
-            <?php     
-            }
-            /*Si c'est fréquent, on lui demande de choisir la date de son voyage puis de réserver*/
-            else{   
-            ?>      
-              <input type="texte" name="tripDate" id="tripDate" value="<?=$journeyDate?>"/>
-              <button href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"
-                      onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
-              </button>
-            <?php
-            }
-            /*S'il a déja envoyé une demande de réservation:*/
+          if($tripdetails['trip_user_id'] == $user['user_id']){?>
+<!--Possibilité #1 : Si oui et que c'est son annonce, il peut pas réserver -->
+            <a href="javascript:void(0)" class="badge badge-success your-trip">  <?php echo lang('your_trip');?></a>    <?php 
+          }
+          /*S'il a déja envoyé une demande de réservation:*/
               /*Il peut plus renvoyer la demande mais il doit pouvoir envoyer une annulation de sa demande*/
-            }else{ 
-              /*Si sa réservation est confirmée*/
-                if(!$tripenquirydetail['enquiry_trip_status']){ ?>
+          else if($tripenquirydetail['enquiry_passanger_id'] !== $user['user_id']){
+            if (getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0) {
+              ?>
+                <span class="badge badge-danger trip-complet"><?php echo lang('trip_complet');?> </span><?php
+            }
+            else{
+              if($tripdetails['trip_casual_date']){
+                  ?>
+<!--Possibilité #2 :Si c'est occasionnel, il peut réserver en cliquant sur le bouton -->
+                    <input type="hidden" name="tripDate" id="tripDate" value="<?=date('d/m/Y', strtotime($tripdetails['trip_casual_date']));?>"/>  
+                    <button  href="#" class="btn btn-success padding10 " id="enquiry_<?=$tripdetails['trip_id']?>" 
+                        onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
+                    </button>  
+                  <?php     
+              }
+              /*Si c'est fréquent, on lui demande de choisir la date de son voyage puis de réserver*/
+              else{   
+                  ?>      
+                    <input type="texte" name="tripDate" id="tripDate" value="<?=$journeyDate?>"/>
+                    <button href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"
+                            onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
+                    </button>
+                  <?php
+              }
+              
+            }
+          }
+          else if($tripenquirydetail['enquiry_passanger_id'] == $user['user_id']){
+            switch ($tripenquirydetail['enquiry_trip_status']) {
+              case 0:?>
+                 <!--Possibilité #3 : Si elle est en attente de confirmation-->
                   <span href="javascript:void(0)" class="label label-info padding10 ">  <?php echo lang('already');?> </span>
                   <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button>
                 <?php
-                }
-                /*Si elle est en attente de confirmation*/
-                else{?>
+                break;
+              
+              default:
+                ?>
+                <!--Possibilité #3 : Si sa réservation est confirmée -->
                   <span href="javascript:void(0)" class="label label-success padding10 ">  <?php echo lang('enquiry_accepted');?> </span>
                   <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button>
+                  
                 <?php
-                }           
-            
-
-        }
+                break;
+            }
+           
+          }
         }
         /*S'il n'est pas connecté, on lui renvoie dans la page de connexion*/
-        else {
-          ?>
-          <a href="<?=base_url('login')?>" class="btn btn-success padding10 "> <?php echo lang('get_enquiry');?> </a> 
-          <?php
-        }
-          ?>
+        else{
+          if(getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0){?>
+            <span class="badge badge-danger trip-complet"><?php echo lang('trip_complet');?> </span><?php
+          }
+          else{?>
+            <a href="<?=base_url('login')?>" class="btn btn-success padding10 "> <?php echo lang('get_enquiry');?> </a> 
+            <?php
+          }
+        }?>
       </div>
       <div class="rowrec line4"></div>
 

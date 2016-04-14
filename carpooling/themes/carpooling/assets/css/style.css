@@ -1466,6 +1466,9 @@ a.drop{
 .your-trip{
   font-size: 18px;
 }
+.trip-complet{
+  font-size: 15px;
+}
 
 .cancel_enquiry{
   margin-top: 7%;

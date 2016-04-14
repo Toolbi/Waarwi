@@ -23,6 +23,7 @@ $lang['inr']						= 'Per Passenger';
 $lang['available_seats']			= 'Available Seats :';
 $lang['cancel']						= 'Cancel';
 $lang['cancel_enquiry']				= 'Cancel enquiry';
+$lang['trip_complet']				= 'Sorry, trip compled.';
 $lang['save']						= 'Save';
 $lang['delete_all_trips']			= 'Delete all trips';
 $lang['no_ratings_given']			= 'No Ratings given';
