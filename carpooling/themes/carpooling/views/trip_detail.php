@@ -201,7 +201,7 @@ function viewPopcontact(pmId)
           }
           /*S'il a déja envoyé une demande de réservation:*/
               /*Il peut plus renvoyer la demande mais il doit pouvoir envoyer une annulation de sa demande*/
-          else if($tripenquirydetail['enquiry_passanger_id'] !== $user['user_id']){
+          else if(isset($tripenquirydetail['enquiry_passanger_id']) !== $user['user_id']){
             if (getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0) {
               ?>
                 <span class="badge badge-danger trip-complet"><?php echo lang('trip_complet');?> </span><?php
@@ -228,7 +228,7 @@ function viewPopcontact(pmId)
               
             }
           }
-          else if($tripenquirydetail['enquiry_passanger_id'] == $user['user_id']){
+          else if(isset($tripenquirydetail['enquiry_passanger_id']) == $user['user_id']){
             switch ($tripenquirydetail['enquiry_trip_status']) {
               case 0:?>
                  <!--Possibilité #3 : Si elle est en attente de confirmation-->
