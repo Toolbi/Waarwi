@@ -3,9 +3,12 @@
 //Add Trip Language
 
 $lang['my_trips']					= 'My Trips';
+$lang['my_trip']					= 'My Trips';
 $lang['rides_offered']				= 'As a car owner';
 $lang['enquiry']				    = 'As a passenger';
 $lang['upcoming_trips']				= 'Upcoming Trips';
+$lang['upcoming_trips_description'] = 'Click on a trip to edit.';
+$lang['past_trips_description'] 	= 'Click on a trip view details.';
 $lang['past_trips']					= 'Past Trip';
 $lang['trip_legs']					= 'Trip legs:';
 $lang['edit_trips']					= 'Edit trips';
@@ -19,6 +22,8 @@ $lang['price']						= 'Price:';
 $lang['inr']						= 'Per Passenger';
 $lang['available_seats']			= 'Available Seats :';
 $lang['cancel']						= 'Cancel';
+$lang['cancel_enquiry']				= 'Cancel enquiry';
+$lang['trip_complet']				= 'Sorry, trip compled.';
 $lang['save']						= 'Save';
 $lang['delete_all_trips']			= 'Delete all trips';
 $lang['no_ratings_given']			= 'No Ratings given';
@@ -112,8 +117,12 @@ $lang['departure_date']					= 'Date of Departure';
 $lang['departure_time']					= 'Time of Departure';
 $lang['total_no_seats']					= 'Total number of seats :';
 $lang['get_enquiry']					= 'Get Enquiry';
+$lang['your_trip']						= 'Your trip';
+$lang['enquiry_request']				= 'Your request already sent. You may call if required.';
+$lang['enquiry_confirm']				= 'Your Enquiry has been submitted successfully!';
 $lang['your_trip']                      ='Your trip';
 $lang['already']					    = 'Already Enquired';
+$lang['please_trip_date']				= 'Please enter trip date';
 $lang['driver']							= 'Driver';
 $lang['years']							= '22 Years old';
 $lang['my_verifications']				= 'My verifications';
@@ -277,7 +286,8 @@ $lang['settings']						= 'SETTINGS';
 $lang['my_vehicles']					= 'MY VEHICLES';
 $lang['my_trips']						= 'MY TRIPS';
 $lang['my_ratings']                     = 'MY RATINGS';
-$lang['my_enquiries']                     = 'MY ENQUIRY';
+$lang['my_enquiries']                   = 'MY ENQUIRY';
+$lang['my_enquiries_message']			= 'MES MESSAGES';
 $lang['logout']							= 'LOGOUT';
 $lang['edit_options']                    = '(Edit your trip date and rate here.)';
 
@@ -404,6 +414,9 @@ $lang['no_ratings']                           = 'No ratings';
 //Enquiry
 
 $lang['my_enquiry']                           = 'My enquiry';
+$lang['my_enquiry_message']                   = 'My message';
+$lang['view_trip']                   		  = 'Voir l\'annonce';
+$lang['my_enquiries_description']		      = 'List of enquiries by users';
 $lang['enquiry_date']                         = 'Enquiry date';
 $lang['trip_date']                            = 'Trip date';
 $lang['vehicle_number']				          = 'Vehicle number';

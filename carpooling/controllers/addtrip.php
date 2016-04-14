@@ -15,10 +15,17 @@ class Addtrip extends Traveller_Controller {
         $this->load->model('Trip_model');
         $this->load->model('Enquiry_model');
         $this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->helper('date');
+        $this->load->model('Customer_model');
+        $this->lang->load('backend');
     }
 
     function index() {
+        
         $this->upcoming_trip();
+        
+        
     }
 
     function form($trip_id = false, $ajax = false) {
@@ -571,7 +578,9 @@ class Addtrip extends Traveller_Controller {
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         $data['enquiries'] = $this->Enquiry_model->get_enquires_list($this->user_id);
-//	echo '<pre>';print_r($data['enquiries']);echo'</pre>';exit;
+	// echo '<pre>';print_r($data['enquiries'][0]);echo'</pre>';exit;
+         $id = $carpool_session['carpool_session']['user_id'];  
+        $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('enquery_list', $data);
     }
     
@@ -714,7 +723,9 @@ class Addtrip extends Traveller_Controller {
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $id = $carpool_session['carpool_session']['user_id'];
         $data = $this->Trip_model->past_trip($this->user_id, $data);
+        $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('past_trip', $data);
     }
 
@@ -723,8 +734,10 @@ class Addtrip extends Traveller_Controller {
         $data = array();
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
+        $id = $carpool_session['carpool_session']['user_id'];
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         $data = $this->Trip_model->get_trips($this->user_id, $data);
+        $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('trips', $data);
     }
     
@@ -734,7 +747,9 @@ class Addtrip extends Traveller_Controller {
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $id = $carpool_session['carpool_session']['user_id'];
         $data = $this->Trip_model->get_trips_passenger($this->user_id, $data);
+         $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('trips_passenger', $data);
     }
     
@@ -744,7 +759,9 @@ class Addtrip extends Traveller_Controller {
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $id = $carpool_session['carpool_session']['user_id'];
         $data = $this->Trip_model->past_trip_passenger($this->user_id, $data);
+        $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('past_trip_passenger', $data);
     }
 

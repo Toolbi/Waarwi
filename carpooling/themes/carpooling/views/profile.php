@@ -87,7 +87,7 @@ var baseurl = "<?php print base_url(); ?>";
     </div>
   </div>
   <div class="row"> 
-  <div class="panel panel-tabs text-center">
+    <div class="panel panel-tabs text-center">
 
       <div class="panel-heading">  
       <!-- Navigation haut -->
@@ -105,21 +105,61 @@ var baseurl = "<?php print base_url(); ?>";
               <i class="fa fa-cogs"></i>
               <span><?php echo lang('settings');?></span>
             </a></li>
-            <li tab="my-cars-info" class="colored purple-bg"><a href="#my-cars-info">
+            <li tab="my-cars-info" class="colored purple-bg"><a href="profile#my-cars-info">
               <i class="fa fa-car"></i>
               <span><?php echo lang('my_vehicles');?></span>
             </a></li>
-            <li tab="my-trips" class="colored red-bg"><a href="#my-trips">
-              <i class="fa fa-road"></i>
-              <span><?php echo lang('my_trips');?></span>
-            </a></li>
-            <li tab="my-ratings" class="colored yellow-bg"><a href="#my-ratings">
-              <i class="fa fa-star"></i>
-              <span><?php echo lang('my_ratings');?></span>
-              </a></li>
-            <li tab="my-enquiries" class="colored gray-bg"><a href="#my-enquiries">
+            <li tab="my-trips" class="dropdown hidden-xs colored red-bg">
+              <a class="drop dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-road"></i>
+                <span><?php echo lang('my_trips');?></span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="item">
+                  <a href="addtrip">
+                      <i class="fa fa-car"></i> 
+                      <?php echo lang('rides_offered');?>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="addtrip/upcoming_trip_passenger">
+                    <i class="fa fa-car"></i> <i class="fa fa-question"></i> 
+                      <?php echo lang('enquiry');?>
+                  </a>
+                </li>                   
+              </ul>
+            </li>
+            <li  tab="my-ratings" class="dropdown hidden-xs colored yellow-bg">
+              <a class="drop dropdown-toggle" data-toggle="dropdown">
+                 <i class="fa fa-star"></i>
+                <span><?php echo lang('my_ratings');?></span>
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="item">
+                  <a href="<?php print base_url(); ?>rating">
+                      <i class="fa fa-star-o"></i> 
+                      <?php echo lang('ratings_pending'); ?>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="<?php print base_url(); ?>rating/received_rating">
+                    <i class="fa fa-star"></i> 
+                      <?php echo lang('received_ratings'); ?>
+                  </a>
+                </li> 
+                <li class="item">
+                  <a href="<?php print base_url(); ?>rating/given_rating">
+                    <i class="fa fa-star-half-o"></i> 
+                      <?php echo lang('rating_given'); ?>
+                  </a>
+                </li>                   
+              </ul>
+            </li>
+            <li class="colored gray-bg"><a href="<?php print base_url(); ?>addtrip/enquery_list">
               <i class="fa fa-question"></i>
-              <span><?php echo lang('my_enquiries');?></span>
+              <span><?php echo lang('my_enquiries_message');?></span>
             </a></li>
           </ul>
         </div>
@@ -176,18 +216,69 @@ var baseurl = "<?php print base_url(); ?>";
         </div>
         <!-- Tab annonces/trajets -->
          <div class="tab-content" style="display: none;">
-<<<<<<< HEAD
-           <?php include('my-trips.php');?>
-=======
-           <?php include('settings.php');?>
->>>>>>> master
+           <div class="active-red padding10">
+            <h4> <?php echo lang('my_trips');?></h4>
+          </div><br>
+          <div class="row button"> 
+            <a href="<?php print base_url(); ?>addtrip">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="main-box infographic-box  white-red-bg">
+                  <i class="fa fa-car"></i> 
+                  <span class="headline"><?php echo lang('rides_offered');?></span>
+                </div>
+              </div>
+            </a>
+            <a href="<?php print base_url(); ?>addtrip/upcoming_trip_passenger">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="main-box infographic-box  white-red-bg">
+                  <i class="fa fa-question"></i> 
+                  <span class="headline"><?php echo lang('enquiry');?></span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <!-- Tab avis -->
          <div class="tab-content" style="display: none;">
           <div class="active-yellow padding10">
             <h4> <?php echo lang('ratings');?></h4>
           </div>
-          En cours de développement...
+          <br>
+          <ul class="dropdown-menu">
+               
+                <li class="item">
+                  <a href="<?php print base_url(); ?>rating/given_rating">
+                    <i class="fa fa-star-half-o"></i> 
+                      <?php echo lang('rating_given'); ?>
+                  </a>
+                </li>                   
+              </ul>
+          <div class="row button"> 
+            <a href="<?php print base_url(); ?>rating">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="main-box infographic-box  white-yellow-bg">
+                  <i class="fa fa-star-o"></i> 
+                  <span class="headline"><?php echo lang('ratings_pending');?></span>
+                </div>
+              </div>
+            </a>
+            <a href="<?php print base_url(); ?>rating/received_rating">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="main-box infographic-box  white-yellow-bg">
+                  <i class="fa fa-star"></i> 
+                  <span class="headline"><?php echo lang('received_ratings');?></span>
+                </div>
+              </div>
+            </a>
+            <a href="<?php print base_url(); ?>rating/given_rating">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div class="main-box infographic-box  white-yellow-bg">
+                  <i class="fa fa-star-half-o"></i> 
+                  <span class="headline"><?php echo lang('rating_given');?></span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         
         <!-- Tab demandes -->
@@ -195,9 +286,9 @@ var baseurl = "<?php print base_url(); ?>";
           <div class="active-gray padding10">
             <h4> <?php echo lang('enquiry');?></h4>
           </div>
-          En cours de développement...
         </div>
       </div>
   </div>
 </div>
 <div class="modal"></div>
+

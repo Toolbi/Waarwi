@@ -253,7 +253,7 @@ class Profile extends Traveller_Controller
 
 
             $this->session->set_flashdata('message', lang('profile_update_msg'));
-            redirect('profile#personal-info');
+            redirect('profile#personal-infos');
         }
     }
 

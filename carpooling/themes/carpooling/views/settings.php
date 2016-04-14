@@ -35,13 +35,13 @@
 	 <label>
 	 </div>
 	 </li>
-	 <!--<li class="width55"> <label class="swith_class"><?php echo lang('pet');?></label>
+	 <li class="width55"> <label class="swith_class"><?php echo lang('pet');?></label>
 	 <div class="ios-input">
 	 <label>
 		<input type="checkbox" class="ios-switch" <?php if(!empty($pet)){ echo 'checked'; } ?> name="pet" value="1"/>
 	 <label>
 	 </div>
-	 </li>-->
+	 </li>
 	 <li class="width55"> <label class="swith_class" ><?php echo lang('smoke');?></label>
 	 <div class="ios-input">
 	 <label>

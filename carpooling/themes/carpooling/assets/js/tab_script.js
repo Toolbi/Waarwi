@@ -19,7 +19,7 @@
         showTab(location.hash);
     }
     else {
-        showTab("personal-info");
+        showTab("personal-infos");
     }
 
     function showTab(tab) {		

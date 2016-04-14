@@ -5,13 +5,14 @@
 <head>
 <title><?php echo lang('head_title'); ?> </title>
 <!-- Librairies -->
+
 <?php echo theme_js('jquery-1.9.1.js', true);?>
 <?php echo theme_js('jquery-ui-1.9.2.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.fr.js',true); ?>
 <?php echo theme_js('jquery.validate.js',true); ?>
-<?php echo admin_js('maps-googleapis.js', true); ?>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&language=en"></script>
 <?php echo theme_css('bootstrap.css', true);?>
 <?php echo theme_css('bootstrap-datepicker.css', true);?>
 <?php echo theme_css('half-slider.css', true);?>
@@ -90,7 +91,7 @@ $(document).ready(function(){
                       <li><a href="<?php echo base_url('profile#my-cars-info');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_vehicles');?> </a></li>
                        <li><a href="<?php echo base_url('addtrip');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_trips');?> </a></li>
                        <li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
-             <li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries'); ?> </a></li>
+             <li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> </a></li>
             
                       <li><a href="<?php echo base_url('login/logout');?>"> <img src="<?php echo theme_img('logout-ico.png')?>" width="13"> <?php echo lang('logout'); ?></a></li>
                     </ul>
