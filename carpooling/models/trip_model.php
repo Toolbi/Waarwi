@@ -108,10 +108,19 @@ Class Trip_model extends CI_Model
 		$this->db->join('tbl_users','tbl_users.user_id = tbl_trips.trip_user_id','inner');
 		$this->db->join('tbl_vehicle','tbl_vehicle.vechicle_id = tbl_trips.trip_vehicle_id','inner');
 		$this->db->join('tbl_vechicle_types','tbl_vechicle_types.vechicle_type_id = tbl_vehicle.vechicle_type_id','inner');	
+		// $this->db->join('tbl_enquires','tbl_enquires.enquiry_trip_id = tbl_trips.trip_id','inner');	
+		
    		$this->db->where('tbl_t_trip_legs.trip_led_id',$id);	
 		return $this->db->get('tbl_t_trip_legs')->row_array();
 		
 	}
+	/*Fonction pour récuperer le status de la demande de réservation*/
+	function get_tripenquirydetail($id)
+	{
+		$this->db->select('*');		
+		return $this->db->get('tbl_enquires')->row_array();
+	}
+
 	function get_vehicle($vid)
 	{
 	$result	= $this->db->get_where('tbl_vehicle', array('vechicle_id'=>$vid));

@@ -144,7 +144,7 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .fright { float: right; }
 .marginleft10 { margin-left: 10px; }
 .trip-lft { float: left; }
-.trip-right { float: right; width: 335px;  }
+.trip-right { float: right; width: 370px;  }
 .view-map img { height: 230px; width: 100%; margin-bottom: 20px; }
 .view-col1 { float: left; width: 50%; padding: 0 10px 0 0; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;  }
 .view-col1 p { font-size: 14px; line-height: 24px; }
@@ -1458,4 +1458,15 @@ a.drop{
     color: #fff;
   background-color: #e84e40;
   border-color: #4cae4c;
+}
+.badge.badge-info {
+ background-color: #5bc0de;
+}
+
+.your-trip{
+  font-size: 18px;
+}
+
+.cancel_enquiry{
+  margin-top: 7%;
 }

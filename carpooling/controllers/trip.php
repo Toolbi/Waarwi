@@ -33,16 +33,18 @@ class Trip extends Front_Controller
         $this->session->unset_userdata('journeyDate');
         //echo '<pre>';print_r($data);echo'</pre>';exit;
         $data['tripdetails'] = $this->trip_model->get_tripdetail($id);
-		//print_r($data['tripdetails'] ); die;
+        $data['tripenquirydetail'] = $this->trip_model->get_tripenquirydetail($id);
+		// print_r($data['tripenquirydetail'] ); die;
 		
 
 		
 		if(!empty($data['tripdetails'])){
 			if (!empty($this->user['user_id'])) 
-			{
+			{ 
 				$data['islogin'] = true;
 				$data['user']=$this->user;
 				$data['status'] = $this->check_enquiry($this->user['user_id'], $data['tripdetails']['trip_id'],$data['journeyDate']);
+				// print_r($data['status'] ); die;
 			}
 			
 			$data['description'] = $data['tripdetails']['source_leg'] .' To '. $data['tripdetails']['destination_leg']; 
@@ -96,7 +98,7 @@ class Trip extends Front_Controller
             return 1;
         }
     }
-
+    
 }
 
 ?>

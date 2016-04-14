@@ -9,26 +9,34 @@
     var baseurl = "<?php print base_url(); ?>";
 
     $(document).ready(function() {
+
     
     // clique sur accpter ou rejeter
+
     $('body').on("click", '.enquiryBtn', function(){
         var id = $(this).attr('data-id');
         var action = $(this).attr('data-action');
         var pmQueryString = 'enquiryId='+id+'&action='+action;
-        // on envoie les données au serveur
         $.ajax({
             type: "POST", 
             url: baseurl + "addtrip/enquiryaction/true",  
             dataType: "json", 
-            data:pmQueryString
-                
+            data:pmQueryString,
+            success: function(json) {
+                if (json.result == 0){                                                                   
+                    alert(json.message);
+                    return false;
+                } else if (json.result == 1) {                    
+                    if(action == 'accept'){
+                        $('#enquirySuccess-'+id).html('<span class="badge badge-success"> <?php echo lang("accepted");?> </span>');
+                    }else if(action == 'reject'){
+                        $('#enquiry-'+id).fadeOut().remove();
+                    }                    
+                }
+            }
         });
-        // on recharge la page
-        window.location.reload(true);
     });
-
-    
-  /************************************/
+    /************************************/
     /* Slider Expand Click */
     $('body').on("click", '.slider', function()
     {
