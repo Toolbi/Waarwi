@@ -7,12 +7,9 @@
 <?php echo theme_js('popup/jquery.boxy.js', true) ?>
 <script type="text/javascript">
     var baseurl = "<?php print base_url(); ?>";
-
     $(document).ready(function() {
-
     
     // clique sur accpter ou rejeter
-
     $('body').on("click", '.enquiryBtn', function(){
         var id = $(this).attr('data-id');
         var action = $(this).attr('data-action');
@@ -48,7 +45,6 @@
     else
     {
     close()
-
             $('#slide' + ID).addClass('open').removeClass('close');
             $('#slide' + ID).slideToggle('slow');
             return false;
@@ -62,8 +58,6 @@
                             $(this).slideToggle('slow');
                     });
             }
-
-
 <?php
 //lets have the flashdata overright "$message" if it exists
 if ($this->session->flashdata('message')) {
@@ -79,7 +73,6 @@ if ($this->session->flashdata('message')) {
         });
 <?php
 }
-
 if ($this->session->flashdata('error')) {
     $error = $this->session->flashdata('error');
     ?>
@@ -93,7 +86,6 @@ if ($this->session->flashdata('error')) {
         });
     <?php
 }
-
 if (function_exists('validation_errors') && validation_errors() != '') {
     $error = validation_errors();
     ?>
@@ -108,7 +100,6 @@ if (function_exists('validation_errors') && validation_errors() != '') {
     <?php
 }
 ?>
-
   });</script>
   <?php echo theme_js('jquery_tab.min.js',true) ?>
 <?php echo theme_js('jquery.ba-hashchange.js',true) ?>
@@ -120,7 +111,6 @@ if (function_exists('validation_errors') && validation_errors() != '') {
 <link rel="stylesheet" href="<?php echo theme_js('popup/boxy.css') ?>">
 <?php echo theme_js('popup/jquery.boxy.js',true) ?>
 <?php echo theme_css('checkbox.css',true) ?>
-
 <script>
 $(document).ready(function() {  
   
@@ -153,7 +143,6 @@ $(document).ready(function() {
       
   });
   
-
 </script>
 <?php echo theme_js('common.js', true); ?>
 <div class="container-fluid margintop40">
@@ -163,9 +152,7 @@ $(document).ready(function() {
       
     </div>
   </div>
-
   <div class="panel panel-tabs text-center">
-
       <div class="panel-heading">  
       <!-- Navigation haut -->
       <div id="user-tabs"> 
@@ -269,7 +256,6 @@ $(document).ready(function() {
       <input type="file"  name="profileimg" id="profileimg">
     </div>          
     </form>
-
   <div class="trips"> 
         <ul class="brd-crmb">
           <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
@@ -282,14 +268,13 @@ $(document).ready(function() {
              
          <div class="active-gray padding10">
         <h4> <?php echo lang('my_enquiry_message');?>: <?php echo lang('my_enquiries_description');?></h4>
-
         </div>
             <div class="inner-gray">
                 <div class="obj_cont p_block_bottom rowrec" style="display: block;">
                    
                           
                             <div class="add_trip_enquery_tbl">
-                                <?php if ($enquiries) { ?>         	
+                                <?php if ($enquiries) { ?>          
                                     <table class="table table-striped">
                                         <tbody class="table_title">
                                             <tr>
@@ -302,10 +287,8 @@ $(document).ready(function() {
                                                 <th> <?php echo lang('passenger_email'); ?> </th>
                                                 <th> <?php echo lang('enquniry_status'); ?></th>
                                             </tr>  
-
                                             <?php foreach ($enquiries as $enquiry) { ?>
-
-                                                <tr id="enquiry-<?=$enquiry->enquiry_id?>">                        	
+                                                <tr id="enquiry-<?=$enquiry->enquiry_id?>">                         
                                                     <td> # </td>
                                                     <td> <?= date('d, M Y', strtotime($enquiry->enquiry_date_time)) ?> </td>
                                                     <td> <?= date('d, M Y', strtotime($enquiry->enquiry_trip_date)) ?> </td>
@@ -326,25 +309,17 @@ $(document).ready(function() {
                                         </tbody></table>
                                 <?php
                                 } else {
-
                                     echo lang('no_enquiry');
                                 }
                                 ?>
-
                             </div>
                         </div>
                         <!-- end tab1 -->
-
-
-
                     </div>
                 </div>
                 <!-- end tab2 -->
-
             </div>
-
         </div>
         <!-- End -->
     </div>
 </div>  
-

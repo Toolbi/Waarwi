@@ -70,6 +70,15 @@ function getAvailableSeat($tripDate,$tripId){
     }
 }
 
+function getEnquiriedUser($userId){
+    $CI = & get_instance();
+    $CI->db->select("(SELECT enquiry_passanger_id FROM tbl_enquires WHERE enquiry_passanger_id=".$userId.")");        
+    $CI->db->where('enquiry_passanger_id', $userId);
+    $result = $CI->db->get('tbl_enquires')->row();
+    return $result;
+    
+}
+
 function getOverallRating($userId){
     $CI = & get_instance();
     $CI->db->select("count(id) as totalUser,(SELECT IFNULL(SUM(rating),0) FROM tbl_rating WHERE rating_receiver_id=".$userId.") as totalRating",FALSE);        

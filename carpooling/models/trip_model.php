@@ -115,10 +115,11 @@ Class Trip_model extends CI_Model
 		
 	}
 	/*Fonction pour récuperer le status de la demande de réservatio*/
-	function get_tripenquirydetail($id)
-	{
-		$this->db->select('*');		
-		return $this->db->get('tbl_enquires')->row_array();
+	function get_tripenquirydetail($user_id)
+	{	
+		$this->db->select('*');
+		$result	= $this->db->get_where('tbl_enquires', array('enquiry_passanger_id'=>$user_id));
+		return $result->row();	
 	}
 
 	function get_vehicle($vid)

@@ -578,8 +578,9 @@ class Addtrip extends Traveller_Controller {
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         $data['enquiries'] = $this->Enquiry_model->get_enquires_list($this->user_id);
-	// echo '<pre>';print_r($data['enquiries'][0]);echo'</pre>';exit;
-         $id = $carpool_session['carpool_session']['user_id'];  
+        $data['user']= $carpool_session['carpool_session']['user_id'];
+	// echo '<pre>';print_r($data['user']);echo'</pre>';exit;
+        $id = $carpool_session['carpool_session']['user_id'];  
         $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('enquery_list', $data);
     }

@@ -61,15 +61,18 @@ function format_currency($value, $symbol=true)
 	
 	if($symbol)
 	{
-		$formatted	= number_format(abs($value), 2, $CI->config->item('currency_decimal'), $CI->config->item('currency_thousands_separator'));
+		// $formatted	= number_format(abs($value), 2, $CI->config->item('currency_decimal'), 
+		// 	$CI->config->item('currency_thousands_separator'));
+
+		$formatted	= number_format(abs($value), 0, '.', ' ') ;
 		
-		if($CI->config->item('currency_symbol_side') == 'left')
+		if($CI->config->item('currency_symbol_side') == 'right')
 		{
-			$formatted	= $neg.$CI->config->item('currency_symbol').$formatted;
+			$formatted	= $neg.' '.$CI->config->item('currency_symbol').' '.$formatted;
 		}
 		else
 		{
-			$formatted	= $neg.$formatted.$CI->config->item('currency_symbol');
+			$formatted	= $neg.$formatted.' '.$CI->config->item('currency_symbol');
 		}
 	}
 	else
