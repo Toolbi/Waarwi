@@ -3,7 +3,6 @@
 <?php echo theme_css('font-awesome.css',true) ?>
 
 <script type="text/javascript">
-
 var baseurl = "<?php print base_url(); ?>";
 function viewPopcontact(pmId)
 {
@@ -16,13 +15,11 @@ function viewPopcontact(pmId)
          dataType: "json", 
          data:pmQueryString,
          success: function(json) {
-
           if (json.result == 0){                                                                   
            $('#enquiry_'+pmId).addClass(".book-active-success");
            $('#enquiry_'+pmId).removeClass("btn btn-success");
            $('#enquiry_'+pmId).html('<span> <?php echo lang("enquiry_request");?> </span>');
            //$('#spnError').show();
-
            return false;
           } else if (json.result == 1) {
               $('#enquiry_'+pmId).addClass(".book-active-success");
@@ -36,7 +33,7 @@ function viewPopcontact(pmId)
         return false;
     }
 } 
-  
+  $('[data-toggle="tooltip"]').tooltip();   
 </script>
 
 <?=  theme_js('rate.js',true)?>
@@ -136,7 +133,8 @@ function viewPopcontact(pmId)
     <div class="trip-right cs-lgrey-bg">
       
       <div class="rowrec trp-top padding10">
-          <strong class="cs-blue-text"><?= $tripdetails['user_first_name'] .' '.$tripdetails['user_last_name'] ?></strong> <span><?php echo lang('offer');?> </span>
+          <img  class="passanger-img" src="<?php if($tripdetails['user_profile_img']) { echo theme_profile_img($tripdetails['user_profile_img']); } else { echo theme_img('default.png');  }?>">
+          <strong class="cs-blue-text"><?= $tripdetails['user_first_name']?></strong> <span><?php echo lang('offer');?> </span>
           <h4 class="paddingtop10 cs-blue-text">
       <?php $source = explode(",", $tripdetails['source_leg']); 
       echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
@@ -186,69 +184,72 @@ function viewPopcontact(pmId)
                     }
                     echo getAvailableSeat(date('Y-m-d',  strtotime(str_replace('/', '-', $journeyDate))),$tripdetails['trip_id']);
                 }
-
             ?>   
       </div> 
 
-      <div class="rowrec line4"></div>
-      
+      <div class="rowrec line4"></div>    
       <div class="rowrec center margin padding10">
       <!-- On vérifie si l'utilisateur est connecté: -->      
-        <?php if($islogin){        
+        <?php if($islogin){
           if($tripdetails['trip_user_id'] == $user['user_id']){?>
 <!--Possibilité #1 : Si oui et que c'est son annonce, il peut pas réserver -->
             <a href="javascript:void(0)" class="badge badge-success your-trip">  <?php echo lang('your_trip');?></a>    <?php 
           }
-          /*S'il a déja envoyé une demande de réservation:*/
-              /*Il peut plus renvoyer la demande mais il doit pouvoir envoyer une annulation de sa demande*/
-          else if(isset($tripenquirydetail['enquiry_passanger_id']) !== $user['user_id']){
-            if (getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0) {
-              ?>
-                <span class="badge badge-danger trip-complet"><?php echo lang('trip_complet');?> </span><?php
+          else if(isset($tripenquirydetail->enquiry_passanger_id) == $user['user_id']){
+            if ($tripenquirydetail->enquiry_trip_status == 0) {?>
+<!--Possibilité #3 : Si elle est en attente de confirmation-->
+              <span href="javascript:void(0)" class="label label-info padding10 ">  <?php echo lang('already');?> </span>
+              <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button><?php            
+            }
+            else{
+               ?>
+<!--Possibilité #3 : Si sa réservation est confirmée -->
+              <span href="javascript:void(0)" class="label label-success padding10 ">  <?php echo lang('enquiry_accepted');?> </span>
+              <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button><?php              
+            }                
+          }
+          else{
+            if(getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0){?>
+              <span class="badge badge-danger trip-complet"><?php echo lang('trip_complet');?> </span><?php
             }
             else{
               if($tripdetails['trip_casual_date']){
-                  ?>
-<!--Possibilité #2 :Si c'est occasionnel, il peut réserver en cliquant sur le bouton -->
-                    <input type="hidden" name="tripDate" id="tripDate" value="<?=date('d/m/Y', strtotime($tripdetails['trip_casual_date']));?>"/>  
-                    <button  href="#" class="btn btn-success padding10 " id="enquiry_<?=$tripdetails['trip_id']?>" 
-                        onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
-                    </button>  
-                  <?php     
-              }
-              /*Si c'est fréquent, on lui demande de choisir la date de son voyage puis de réserver*/
-              else{   
-                  ?>      
-                    <input type="texte" name="tripDate" id="tripDate" value="<?=$journeyDate?>"/>
-                    <button href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"
-                            onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
-                    </button>
-                  <?php
-              }
-              
-            }
-          }
-          else if(isset($tripenquirydetail['enquiry_passanger_id']) == $user['user_id']){
-            switch ($tripenquirydetail['enquiry_trip_status']) {
-              case 0:?>
-                 <!--Possibilité #3 : Si elle est en attente de confirmation-->
-                  <span href="javascript:void(0)" class="label label-info padding10 ">  <?php echo lang('already');?> </span>
-                  <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button>
-                <?php
-                break;
-              
-              default:
                 ?>
-                <!--Possibilité #3 : Si sa réservation est confirmée -->
-                  <span href="javascript:void(0)" class="label label-success padding10 ">  <?php echo lang('enquiry_accepted');?> </span>
-                  <button href="#" class="btn btn-danger padding10 cancel_enquiry">  <?php echo lang('cancel_enquiry');?> </button>
-                  
-                <?php
-                break;
+<!--Possibilité #4 :Si c'est occasionnel, il peut réserver en cliquant sur le bouton -->
+                  <input type="hidden" name="tripDate" id="tripDate" value="<?=date('d/m/Y', strtotime($tripdetails['trip_casual_date']));?>"/>  
+                  <button  href="#" class="btn btn-success padding10 " id="enquiry_<?=$tripdetails['trip_id']?>" 
+                      onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
+                  </button>  
+                <?php     
             }
-           
+            /*Si c'est fréquent, on lui demande de choisir la date de son voyage puis de réserver*/
+            else{   
+                ?>      
+                  <input type="texte" name="tripDate" id="tripDate" value="<?=$journeyDate?>"/>
+                  <button href="javascript:void(0)" class="btn btn-success padding10 "  id="enquiry_<?=$tripdetails['trip_id']?>"
+                          onclick="viewPopcontact(<?=$tripdetails['trip_id']?>)"><?php echo lang('get_enquiry');?>
+                  </button>
+                <?php
+              }
+            }              
           }
-        }
+          ?>
+          <div class="rowrec line4"></div>
+            <div class="rowrec size20 cs-blue-text center"> 
+              <?php echo lang('passenger_in_trip');?></br>
+             
+            <div class="passenger-in-trip">
+            <?php if($passangers_in_trip){?>          
+              <ul>            
+                <?php foreach ($passangers_in_trip as $passangers){ ?>                     
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="<?php echo $passangers->user_first_name?>"> <li> <img  class="passanger-img" src="<?php if($passangers->user_profile_img) { echo theme_profile_img($passangers->user_profile_img); } else { echo theme_img('default.png');  }?>">
+                </li><?php } ?></a>
+              </ul>
+              <?php }else{            
+                echo lang('no_passanger');             
+             }?>
+            </div><?php
+        }       
         /*S'il n'est pas connecté, on lui renvoie dans la page de connexion*/
         else{
           if(getAvailableSeat($tripdetails['trip_casual_date'],$tripdetails['trip_id']) == 0){?>
@@ -449,7 +450,6 @@ $('#tripDate').datepick({
  changeMonth: false,autoSize: true,minDate: 0,dateFormat: 'dd/mm/yyyy'
 });
   
-
    var baseurl = "<?php print base_url(); ?>";
 $(document).ready(function() {
   
@@ -478,4 +478,3 @@ $(document).ready(function() {
   
 </script>
 <?php include('footer.php'); ?>
-

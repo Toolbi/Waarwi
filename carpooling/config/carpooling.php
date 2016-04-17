@@ -23,15 +23,15 @@ $config['fb_appsecret']			= '';
 $config['googleplus_appid']		= '';
 $config['googleplus_appsecret']	= '';
 
-$config['country_code']			= ''; // use proper country codes only
+$config['country_code']			= 'SEN'; // use proper country codes only
 
 $config['site_language_prefix']			= 'fr';
 $config['site_language']				= 'french';
 
 
 // Store currency
-$config['currency']						= 'INR';  // USD, EUR, etc
-$config['currency_symbol']				= 'Rs';
+$config['currency']						= 'Franc CFA';  // USD, EUR, etc
+$config['currency_symbol']				= 'CFA';
 $config['currency_symbol_side']			= 'left'; // anything that is not "left" is automatically right
 $config['currency_decimal']				= '.';
 $config['currency_thousands_separator']	= ',';
