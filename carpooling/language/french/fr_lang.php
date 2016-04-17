@@ -47,6 +47,7 @@ $lang['passenger_name']			    = 'Nom du passager';
 $lang['passenger_number']		    = 'Numéro du passager';
 $lang['passenger_email']		    = 'Email du passager';
 $lang['there_is_no']			    = "Il n'y a pas de demande fournie";
+$lang['no_passanger']			    = "Ce trajet n'a pas encore de passager";
 //Vechicles Language
 $lang['remove_photo']				= 'Supprimer la photo';
 $lang['upload_msg']				    = 'Chargement, veillez patienter...';

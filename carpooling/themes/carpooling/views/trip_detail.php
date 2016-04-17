@@ -33,7 +33,7 @@ function viewPopcontact(pmId)
         return false;
     }
 } 
-  
+  $('[data-toggle="tooltip"]').tooltip();   
 </script>
 
 <?=  theme_js('rate.js',true)?>
@@ -133,7 +133,8 @@ function viewPopcontact(pmId)
     <div class="trip-right cs-lgrey-bg">
       
       <div class="rowrec trp-top padding10">
-          <strong class="cs-blue-text"><?= $tripdetails['user_first_name'] .' '.$tripdetails['user_last_name'] ?></strong> <span><?php echo lang('offer');?> </span>
+          <img  class="passanger-img" src="<?php if($tripdetails['user_profile_img']) { echo theme_profile_img($tripdetails['user_profile_img']); } else { echo theme_img('default.png');  }?>">
+          <strong class="cs-blue-text"><?= $tripdetails['user_first_name']?></strong> <span><?php echo lang('offer');?> </span>
           <h4 class="paddingtop10 cs-blue-text">
       <?php $source = explode(",", $tripdetails['source_leg']); 
       echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
@@ -237,23 +238,15 @@ function viewPopcontact(pmId)
             <div class="rowrec size20 cs-blue-text center"> 
               <?php echo lang('passenger_in_trip');?></br>
              
-            <div class="add_trip_enquery_tbl">
-            <?php if($passangers_in_trip){   ?>          
-              <table valign="center" cellpadding="0" cellspacing="0"  width="100%">
-                <tbody><tr bgcolor="#01acf1">
-                  <th> <?php echo lang('enquiry_date');?></th>                           
-                  <th> <?php echo lang('passenger_name');?> </th>
-                  <th> <?php echo lang('enquiry_status'); ?></th>
-                </tr>  
-                  <?php foreach ($passangers_in_trip as $enquiry){ ?>                        
-                <tr>                          
-                  <td> <?=date('d, M Y',strtotime($enquiry->enquiry_date_time)) ?> </td>
-                  <td> <?=$enquiry->user_first_name.' '.$enquiry->user_last_name?> </td> 
-                  <td> <?=$enquiry->enquiry_trip_status?></td>
-                </tr> <?php } ?>
-              </tbody></table>
-                    <?php }else{            
-                echo lang('no_enquiry');             
+            <div class="passenger-in-trip">
+            <?php if($passangers_in_trip){?>          
+              <ul>            
+                <?php foreach ($passangers_in_trip as $passangers){ ?>                     
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="<?php echo $passangers->user_first_name?>"> <li> <img  class="passanger-img" src="<?php if($passangers->user_profile_img) { echo theme_profile_img($passangers->user_profile_img); } else { echo theme_img('default.png');  }?>">
+                </li><?php } ?></a>
+              </ul>
+              <?php }else{            
+                echo lang('no_passanger');             
              }?>
             </div><?php
         }       

@@ -34,6 +34,7 @@ $lang['passenger_name']			    = 'Passenger Name';
 $lang['passenger_number']		    = 'Passenger Number';
 $lang['passenger_email']		    = 'Passenger Email';
 $lang['there_is_no']			    = 'There is no Enquiry';
+$lang['no_passanger']			    = "No passenger ";
 $lang['rides_passanger']            = 'As a passenger';
 $lang['deviation_placeholder']      = 'Your passing through point (address,city,station...)';
 
