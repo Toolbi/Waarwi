@@ -118,8 +118,10 @@ Class Trip_model extends CI_Model
 	function get_tripenquirydetail($user_id)
 	{	
 		$this->db->select('*');
-		$result	= $this->db->get_where('tbl_enquires', array('enquiry_passanger_id'=>$user_id));
-		return $result->row();	
+        $this->db->where('tbl_enquires.enquiry_passanger_id', $user_id);
+        $this->db->where('tbl_enquires.enquiry_trip_id', 276);
+        $result = $this->db->get('tbl_enquires');
+		return $result->row();
 	}
 	
 	function get_vehicle($vid)

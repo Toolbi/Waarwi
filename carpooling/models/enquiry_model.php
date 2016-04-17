@@ -23,9 +23,7 @@ Class Enquiry_model extends CI_Model
 	function count_enquiry()
 	{
 		return $this->db->count_all_results('tbl_enquires');
-	}
-	
-	
+	}	
 	
 
 	function get_enquires_list($id)
@@ -43,13 +41,15 @@ Class Enquiry_model extends CI_Model
 		
 	}
 	/*Fonction pour récupérer les passagers confrimés d'un trajet*/
-	function get_passengers_in_trip($trip_id)
+	function get_passengers_in_trip($trip_id, $trip_date, $trip_led_id)
 	{
 		$this->db->select('*');
 		$this->db->join('tbl_t_trip_legs', 'tbl_t_trip_legs.trip_led_id');
 		$this->db->join('tbl_users', 'tbl_users.user_id = tbl_enquires.enquiry_passanger_id');
 		$this->db->where('tbl_t_trip_legs.trip_led_id', $trip_id);
-        $this->db->where('(CURDATE() <= tbl_enquires.enquiry_trip_date OR tbl_enquires.enquiry_trip_status = 1)');
+        $this->db->where('tbl_enquires.enquiry_trip_date', $trip_date);
+        $this->db->where('tbl_enquires.enquiry_trip_status = 1');
+        $this->db->where('tbl_enquires.enquiry_trip_id', $trip_led_id);
 		return $this->db->get('tbl_enquires')->result();
 	}
         
