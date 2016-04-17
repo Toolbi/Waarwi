@@ -186,11 +186,10 @@ function viewPopcontact(pmId)
             ?>   
       </div> 
 
-      <div class="rowrec line4"></div>
-      
+      <div class="rowrec line4"></div>    
       <div class="rowrec center margin padding10">
       <!-- On vérifie si l'utilisateur est connecté: -->      
-        <?php if($islogin){        
+        <?php if($islogin){
           if($tripdetails['trip_user_id'] == $user['user_id']){?>
 <!--Possibilité #1 : Si oui et que c'est son annonce, il peut pas réserver -->
             <a href="javascript:void(0)" class="badge badge-success your-trip">  <?php echo lang('your_trip');?></a>    <?php 
@@ -233,6 +232,30 @@ function viewPopcontact(pmId)
               }
             }              
           }
+          ?>
+          <div class="rowrec line4"></div>
+            <div class="rowrec size20 cs-blue-text center"> 
+              <?php echo lang('passenger_in_trip');?></br>
+             
+            <div class="add_trip_enquery_tbl">
+            <?php if($passangers_in_trip){   ?>          
+              <table valign="center" cellpadding="0" cellspacing="0"  width="100%">
+                <tbody><tr bgcolor="#01acf1">
+                  <th> <?php echo lang('enquiry_date');?></th>                           
+                  <th> <?php echo lang('passenger_name');?> </th>
+                  <th> <?php echo lang('enquiry_status'); ?></th>
+                </tr>  
+                  <?php foreach ($passangers_in_trip as $enquiry){ ?>                        
+                <tr>                          
+                  <td> <?=date('d, M Y',strtotime($enquiry->enquiry_date_time)) ?> </td>
+                  <td> <?=$enquiry->user_first_name.' '.$enquiry->user_last_name?> </td> 
+                  <td> <?=$enquiry->enquiry_trip_status?></td>
+                </tr> <?php } ?>
+              </tbody></table>
+                    <?php }else{            
+                echo lang('no_enquiry');             
+             }?>
+            </div><?php
         }       
         /*S'il n'est pas connecté, on lui renvoie dans la page de connexion*/
         else{

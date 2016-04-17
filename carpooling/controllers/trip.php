@@ -35,12 +35,12 @@ class Trip extends Front_Controller
         $this->session->unset_userdata('journeyDate');
 
        
-        $data['enquiries'] = $this->Enquiry_model->get_enquires_list($this->user['user_id']);
+        $data['passangers_in_trip'] = $this->Enquiry_model->get_passengers_in_trip($id);
 
         //echo '<pre>';print_r($data);echo'</pre>';exit;
         $data['tripdetails'] = $this->trip_model->get_tripdetail($id);
        	$data['tripenquirydetail'] = $this->trip_model->get_tripenquirydetail($this->user['user_id']);
-		// print_r($data['enquiries']); die;
+		// print_r($data['passangers_in_trip']); die;
 		// print_r($this->user['user_id'] ); die;		
 
 		

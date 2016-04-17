@@ -42,21 +42,31 @@ Class Enquiry_model extends CI_Model
 //		die;
 		
 	}
+	/*Fonction pour récupérer les passagers confrimés d'un trajet*/
+	function get_passengers_in_trip($trip_id)
+	{
+		$this->db->select('*');
+		$this->db->join('tbl_t_trip_legs', 'tbl_t_trip_legs.trip_led_id');
+		$this->db->join('tbl_users', 'tbl_users.user_id = tbl_enquires.enquiry_passanger_id');
+		$this->db->where('tbl_t_trip_legs.trip_led_id', $trip_id);
+        $this->db->where('(CURDATE() <= tbl_enquires.enquiry_trip_date OR tbl_enquires.enquiry_trip_status = 1)');
+		return $this->db->get('tbl_enquires')->result();
+	}
         
         
-        function checkAvailableSeat($tripDate,$tripId,$enquiryId){
-            
-            $this->db->select("(SELECT trip_avilable_seat FROM tbl_trips WHERE trip_id=".$tripId.") - (SELECT IFNULL(COUNT(enquiry_id), 0) FROM tbl_enquires WHERE enquiry_trip_id=".$tripId
-                . " AND enquiry_trip_date=".$tripDate. " AND enquiry_trip_status= 1) as balanceSeat",FALSE);        
-            $this->db->where('tbl_enquires.enquiry_id', $enquiryId);
-            $result = $this->db->get('tbl_enquires')->row();
-            $balanceSeat = $result->balanceSeat;
-            if($balanceSeat > 0){
-                return true;
-            }else{
-                return false;
-            }
+    function checkAvailableSeat($tripDate,$tripId,$enquiryId){
+        
+        $this->db->select("(SELECT trip_avilable_seat FROM tbl_trips WHERE trip_id=".$tripId.") - (SELECT IFNULL(COUNT(enquiry_id), 0) FROM tbl_enquires WHERE enquiry_trip_id=".$tripId
+            . " AND enquiry_trip_date=".$tripDate. " AND enquiry_trip_status= 1) as balanceSeat",FALSE);        
+        $this->db->where('tbl_enquires.enquiry_id', $enquiryId);
+        $result = $this->db->get('tbl_enquires')->row();
+        $balanceSeat = $result->balanceSeat;
+        if($balanceSeat > 0){
+            return true;
+        }else{
+            return false;
         }
+    }
 	
 	
 	function get_enquiries($typeid) {
