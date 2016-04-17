@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 16 Avril 2016 à 23:20
+-- Généré le :  Lun 18 Avril 2016 à 00:05
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -254,7 +254,10 @@ INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity
 ('3779c25c7c01f7e43577f604558f8b45', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460744098, 'a:1:{s:9:"user_data";s:0:"";}'),
 ('9b3194d4db4cf5ef8c3ac09347795837', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460733816, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:15:"demba@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"8";s:7:"trip_id";a:0:{}s:6:"expire";i:1460734416;}}'),
 ('93bb021902e8baa32b1cf05570746ead', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1460738372, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:21:"contact@khadimdev.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"6";s:7:"trip_id";b:0;s:6:"expire";i:1460738984;}}'),
-('1cb820e03f10ec6694ceeb82c8dfe51e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460840506, '');
+('1cb820e03f10ec6694ceeb82c8dfe51e', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460840506, ''),
+('dc392f5d02724da6f14f4b10f3878492', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460930456, 'a:1:{s:9:"user_data";s:0:"";}'),
+('c8da161554959d96d10993dda5bea067', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460930456, ''),
+('98faa93dd2085bb6cf02b5670d0a7409', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 1460930565, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:15:"demba@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"8";s:7:"trip_id";a:0:{}s:6:"expire";i:1460931272;}}');
 
 -- --------------------------------------------------------
 
@@ -479,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `tbl_enquires` (
   PRIMARY KEY (`enquiry_id`),
   KEY `tbl_trips_tbl_enquires` (`enquiry_trip_id`),
   KEY `tbl_passengers_tbl_enquires` (`enquiry_passanger_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=85 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=91 ;
 
 --
 -- Contenu de la table `tbl_enquires`
@@ -488,8 +491,12 @@ CREATE TABLE IF NOT EXISTS `tbl_enquires` (
 INSERT INTO `tbl_enquires` (`enquiry_id`, `enquiry_passanger_id`, `enquiry_trip_id`, `enquire_travel_id`, `enquiry_trip_date`, `enquiry_trip_status`, `enquiry_date_time`) VALUES
 (84, '7', '274', '6', '2016-04-16', 1, '2016-04-16 11:11:54'),
 (83, '3', '274', '6', '2016-04-16', 1, '2016-04-15 18:04:40'),
-(81, '2', '274', '6', '2016-04-16', 0, '2016-04-15 16:04:40'),
-(80, '8', '274', '6', '2016-04-16', 1, '2016-04-15 11:58:45');
+(81, '1', '274', '6', '2016-04-16', 0, '2016-04-15 16:04:40'),
+(80, '8', '274', '6', '2016-04-16', 1, '2016-04-15 11:58:45'),
+(86, '2', '275', '7', '2016-04-18', 1, '2016-04-17 20:44:51'),
+(89, '2', '276', '7', '2016-04-19', 1, '2016-04-17 22:01:51'),
+(88, '6', '276', '7', '2016-04-19', 0, '2016-04-17 21:50:37'),
+(90, '8', '276', '7', '2016-04-19', 1, '2016-04-17 22:02:57');
 
 -- --------------------------------------------------------
 
@@ -668,7 +675,7 @@ CREATE TABLE IF NOT EXISTS `tbl_trips` (
   KEY `tbl_users_tbl_trips` (`trip_user_id`),
   KEY `tbl_vehicle_tbl_trips` (`trip_vehicle_id`),
   KEY `tbl_drivers_tbl_trips` (`trip_driver_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=275 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=277 ;
 
 --
 -- Contenu de la table `tbl_trips`
@@ -676,7 +683,9 @@ CREATE TABLE IF NOT EXISTS `tbl_trips` (
 
 INSERT INTO `tbl_trips` (`trip_id`, `trip_driver_id`, `trip_vehicle_id`, `trip_from_latlan`, `trip_to_latlan`, `source`, `destination`, `route`, `route_full_data`, `trip_routes_lat_lan`, `trip_routes`, `trip_return`, `trip_depature_time`, `trip_return_time`, `trip_journey_hours`, `trip_amenities`, `trip_frequncy`, `trip_avilable_seat`, `passenger_type`, `trip_rate_details`, `contact_person_name`, `contact_person_number`, `trip_comments`, `trip_user_id`, `trip_casual_date`, `trip_created_date`, `trip_status`, `trip_otp_status`) VALUES
 (274, NULL, '231', '~14.7645042,-17.366028599999936~', '~15.6141768,-16.22867999999994~', 'Dakar, Senegal', 'Louga, Senegal', 'Kebemer', '', '~14.7645042,-17.366028599999936~,~15.3763381,-16.446476599999983~,~15.6141768,-16.22867999999994~', 'Dakar, Senegal~Kebemer, Louga, Senegal~Louga, Senegal', 'no', '01:00:00', '02:56:00', NULL, NULL, '', '3', '0', NULL, NULL, '0638226417', 'Je rentre à Louga le week end pour voir la famille.', '6', '2016/04/16', '2016-04-15 10:24:34', 1, 0),
-(272, NULL, '229', '~14.8665572,-15.899495600000023~', '~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal', 'Dakar, Senegal', 'Thies', '', '~14.8665572,-15.899495600000023~,~14.7910052,-16.935860400000024~,~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal~Thies, Senegal~Dakar, Senegal', 'no', '11:15:00', '01:00:00', NULL, NULL, '', '1', '0', NULL, NULL, '0638226417', 'bsdjksbd', '1', '2016/04/14', '2016-04-13 15:43:38', 1, 0);
+(272, NULL, '229', '~14.8665572,-15.899495600000023~', '~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal', 'Dakar, Senegal', 'Thies', '', '~14.8665572,-15.899495600000023~,~14.7910052,-16.935860400000024~,~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal~Thies, Senegal~Dakar, Senegal', 'no', '11:15:00', '01:00:00', NULL, NULL, '', '1', '0', NULL, NULL, '0638226417', 'bsdjksbd', '1', '2016/04/14', '2016-04-13 15:43:38', 1, 0),
+(275, NULL, '232', '~14.8665572,-15.899495600000023~', '~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal', 'Dakar, Senegal', 'Rufisque', '', '~14.8665572,-15.899495600000023~,~14.7645042,-17.366028599999936~,~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal~Rufisque, Dakar, Senegal~Dakar, Senegal', 'no', '14:00:00', '01:00:00', NULL, NULL, '', '4', '0', NULL, NULL, '0638226417', 'bdkfdekf nekfkjefe', '7', '2016/04/18', '2016-04-17 18:57:07', 1, 0),
+(276, NULL, '232', '~16.0326307,-16.481816699999968~', '~12.5641479,-16.263982499999997~', 'Saint Louis, Saint-Louis, Senegal', 'Ziguinchor, Senegal', 'Kolda', '', '~16.0326307,-16.481816699999968~,~12.9107495,-14.950567099999944~,~12.5641479,-16.263982499999997~', 'Saint Louis, Saint-Louis, Senegal~Kolda, Senegal~Ziguinchor, Senegal', 'no', '13:00:00', '02:51:00', NULL, NULL, '', '2', '0', NULL, NULL, '0638226417', 'dfbkdnfdnfld efn lefjle', '7', '2016/04/19', '2016-04-17 21:31:25', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1049,7 +1058,22 @@ INSERT INTO `tbl_t_login_logs` (`login_log_id`, `login_id`, `login_ip`, `login_t
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 2, '127.0.0.1', NULL),
 (NULL, 8, '127.0.0.1', NULL),
-(NULL, 7, '127.0.0.1', NULL);
+(NULL, 7, '127.0.0.1', NULL),
+(NULL, 7, '127.0.0.1', NULL),
+(NULL, 7, '127.0.0.1', NULL),
+(NULL, 7, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 6, '127.0.0.1', NULL),
+(NULL, 8, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 8, '127.0.0.1', NULL),
+(NULL, 8, '127.0.0.1', NULL),
+(NULL, 7, '127.0.0.1', NULL),
+(NULL, 8, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 6, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 8, '127.0.0.1', NULL);
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1095,7 @@ CREATE TABLE IF NOT EXISTS `tbl_t_trip_legs` (
   `trip_id` int(150) NOT NULL,
   `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`trip_led_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=839 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=845 ;
 
 --
 -- Contenu de la table `tbl_t_trip_legs`
@@ -1086,7 +1110,13 @@ INSERT INTO `tbl_t_trip_legs` (`trip_led_id`, `source_leg`, `source_latitude`, `
 (832, 'Thies, Senegal', '14.7910052', '-16.935860400000024', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '12:39 pm', 0, 1000, 272, '2016-04-13 15:43:38'),
 (833, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Thies, Senegal', '14.7910052', '-16.935860400000024', '10:00 ', 0, 0, 273, '2016-04-13 20:44:12'),
 (831, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '11:15 ', 0, 2500, 272, '2016-04-13 15:43:38'),
-(830, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Thies, Senegal', '14.7910052', '-16.935860400000024', '11:15 ', 0, 1000, 272, '2016-04-13 15:43:38');
+(830, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Thies, Senegal', '14.7910052', '-16.935860400000024', '11:15 ', 0, 1000, 272, '2016-04-13 15:43:38'),
+(839, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Rufisque, Dakar, Senegal', '14.7645042', '-17.366028599999936', '14:00 ', 0, 0, 275, '2016-04-17 18:57:07'),
+(840, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '14:00 ', 0, 0, 275, '2016-04-17 18:57:07'),
+(841, 'Rufisque, Dakar, Senegal', '14.7645042', '-17.366028599999936', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '15:59 pm', 0, 0, 275, '2016-04-17 18:57:07'),
+(842, 'Saint Louis, Saint-Louis, Senegal', '16.0326307', '-16.481816699999968', 'Kolda, Senegal', '12.9107495', '-14.950567099999944', '13:00 ', 0, 0, 276, '2016-04-17 21:31:25'),
+(843, 'Saint Louis, Saint-Louis, Senegal', '16.0326307', '-16.481816699999968', 'Ziguinchor, Senegal', '12.5641479', '-16.263982499999997', '13:00 ', 0, 0, 276, '2016-04-17 21:31:25'),
+(844, 'Kolda, Senegal', '12.9107495', '-14.950567099999944', 'Ziguinchor, Senegal', '12.5641479', '-16.263982499999997', '17:48 pm', 0, 0, 276, '2016-04-17 21:31:25');
 
 -- --------------------------------------------------------
 
@@ -1141,11 +1171,11 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`user_id`, `user_email`, `user_password`, `user_type`, `user_company_name`, `user_first_name`, `user_last_name`, `user_about_us`, `user_profile_img`, `user_mobile`, `user_secondary_phone`, `user_secondary_mail`, `user_company_id`, `user_url`, `user_street`, `user_city`, `postal_code`, `user_occupation`, `marital_status`, `isverified`, `show_number`, `send_sms`, `allowed_food`, `allowed_pet`, `allowed_smoke`, `allowed_chat`, `allowed_music`, `user_gender`, `user_country`, `user_dob`, `communication_mobile`, `communication_email`, `login_type`, `isactive`, `user_admin_status`, `user_created_date`, `user_lost_login`) VALUES
-(8, 'demba@gmail.com', '9fad81caabbd30778873b660f5b5ded01c67388a', '0', NULL, 'Demba Amar', 'Hann', '', '', '063332152', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:21:53', '2016-04-16 13:09:12'),
-(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Kalidou', 'Ndao', 'Je m''appelle Kalidou, j''aime bien voyager  de temps en temps. dzjdzd', 'user2_profile_1459710648.jpg', '0638226417', NULL, 'kal@gmail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 1, 1, 1, 1, 1, '0', NULL, '1989-01-01', 0, 1, 0, 1, 1, '2016-03-23 19:30:28', '2016-04-16 13:07:34'),
+(8, 'demba@gmail.com', '9fad81caabbd30778873b660f5b5ded01c67388a', '0', NULL, 'Demba Amar', 'Hann', '', '', '063332152', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:21:53', '2016-04-18 00:02:53'),
+(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Kalidou', 'Ndao', 'Je m''appelle Kalidou, j''aime bien voyager  de temps en temps. dzjdzd', 'user2_profile_1459710648.jpg', '0638226417', NULL, 'kal@gmail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 1, 1, 1, 1, 1, '0', NULL, '1989-01-01', 0, 1, 0, 1, 1, '2016-03-23 19:30:28', '2016-04-18 00:01:45'),
 (3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-03-26 19:06:56'),
-(6, 'contact@khadimdev.com', '9606e19dc2ea173ac9cdabde96aad09d73d8bcd0', '0', NULL, 'Abdou Karim', 'Thioye', 'Khadim Mbacké', 'user6_profile_1460669667.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '32e141e74aa53d773dead5f468f2dd52bd1743b6', '1', '1', 1, 0, 0, 1, 0, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-04-03 20:17:41', '2016-04-15 23:45:34'),
-(7, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', '', '', '0638226417', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:15:37', '2016-04-16 13:11:49');
+(6, 'contact@khadimdev.com', '9606e19dc2ea173ac9cdabde96aad09d73d8bcd0', '0', NULL, 'Abdou Karim', 'Thioye', 'Khadim Mbacké', 'user6_profile_1460669667.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '32e141e74aa53d773dead5f468f2dd52bd1743b6', '1', '1', 1, 0, 0, 1, 0, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-04-03 20:17:41', '2016-04-17 23:32:34'),
+(7, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', '', '', '0638226417', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:15:37', '2016-04-17 23:30:26');
 
 -- --------------------------------------------------------
 
@@ -1303,7 +1333,7 @@ CREATE TABLE IF NOT EXISTS `tbl_vehicle` (
   `vechicle_createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`vechicle_id`),
   KEY `tbl_vechicle_types_tbl_vehicle` (`vechicle_type_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=232 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=233 ;
 
 --
 -- Contenu de la table `tbl_vehicle`
@@ -1472,7 +1502,8 @@ INSERT INTO `tbl_vehicle` (`vechicle_id`, `vechicle_type_id`, `vechicle_number`,
 (228, 37, 'sdfad', 'user_vehicle_1440344104.png', '1', 476, '2015-08-23 13:35:14'),
 (229, 34, '0658252', '0', '2', 1, '2016-03-23 19:13:09'),
 (230, 34, 'DK-2574-AZ', '0', '3', 2, '2016-04-03 20:09:51'),
-(231, 34, 'DK-2574-AA', '0', '3', 6, '2016-04-05 19:17:17');
+(231, 34, 'DK-2574-AA', '0', '3', 6, '2016-04-05 19:17:17'),
+(232, 37, '54215289', '0', '2', 7, '2016-04-17 18:56:21');
 
 -- --------------------------------------------------------
 
