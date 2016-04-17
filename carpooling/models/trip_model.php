@@ -115,11 +115,11 @@ Class Trip_model extends CI_Model
 		
 	}
 	/*Fonction pour récuperer les demandes de réservation*/
-	function get_tripenquirydetail($user_id)
+	function get_tripenquirydetail($user_id, $trip_id)
 	{	
 		$this->db->select('*');
         $this->db->where('tbl_enquires.enquiry_passanger_id', $user_id);
-        $this->db->where('tbl_enquires.enquiry_trip_id', 276);
+        $this->db->where('tbl_enquires.enquiry_trip_id', $trip_id);
         $result = $this->db->get('tbl_enquires');
 		return $result->row();
 	}
