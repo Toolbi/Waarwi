@@ -1497,3 +1497,24 @@ a.drop{
 .description-text{
   float: right; 
 }
+
+.fa.rate5{
+  color: #1F6800;
+  font-size: 20px; 
+}
+.rate4{
+  color: #1CB30B; 
+  font-size: 20px; 
+}
+.rate3{
+  color: #D8D813; 
+  font-size: 20px; 
+}
+.rate2{
+  color: #E97013;
+  font-size: 20px;  
+}
+.rate1{
+  color: #AC1700; 
+  font-size: 20px; 
+}

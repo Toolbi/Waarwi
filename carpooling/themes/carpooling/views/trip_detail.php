@@ -282,9 +282,42 @@ function viewPopcontact(pmId)
         <div class="trip-lft">
 
         <h4 class="cs-lgrey-bg padding10"><span class="fa fa-star"></span> <?php echo lang('received_ratings');?> </h4>
+        <!-- Avis récus -->
         <div class="rowrec line4"></div>
-
-        <script>rate(<?=getOverallRating($tripdetails['user_id'])?>);</script>
+          <?php if ($received_rating) { ?>  
+            <?php foreach ($received_rating as $rating) { ?>    
+              <div class="received-rating">
+                <a class="profile-img" href="#"> <img src="<?php if($rating->user_profile_img) { echo theme_profile_img($rating->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> 
+                </a>
+              <div class="rate-content">
+                <h3 class="<?php if ($rating->rating == 5){echo 'fa fa-star rate5';}elseif ($rating->rating == 4) { echo 'fa fa-star rate4';
+                }elseif ($rating->rating == 3) { echo 'fa fa-star rate3';} elseif ($rating->rating == 2) { echo 'fa fa-star rate2';}
+                elseif ($rating->rating == 1) { echo 'fa fa-star rate1';}?>">
+                <?php 
+                if ($rating->rating == 5){
+                  echo lang('rate5');
+                }elseif ($rating->rating == 4) {
+                 echo lang('rate4');
+                }elseif ($rating->rating == 3) {
+                 echo lang('rate3');
+                }elseif ($rating->rating == 2) {
+                 echo lang('rate2');
+                }elseif ($rating->rating == 1) {
+                 echo lang('rate1');
+                }
+                ?></h3><br><br>                
+                <p class="rating-comment"><strong><?=$rating->user_first_name;?>: </strong><?=$rating->rating_comment;?></p>
+              </div>
+              <span class="rating-info">
+                <small class="rating-date"><?php echo date('d/m/Y',strtotime($rating->created_date));?></small>
+              </span>
+              </div>
+              <?php } ?>
+              <?php
+            } else { ?>
+              <p class="para"><?php echo lang('no_ratings'); ?></p>
+                <?php
+              }?>
 
       </div>
       </div>

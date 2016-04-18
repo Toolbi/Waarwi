@@ -14,6 +14,7 @@ class Trip extends Front_Controller
         $this->load->library('session');
         $this->load->model('trip_model');
         $this->load->model('Enquiry_model');
+        $this->load->model('rating_model');
         $data['error'] = "";
         $this->CI = & get_instance();
         $this->user = $this->CI->carpool_session->userdata('carpool');
@@ -37,6 +38,7 @@ class Trip extends Front_Controller
         $data['tripdetails'] = $this->trip_model->get_tripdetail($id);
        	$data['tripenquirydetail']  = $this->trip_model->get_tripenquirydetail($this->user['user_id'], $data['tripdetails']['trip_id']);
        	$data['passangers_in_trip'] = $this->Enquiry_model->get_passengers_in_trip($id, $data['tripdetails']['trip_casual_date'], $data['tripdetails']['trip_id']);
+        $data['received_rating'] = $this->rating_model->get_received_rating($data['tripdetails']['trip_user_id']);
 		// print_r($data['passangers_in_trip']); die;
 		// print_r($this->user['user_id'] ); die;		
 

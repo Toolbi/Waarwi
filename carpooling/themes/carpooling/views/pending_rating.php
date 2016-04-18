@@ -54,6 +54,12 @@ if (function_exists('validation_errors') && validation_errors() != '') {
 }
 ?>
     });
+
+
+function refresh() {
+    location.reload();
+}
+
 </script>
 <link rel="stylesheet" href="<?php echo theme_js('rating/rating.css') ?>">
 <?php echo theme_js('rating/jquery.rating.js', true) ?>
@@ -278,17 +284,17 @@ $(document).ready(function() {
                                                     <td> <?=$rating->user_first_name?></td>
                                                     <td> 
                                                         <div id="rating-<?php echo $rating->user_id; ?>">
-                                                            <input placeholder="<?php echo lang('exple_rate'); ?>" type="text" name="comment" id="comment" value="" />                                                            
+                                                            <textarea placeholder="<?php echo lang('exple_rate'); ?>" type="text" name="comment" id="comment" value="" /></textarea>                                                            
                                                               <input type="hidden" name="trip_date" id="trip_date" value="<?php echo date('Y,m,d');?>" />                                                            
                                                               <input type="hidden" name="trip_id" id="trip_id" value="<?=$rating->enquiry_trip_id?>" />                                                            
-                                                            <select name="rating" id="rating" form="carform">
-                                                              <option value="5">Parfait </option>
-                                                              <option value="4">Très bien</option>
-                                                              <option value="3">Bien</option>
-                                                              <option value="2">Décevant</option>
-                                                              <option value="1">À éviter</option>
+                                                            <select name="rating" id="rating" form="rateform">
+                                                              <option value="5"><?php echo lang('rate5'); ?></option>
+                                                              <option value="4"><?php echo lang('rate4'); ?></option>
+                                                              <option value="3"><?php echo lang('rate3'); ?></option>
+                                                              <option value="2"><?php echo lang('rate2'); ?></option>
+                                                              <option value="1"><?php echo lang('rate1'); ?></option>
                                                             </select>
-                                                              <button class="btn btn-success" onClick="addRating(this,<?php echo $rating->user_id; ?>);">Valider</button>  
+                                                              <button class="btn btn-warning" onClick="addRating(this,<?php echo $rating->user_id;?>); refresh();"><?php echo lang('give_rate'); ?></button>  
                                                               
                                                         </div>
                                                     </td>

@@ -360,6 +360,11 @@ $lang['given_rating_desc']                 	  = 'Vous leur avez donné un avis.'
 $lang['give_rate']                 	  		  = 'Laisser un avis';
 $lang['rating_point']                 	  	  = 'Points';
 $lang['exple_rate']                 	  	  = 'Ex: Voyage agréable, je recommande.';
+$lang['rate5']                 	  	  			= 'Parfait';
+$lang['rate4']                 	  	  			= 'Très bien';
+$lang['rate3']                 	  	  			= 'Bien';
+$lang['rate2']                 	  	  			= 'Dévevant';
+$lang['rate1']                 	  	  			= 'A éviter';
 
 //Enquiry
 
