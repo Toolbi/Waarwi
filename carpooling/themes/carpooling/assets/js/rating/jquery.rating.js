@@ -21,9 +21,13 @@ function addRating(obj,id) {
 			return false;	
 		}
 	});
+	var rating =  'user_id='+id+'&rating='+$('#rating-'+id+' #rating').val();
+	var comment =  'user_id='+id+'&comment='+$('#rating-'+id+' #comment').val();
+	var date =  'user_id='+id+'&trip_date='+$('#rating-'+id+' #trip_date').val();
+	var trip_id =  'user_id='+id+'&trip_id='+$('#rating-'+id+' #trip_id').val();
 	$.ajax({
 	url: baseurl+"rating/add_rating",
-	data:'user_id='+id+'&rating='+$('#rating-'+id+' #rating').val(),
+	data:rating+date+trip_id+comment,
 	type: "POST"
 	});
 }

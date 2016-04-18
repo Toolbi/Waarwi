@@ -11,7 +11,6 @@
 <script>
     var baseurl = "<?php print base_url(); ?>";
     $(document).ready(function () {
-
 <?php
 //lets have the flashdata overright "$message" if it exists
 if ($this->session->flashdata('message')) {
@@ -27,7 +26,6 @@ if ($this->session->flashdata('message')) {
             });
 <?php
 }
-
 if ($this->session->flashdata('error')) {
     $error = $this->session->flashdata('error');
     ?>
@@ -41,7 +39,6 @@ if ($this->session->flashdata('error')) {
             });
     <?php
 }
-
 if (function_exists('validation_errors') && validation_errors() != '') {
     $error = validation_errors();
     ?>
@@ -56,11 +53,7 @@ if (function_exists('validation_errors') && validation_errors() != '') {
     <?php
 }
 ?>
-
     });
-
-
-
 </script>
 <link rel="stylesheet" href="<?php echo theme_js('rating/rating.css') ?>">
 <?php echo theme_js('rating/jquery.rating.js', true) ?>
@@ -75,7 +68,6 @@ if (function_exists('validation_errors') && validation_errors() != '') {
 <link rel="stylesheet" href="<?php echo theme_js('popup/boxy.css') ?>">
 <?php echo theme_js('popup/jquery.boxy.js',true) ?>
 <?php echo theme_css('checkbox.css',true) ?>
-
 <script>
 $(document).ready(function() {  
   
@@ -141,9 +133,7 @@ $(document).ready(function() {
       
     </div>
   </div>
-
   <div class="panel panel-tabs text-center">
-
       <div class="panel-heading">  
       <!-- Navigation haut -->
       <div id="user-tabs"> 
@@ -247,7 +237,6 @@ $(document).ready(function() {
       <input type="file"  name="profileimg" id="profileimg">
     </div>          
     </form>
-
   <div class="trips"> 
         <ul class="brd-crmb">
           <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
@@ -260,7 +249,6 @@ $(document).ready(function() {
              
          <div class="active-yellow padding10">
         <h4> <?php echo lang('my_rating');?>: <?php echo lang('ratings_pending');?></h4>
-
         </div>
             <div class="inner-yellow">
                 <div class="obj_cont p_block_bottom rowrec" style="display: block;">
@@ -268,12 +256,11 @@ $(document).ready(function() {
                     <div class="my-trp-main">
                     <a id="a_tab" class="btn btn-tab-y  active" onclick="tab_tab(this, 'p_block_bottom'), height_right()"><?php echo lang('ratings_pending'); ?></a>      
                     <a id="a_tab" class="btn btn-tab-y enquery" href="<?php echo base_url('rating/received_rating');?>"><?php echo  lang('received_ratings'); ?></a>
-                    <a id="a_tab" class="btn btn-tab-y enquery" href="<?php echo base_url('rating/given_rating');?>"><?php echo lang('rating_given'); ?></a>	
+                    <a id="a_tab" class="btn btn-tab-y enquery" href="<?php echo base_url('rating/given_rating');?>"><?php echo lang('rating_given'); ?></a>  
                     <div class="cr"></div>
-
                         <div class="my-trp-content rowrec" id="pageresult">
                              <?php if ($pending_rating) { ?> 
-                            <div class="add_trip_enquery_tbl">                                       	
+                            <div class="add_trip_enquery_tbl">                                        
                                     <table valign="center" class="rating-table" cellpadding="0" cellspacing="0"  width="100%">
                                         <tbody>
                                             <tr bgcolor="#01acf1">
@@ -281,27 +268,28 @@ $(document).ready(function() {
                                                 <th> <?php echo lang('user_name'); ?></th>  
                                                 <th> <?php echo lang('rating'); ?> </th>                                                                           
                                             </tr>  
-
                                             <?php foreach ($pending_rating as $rating) { ?>
-
-                                                <tr id="enquiry-<?=$rating->enquiry_id?>">                        	
+                                                <tr id="enquiry-<?=$rating->enquiry_id?>">                          
                                                     <td> 
                                                         <div class="profile-img"> 
                                                             <img src="<?php if($rating->user_profile_img) { echo theme_profile_img($rating->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> 
                                                         </div>
                                                     </td>
-                                                    <td> <?=$rating->user_first_name.' '.$rating->user_last_name ?></td>
+                                                    <td> <?=$rating->user_first_name?></td>
                                                     <td> 
                                                         <div id="rating-<?php echo $rating->user_id; ?>">
-                                                            <input type="hidden" name="rating" id="rating" value="" />                                                            
-                                                            <ul onMouseOut="resetRating(<?php echo $rating->user_id; ?>);">
-                                                              <?php
-                                                              for($i=1;$i<=5;$i++) {
-                                                                $selected = "";                                                              
-                                                              ?>
-                                                              <li class='<?php echo $selected; ?>' onmouseover="highlightStar(this,<?php echo $rating->user_id; ?>);" onmouseout="removeHighlight(<?php echo $rating->user_id; ?>);" onClick="addRating(this,<?php echo $rating->user_id; ?>);">&#9733;</li>  
-                                                              <?php }  ?>
-                                                            <ul>
+                                                            <input placeholder="<?php echo lang('exple_rate'); ?>" type="text" name="comment" id="comment" value="" />                                                            
+                                                              <input type="hidden" name="trip_date" id="trip_date" value="<?php echo date('Y,m,d');?>" />                                                            
+                                                              <input type="hidden" name="trip_id" id="trip_id" value="<?=$rating->enquiry_trip_id?>" />                                                            
+                                                            <select name="rating" id="rating" form="carform">
+                                                              <option value="5">Parfait </option>
+                                                              <option value="4">Très bien</option>
+                                                              <option value="3">Bien</option>
+                                                              <option value="2">Décevant</option>
+                                                              <option value="1">À éviter</option>
+                                                            </select>
+                                                              <button class="btn btn-success" onClick="addRating(this,<?php echo $rating->user_id; ?>);">Valider</button>  
+                                                              
                                                         </div>
                                                     </td>
                                                                                 
@@ -310,33 +298,21 @@ $(document).ready(function() {
                                         </tbody></table>
                                 <?php
                                 } else { ?>
-
                                     <p class="para"><?php echo lang('no_ratings'); ?></p>
                                 <?php    
                                 }
                                 ?>
-
                             </div>
                             
-
                         </div>
                     </div>        
-
-
                 </div>
                 <!-- end tab1 -->
-
                 
                     <!-- end tab2 -->
-
                    
-
                 </div>
                 <!-- End -->
-
             </div>
         </div>
-
-
-    </div>
-
+    </div>  

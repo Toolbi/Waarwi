@@ -1494,3 +1494,6 @@ a.drop{
     text-align: center;
 }
 
+.description-text{
+  float: right; 
+}

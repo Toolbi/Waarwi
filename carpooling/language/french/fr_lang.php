@@ -7,6 +7,8 @@ Langue du tableau de bord utilisateur
 //Add Trip Language
 $lang['my_trips']					= 'Mes trajets';
 $lang['my_trip']					= 'Mes trajets';
+$lang['trip']						= 'Trajet';
+$lang['see_trip']					= 'Voir le trajet';
 $lang['rides_offered']				= 'Trajets proposés';
 $lang['enquiry']				    = 'Trajets réservés';
 $lang['upcoming_trips']				= 'Trajets à venir';
@@ -344,13 +346,20 @@ $lang['success_trip_deleted']                 = 'Votre trajet a été supprimé'
 //Rating languages
 
 $lang['my_rating']                            = 'Mes avis';
-$lang['ratings_pending']                      = 'Avis en attentes';
+$lang['ratings_pending']                      = 'Donner un avis';
 $lang['received_ratings']                     = 'Avis reçus';
 $lang['rating_given']                         = 'Avis donnés';
 $lang['user_mage']                            = 'Photo';
 $lang['user_name']                            = 'Nom';
 $lang['no_ratings']                           = 'Pas d\'avis';
 $lang['rating_comment']                       = 'Commentaire';
+$lang['rating_date']                          = 'Date de l\'avis';
+$lang['pending_rating_desc']                  = 'Ils attendent votre avis.';
+$lang['received_rating_desc']                 = 'Ils vous ont donné un avis.';
+$lang['given_rating_desc']                 	  = 'Vous leur avez donné un avis.';
+$lang['give_rate']                 	  		  = 'Laisser un avis';
+$lang['rating_point']                 	  	  = 'Points';
+$lang['exple_rate']                 	  	  = 'Ex: Voyage agréable, je recommande.';
 
 //Enquiry
 

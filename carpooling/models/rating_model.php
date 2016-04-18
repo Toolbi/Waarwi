@@ -23,7 +23,7 @@ Class Rating_model extends CI_Model
             $this->db->group_by('tbl_enquires.enquire_travel_id');
             $this->db->where('`tbl_enquires`.`enquire_travel_id` NOT IN '
             . '(SELECT `rating_receiver_id` FROM `tbl_rating` WHERE `rating_giver_id` = "'.$userId.'")', NULL, FALSE);
-            $this->db->where('tbl_enquires.enquiry_trip_status',1);
+            $this->db->where('tbl_enquires.enquiry_trip_status', 1);
 			$this->db->where('tbl_enquires.enquiry_passanger_id',$userId);
             $this->db->where('tbl_enquires.enquiry_trip_date < ',date('Y-m-d',now()));
             return $this->db->get('tbl_enquires')->result();            

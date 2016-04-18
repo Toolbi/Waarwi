@@ -269,6 +269,9 @@ $(document).ready(function() {
                     <a id="a_tab" class="btn btn-tab-y" href="<?php echo base_url('rating');?>"><?php echo  lang('ratings_pending'); ?></a>      
                     <a id="a_tab" class="btn btn-tab-y active" ><?php echo  lang('received_ratings'); ?></a>
                     <a id="a_tab" class="btn btn-tab-y enquery" href="<?php echo base_url('rating/given_rating');?>"><?php echo lang('rating_given'); ?></a>	
+                     <?php if ($received_rating) { ?>  
+                      <span class="description-text"> <?php echo lang('received_rating_desc'); ?></span>
+                     <?php }else{ } ?>
                     <div class="cr">
                     </div>
                 </div>
@@ -284,7 +287,9 @@ $(document).ready(function() {
                                                 <th> <?php echo lang('user_image'); ?></th> 
                                                 <th> <?php echo lang('user_name'); ?></th>  
                                                 <th> <?php echo lang('rating_comment'); ?> </th>
-                                                <th> <?php echo lang('rating'); ?> </th>                                                                           
+                                                <th> <?php echo lang('rating'); ?> </th>
+                                                <th> <?php echo lang('rating_date'); ?> </th>
+                                                <th> <?php echo lang('trip'); ?> </th>                                                                           
                                             </tr>  
 
                                             <?php foreach ($received_rating as $rating) { ?>
@@ -296,7 +301,7 @@ $(document).ready(function() {
                                                         </div>
                                                     </td>
                                                     <td> <?=$rating->user_first_name.' '.$rating->user_last_name ?></td>
-                                                    <td> <?=$rating->rating_comment ?></td>
+                                                    <td> <?=$rating->rating_comment?></td>
                                                     <td> 
                                                         <div id="rating-<?php echo $rating->user_id; ?>">                                                                                                                   
                                                             <ul>
@@ -312,6 +317,9 @@ $(document).ready(function() {
                                                             <ul>
                                                         </div>
                                                     </td>
+                                                    <td><?php echo date('d/m/Y',strtotime($rating->created_date));?></td>
+                                                    <td> <a class="btn btn-info" href="<?php print base_url(); ?>trip/tripdetails/<?=$rating->trip_id?>">
+                                                    <?php echo lang('see_trip'); ?></a></td>
                                                                                 
                                                 </tr>   
                                             <?php } ?>
