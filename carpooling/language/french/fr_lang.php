@@ -100,7 +100,7 @@ $lang['comfort_level']					    = 'Confort';
 $lang['search']					        = 'Recherche';
 $lang['trip_detail']					= 'Détails du trajet';
 $lang['published_at']					= 'Publié le';
-$lang['preferences']					= 'Choix :';
+$lang['preferences']					= 'Mes préférences';
 $lang['departure_point']				= 'Point de départ';
 $lang['destination']					= 'Destination';
 $lang['detour']					        = 'Détour';
@@ -129,9 +129,10 @@ $lang['my_verifications']				= 'Mes vérifications';
 $lang['phone']							= 'Téléphone';
 $lang['email']							= 'Email';
 $lang['activity']						= 'Profession';
-$lang['since']							= 'Depuis:';
-$lang['last_visit']						= 'Dernier visite:';
-$lang['car']							= 'véhicule';
+$lang['since']							= 'Inscrit depuis';
+$lang['last_visit']						= 'Dernière visite';
+$lang['car']							= 'Véhicule';
+$lang['no_age']							= 'Age non défini';
 //Add Trip Form Language
 $lang['register_your_carpool']				= 'Enregistrer votre annonce';
 $lang['register_your_trip']					= 'Enregistrer votre trajet';
@@ -349,6 +350,7 @@ $lang['rating_given']                         = 'Avis donnés';
 $lang['user_mage']                            = 'Photo';
 $lang['user_name']                            = 'Nom';
 $lang['no_ratings']                           = 'Pas d\'avis';
+$lang['rating_comment']                       = 'Commentaire';
 
 //Enquiry
 
