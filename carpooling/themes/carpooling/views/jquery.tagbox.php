@@ -20,17 +20,17 @@
       separator: '~',
       className: 'tagBox',
       tagInputClassName: 'fleft padding10 marginleft10 ',
-      tagButtonClassName: 'cs-blue-bg padding10 fright colorwhite',
-      tagButtonTitle: 'Add route',
+      tagButtonClassName: 'btn btn-success fright',
+      tagButtonTitle: '<?php echo lang('add_route_btn');?>',
       confirmRemoval: false,
-      confirmRemovalText: 'Do you really want to remove the tag?',
+      confirmRemovalText: '<?php echo lang('remove_tag_confirm');?>',
       completeOnSeparator: true,
       completeOnBlur: false,
       readonly: false,
       enableDropdown: false,
       dropdownSource: function() {},
       dropdownOptionsAttribute: "title",
-      removeTagText: "Remove Tag",
+      removeTagText: "<?php echo lang('remove_tag');?>",
       maxTags: -1,
       maxTagsErr: function(max_tags) { alert("A maximum of "+max_tags+" tags can be added!"); },
       beforeTagAdd: function(tag_to_add) {},
@@ -185,13 +185,13 @@
         jQuery.each(tags_list, function(key, val) {
          
 		  if(val != "") {
-            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+' cs-dark-bg padding10 fright colorwhite" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
+            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+'btn btn-danger padding10 fright" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
             if((options.enableDropdown) && jQuery('#'+options.className+'-input-'+uuid).find("option").length > 0) {
               var display_val = jQuery('#'+options.className+'-input-'+uuid).find("option[value='"+val+"']").text();
             } else {
               var display_val = val;
             }
-            $tag_list_elem.append('<span class="'+options.className+'-item tag-box-space"><span class="'+options.className+'-bullet"></span><p class="cs-grey-bg row"><span class="'+options.className+'-item-content padding10 fleft">'+display_val+'</span>'+remove_tag_link+'</p></span></div>');
+            $tag_list_elem.append('<span class="'+options.className+'-item tag-box-space"><span class="'+options.className+'-bullet"></span><p class="cs-grey-bg row "><span class="'+options.className+'-item-content padding10 fleft">'+display_val+'</span>'+remove_tag_link+'</p></span></div>');
           }
         });
         $element.val(tags_list.join(options.separator));

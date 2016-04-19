@@ -177,7 +177,9 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .row59 { width: 59%; float: left; margin-left:0px; }
 .fleft .bold,#rpt_from_date,#avail_seats,#number{ margin-left:0px;}
 .add-tag-but { border: none; font-size: 16px; width: 106px; cursor: pointer; color:#fff; }
-.cs-grey-bg { background: #adadad; }
+.cs-grey-bg { 
+  background: #E8E3E3; 
+}
 .cs-dark-bg { background: #333; }
 .colorwhite { color: #fff; }
 .trp-step li { width: 50%; float: left; font-size: 14px; }
@@ -1497,6 +1499,10 @@ a.drop{
 .description-text{
   float: right; 
 }
+.description{
+  font-size: 14px;
+  float: left;  
+}
 
 .fa.rate5{
   color: #1F6800;
@@ -1517,4 +1523,9 @@ a.drop{
 .rate1{
   color: #AC1700; 
   font-size: 20px; 
+}
+
+.map{
+  padding-top: 100%;
+  padding-left: 4%;
 }

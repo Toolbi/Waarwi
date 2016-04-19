@@ -63,7 +63,7 @@
 					
 				},
 				jquerytagboxtext:{
-					required: true,
+					required: false,
 				},
 				tzone:{
 					
@@ -112,9 +112,9 @@
 				comments: {
 					required: "Enter your commends",
 				},
-				jquerytagboxtext:{
-					required: "Please add atleast one route",
-				},
+				// jquerytagboxtext:{
+				// 	required: "Please add atleast one route",
+				// },
 				tzone:{
 					required: "Please check your timings",
 				},
