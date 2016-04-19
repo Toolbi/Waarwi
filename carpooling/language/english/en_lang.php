@@ -4,6 +4,8 @@
 
 $lang['my_trips']					= 'My Trips';
 $lang['my_trip']					= 'My Trips';
+$lang['trip']						= 'Trip';
+$lang['see_trip']					= 'See trip';
 $lang['rides_offered']				= 'As a car owner';
 $lang['enquiry']				    = 'As a passenger';
 $lang['upcoming_trips']				= 'Upcoming Trips';
@@ -412,6 +414,11 @@ $lang['rating_given']                         = 'Rating given';
 $lang['user_mage']                            = 'User image';
 $lang['user_name']                            = 'User name';
 $lang['no_ratings']                           = 'No ratings';
+$lang['rating_comment']                       = 'Comment';
+$lang['rating_date']                          = 'Rating date';
+$lang['pending_rating_desc']                  = 'They are waiting for your rate';
+$lang['give_rate']                 	  		  = 'Give a rate';
+$lang['rating_point']                 	  	  = 'Rating point';
 
 //Enquiry
 

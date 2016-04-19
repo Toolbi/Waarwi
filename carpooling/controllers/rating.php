@@ -68,10 +68,16 @@ class Rating extends Traveller_Controller {
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         $receiver_id = $this->input->post('user_id');
         $rating = $this->input->post('rating');
+        $comment = $this->input->post('comment');
+        $trip_id = $this->input->post('trip_id');
+        $trip_date = $this->input->post('trip_date');
         $save['id'] = false;
         $save['rating_giver_id'] = $this->user_id;
         $save['rating_receiver_id'] = $receiver_id;
         $save['rating'] = $rating;
+        $save['rating_comment'] = $comment;
+        $save['trip_id'] = $trip_id;
+        $save['created_date'] = $trip_date;
         $this->rating_model->save_rating($save);
     }
 }
