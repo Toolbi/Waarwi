@@ -283,6 +283,7 @@ $(document).ready(function() {
                                             <tr bgcolor="#01acf1">
                                                 <th> <?php echo lang('user_image'); ?></th> 
                                                 <th> <?php echo lang('user_name'); ?></th>  
+                                                <th> <?php echo lang('rating_comment'); ?> </th>
                                                 <th> <?php echo lang('rating'); ?> </th>                                                                           
                                             </tr>  
 
@@ -295,6 +296,7 @@ $(document).ready(function() {
                                                         </div>
                                                     </td>
                                                     <td> <?=$rating->user_first_name.' '.$rating->user_last_name ?></td>
+                                                    <td> <?=$rating->rating_comment ?></td>
                                                     <td> 
                                                         <div id="rating-<?php echo $rating->user_id; ?>">                                                                                                                   
                                                             <ul>

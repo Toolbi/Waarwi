@@ -74,33 +74,33 @@ function viewPopcontact(pmId)
         
       <div class="rowrec view-map"><?php echo $map['js']; 
               echo $map['html']; ?>
-                            <div id="directionsDiv"></div></div>
-
-      <div class="row margin">
-        <div class="view-col1">
-            <h4><?php echo lang('trip_detail');?> </h4><small class=""><?php echo lang('published_at');?> <?php echo date('d/m/Y',strtotime($tripdetails['trip_created_date']));?></small>
-        </div>
-        <div class="view-col1">
-            <h4 class="cs-blue-text"> <?php echo lang('preferences');?>  </h4>
-            <p> </p>
-        </div>
-      </div>
+      <div id="directionsDiv"></div></div>
       <div class="rowrec line4"></div>
 
-      <div class="sea-city-city cs-blue-text cs-lgrey-bg padding10"> <b><?= $tripdetails['source_leg'] ?> 
+      <div class="sea-city-city cs-blue-text cs-lgrey-bg padding10" align="center"> <b><?= $tripdetails['source_leg'] ?> 
       <span> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
     <?= $tripdetails['destination_leg'] ?> </b> </div>
 
       <div class="rowrec line4"></div>
+      <div class="row margin">
+        <div class="view-col1">
+            <h4><?php echo lang('trip_detail');?> </h4><small class=""><?php echo lang('published_at');?> <?php echo date('d/m/Y',strtotime($tripdetails['trip_created_date']));?></small>
+        </div>
+        <!-- <div class="view-col1">
+            <h4 class="cs-blue-text"> <?php echo lang('preferences');?>  </h4>
+            <p> </p>
+        </div> -->
+      </div>
+      
 
       <div class="rowrec">
 
         <div class="trip-col3">
-            <span class=""><span> <img src="<?php echo theme_img('src-dest-ico.png');?>"> </span> <?php echo lang('departure_point');?></span>
+            <span class=""><span> <img src="<?php echo theme_img('marker-from.png');?>"> </span> <?php echo lang('departure_point');?></span>
             <br>
             <span class=""><?= $tripdetails['source_leg'] ?></span>
             <br><br>
-            <span class=""><span> <span> <img src="<?php echo theme_img('src-dest-ico-green.png');?>"> </span> </span> <?php echo lang('destination');?></span>
+            <span class=""><span> <span> <img src="<?php echo theme_img('marker-to.png');?>"> </span> </span> <?php echo lang('destination');?></span>
             <br>
             <span class=""><?= $tripdetails['destination_leg'] ?></span>
         </div>
@@ -146,7 +146,7 @@ function viewPopcontact(pmId)
       <div class="rowrec line4"></div>
 
       <div class="padding20">          
-          <h3 class="size22">  <?= format_currency($tripdetails['route_rate']); ?>  <?php echo lang('per_passenger');?></h3>
+          <h4 class="size22">  <?= format_currency($tripdetails['route_rate']); ?>  <?php echo lang('per_passenger');?></h4>
           
       </div>
 
@@ -156,7 +156,7 @@ function viewPopcontact(pmId)
             <?php echo lang('departure_date');?><br>
             <span class="size20"><span><img src="<?php echo theme_img('cal-14-14.png');?>"></span> <?php echo date('d/m/Y',strtotime($tripdetails['trip_casual_date']));?>
             </span><br>
-            <small> <?php echo date('M',strtotime($tripdetails['trip_casual_date']));?> </small>
+            <!-- <small> <?php echo date('M',strtotime($tripdetails['trip_casual_date']));?> </small> -->
         </div>
         <?php } ?>
         <div class="colmd6 noborder">
@@ -272,19 +272,30 @@ function viewPopcontact(pmId)
     <div class="rowrec margin">
 
       <div class="trip-lft">
-
-        <h2> <?php echo lang('more_details');?> </h2>
-
+      <h4 class="cs-lgrey-bg padding10"><span class="fa fa-comment"></span> <?php echo lang('more_details');?> </h4>
         <div class="rowrec line4"></div>
 
         <p class="para"> <?= $tripdetails['trip_comments'] ?> </p>
 
+        <div class="rowrec line4"></div></br>
+
+        <div class="trip-lft">
+
+        <h4 class="cs-lgrey-bg padding10"><span class="fa fa-star"></span> <?php echo lang('received_ratings');?> </h4>
+        <div class="rowrec line4"></div>
+
+        <script>rate(<?=getOverallRating($tripdetails['user_id'])?>);</script>
+
+      </div>
       </div>
       <!-- End 2  left row -->
+      <!-- Row avis driver -->
+      
 
       <div class="trip-right">
 
-        <h3 class="cs-lgrey-bg padding10"> <span> <img src="<?php echo theme_img('driver-ico.png');?>"> </span> <?php echo lang('driver');?> </h3>
+        <h4 class="cs-lgrey-bg padding10"><i class="fa fa-user" aria-hidden="true"></i>
+        <?php echo lang('driver');?> </h4>
 
         <div class="rowrec line4"></div>
 
@@ -298,7 +309,7 @@ function viewPopcontact(pmId)
                   <a href="javascript:void(0)" class="cs-blue-text"><?= $tripdetails['user_first_name'] .' '.$tripdetails['user_last_name'] ?></a>
               </strong><br>
         
-              <small class="size13" > 
+              <!-- <small class="size13" > 
         DOB : 
           <?php
  
@@ -310,9 +321,9 @@ function viewPopcontact(pmId)
                {
                   echo "User is not specified";
                }
- ?></small><br>
+ ?></small><br> -->
         <small class="size14" >
-        Age:  
+        <?php echo lang('age');?>:  
           <?php
  
                if (!empty($tripdetails['show_number']))
@@ -323,13 +334,13 @@ function viewPopcontact(pmId)
          }
                   else
           {
-            echo "User is not specified";
+            echo lang('no_age');
           }
                  ?>
           </small>
         
               <span class="rowrec size14"> 
-                <span class="fleft"> Ratings: </span>
+                <span class="fleft"> <?php echo lang('ratings');?> </span>
                   <div class="starrow fleft marginleft10">           
                     <script>rate(<?=getOverallRating($tripdetails['user_id'])?>);</script>                
                  </div>
@@ -341,13 +352,14 @@ function viewPopcontact(pmId)
 
         <div class="rowrec line4"></div>
 
-        <h3 class="rowrec cs-lgrey-bg padding10"> <span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('my_verifications');?> </h3>
+        <h4 class="rowrec cs-lgrey-bg padding10"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        <?php echo lang('my_verifications');?> </h4>
 
         <div class="rowrec line4"></div>
 
         <ul class="rowrec trp-cont-rht">
             <li>
-                <span class="trp-imge paddingtop5"><img src="<?php echo theme_img('mobile-ico.png');?>"></span> <strong class="size14 paddingleft8"><?php echo lang('phone');?> </strong>
+                <span class="trp-imge paddingtop5 glyphicon glyphicon-phone"></span> <strong class="size14 paddingleft8"><?php echo lang('phone');?> </strong>
         
         <?php  if($tripdetails['show_number'] == 1)
         { ?>  
@@ -361,11 +373,14 @@ function viewPopcontact(pmId)
          <?php  } ?>
             </li>
             <li>
-              <span class="trp-imge paddingtop5"><img src="<?php echo theme_img('mail-ico.png');?>"></span> <strong class="size14 paddingleft8"><?php echo lang('email');?> </strong>            
+              <span class="trp-imge paddingtop5 fa fa-envelope"></span> <strong class="size14 paddingleft8"><?php echo lang('email');?> </strong>            
               <span class="fright paddingtop5"><img src="<?php echo theme_img('verified-ico-green.png');?>"></span>
             </li>
         </ul>
-      
+        <div class="rowrec line4"></div>
+      <h4 class="rowrec cs-lgrey-bg padding10"> <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <?php echo lang('preferences');?> </h4>
+      <div class="rowrec line4"></div>
       <div class="trip-icons">
         
         <?php  if($tripdetails['allowed_chat'] == 1)
@@ -374,7 +389,6 @@ function viewPopcontact(pmId)
          <?php }
         else
         { ?>
-        
                 <li><span class="chat-red"></span></li>
         <?php } ?>
         
@@ -410,19 +424,18 @@ function viewPopcontact(pmId)
 
         <div class="rowrec line4"></div>
 
-        <h3 class="rowrec cs-lgrey-bg padding10"> <span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('activity');?> </h3>
+        <!-- <h4 class="rowrec cs-lgrey-bg padding10"> <span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('activity');?> </h4> -->
 
-        <div class="rowrec line4"></div>
+        <!-- <div class="rowrec line4"></div> -->
 
         <ul class="size14 row trp-cont-rht">           
-            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('cal-14-14.png');?>" width="12" height="12"></span> <strong class="paddingleft8">Since</strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_created_date']));?></li>
-            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('time-ico.png');?>"></span> <strong class="paddingleft8"><?php echo lang('last_visit');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_lost_login']));?></li>
-           
+            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('cal-14-14.png');?>" width="12" height="12"></span> <strong class="paddingleft8"><?php echo lang('since');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_created_date']));?></li>
+            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('time-ico.png');?>"></span> <strong class="paddingleft8"><?php echo lang('last_visit');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_lost_login']));?></li>           
         </ul>
 
         <div class="rowrec line4"></div>
 
-        <h3 class="rowrec cs-lgrey-bg padding10"> <span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('car');?> </h3>
+        <h4 class="rowrec cs-lgrey-bg padding10"> <span class="fa fa-car"> </span> <?php echo lang('car');?> </h4>
 
         <div class="rowrec line4"></div>
 
@@ -430,8 +443,10 @@ function viewPopcontact(pmId)
               <span class=" rowrec cs-blue-text"><b><?= $tripdetails['vechicle_type_name'] ?></b></span>
               <img class="search-thumb search-user-thumb " style="margin: 15px 0 15px 7px;" src="<?php if(!empty($tripdetails['vechicle_logo'])){ echo  base_url('uploads/vehicle/thumbnails/'.$tripdetails['vechicle_logo'] ); } else { echo theme_img('no_car.png'); } ?>">
                
-              </div>
+        </div>
+        <div class="rowrec line4"></div>
           </div>
+
 
       </div>
       <!-- End 2  right row -->

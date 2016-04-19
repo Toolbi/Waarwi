@@ -45,6 +45,14 @@ Class Rating_model extends CI_Model
             return $this->db->get('tbl_rating')->result();
             
         }
+        /*Nouvelle fonction pour afficher les avis reçus dans le profil du conducteur*/
+        function get_rating($userId){
+            $this->db->select('*');
+            $this->db->join('tbl_users','tbl_users.user_id = tbl_rating.rating_giver_id');            
+            $this->db->where('tbl_rating.rating_receiver_id',$userId);
+            return $this->db->get('tbl_rating')->result();
+            
+        }
         
         function save_rating($save){
             

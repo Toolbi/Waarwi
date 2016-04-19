@@ -193,12 +193,12 @@ $(document).ready(function(){
             <input type="hidden" name="tolatlng" id="tolatlng"  value=""/>
 
             <div id="datepicker" class="input-group date" data-date-format="<?php echo lang('date-format');?>">
-                <input class="form-control srcdes" type="text" />
+                <input class="form-control srcdes" type="text" id="journey_date" name="journey_date"/>
                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
             </div>
              
-             <input type="hidden" name="frequency" id="frequency"  value=""/>
-             <button class="top-login ride search-bouton" type="submit"><span class="fa fa-search"></span>   <?php echo lang('search');?></button>      
+            <input type="hidden" name="frequency" id="frequency"  value=""/>
+            <button class="top-login ride search-bouton" type="submit"><span class="fa fa-search"></span>   <?php echo lang('search');?></button>      
           </form>
         </div>      
     </div> 

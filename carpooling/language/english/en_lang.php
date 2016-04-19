@@ -133,6 +133,7 @@ $lang['activity']						= 'Activity';
 $lang['since']							= 'Since:';
 $lang['last_visit']						= 'Last visit:';
 $lang['car']							= 'Car';
+$lang['no_age']							= 'User not specified';
 //para
 
 $lang['up_this_page']				    = 'This Page lists all your passenger seats on offer for each of your upcoming trips';

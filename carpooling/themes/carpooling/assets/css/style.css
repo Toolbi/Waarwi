@@ -126,8 +126,8 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .sea-nam { text-align: center; }
 .sea-nam h3 { color: #13988a; font-size: 18px; } 
 .line2 { background: #e8e8e8; height: 1px; margin: 12px 0 6px; padding: 0; display: block; }
-.search-thumb { display: block; padding: 4px; margin-bottom: 20px; line-height: 1.428571429; background-color: #fff; border: 1px solid #ddd; border-radius: 4px; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
-.search-user-thumb { width: 100px; height: 100px; border-radius: 100%; display: inline; margin-bottom: 5px; }
+.search-thumb { display: block; padding: 4px; margin-bottom: 20px; line-height: 1.428571429; background-color: #fff; border: 2px solid #13988a; border-radius: 4px; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+.search-user-thumb { width: 70px; height: 70px; border-radius: 100%; display: inline; margin-bottom: 5px; }
 .sea-col2 { width: 50%; float: left; padding: 0 10px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
 .sea-col2 h3 { color: #13988a; font-size: 16px; } 
 .sea-city-city { font-size: 14px; color: #333; }
@@ -322,9 +322,9 @@ top: -9px; left: 50%; margin-left: 43px; }*/
 .nav-set li { float: left; width: 100%; margin: 0; }
 .nav-set li a { float: left; width: 100%; font-size: 13px; color: #333; text-align: left; padding: 3px 15px; box-sizing: border-box; -webkit-ox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
 .nav-set li a img { padding-right: 5px; }
-.profile-img { float:left; width: 30px; height: 30px; border-radius: 50%; border: solid 2px #fff; margin-right: 10px; }
+.profile-img { float:left; width: 30px; height: 30px; border-radius: 50%; border: solid 2px #13988a; margin-right: 10px; }
 .profile-img img { border-radius: 50%; }
-.passanger-img { width: 40px; height: 40px; border-radius: 50%; border: solid 2px #fff; margin-right: 10px; }
+.passanger-img { width: 40px; height: 40px; border-radius: 50%; border: solid 2px #13988a; margin-right: 10px; }
 .passanger-img img { border-radius: 50%; }
 .my-account-button span { font-size: 16px; color: #fff; padding: 4px 0 0;   float: left; }
 .my-account-button p {  padding: 5px 0 0 10px;; float: left; }
@@ -652,12 +652,12 @@ a:visited {
     color: #FFF;
     text-decoration: none;
 }
-a:link {
+/*a:link {
     color: #FFF;
     text-decoration: none;
     outline: none;
     transition: all 0.25s;
-}
+}*/
 .share-post li .fa {
     display: initial;
  font-size:18px;
