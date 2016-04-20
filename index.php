@@ -1,7 +1,7 @@
 <?php
 
-//if the Carpooling config file doesn't exist, the cart hasn't been installed.
-if(!file_exists(dirname($_SERVER['SCRIPT_FILENAME']).'/carpooling/config/carpooling.php'))
+//if the tukkeendoo config file doesn't exist, the cart hasn't been installed.
+if(!file_exists(dirname($_SERVER['SCRIPT_FILENAME']).'/tukkeendoo/config/tukkeendoo.php'))
 {
 	$folder = dirname($_SERVER['SCRIPT_NAME']);
 	$path	= rtrim($_SERVER['HTTP_HOST'].$folder, '/\\').'/';	
@@ -83,7 +83,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'carpooling';
+	$application_folder = 'tukkeendoo';
 
 /*
  * --------------------------------------------------------------------
