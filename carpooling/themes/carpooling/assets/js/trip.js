@@ -170,7 +170,7 @@
 												//alert(json.error)												
 												return false;
 											} else if (json.result == 1) {
-												window.location	= baseurl +'addtrip';
+												window.location	= baseurl +'addtrip/form_next';
 											}
 										
 										
@@ -179,7 +179,7 @@
 									
 								}
 								else if (json.result == 0) {
-									//alert(json.message)	
+									alert(json.message);
 									Boxy.alert(json.message,function() {			 	
 											return false;			
 										 },{title: 'Alert'});	
@@ -284,7 +284,7 @@ function filter_result1() {
   
 }
 
-/*function calculatehours()
+function calculatehours()
 {	
 
 
@@ -367,7 +367,7 @@ function convertTo24Hour(time) {
         time = time.replace(hours, (hours + 12));
     }
     return time.replace(/(am|pm)/, '');
-}*/
+}
 
 function checkroute(){
 	var latlng = $('#welcome').val()

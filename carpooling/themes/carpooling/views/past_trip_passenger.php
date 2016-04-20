@@ -10,7 +10,6 @@
 <script>
     var baseurl = "<?php print base_url(); ?>";
             $(document).ready(function() {
-
     /* Slider Expand Click */
     $('body').on("click", '.slider', function()
     {
@@ -22,7 +21,6 @@
     else
     {
             close()
-
             $('#slide' + ID).addClass('open').removeClass('close');
             $('#slide' + ID).slideToggle('slow');
             return false;
@@ -37,7 +35,6 @@
                     $(this).slideToggle('slow');
             });
     }
-
 <?php
 //lets have the flashdata overright "$message" if it exists
 if ($this->session->flashdata('message')) {
@@ -53,7 +50,6 @@ if ($this->session->flashdata('message')) {
         });
 <?php
 }
-
 if ($this->session->flashdata('error')) {
     $error = $this->session->flashdata('error');
     ?>
@@ -67,7 +63,6 @@ if ($this->session->flashdata('error')) {
         });
     <?php
 }
-
 if (function_exists('validation_errors') && validation_errors() != '') {
     $error = validation_errors();
     ?>
@@ -82,7 +77,6 @@ if (function_exists('validation_errors') && validation_errors() != '') {
     <?php
 }
 ?>
-
   });</script>
 <?php echo theme_js('common.js', true); ?>
 <?php echo theme_js('jquery_tab.min.js',true) ?>
@@ -95,7 +89,6 @@ if (function_exists('validation_errors') && validation_errors() != '') {
 <link rel="stylesheet" href="<?php echo theme_js('popup/boxy.css') ?>">
 <?php echo theme_js('popup/jquery.boxy.js',true) ?>
 <?php echo theme_css('checkbox.css',true) ?>
-
 <script>
 $(document).ready(function() {  
   
@@ -169,9 +162,7 @@ $(document).ready(function() {
       
     </div>
   </div>
-
   <div class="panel panel-tabs text-center">
-
       <div class="panel-heading">  
       <!-- Navigation haut -->
       <div id="user-tabs"> 
@@ -275,9 +266,7 @@ $(document).ready(function() {
       <input type="file"  name="profileimg" id="profileimg">
     </div>          
     </form>
-
   <div class="trips">    
-
     <ul class="brd-crmb">
       <li><a href="<?php print base_url(); ?>"> <img src="<?php echo theme_img('home-ico.png') ?>"> <?php echo lang('home');?></a></li>
       <li> / </li>
@@ -290,7 +279,6 @@ $(document).ready(function() {
              
  <div class="active-red padding10">
 <h4> <?php echo lang('my_trip');?>: <?php echo lang('enquiry');?></h4>
-
 </div>
 <div class="inner-red"> 
  <div class="tab-container">   
@@ -303,8 +291,6 @@ $(document).ready(function() {
     </div>
     <div class="my-trp-content rowrec" id="pageresult">
     <p class="para"><?php echo lang('up_this_page'); ?></p>
-
-
     <?php
     if ($trip_details) {
         $i = 1;
@@ -376,19 +362,12 @@ $(document).ready(function() {
     }
     } ?>
     <!-- Ena Main Trip -->
-
     </div>                     
-
     </div>
     </div>    
     <!-- end tab2 -->
-
             </div>
-
         </div>
         <!-- End -->
-
     </div>
-
-
 </div>

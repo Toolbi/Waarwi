@@ -8,6 +8,8 @@ Langue du tableau de bord utilisateur
 $lang['my_trips']					= 'Mes trajets';
 $lang['my_trip']					= 'Mes trajets';
 $lang['trip']						= 'Trajet';
+$lang['next']						= 'Suivant';
+$lang['prev']						= 'Précedant';
 $lang['see_trip']					= 'Voir le trajet';
 $lang['rides_offered']				= 'Trajets proposés';
 $lang['enquiry']				    = 'Trajets réservés';

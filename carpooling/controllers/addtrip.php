@@ -199,7 +199,12 @@ class Addtrip extends Traveller_Controller {
             $source = $this->input->post('txtsource');
             $destination = $this->input->post('txtdestination');
 
-            $trip_routes = $source . '~' . $this->input->post('jquerytagboxtext') . '~' . $destination;
+            if($this->input->post('jquerytagboxtext')){
+                $trip_routes = $source . '~' . $this->input->post('jquerytagboxtext') . '~' . $destination;
+            }
+            else{
+                $trip_routes = $source .'~' . $destination;
+            }            
 
 
             $save['trip_id'] = $this->trip_id;
@@ -296,7 +301,12 @@ class Addtrip extends Traveller_Controller {
 //------------------------------------ trip leg concept ------------------------------------------------------------------------
             if (!empty($trip_id)) {
 
-                $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('route_lanlat') . ',' . $this->input->post('destination_ids');
+                if($this->input->post('route_lanlat')){
+                    $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('route_lanlat') . ',' . $this->input->post('destination_ids');
+                }else{
+                    $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('destination_ids');
+                }
+                
 
 
 
@@ -327,7 +337,7 @@ class Addtrip extends Traveller_Controller {
                 }
 
 
-                // insert route  leg data onr by one 
+                // insert route  leg data one by one 
                 $i = 0;
                 $j = 0;
                 for ($i = 0; $i < sizeof($route_leg_array); $i++) {
@@ -740,6 +750,19 @@ class Addtrip extends Traveller_Controller {
         $data = $this->Trip_model->get_trips($this->user_id, $data);
         $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('trips', $data);
+    }
+
+    // Fonction pour continuer l'ajout du trajet
+    function form_next() {
+
+        $data = array();
+        $this->load->helper('form');
+        $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
+        $id = $carpool_session['carpool_session']['user_id'];
+        $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $data = $this->Trip_model->get_trips($this->user_id, $data);
+        $data['customer'] = $this->Customer_model->get_customer($id);
+        $this->load->view('addtrip_individual_next', $data);
     }
     
     function upcoming_trip_passenger() {

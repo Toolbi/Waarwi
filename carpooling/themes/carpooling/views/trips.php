@@ -119,51 +119,7 @@ $(document).ready(function() {
     }
   
   
-    <?php
-    //lets have the flashdata overright "$message" if it exists
-    if($this->session->flashdata('message'))
-    {
-      $message  = $this->session->flashdata('message'); ?>
-      $.goNotification('<?=$message?>', { 
-      type: 'success', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php }
-    
-    if($this->session->flashdata('error'))
-    {
-      $error  = $this->session->flashdata('error'); 
-      ?>
-      $.goNotification("<?=trim($error)?>", { 
-      type: 'error', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php
-    }
-    
-    if(function_exists('validation_errors') && validation_errors() != '')
-    {
-      $error  = validation_errors();
-      ?>
-      $.goNotification('<?=trim($error)?>', { 
-      type: 'error', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 200000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php
-    }
-    ?>
+   
       
   });
   

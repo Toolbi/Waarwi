@@ -177,12 +177,12 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('from');?></span>          
           <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('from_placeholder');?>"   name="txtsource" id="txtsource"class="frt_src" value="<?=$txtsource?>" >
-                    <input type="hidden" name="source_ids" id="source_ids"  value="<?=$source_ids?>"/>
+            <input type="hidden" name="source_ids" id="source_ids"  value="<?=$source_ids?>"/>
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold"><span class="mandatory">*</span> <?php echo lang('to');?></span>          
             <input type="text" class="fleft width100 padding10" placeholder="<?php echo lang('to_placeholder');?>"  name="txtdestination" id="txtdestination"  value="<?=$txtdestination?>"/>
-                    <input type="hidden" name="destination_ids" id="destination_ids"  value="<?=$destination_ids?>"/>
+            <input type="hidden" name="destination_ids" id="destination_ids"  value="<?=$destination_ids?>"/>
         </div>
         <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory"></span> <?php echo lang('add_route');?></span><br>
@@ -191,9 +191,9 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
            <input type="hidden" name="routes" id="routes" value="<?=$routes?>" />
           <input type="hidden" name="routesdata" id="routesdata" value="<?=$routesdata?>" />
          <input type="hidden" name="route_lanlat" id="route_lanlat" value="<?=$route_lanlat?>" />         
-        </div>      
+        </div>
         <div class="fleft width100 line4"></div>
-                <div class="fleft width100 margintop20"> 
+            <div class="fleft width100 margintop20"> 
                 <div class="fleft width100 margintop20"> 
           <div class="roundstep-no fleft size13"><?php echo lang('step_3');?> &nbsp;</div> 
           <span class="size16 fleft bold"><?php echo lang('add_frequency');?></span>   
@@ -280,11 +280,10 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
     echo form_textarea($data);?> 
          
         </div>
-        <div class="fleft width100 line4"></div>
-        <div class="margintop20 fright">
-          <input type="submit" value="<?php echo lang('post');?>" class="padding10 colorwhite cs-blue-bg trp-cont-but size16 bold">
-        </div>
-
+    <div class="fleft width100 line4"></div>
+      <div class="margintop20 fright">
+        <input type="submit" value="<?php echo lang('next');?>" class="padding10 btn btn-success">
+      </div>
     </div>
      </div>
     <!-- End Left -->
