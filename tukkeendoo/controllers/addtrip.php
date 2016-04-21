@@ -5,6 +5,7 @@ class Addtrip extends Traveller_Controller {
     var $CI;
     var $user_id;
     var $trip_id;
+    var $last_trip_id;
 
     function __construct() {
         parent::__construct();
@@ -232,6 +233,7 @@ class Addtrip extends Traveller_Controller {
 
 
             $trip_id = $this->Trip_model->save($save);
+            $this->session->set_flashdata('trip_id', $trip_id);
 
             if ($this->input->post('return') == 'yes') {
                 $return_destination = $this->input->post('txtsource');
@@ -429,13 +431,12 @@ class Addtrip extends Traveller_Controller {
 
     // Fonction pour continuer l'ajout du trajet
     function step_2() {
-
+        $last_trip_id =  $this->session->flashdata('trip_id');
         $data = array();
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $id = $carpool_session['carpool_session']['user_id'];
         $this->user_id = $carpool_session['carpool_session']['user_id'];
-        $last_trip_id = 3;
         $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id);
         // $data['customer'] = $this->Customer_model->get_customer($id);
         echo '<pre>';print_r($data);echo'</pre>';
