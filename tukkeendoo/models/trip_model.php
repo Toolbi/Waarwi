@@ -403,6 +403,20 @@ Class Trip_model extends CI_Model
 	{
 		return $this->db->where('trip_led_id', $id)->get('tbl_t_trip_legs')->row();	
 	}
+
+	/*Nouvelle fonction pour récupérer uniquement les parties d'un trajet soumis par l'utilisateur
+		pour continuer la saisie des prix
+	*/
+	function get_legs($trip_led_id, $user_id)
+	{	
+		$this->db->join('tbl_trips','tbl_trips.trip_id = tbl_t_trip_legs.trip_id');
+		$this->db->select('trip_led_id');
+		$this->db->where('tbl_t_trip_legs.trip_id',$trip_led_id);
+		$this->db->where('tbl_trips.trip_user_id', $user_id);
+		$result = $this->db->get('tbl_t_trip_legs');
+		$result = $result->result_array();
+		return $result;	
+	}
 	
 	function get_user($tripid)
 	{

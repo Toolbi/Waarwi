@@ -63,7 +63,7 @@
 					
 				},
 				jquerytagboxtext:{
-					required: true,
+					required: false,
 				},
 				tzone:{
 					
@@ -112,9 +112,9 @@
 				comments: {
 					required: "Enter your commends",
 				},
-				jquerytagboxtext:{
-					required: "Please add atleast one route",
-				},
+				// jquerytagboxtext:{
+				// 	required: "Please add atleast one route",
+				// },
 				tzone:{
 					required: "Please check your timings",
 				},
@@ -170,7 +170,7 @@
 												//alert(json.error)												
 												return false;
 											} else if (json.result == 1) {
-												window.location	= baseurl +'addtrip';
+												window.location	= baseurl +'addtrip/step_2/';
 											}
 										
 										

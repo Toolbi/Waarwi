@@ -427,6 +427,22 @@ class Addtrip extends Traveller_Controller {
         }
     }
 
+    // Fonction pour continuer l'ajout du trajet
+    function step_2() {
+
+        $data = array();
+        $this->load->helper('form');
+        $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
+        $id = $carpool_session['carpool_session']['user_id'];
+        $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $last_trip_id = 3;
+        $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id);
+        // $data['customer'] = $this->Customer_model->get_customer($id);
+        echo '<pre>';print_r($data);echo'</pre>';
+           die;
+        // $this->load->view('addtrip_individual_next', $data);
+    }
+
     function get_vehiclenumber() {
         $vehiclenumber = $this->input->post('vid');
         $vehicle = $this->Trip_model->get_vehicle($vehiclenumber);
@@ -752,19 +768,7 @@ class Addtrip extends Traveller_Controller {
         $this->load->view('trips', $data);
     }
 
-    // Fonction pour continuer l'ajout du trajet
-    function step_2() {
-
-        $data = array();
-        $this->load->helper('form');
-        $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
-        $id = $carpool_session['carpool_session']['user_id'];
-        $this->user_id = $carpool_session['carpool_session']['user_id'];
-        $data = $this->Trip_model->get_trips($this->user_id, $data);
-        $data['customer'] = $this->Customer_model->get_customer($id);
-        $this->load->view('addtrip_individual_next', $data);
-    }
-    
+      
     function upcoming_trip_passenger() {
 
         $data = array();
