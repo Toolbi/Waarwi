@@ -129,7 +129,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
    
     <?php /*?><?php 
       $attributes = array('id' => 'frmtrip','class'=>'bbq');         
-     echo form_open('addtrip/form/'.$tripid,$attributes); ?><?php */?>
+     echo form_open('addtrip/step_1/'.$tripid,$attributes); ?><?php */?>
       <form class="bbq" id="frmtrip">
         <input type="hidden" name="tripid" id="tripid" value="<?=$tripid?>" />
         <input type="hidden" name="submitted" id="route-map" value="submitted" />
@@ -141,15 +141,15 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         <div class="fleft width100">
         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">     
       <div class="trip-lft">
-        
+         <div class="fleft width100 line4"></div>
         <h2 class="pst-trip-tit"><?php echo lang('register_your_trip');?></h2>
           <div class="fleft width100 margintop20">
           <ul class="trp-part">
             <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-bg"></span> </li>
-            <li> <p><?php echo lang('part_2_of_2');?></p> <span></span> </li>
+             <li> <p><?php echo lang('part_2_of_2');?></p> <span></span> </li>
           </ul>
         </div>
-        <div class="fleft width100 line4"></div>
+        
                 <div class="fleft width100 margintop20"> 
           <div class="roundstep-no fleft size13"><?php echo lang('step_1');?> &nbsp;</div> 
           <span class="size16 fleft bold"><?php echo lang('add_vehicle_info');?></span>   
@@ -260,13 +260,17 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
           </ul>
         </div>  
         
-        <div class="fleft width100 line4"></div>
+        <!-- <div class="fleft width100 line4"></div> -->
                 <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('available_seat');?></span>          
           <?php
     $data = array('name'=>'avail_seats','id'=>'avail_seats','class'=>'fleft width100 padding10 row', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
     echo form_input($data);?>
         </div>
+        <div class="fleft width100 line4"></div>
+        <div class="roundstep-no fleft size13"><?php echo lang('step_5');?> &nbsp;</div> 
+          <span class="size16 fleft bold"><?php echo lang('add_details');?></span>   
+
         <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('phone_number');?></span>
           <?php
@@ -290,6 +294,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
     <div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
     <div class="trip-right map">
 
+      <div class="roundstep-no fleft size13"><?php echo lang('info_map');?> &nbsp;</div>
       <h2 class="size16 fleft bold"><?php echo lang('journey_route');?></h2><br>
 
       <div class="float width100 line4"></div>

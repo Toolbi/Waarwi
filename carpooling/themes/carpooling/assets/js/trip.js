@@ -1,4 +1,4 @@
-	$(document).ready(function() {
+$(document).ready(function() {
 		jQuery.validator.addMethod("lettersonly", function(value, element) {
 					return this.optional(element) || /^[a-z]+$/i.test(value);
 					}, "Please enter only letters"); 
@@ -158,7 +158,7 @@
 									
 									$.ajax({
 										type: "POST",
-										url: baseurl+'addtrip/form/0/true',
+										url: baseurl+'addtrip/step_1/0/true',
 										data:$("#frmtrip").serialize(),
 										dataType:"json",
 										success: function(json){	
@@ -170,7 +170,7 @@
 												//alert(json.error)												
 												return false;
 											} else if (json.result == 1) {
-												window.location	= baseurl +'addtrip/form_next';
+												window.location	= baseurl +'addtrip/step_2';
 											}
 										
 										
@@ -218,6 +218,7 @@ function change_trip(type_id)
 	
   }
 }	
+
 
 function change_type(type_id)
 {
@@ -604,7 +605,8 @@ $('body').on("click",'#route-map',function()
 			data:param,
 			success: function(html)	{
 		
-				if (html){				
+				if (html){	
+				console.log(html);			
 					$('#route-map-data').html(html)
 					initialize_map();
 					//setTimeout(function(){ initialize_map(); }, 2000);

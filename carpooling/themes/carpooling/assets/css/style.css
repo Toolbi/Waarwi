@@ -142,6 +142,9 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .marginleft0 { margin-left: 0; }
 .fleft { float: left; }
 .fright { float: right; }
+.tagbox {    float: right;
+    margin-right: 25%;
+    margin-top: 1%;}
 .marginleft10 { margin-left: 10px; }
 .trip-lft { float: left; }
 .trip-right { float: right; width: 370px;  }
@@ -167,7 +170,7 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .size13 { font-size: 13px; }
 .paddingleft8 {  padding-left: 8px; }
 .fright { float: right; }
-.pst-trip-tit { font-style: italic; font-family: monotype-corsiva; font-weight: 400; font-size: 28px; } 
+.pst-trip-tit {font-weight: 400; font-size: 28px; } 
 .margintop20 { margin-top: 20px; }
 .trp-part li { width: 50%; float: left; font-size: 14px; }
 .trp-part li span { background: #e6e6e6; height: 8px; width: 100%; float: left; }
@@ -872,7 +875,8 @@ a:visited {
   padding : 5px 15px;
 }
 
-#datepicker{width: 98%;margin: 0 2px 20px;}
+#datepicker{width: 98%; margin: 0 2px 20px;}
+.datepicker{margin-right: 65%;}
 #datepicker > span:hover{cursor: pointer;}
 
 .login-btn { 

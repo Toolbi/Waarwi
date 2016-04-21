@@ -42,7 +42,7 @@
                     <?php /*?><li> <a href="#">Sign In</a> </li><?php */?>
 					<li><a href="/" alt="home"><?php lang('admin_home'); ?></a></li>
 					<li> <a href="<?php echo base_url('vechicle/vechicleform');?>"><?php echo lang('add_vehicle'); ?></a> </li>
-                    <li class="post_ride"> <a href="<?php echo base_url('addtrip/form');?>"><?php echo lang('post_a_ride'); ?></a> </li> 
+                    <li class="post_ride"> <a href="<?php echo base_url('addtrip/step_1');?>"><?php echo lang('post_a_ride'); ?></a> </li> 
 					<li> <a href="<?php echo base_url('login/logout');?>"><?php lang('logout'); ?></a> </li></ul> 
                 <?php else: ?>
                  <ul class="notregi">

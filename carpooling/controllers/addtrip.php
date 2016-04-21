@@ -28,7 +28,7 @@ class Addtrip extends Traveller_Controller {
         
     }
 
-    function form($trip_id = false, $ajax = false) {
+    function step_1($trip_id = false, $ajax = false) {
 
         $this->CI = & get_instance();
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
@@ -86,7 +86,7 @@ class Addtrip extends Traveller_Controller {
 
             if (!$trip) {
                 $this->session->set_flashdata('error', lang('error_not_found'));
-                redirect('addtrip/form');
+                redirect('addtrip/step_1');
             }
 
             $route_lanlat = explode('~,', $trip->trip_routes_lat_lan);
@@ -753,7 +753,7 @@ class Addtrip extends Traveller_Controller {
     }
 
     // Fonction pour continuer l'ajout du trajet
-    function form_next() {
+    function step_2() {
 
         $data = array();
         $this->load->helper('form');

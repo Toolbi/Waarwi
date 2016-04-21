@@ -19,8 +19,8 @@
     var defaults = {
       separator: '~',
       className: 'tagBox',
-      tagInputClassName: 'fleft padding10 marginleft10 ',
-      tagButtonClassName: 'btn btn-success fright',
+      tagInputClassName: 'fleft padding10 ',
+      tagButtonClassName: 'btn btn-success tagbox',
       tagButtonTitle: '<?php echo lang('add_route_btn');?>',
       confirmRemoval: false,
       confirmRemovalText: '<?php echo lang('remove_tag_confirm');?>',
