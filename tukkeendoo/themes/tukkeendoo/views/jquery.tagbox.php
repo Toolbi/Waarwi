@@ -19,18 +19,18 @@
     var defaults = {
       separator: '~',
       className: 'tagBox',
-      tagInputClassName: 'fleft padding10 marginleft10 ',
-      tagButtonClassName: 'cs-blue-bg padding10 fright colorwhite',
-      tagButtonTitle: 'Add route',
+      tagInputClassName: 'fleft padding10 ',
+      tagButtonClassName: 'btn btn-success tagbox',
+      tagButtonTitle: '<?php echo lang('add_route_btn');?>',
       confirmRemoval: false,
-      confirmRemovalText: 'Do you really want to remove the tag?',
+      confirmRemovalText: '<?php echo lang('remove_tag_confirm');?>',
       completeOnSeparator: true,
       completeOnBlur: false,
       readonly: false,
       enableDropdown: false,
       dropdownSource: function() {},
       dropdownOptionsAttribute: "title",
-      removeTagText: "Remove Tag",
+      removeTagText: "<?php echo lang('remove_tag');?>",
       maxTags: -1,
       maxTagsErr: function(max_tags) { alert("A maximum of "+max_tags+" tags can be added!"); },
       beforeTagAdd: function(tag_to_add) {},
@@ -87,8 +87,8 @@
       } else {
         var $tag_input_elem = (options.readonly) ? '' : jQuery('<input type="text" class="row padding10 row59 '+options.className+'-input" value="" id="welcome" placeholder="<?php echo lang('deviation_holder');?>"/>');
       }
-	  
-	  var $tag_add_elem = (options.readonly) ? '' : jQuery('<a href="javascript:void(0)"  class="'+options.tagButtonClassName+''+options.className+'-add-tag" id="'+options.className+'-add-tag-'+uuid+'">'+options.tagButtonTitle+'</a>');
+    
+    var $tag_add_elem = (options.readonly) ? '' : jQuery('<a href="javascript:void(0)"  class="'+options.tagButtonClassName+''+options.className+'-add-tag" id="'+options.className+'-add-tag-'+uuid+'">'+options.tagButtonTitle+'</a>');
       var $tag_list_elem = jQuery('<div class="fleft width100 margintop20"><span class="'+options.className+'-list" id="'+options.className+'-list-'+uuid+'"></span>');
       
       var $tagBox = jQuery('<span class="'+options.className+'-container"></span>').append($tag_input_elem).append($tag_add_elem).append($tag_list_elem);
@@ -106,40 +106,40 @@
       generate_tags_list( get_current_tags_list() );
       if(!options.readonly) {
         $tag_add_elem.click(function() {
-			checkroute();
-				
-			setTimeout(function() {
-				
-			  var value = $tag_input_elem.val();
-			  //valu = value.split(',');
-			  //var vals = '';
-			  
-			  if(value!=''){	
-						vals = value;
-						$('#edited').val('1');
-			  }else{
-					alert('Please fill the route');
-					return false
-			  }
-			  
-			  var selected_tag = vals; 
-			   options.beforeTagAdd(selected_tag);
-			   add_tag(selected_tag);
-			   if($tag_input_elem.is("select")) {
-				$tag_input_elem.find('option[value="'+selected_tag+'"]').attr("disabled", "disabled");
-			   }
-			   $tag_input_elem.val('');
-			   options.afterTagAdd(selected_tag);
-				  
-			}, 1000);	
-			  
-		  
-		  
+      checkroute();
+        
+      setTimeout(function() {
+        
+        var value = $tag_input_elem.val();
+        //valu = value.split(',');
+        //var vals = '';
+        
+        if(value!=''){  
+            vals = value;
+            $('#edited').val('1');
+        }else{
+          alert('Please fill the route');
+          return false
+        }
+        
+        var selected_tag = vals; 
+         options.beforeTagAdd(selected_tag);
+         add_tag(selected_tag);
+         if($tag_input_elem.is("select")) {
+        $tag_input_elem.find('option[value="'+selected_tag+'"]').attr("disabled", "disabled");
+         }
+         $tag_input_elem.val('');
+         options.afterTagAdd(selected_tag);
+          
+      }, 1000); 
+        
+      
+      
         });
         $tag_input_elem.keypress(function(e) {
           var code = (e.keyCode ? e.keyCode : e.which);
           var this_val = jQuery(this).val();
-		 // alert(this_val);
+     // alert(this_val);
           if(code==13 || (code == options.separator.charCodeAt(0) && options.completeOnSeparator) ) {
             $tag_add_elem.trigger("click");
             return false;
@@ -161,7 +161,7 @@
             $tag_input_elem.find('option[value="'+tag_item+'"]').removeAttr("disabled");
           }
           $tag_input_elem.val('');
-		  
+      
           remove_tag(tag_item);
         });
       }
@@ -171,7 +171,7 @@
       }
 
       function get_current_tags_list() {
-		  //alert($element.val());
+      //alert($element.val());
         var tags_list = $element.val().split(options.separator);
         tags_list = jQuery.map(tags_list, function (item) { return jQuery.trim(item); });
         return tags_list;
@@ -180,22 +180,22 @@
       function generate_tags_list(tags_list) {
 
       // var tags_list = jQuery.unique(tags_list);
-	   var tags_list = tags_list;
+     var tags_list = tags_list;
         $tag_list_elem.html('');
         jQuery.each(tags_list, function(key, val) {
          
-		  if(val != "") {
-            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+' cs-dark-bg padding10 fright colorwhite" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
+      if(val != "") {
+            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+'btn btn-danger padding10 fright" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
             if((options.enableDropdown) && jQuery('#'+options.className+'-input-'+uuid).find("option").length > 0) {
               var display_val = jQuery('#'+options.className+'-input-'+uuid).find("option[value='"+val+"']").text();
             } else {
               var display_val = val;
             }
-            $tag_list_elem.append('<span class="'+options.className+'-item tag-box-space"><span class="'+options.className+'-bullet"></span><p class="cs-grey-bg row"><span class="'+options.className+'-item-content padding10 fleft">'+display_val+'</span>'+remove_tag_link+'</p></span></div>');
+            $tag_list_elem.append('<span class="'+options.className+'-item tag-box-space"><span class="'+options.className+'-bullet"></span><p class="cs-grey-bg row "><span class="'+options.className+'-item-content padding10 fleft">'+display_val+'</span>'+remove_tag_link+'</p></span></div>');
           }
         });
         $element.val(tags_list.join(options.separator));
-		filter_route();
+    filter_route();
       }
       
       function add_tag(new_tag_items) {
@@ -213,7 +213,7 @@
       }
       
       function remove_tag(old_tag_items) {
-		  $('#edited').val('1');
+      $('#edited').val('1');
         var tags_list = get_current_tags_list();
         old_tag_items = old_tag_items.split(options.separator);
         old_tag_items = jQuery.map(old_tag_items, function (item) { return jQuery.trim(item); });
@@ -221,7 +221,7 @@
           tags_list = jQuery.grep(tags_list, function(value) { return value != val; });
         });
         generate_tags_list(tags_list);
-		
+    
       }
     });
   }

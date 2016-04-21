@@ -158,7 +158,7 @@
 									
 									$.ajax({
 										type: "POST",
-										url: baseurl+'addtrip/form/0/true',
+										url: baseurl+'addtrip/step_1/0/true',
 										data:$("#frmtrip").serialize(),
 										dataType:"json",
 										success: function(json){	

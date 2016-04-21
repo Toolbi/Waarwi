@@ -67,7 +67,7 @@ $(document).ready(function(){
         if($this->auth_travel->is_logged_in(false, false)):       
         ?>  
             <ul class="top-nav new-top-nav pull-right">
-              <li>  <a href="<?php echo base_url('addtrip/form');?>" class="ride btn defaut-bouton"><?php echo lang('post_a_trip');?></a> </li>
+              <li>  <a href="<?php echo base_url('addtrip/step_1');?>" class="ride btn defaut-bouton"><?php echo lang('post_a_trip');?></a> </li>
               <li>
                 <div id="my-account">
                   <div class="my-account-button">  <div class="profile-img"> <img src="<?php if($profile->user_profile_img) { echo theme_profile_img($profile->user_profile_img); } else { echo theme_img('default.png');  }?>" width="30" height="30"> </div> <span> <?=$profile->user_first_name.' '.$profile->user_last_name ?> </span> <p> <img src="<?php echo theme_img('drop-white.png')?>"> </p>  </div>

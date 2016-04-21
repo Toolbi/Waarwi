@@ -335,7 +335,7 @@ $(document).ready(function() {
 			              <div class="fleft width100 padding20 ed-can-trp">
                 <a href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>" class="red-bg"> <img src="<?php echo theme_img('cancel-ico.png') ?>"> <?php echo lang('delete_all_trips');?> </a>
 
-                <!--<a href="<?= base_url('addtrip/form/'.$trip['trip_id']); ?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"><?php echo lang('edit_trips'); ?></a>-->
+                <!--<a href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"><?php echo lang('edit_trips'); ?></a>-->
 
 
               </div>

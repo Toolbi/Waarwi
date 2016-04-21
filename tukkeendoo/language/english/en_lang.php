@@ -153,6 +153,11 @@ $lang['travel_type']						= 'Vehicle:';
 $lang['select_your_car']					= 'Select your car';
 $lang['vehicle_number']						= 'Vehicle Number:';
 $lang['step_2']								= 'Step: 2';
+$lang['step_3']								= 'Step: 3';
+$lang['step_4']								= 'Step: 4';
+$lang['step_5']								= 'Step: 5';
+$lang['info_map']							= 'Your trip';
+$lang['add_details']						= 'Add details';
 $lang['add_trip']							= 'Add Trip';
 $lang['from']								= 'From :';
 $lang['from_placeholder']					= 'Your departure point (address,city,station...)';
@@ -210,7 +215,7 @@ $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Facebook Profile';
 $lang['fb-login']						= 'Login with facebook';
 $lang['gl-login']						= 'Login with Google';
-$lang['i_agree_to']						= 'I agree upon receiving newsletters from Tukkeendoo';
+$lang['i_agree_to']						= 'I agree upon receiving newsletters from Carpooling';
 $lang['submit']							= 'Submit';
 $lang['settings']						= 'Settings';
 
@@ -240,7 +245,7 @@ $lang['confirm_new_pass']				= 'Confirm new password';
 $lang['save']				            = 'Save';
 
 //Register Language
-$lang['join_tukkeendoo']			    = 'Join Tukkeendoo';
+$lang['join_carpooling']			    = 'Join Carpooling';
 $lang['login']			                = 'LOGIN';
 $lang['first_name']				     	= 'First Name';
 $lang['last_name']					    = 'Last Name';
@@ -311,7 +316,7 @@ $lang['dash_para'] 				        = 'Lorem ipsum dolor sit amet, consectetur adipis
 $lang['find_a_car'] 					= 'Find a Car';
 
 //Login Language
-$lang['sign_in_to_tukkeendoo']					= 'Sign in to Tukkeendoo';
+$lang['sign_in_to_carpooling']					= 'Sign in to Carpooling';
 $lang['login']					                = 'LOGIN';
 $lang['email_username']							= 'Email / Username';
 $lang['password']								= 'Password';
@@ -362,7 +367,7 @@ $lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an em
 
 $lang['find_para_ride']					= 'Find a perfect ride based on your travel needs and share a ride with drivers travelling towards same destination.';
 
-$lang['newsletter_content']					= 'Would you like to get regular updates from our Tukkeendoo website? Then, simply provide your email id and we shall update you regularly. ';
+$lang['newsletter_content']					= 'Would you like to get regular updates from our Carpooling website? Then, simply provide your email id and we shall update you regularly. ';
 $lang['road_travel_made_para']				= 'A connecting site for Car Owners and travellers.';
 
 $lang['road_travel_made_para1']				= 'Sign up and meet drivers who are travelling in the same direction. Get in touch with them to reach the common destination at the same time, through the same ride.';
@@ -390,7 +395,7 @@ $lang['error_login']                          = 'Authentication Failed!';
 $lang['error_edit']                           = 'The vehicle has already been allocated a trip. Now you cannot make any changes to the vehicle.';
 $lang['error_delete']                         = 'The vehicle has already been allocated a trip. Now you cannot delete this vehicle.';
 $lang['error_unable_login']                   = 'Unable to login';
-$lang['error_account_disable']                = 'Currently your account has been disabled. Please contact contact@tukkeendoo.com for more information.';
+$lang['error_account_disable']                = 'Currently your account has been disabled. Please contact info@carpoolingscript.com for more information.';
 $lang['error_code']                           = 'Incorrect code';
 $lang['error_invalid_currpass']               = 'Invalid password. Please try again.';
 

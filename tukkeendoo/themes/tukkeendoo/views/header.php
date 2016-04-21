@@ -74,7 +74,7 @@ $(document).ready(function(){
             <ul class="top-nav new-top-nav pull-right">
             <!-- Publier un trajet -->
               <div class="top-trip-add">
-                <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
+                <a href="<?php echo base_url('addtrip/step_1');?>" class="top-trip ">
                   <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
 
                   <p class="size20">
