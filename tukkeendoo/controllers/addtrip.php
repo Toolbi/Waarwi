@@ -233,6 +233,7 @@ class Addtrip extends Traveller_Controller {
 
 
             $trip_id = $this->Trip_model->save($save);
+            /*Récupération du last ID après insertion*/
             $this->session->set_flashdata('trip_id', $trip_id);
 
             if ($this->input->post('return') == 'yes') {
@@ -270,11 +271,6 @@ class Addtrip extends Traveller_Controller {
                 }
                 $return_route = $return_temp;
                 $return_route = implode(',', $return_route);
-
-
-
-
-
 
                 $param['trip_id'] = $this->trip_id;
                 $param['trip_vehicle_id'] = $this->input->post('vechicletype');
@@ -437,11 +433,12 @@ class Addtrip extends Traveller_Controller {
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $id = $carpool_session['carpool_session']['user_id'];
         $this->user_id = $carpool_session['carpool_session']['user_id'];
-        $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id);
+        // $data = $this->Trip_model->get_trips($this->user_id, $data);
+        $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id, $data);
         // $data['customer'] = $this->Customer_model->get_customer($id);
-        echo '<pre>';print_r($data);echo'</pre>';
-           die;
-        // $this->load->view('addtrip_individual_next', $data);
+        // echo '<pre>';print_r($data);echo'</pre>';
+           // die;
+        $this->load->view('addtrip_individual_next', $data);
     }
 
     function get_vehiclenumber() {

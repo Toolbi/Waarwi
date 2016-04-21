@@ -407,15 +407,45 @@ Class Trip_model extends CI_Model
 
 	/*  Nouvelle fonction pour récupérer uniquement les parties d'un trajet soumis par l'utilisateur
 		pour continuer la saisie des prix*/	
-	function get_legs($trip_led_id, $user_id)
+	function get_legs($trip_led_id, $user_id, $data)
 	{	
-		// $this->db->select('trip_led_id');
-		$this->db->join('tbl_trips','tbl_trips.trip_id = tbl_t_trip_legs.trip_id');
-		$this->db->where('tbl_t_trip_legs.trip_id',$trip_led_id);
+		
+		$this->db->where('tbl_trips.trip_id',$trip_led_id);
 		$this->db->where('tbl_trips.trip_user_id', $user_id);
-		$result = $this->db->get('tbl_t_trip_legs');
-		$result = $result->result_array();
-		return $result;	
+		$query = $this->db->get('tbl_trips');
+		$result =  $query->result_array();
+
+		$temp = array();
+		if($result)
+		{
+		
+			foreach( $result as $key => $row )
+			{
+				
+				if($row['trip_routes'])
+				{
+					
+					$trip_route_ids = explode('~',$row['trip_routes']);				 							
+					array_shift($trip_route_ids);
+					array_pop($trip_route_ids);
+					$ids = array();
+					foreach($trip_route_ids as $route)
+					{	 				 
+						 $ids[] = $route;					 
+					}
+					
+					$temp['route_'.$row['trip_id']] = $ids;
+				}
+				$temp['leg_'.$row['trip_id']] = $this->db->order_by('trip_led_id','ASC')->get_where('tbl_t_trip_legs', array('trip_id'=>$row['trip_id']))->result_array();
+			}
+		}
+		
+		$data['legdetails'] = $temp;
+			
+		$data['trip_details'] = $result;
+		/*echo "<pre>";print_r($data);echo "<pre/>";
+		die;*/
+		return $data;
 	}
 	
 	function get_user($tripid)

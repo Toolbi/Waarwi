@@ -128,6 +128,38 @@ $(document).ready(function() {
 </script>
 <?php  echo theme_js('common.js', true);?>
 
+<div class="container-fluid margintop40">
+  <div class="container">
+    <div class="row">
+       <ul class="brd-crmb">
+        <li><a href="#"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
+        <li> / </li>
+        <li><a href="#"><?php echo lang('register_your_carpool');?></a></li>
+      </ul>
+      <div class="row margin">
+        <div class="container-fluid">
+          <div class="container">
+            <div class="fleft width100">
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">     
+                <div class="trip-lft">
+                  <div class="fleft width100 line4"></div>
+                  <h2 class="pst-trip-tit"><?php echo lang('register_your_trip');?></h2>
+                  <div class="fleft width100 margintop20">
+                    <ul class="trp-part">
+                      <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-bg"></span> </li>
+                       <li> <p><?php echo lang('part_2_of_2');?></p> <span class="cs-blue-bg"></span> </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
             <?php if($trip_details){
