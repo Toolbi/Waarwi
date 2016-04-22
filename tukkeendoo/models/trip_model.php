@@ -393,7 +393,8 @@ Class Trip_model extends CI_Model
 		}
 		
 	}
-	
+
+		
 	function delete_legdetils($trip_id)
 	{
 		$this->db->where('trip_id', $trip_id);

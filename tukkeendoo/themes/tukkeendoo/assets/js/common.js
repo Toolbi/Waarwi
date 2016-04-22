@@ -71,9 +71,11 @@
 	/*Edit route rates*/
 	$('body').on("click",'.save-leg-rate',function()
 	{
-	
 		var ID = parseInt($(this).attr("rel"));
+		// console.log('id', ID);
+		
 		var Rate = $('#rate'+ID).val();
+		// console.log('rate', Rate);
 		if($.isNumeric(Rate))
 		{
 			
@@ -86,7 +88,8 @@
 			cache: false,
 			success: function(json){
 			if(json.result == 1)
-			{
+			{		
+					// console.log('result', json)
 					$('#rate'+ID).val(json.rate);
 					$('#trip_rate_'+ID).val(json.rate);
 					$('#amount_'+ID).text(json.rate);

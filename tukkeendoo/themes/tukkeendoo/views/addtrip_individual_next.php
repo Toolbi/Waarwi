@@ -127,136 +127,115 @@ $(document).ready(function() {
   
 </script>
 <?php  echo theme_js('common.js', true);?>
-
 <div class="container-fluid margintop40">
   <div class="container">
-    <div class="row">
-       <ul class="brd-crmb">
-        <li><a href="#"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
-        <li> / </li>
-        <li><a href="#"><?php echo lang('register_your_carpool');?></a></li>
-      </ul>
-      <div class="row margin">
-        <div class="container-fluid">
-          <div class="container">
-            <div class="fleft width100">
-              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">     
-                <div class="trip-lft">
-                  <div class="fleft width100 line4"></div>
-                  <h2 class="pst-trip-tit"><?php echo lang('register_your_trip');?></h2>
-                  <div class="fleft width100 margintop20">
-                    <ul class="trp-part">
-                      <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-bg"></span> </li>
-                       <li> <p><?php echo lang('part_2_of_2');?></p> <span class="cs-blue-bg"></span> </li>
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+   <div class="row">
+     <ul class="brd-crmb">
+      <li><a href="#"> <img src="<?php echo theme_img('home-ico.png') ?>"> </a></li>
+      <li> / </li>
+      <li><a href="#"><?php echo lang('register_your_carpool');?></a></li>
+    </ul>
+    <div class="row margin">
+     
+      <div class="container-fluid">
+        <div class="container">
+        <div class="fleft width100">
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">     
+      <div class="trip-lft">
+         <div class="fleft width100 line4"></div>
+        <h2 class="pst-trip-tit"><?php echo lang('register_your_trip');?></h2>
+          <div class="fleft width100 margintop20">
+          <ul class="trp-part">
+            <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-bg"></span> </li>
+             <li> <p><?php echo lang('part_2_of_2');?></p> <span class="cs-blue-border"></span> </li>
+          </ul>
+          </div>        
+          <div class="fleft width100 margintop20"> 
+            <div class="roundstep-no fleft size13"><?php echo lang('step_5');?> &nbsp;</div> 
+            <span class="size16 fleft bold"><?php echo lang('manage_price');?></span>   
           </div>
+     
+        <div class="fleft width100 margintop20">
+          <p class="rate-description"><?php echo lang('rate_description_text');?></p>  
+                      <?php if($trip_details){
+                      $i =1;?>          
+                      <table class="table table-rate fleft width100 margintop20">
+                        <thead>
+                          <tr class="info">
+                            <th><?php echo lang('trip_leg');?></th>
+                            <th><?php echo lang('price');?></th>
+                            <th><?php echo lang('edit_price');?></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($trip_details as $trip){
+                        if(!empty($legdetails['leg_'.$trip['trip_id']])){
+                          foreach ($legdetails['leg_'.$trip['trip_id']] as $trip_leg){?>
+                          <tr>
+                            <td>
+                              
+                              <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_leg['destination_leg']?>
+                            </td>
+                            
+                            <td>
+                            <input  type="text"  name="trip_rate_<?=$trip_leg['trip_led_id']?>" id="trip_rate_<?=$trip_leg['trip_led_id']?>" value="<?=$trip_leg['route_rate']?>" class="edit_fld show-rate" disabled>
+                            </td>
+                            
+                            <td>
+                              <div id="edit-rate-<?=$trip_leg['trip_led_id']?>" style="display:none;">
+                            <?php  
+                              $fresult = $trip_leg['route_rate'];            
+                              $data = array('name'=>'route_rate','id'=>'rate'.$trip_leg['trip_led_id'],'class'=>'rate'.$trip_leg['trip_led_id'], 'placeholder'=>'Trip Rate', 'value'=>set_value('avail_seats', $fresult));
+                              echo form_input($data);?>
+                              <span class="edit-rate-btn"><a href="javascript:void(0)" class="btn btn-success table-rate-btn padchg save-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('save');?> </a>
+                              <a href="javascript:void(0)" class="btn btn-danger table-rate-btn padchg cancel-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('cancel');?> </a></span>
+                          </div>
+                        <div id="leg-rate-<?=$trip_leg['trip_led_id']?>">
+                           
+                          <a href="javascript:void(0)" class="table-rate-btn btn btn-warning edit-leg-rate efld fleftnon fright" rel="<?=$trip_leg['trip_led_id']?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"> </a> </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <?php } } ?> 
+                         <?php $i++; } } ?>
+                      </table>
+            </div>
+      
+        <div class="fleft width100 padding20 ">
+          <a class="btn btn-info" href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>"> <?php echo lang('prev'); ?></a>
+          <a href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>" class="btn btn-danger fcenter"> <?php echo lang('delete_all_trips');?> </a>
+                    <a href="#" class="btn btn-success fright"> <?php echo lang('publish_trip');?> </a>
         </div>
+    <!-- End Left -->
+   
+    <!-- End Right -->
+   
+
+    </div>
+
+
+  </div>
+   <div class="col-lg-4  col-md-12 col-sm-12 col-xs-12">
+      <div class="trip-right trip-view">
+
+        <div class="roundstep-no fleft size13"><?php echo lang('info_map');?> &nbsp;</div>
+        <h2 class="size16 fleft bold"><?php echo lang('journey_route');?></h2><br>
+
+        <div class="float width100 line4"></div>
+          <div class="rowrec view-map"><?php echo $map['js']; 
+              echo $map['html']; ?>
+      <div id="directionsDiv"></div></div>
+        <div class="fleft width100 line4"></div>
       </div>
     </div>
   </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </div>
 
-
-            <?php if($trip_details){
-        $i =1;
-          foreach ($trip_details as $trip){
-            ?>
-           
-              
-               <?php  
-               if(!empty($legdetails['leg_'.$trip['trip_id']])){
-               foreach ($legdetails['leg_'.$trip['trip_id']] as $trip_leg){ 
-               //print_r($trip_leg); die;
-              ?>
-              <div class="fleft width100 inner-in-trp">
-                <div class="inner-trip-det marginbot10">
-                  <div class="sea-city-city topbg2 colorwhite padding5 cs-blue-text size14"> 
-                    <b><span><?php echo lang('trip_leg');?>:</span> 
-                    <img src="<?php echo theme_img('marker-from.png') ?>"> </span>
-                    <?=$trip_leg['source_leg']?><span> <img src="<?php echo theme_img('search-arrow-right-grey.png') ?>"> </span> <?=$trip_leg['destination_leg']?> <img src="<?php echo theme_img('marker-to.png') ?>"> </span></b> 
-                  </div>
-                  <div class="padding20 fleft width100">
-                    <div class="inn-in-left fleft">
-                      <div class="sea-city-city row cs-grey-text size14"> 
-                        <img src="<?php echo theme_img('time-ico.png') ?>"> <b> <?php echo lang('expected_departure');?> </b> <span id="time_<?=$trip_leg['trip_led_id']?>"><?=$trip_leg['expected_time']?></span>
-                      </div>
-                      <div class="sea-city-city margintop30 row cs-grey-text size14"> 
-                        <img src="<?php echo theme_img('rs-ico-big.png') ?>"> <b> <?php echo lang('price');?> </b> <span class="grey" id="amount_<?=$trip_leg['trip_led_id']?>"> <?php if(!empty($trip_leg['route_rate'])){ echo format_currency($trip_leg['route_rate']); } else { echo '-';} ?> </span><span><?php echo lang('inr');?></span>
-                      </div>
-                      <h4 class="cs-blue-text size14"> <?php echo lang('available_seats');?> <?=$trip['trip_avilable_seat']?> </h4>
-                    </div>
-                    <div class="inn-in-left fright flefti margintop20i">
-                      <div class="sea-city-city fright fleftnon cs-grey-text size14 ed-tme"> 
-                        <b><?php echo lang('edit_time');?></b>
-                        <div id="edit-time-<?=$trip_leg['trip_led_id']?>" style="display:none">
-                        <?php  
-            $fresult = explode(' ',$trip_leg['expected_time']);           
-            $ftime = explode(':',$fresult[0]);
-            $options = array(           
-            '1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10','11'=>'11','12'=>'12' );
-            echo form_dropdown('fhh', $options, set_value('fhh',$ftime[0]),' id="fhh" class="hour'.$trip_leg['trip_led_id'].'" placeholder="hh"');?>
-                        <?php  $options = array(
-            '' => 'MM','00'=>'00',
-            '15'=>'15','30'=>'30','45'=>'45');
-        echo form_dropdown('fmm', $options, set_value('fmm',$ftime[1]),' id="fmm" class="min'.$trip_leg['trip_led_id'].'"');?>
-                        <?php  $options = array(            
-            'am'=>'AM','pm'=>'PM');
-            echo form_dropdown('fzone', $options, set_value('fzone',$fresult[1]),' id="fzone" class="zone'.$trip_leg['trip_led_id'].'"');?>  
-                        <a href="javascript:void(0)" class="btn btn-success padchg save-leg" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('save');?> </a>
-                        <a href="javascript:void(0)" class="btn btn-danger padchg cancel-leg" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('cancel');?> </a>
-                        </div>
-                        <div id="leg-time-<?=$trip_leg['trip_led_id']?>">
-                        <input type="text" name="trip_time_<?=$trip_leg['trip_led_id']?>" id="trip_time_<?=$trip_leg['trip_led_id']?>" value="<?=$trip_leg['expected_time']?>" class="edit_fld"> 
-                        <a href="javascript:void(0)" class="btn btn-warning edit-leg efld" rel="<?=$trip_leg['trip_led_id']?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"> </a>
-                        </div>
-                      </div>
-                       <div class="sea-city-city fright cs-grey-text size14 ed-tme" style="clear:both"> 
-                       <b><?php echo lang('edit_rate');?></b>
-                        <div id="edit-rate-<?=$trip_leg['trip_led_id']?>" style="display:none">
-                        <?php  
-            $fresult = $trip_leg['route_rate'];            
-    $data = array('name'=>'route_rate','id'=>'rate'.$trip_leg['trip_led_id'],'class'=>'rate'.$trip_leg['trip_led_id'], 'placeholder'=>'Trip Rate', 'value'=>set_value('avail_seats', $fresult));
-    echo form_input($data);?>
-            
-            
-                        <a href="javascript:void(0)" class="btn btn-success padchg save-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('save');?> </a>
-                        <a href="javascript:void(0)" class="btn btn-danger padchg cancel-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('cancel');?> </a>
-                        </div>
-                        <div id="leg-rate-<?=$trip_leg['trip_led_id']?>">
-                        <input type="text"  name="trip_rate_<?=$trip_leg['trip_led_id']?>" id="trip_rate_<?=$trip_leg['trip_led_id']?>" value="<?=$trip_leg['route_rate']?>" class="edit_fld"> 
-                        <a href="javascript:void(0)" class="btn btn-warning edit-leg-rate efld fleftnon" rel="<?=$trip_leg['trip_led_id']?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"> </a>     
-                      </div>
-                      </div>
-                     <!-- <div class="fright margintop30 row size14 sea-trp-view"> 
-                        <a href="#"> View Trip </a>
-                      </div>-->
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-              <?php } } ?>
-              <!-- End Trip Leg -->
-              <div class="fleft width100 padding20 ">
-
-                
-
-               <a href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>"> <img src="<?php echo theme_img('edit-ico.png') ?>"><?php echo lang('edit_trips'); ?></a>
-
-               <a href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>" class="btn btn-danger"> <img src="<?php echo theme_img('cancel-ico.png') ?>"> <?php echo lang('delete_all_trips');?> </a>
-
-               <a href="#" class="btn btn-success fright"> <?php echo lang('save');?> </a>
-
-               
-
-              </div>
-              </div>
-            </div>
-             <?php $i++; } } ?>
-            <!-- Ena Main Trip -->
-       
+  </div>
+ <!-- End -->
+ 
+<?php include('footer.php');?> 

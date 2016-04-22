@@ -1,4 +1,4 @@
-	$(document).ready(function() {
+$(document).ready(function() {
 		jQuery.validator.addMethod("lettersonly", function(value, element) {
 					return this.optional(element) || /^[a-z]+$/i.test(value);
 					}, "Please enter only letters"); 
@@ -63,7 +63,7 @@
 					
 				},
 				jquerytagboxtext:{
-					required: false,
+					required: true,
 				},
 				tzone:{
 					
@@ -112,9 +112,9 @@
 				comments: {
 					required: "Enter your commends",
 				},
-				// jquerytagboxtext:{
-				// 	required: "Please add atleast one route",
-				// },
+				jquerytagboxtext:{
+					required: "Please add atleast one route",
+				},
 				tzone:{
 					required: "Please check your timings",
 				},
@@ -170,7 +170,7 @@
 												//alert(json.error)												
 												return false;
 											} else if (json.result == 1) {
-												window.location	= baseurl +'addtrip/step_2/';
+												window.location	= baseurl +'addtrip/step_2';
 											}
 										
 										
@@ -286,30 +286,22 @@ function filter_result1() {
 
 /*function calculatehours()
 {	
-
-
 if($('#frequency_ids').val() == '' && $('#rpt_from_date').val() == ''){
 	alert('Please select trip frequency or date');
 	$('[name=tzone]').val( '' );
 	return false;
 }
-
 if($("#fhh").val() !='' && $('#fmm').val() !='' && $('#fzone').val() !='')
 {
 	//alert();
 from = $("#fhh").val()+":"+$('#fmm').val()+" "+$('#fzone').val()	
 to = $("#thh").val()+":"+$('#tmm').val()+" "+$('#tzone').val()
-
 frmtime = new Date(
    '01/01/1971 ' +from
   ).getTime();
 totime = new Date(
    '01/01/1971 ' +to
   ).getTime();
-
-
-
-
 $('#timing').html('');
 var param = 'time='+from+'&t_time='+to+'&tid='+$('#tripid').val()+'&vid='+$('#vechicletype').val()+'&frequency='+$('#frequency_ids').val()+'&date='+$('#rpt_from_date').val()
 $.ajax({
@@ -338,16 +330,13 @@ $.ajax({
 				}
 		}
 	});
-
 }else
 {
 	alert('please select depature time');
 	return false;
 }
 //alert(result);
-
 }
-
 function toSeconds(time_str) {
 	// Extract hours, minutes and seconds
 	var parts = time_str.split(':');
@@ -357,7 +346,6 @@ function toSeconds(time_str) {
 	+
 	parts[2]; // seconds
 }
-
 function convertTo24Hour(time) {
     var hours = parseInt(time.substr(0, 2));
     if(time.indexOf('am') != -1 && hours == 12) {
@@ -642,4 +630,3 @@ $.ajax({
 			      
 
 }
-	

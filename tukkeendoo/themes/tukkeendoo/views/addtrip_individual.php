@@ -145,7 +145,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         <h2 class="pst-trip-tit"><?php echo lang('register_your_trip');?></h2>
           <div class="fleft width100 margintop20">
           <ul class="trp-part">
-            <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-bg"></span> </li>
+            <li> <p><?php echo lang('part_1_of_2');?></p> <span class="cs-blue-border"></span> </li>
              <li> <p><?php echo lang('part_2_of_2');?></p> <span></span> </li>
           </ul>
         </div>
@@ -268,7 +268,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
     echo form_input($data);?>
         </div>
         <div class="fleft width100 line4"></div>
-        <div class="roundstep-no fleft size13"><?php echo lang('step_5');?> &nbsp;</div> 
+        <div class="roundstep-no fleft size13"><?php echo lang('step_4');?> &nbsp;</div> 
           <span class="size16 fleft bold"><?php echo lang('add_details');?></span>   
 
         <div class="fleft width100 margintop20">
@@ -316,5 +316,6 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
   </div>
   </div>
   </div>
+
  
 <?php include('footer.php');?> 

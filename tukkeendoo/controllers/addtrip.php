@@ -434,11 +434,30 @@ class Addtrip extends Traveller_Controller {
         $id = $carpool_session['carpool_session']['user_id'];
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         // $data = $this->Trip_model->get_trips($this->user_id, $data);
+        $data['tripdetails'] = $this->Trip_model->get_tripdetail($last_trip_id);
         $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id, $data);
         // $data['customer'] = $this->Customer_model->get_customer($id);
         // echo '<pre>';print_r($data);echo'</pre>';
            // die;
+        $map = $this->Trip_model->getmap_details($last_trip_id);
+        $this->load->library('googlemaps');
+        $config['center'] = $map['origin'];
+        $config['zoom'] = 'auto';
+        $config['directions'] = TRUE;
+        $config['directionsStart'] = $map['origin'];
+        $config['directionsEnd'] = $map['destination'];
+        $config['directionsWaypointArray'] = $map['route'];
+        $config['map_height'] = '230px';
+        $config['draggable'] = FALSE;
+        $config['scrollwheel'] = FALSE;
+    
+    
+        $this->googlemaps->initialize($config);
+        $data['map'] = $this->googlemaps->create_map();
+
+
         $this->load->view('addtrip_individual_next', $data);
+        
     }
 
     function get_vehiclenumber() {
@@ -502,6 +521,18 @@ class Addtrip extends Traveller_Controller {
             die(json_encode(array('result' => false, 'message' => 'please enter valid rate')));
         }
     }
+
+
+    function test() 
+      {
+  foreach($_POST['Won'] as $key=>$val) {
+echo "The value of $key is $val <br>";
+} 
+foreach($_POST['Lost'] as $key=>$val) {
+echo "The value of $key is $val <br>";
+} 
+      }
+
 
     function update_time($ajax = false) {
         $trip_leg_id = $this->input->post('lid');

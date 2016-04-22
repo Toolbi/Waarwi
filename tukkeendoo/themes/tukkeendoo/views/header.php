@@ -19,7 +19,7 @@ if(!empty($description)){
 
     <?php  echo theme_css('bootstrap.css', true);?>
     <?php  echo theme_css('font-awesome.min.css', true);?>
-	<?php  echo theme_css('bootstrap-theme.css', true);?>
+  <?php  echo theme_css('bootstrap-theme.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -30,12 +30,12 @@ if(!empty($description)){
 <script type="text/javascript">
 $(document).ready(function(){
   $(".my-account-button").click(function(){
-	$(".my-account-details").fadeToggle("fast", function(){
-	  if($(".my-account-details").css('display') == "none")
-		$(".my-account-button").removeClass("active");
-	  else
-		$(".my-account-button").addClass("active");
-	});
+  $(".my-account-details").fadeToggle("fast", function(){
+    if($(".my-account-details").css('display') == "none")
+    $(".my-account-button").removeClass("active");
+    else
+    $(".my-account-button").addClass("active");
+  });
   });
 });
 </script>
@@ -63,14 +63,14 @@ $(document).ready(function(){
      <img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:180px;"> </a> </div>
         <div class="pull-right head-rht">  
                   
-       	 <?php 
-				$this->CI =& get_instance();
-				$carpool_session['carpool_session']		= $this->CI->carpool_session->userdata('carpool');
-				//print_r($carpool_session['carpool_session']	);
-			   $id	= $carpool_session['carpool_session']['user_id'];
-			   $profile	= $this->auth_travel->get_travel($id);
-				if($this->auth_travel->is_logged_in(false, false)):				
-				?>	
+         <?php 
+        $this->CI =& get_instance();
+        $carpool_session['carpool_session']   = $this->CI->carpool_session->userdata('carpool');
+        //print_r($carpool_session['carpool_session'] );
+         $id  = $carpool_session['carpool_session']['user_id'];
+         $profile = $this->auth_travel->get_travel($id);
+        if($this->auth_travel->is_logged_in(false, false)):       
+        ?>  
             <ul class="top-nav new-top-nav pull-right">
             <!-- Publier un trajet -->
               <div class="top-trip-add">
@@ -93,9 +93,9 @@ $(document).ready(function(){
                       <li><a href="<?php echo base_url('profile#settings');?>"> <img src="<?php echo theme_img('settings-ico.png')?>"> <?php echo lang('settings');?> </a></li>
                       <li><a href="<?php echo base_url('profile#my-cars-info');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_vehicles');?> </a></li>
                        <li><a href="<?php echo base_url('addtrip');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_trips');?> </a></li>
-						<li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
-						<li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> <span class="badge badge-danger">3</span></a></li>
-						
+            <li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
+            <li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> <span class="badge badge-danger">3</span></a></li>
+            
                       <li><a href="<?php echo base_url('login/logout');?>"> <img src="<?php echo theme_img('logout-ico.png')?>" width="13"> <?php echo lang('logout');?> </a></li>
                     </ul>
                   </div>
