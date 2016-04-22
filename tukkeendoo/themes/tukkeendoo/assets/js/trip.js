@@ -63,7 +63,7 @@ $(document).ready(function() {
 					
 				},
 				jquerytagboxtext:{
-					required: true,
+					required: false,
 				},
 				tzone:{
 					

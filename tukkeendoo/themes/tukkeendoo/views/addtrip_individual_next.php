@@ -204,7 +204,7 @@ $(document).ready(function() {
         <div class="fleft width100 padding20 ">
           <a class="btn btn-info" href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>"> <?php echo lang('prev'); ?></a>
           <a href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>" class="btn btn-danger fcenter"> <?php echo lang('delete_all_trips');?> </a>
-                    <a href="#" class="btn btn-success fright"> <?php echo lang('publish_trip');?> </a>
+                    <a href="<?php print base_url(); ?>addtrip" class="btn btn-success fright"> <?php echo lang('publish_trip');?> </a>
         </div>
     <!-- End Left -->
    
