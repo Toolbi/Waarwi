@@ -155,6 +155,7 @@ $lang['step_2']								= 'Etape 2';
 $lang['step_3']								= 'Etape 3';
 $lang['step_4']								= 'Etape 4';
 $lang['step_5']								= 'Etape 5';
+$lang['step_6']								= 'Etape 6';
 $lang['info_map']							= 'Votre parcours';
 $lang['add_details']						= 'Ajouter des détails';
 $lang['from_placeholder']					= 'Votre point de départ (adresse, ville, arrêt...)';
@@ -665,4 +666,18 @@ $lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succ�
 
 $lang['home']								= 'Accueil';
 $lang['dashboard_message']					= 'Bonjour';
+
+/*Détails trajet*/
+$lang['luggage_size_1']						= 'Petits';
+$lang['luggage_size_2']						= 'Moyens';
+$lang['luggage_size_3']						= 'Grands';
+
+$lang['flexibility_1']						= 'Pile à l\'heure';
+$lang['flexibility_2']						= 'à plus ou moins 15mn';
+$lang['flexibility_3']						= 'à plus ou moins 30mn';
+$lang['flexibility_4']						= 'à plus ou moins 45mn';
+
+$lang['detour_1']							= '15mn';
+$lang['detour_2']							= '30mn';
+$lang['detour_3']							= '45mn';
 ?>

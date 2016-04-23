@@ -108,19 +108,43 @@ function viewPopcontact(pmId)
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('random-ico.png');?>"> </span> <?php echo lang('detour');?></span>
             <br><br><br>
-            <span class=""> <?php echo lang('maximum');?></span>
+            <span class="">
+            <?php if ($tripdetails['detour'] == 1){
+                    echo lang('detour_1');
+                  }else if ($tripdetails['detour'] == 2) {
+                   echo lang('detour_2');
+                  }else{
+                    echo lang('detour_3');
+                  }
+            ?></span>
         </div>
 
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('time-ico.png');?>"> </span> <?php echo lang('flexibility');?></span>
             <br><br>            
-            <span> <?php echo lang('leave');?></span>
+            <span> <?php if ($tripdetails['flexibility'] == 1){
+                    echo lang('flexibility_1');
+                  }else if ($tripdetails['flexibility'] == 2) {
+                   echo lang('flexibility_2');
+                  }else{
+                    echo lang('flexibility_3');
+                  }
+            ?></span>
         </div>
 
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('luggage_size');?></span>
             <br><br>
-            <span><?php echo lang('small');?></span>
+            <span>
+              <?php if ($tripdetails['luggage_size'] == 1){
+                    echo lang('luggage_size_1');
+                  }else if ($tripdetails['luggage_size'] == 2) {
+                   echo lang('luggage_size_2');
+                  }else{
+                    echo lang('luggage_size_3');
+                  }
+            ?>
+            </span>
         </div>
 
       </div>

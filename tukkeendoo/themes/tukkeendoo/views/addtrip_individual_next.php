@@ -151,7 +151,7 @@ $(document).ready(function() {
           </ul>
           </div>        
           <div class="fleft width100 margintop20"> 
-            <div class="roundstep-no fleft size13"><?php echo lang('step_5');?> &nbsp;</div> 
+            <div class="roundstep-no fleft size13"><?php echo lang('step_6');?> &nbsp;</div> 
             <span class="size16 fleft bold"><?php echo lang('manage_price');?></span>   
           </div>
      

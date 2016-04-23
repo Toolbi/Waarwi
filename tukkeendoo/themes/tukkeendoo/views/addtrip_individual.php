@@ -261,7 +261,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         </div>  
         
         <!-- <div class="fleft width100 line4"></div> -->
-                <div class="fleft  margintop20">
+        <div class="fleft  margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('available_seat');?></span>          
           <?php
     $data = array('name'=>'avail_seats', 'type'=>'number','id'=>'avail_seats','class'=>'fleft width100 padding10 row width300', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
@@ -270,6 +270,33 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         <div class="fleft width100 line4"></div>
         <div class="roundstep-no fleft size13"><?php echo lang('step_4');?> &nbsp;</div> 
           <span class="size16 fleft bold"><?php echo lang('add_details');?></span>   
+
+        <div class="fleft  width100 margintop20">
+          <span class="size14 bold row"><span class="mandatory"></span> <?php echo lang('luggage_size');?></span>   
+          <select class="fleft width100 padding10 width300" name="luggage_size" id="luggage_size" form="frmtrip">
+            <option value="1"><?php echo lang('luggage_size_1');?></option>
+            <option value="2"><?php echo lang('luggage_size_2');?></option>
+            <option value="3"><?php echo lang('luggage_size_3');?></option>
+          </select>     
+        </div>
+
+        <div class="fleft  width100 margintop20">
+          <span class="size14 bold row"><span class="mandatory"></span> <?php echo lang('flexibility');?></span>   
+          <select class="fleft width100 padding10 width300" name="flexibility" id="flexibility" form="frmtrip">
+            <option value="1"><?php echo lang('flexibility_1');?></option>
+            <option value="2"><?php echo lang('flexibility_2');?></option>
+            <option value="3"><?php echo lang('flexibility_3');?></option>
+          </select>     
+        </div>
+
+        <div class="fleft  width100 margintop20">
+          <span class="size14 bold row"><span class="mandatory"></span> <?php echo lang('detour');?></span>   
+          <select class="fleft width100 padding10 width300" name="detour" id="detour" form="frmtrip">
+            <option value="1"><?php echo lang('detour_1');?></option>
+            <option value="2"><?php echo lang('detour_2');?></option>
+            <option value="3"><?php echo lang('detour_3');?></option>
+          </select>     
+        </div>
 
         <div class="fleft width100 margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('phone_number');?></span><br>

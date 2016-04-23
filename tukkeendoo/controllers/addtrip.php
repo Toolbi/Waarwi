@@ -123,6 +123,9 @@ class Addtrip extends Traveller_Controller {
             $data['hour'] = $trip->trip_journey_hours;
             $data['vehnum'] = $trip->vechicle_number;
             $data['comments'] = $trip->trip_comments;
+            $data['flexibility'] = $trip->flexibility;
+            $data['detour'] = $trip->detour;
+            $data['luggage_size'] = $trip->luggage_size;
             $fresult = explode(' ', $data['depature_time']);
             $ftime = explode(':', $fresult[0]);
             $tresult = explode(' ', $data['arrival_time']);
@@ -224,6 +227,9 @@ class Addtrip extends Traveller_Controller {
             $save['trip_frequncy'] = $this->input->post('frequency_ids');
             $save['trip_avilable_seat'] = $this->input->post('avail_seats');
             $save['trip_comments'] = $this->input->post('comments');
+            $save['flexibility'] = $this->input->post('flexibility');
+            $save['detour'] = $this->input->post('detour');
+            $save['luggage_size'] = $this->input->post('luggage_size');
             $save['trip_user_id'] = $this->user_id;
             if ($this->input->post('rpt_from_date') != '') {
                 $save['trip_casual_date'] = date('Y/m/d', strtotime(str_replace("/", "-", $this->input->post('rpt_from_date'))));
@@ -288,6 +294,9 @@ class Addtrip extends Traveller_Controller {
                 $param['trip_frequncy'] = $this->input->post('frequency_ids');
                 $param['trip_avilable_seat'] = $this->input->post('avail_seats');
                 $param['trip_comments'] = $this->input->post('comments');
+                $param['flexibility'] = $this->input->post('flexibility');
+                $param['detour'] = $this->input->post('detour');
+                $param['luggage_size'] = $this->input->post('luggage_size');
                 $param['trip_user_id'] = $this->user_id;
                 if ($this->input->post('rpt_from_date') != '') {
                     $param['trip_casual_date'] = date('Y/m/d', strtotime(str_replace("/", "-", $this->input->post('rpt_from_date'))));
