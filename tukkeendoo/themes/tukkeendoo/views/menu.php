@@ -2,7 +2,7 @@
   <ul class="my-trp-lft">
   		<?php if($this->auth_travel->is_logged_in(false, false)): ?>				
          <li class="srh_lft"><a href="<?php echo base_url('');?>"><?php echo lang('search_for_lift');?></a></li>
-         <li class="lft_add"><a href="<?php echo base_url('addtrip/form');?>"><?php echo lang('add_a_lift');?></a></li>            
+         <li class="lft_add"><a href="<?php echo base_url('addtrip/step_1');?>"><?php echo lang('add_a_lift');?></a></li>            
            <?php  else: ?>
          <li class="srh_lft"><a href="<?php echo base_url('home');?>"><?php echo lang('search_for_lift');?></a></li>
          <li class="lft_add"><a href="<?php echo base_url('register');?>"><?php echo lang('add_a_lift');?></a></li>              
@@ -26,7 +26,7 @@
                 	<div class="dropdown_1column align_right">                
                         <div class="col_1">                        
                             <ul class="simple">
-                            	<li> <a href="<?php echo base_url('addtrip/form');?>"><?php echo lang('post_a_ride');?></a> </li>
+                            	<li> <a href="<?php echo base_url('addtrip/step_1');?>"><?php echo lang('post_a_ride');?></a> </li>
                             	<li><a href="<?php echo base_url('profile#my-cars-info');?>"><?php echo lang('add_vehicle');?> </a></li>
                             	<li><a href="<?php echo base_url('profile#my-cars-info');?>"><?php echo lang('list_of_vehicles');?></a></li>
                             	<li><a href="<?php echo base_url('addtrip');?>"><?php echo lang('list_of_trips');?></a></li>                        	

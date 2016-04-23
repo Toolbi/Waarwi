@@ -108,19 +108,43 @@ function viewPopcontact(pmId)
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('random-ico.png');?>"> </span> <?php echo lang('detour');?></span>
             <br><br><br>
-            <span class=""> <?php echo lang('maximum');?></span>
+            <span class="">
+            <?php if ($tripdetails['detour'] == 1){
+                    echo lang('detour_1');
+                  }else if ($tripdetails['detour'] == 2) {
+                   echo lang('detour_2');
+                  }else{
+                    echo lang('detour_3');
+                  }
+            ?></span>
         </div>
 
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('time-ico.png');?>"> </span> <?php echo lang('flexibility');?></span>
             <br><br>            
-            <span> <?php echo lang('leave');?></span>
+            <span> <?php if ($tripdetails['flexibility'] == 1){
+                    echo lang('flexibility_1');
+                  }else if ($tripdetails['flexibility'] == 2) {
+                   echo lang('flexibility_2');
+                  }else{
+                    echo lang('flexibility_3');
+                  }
+            ?></span>
         </div>
 
         <div class="trip-col3">
             <span><span> <img src="<?php echo theme_img('suitcase-ico.png');?>"> </span> <?php echo lang('luggage_size');?></span>
             <br><br>
-            <span><?php echo lang('small');?></span>
+            <span>
+              <?php if ($tripdetails['luggage_size'] == 1){
+                    echo lang('luggage_size_1');
+                  }else if ($tripdetails['luggage_size'] == 2) {
+                   echo lang('luggage_size_2');
+                  }else{
+                    echo lang('luggage_size_3');
+                  }
+            ?>
+            </span>
         </div>
 
       </div>
@@ -131,16 +155,15 @@ function viewPopcontact(pmId)
     <!-- End Left -->
 
     <div class="trip-right cs-lgrey-bg">
-      
       <div class="rowrec trp-top padding10">
           <img  class="passanger-img" src="<?php if($tripdetails['user_profile_img']) { echo theme_profile_img($tripdetails['user_profile_img']); } else { echo theme_img('default.png');  }?>">
           <strong class="cs-blue-text"><?= $tripdetails['user_first_name']?></strong> <span><?php echo lang('offer');?> </span>
           <h4 class="paddingtop10 cs-blue-text">
-      <?php $source = explode(",", $tripdetails['source_leg']); 
-      echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
-      <?php $destination = explode(",", $tripdetails['destination_leg']); 
-      echo  $destination[0]; ?>
-      </h4>
+          <?php $source = explode(",", $tripdetails['source_leg']); 
+          echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
+          <?php $destination = explode(",", $tripdetails['destination_leg']); 
+          echo  $destination[0]; ?>
+        </h4>
       </div>
 
       <div class="rowrec line4"></div>

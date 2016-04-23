@@ -5,6 +5,7 @@ class Addtrip extends Traveller_Controller {
     var $CI;
     var $user_id;
     var $trip_id;
+    var $last_trip_id;
 
     function __construct() {
         parent::__construct();
@@ -28,7 +29,7 @@ class Addtrip extends Traveller_Controller {
         
     }
 
-    function form($trip_id = false, $ajax = false) {
+    function step_1($trip_id = false, $ajax = false) {
 
         $this->CI = & get_instance();
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
@@ -86,7 +87,7 @@ class Addtrip extends Traveller_Controller {
 
             if (!$trip) {
                 $this->session->set_flashdata('error', lang('error_not_found'));
-                redirect('addtrip/form');
+                redirect('addtrip/step_1');
             }
 
             $route_lanlat = explode('~,', $trip->trip_routes_lat_lan);
@@ -122,6 +123,9 @@ class Addtrip extends Traveller_Controller {
             $data['hour'] = $trip->trip_journey_hours;
             $data['vehnum'] = $trip->vechicle_number;
             $data['comments'] = $trip->trip_comments;
+            $data['flexibility'] = $trip->flexibility;
+            $data['detour'] = $trip->detour;
+            $data['luggage_size'] = $trip->luggage_size;
             $fresult = explode(' ', $data['depature_time']);
             $ftime = explode(':', $fresult[0]);
             $tresult = explode(' ', $data['arrival_time']);
@@ -199,7 +203,12 @@ class Addtrip extends Traveller_Controller {
             $source = $this->input->post('txtsource');
             $destination = $this->input->post('txtdestination');
 
-            $trip_routes = $source . '~' . $this->input->post('jquerytagboxtext') . '~' . $destination;
+            if($this->input->post('jquerytagboxtext')){
+                $trip_routes = $source . '~' . $this->input->post('jquerytagboxtext') . '~' . $destination;
+            }
+            else{
+                $trip_routes = $source .'~' . $destination;
+            }            
 
 
             $save['trip_id'] = $this->trip_id;
@@ -218,6 +227,9 @@ class Addtrip extends Traveller_Controller {
             $save['trip_frequncy'] = $this->input->post('frequency_ids');
             $save['trip_avilable_seat'] = $this->input->post('avail_seats');
             $save['trip_comments'] = $this->input->post('comments');
+            $save['flexibility'] = $this->input->post('flexibility');
+            $save['detour'] = $this->input->post('detour');
+            $save['luggage_size'] = $this->input->post('luggage_size');
             $save['trip_user_id'] = $this->user_id;
             if ($this->input->post('rpt_from_date') != '') {
                 $save['trip_casual_date'] = date('Y/m/d', strtotime(str_replace("/", "-", $this->input->post('rpt_from_date'))));
@@ -227,6 +239,8 @@ class Addtrip extends Traveller_Controller {
 
 
             $trip_id = $this->Trip_model->save($save);
+            /*Récupération du last ID après insertion*/
+            $this->session->set_flashdata('trip_id', $trip_id);
 
             if ($this->input->post('return') == 'yes') {
                 $return_destination = $this->input->post('txtsource');
@@ -264,11 +278,6 @@ class Addtrip extends Traveller_Controller {
                 $return_route = $return_temp;
                 $return_route = implode(',', $return_route);
 
-
-
-
-
-
                 $param['trip_id'] = $this->trip_id;
                 $param['trip_vehicle_id'] = $this->input->post('vechicletype');
                 $param['trip_from_latlan'] = $this->input->post('destination_ids');
@@ -285,6 +294,9 @@ class Addtrip extends Traveller_Controller {
                 $param['trip_frequncy'] = $this->input->post('frequency_ids');
                 $param['trip_avilable_seat'] = $this->input->post('avail_seats');
                 $param['trip_comments'] = $this->input->post('comments');
+                $param['flexibility'] = $this->input->post('flexibility');
+                $param['detour'] = $this->input->post('detour');
+                $param['luggage_size'] = $this->input->post('luggage_size');
                 $param['trip_user_id'] = $this->user_id;
                 if ($this->input->post('rpt_from_date') != '') {
                     $param['trip_casual_date'] = date('Y/m/d', strtotime(str_replace("/", "-", $this->input->post('rpt_from_date'))));
@@ -296,7 +308,12 @@ class Addtrip extends Traveller_Controller {
 //------------------------------------ trip leg concept ------------------------------------------------------------------------
             if (!empty($trip_id)) {
 
-                $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('route_lanlat') . ',' . $this->input->post('destination_ids');
+                if($this->input->post('route_lanlat')){
+                    $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('route_lanlat') . ',' . $this->input->post('destination_ids');
+                }else{
+                    $route_lat = $this->input->post('source_ids') . ',' . $this->input->post('destination_ids');
+                }
+                
 
 
 
@@ -327,7 +344,7 @@ class Addtrip extends Traveller_Controller {
                 }
 
 
-                // insert route  leg data onr by one 
+                // insert route  leg data one by one 
                 $i = 0;
                 $j = 0;
                 for ($i = 0; $i < sizeof($route_leg_array); $i++) {
@@ -417,6 +434,42 @@ class Addtrip extends Traveller_Controller {
         }
     }
 
+    // Fonction pour continuer l'ajout du trajet
+    function step_2($idd) {
+        $last_trip_id =  $this->session->flashdata('trip_id');
+        $data = array();
+        $this->load->helper('form');
+        $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
+        $id = $carpool_session['carpool_session']['user_id'];
+        $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $data['symbol']  = $this->CI->config->item('currency_symbol');
+        // $data = $this->Trip_model->get_trips($this->user_id, $data);
+        $data['tripdetails'] = $this->Trip_model->get_tripdetail($last_trip_id);
+        $data = $this->Trip_model->get_legs(44, $this->user_id, $data);
+        // $data['customer'] = $this->Customer_model->get_customer($id);
+        // echo '<pre>';print_r($data);echo'</pre>';
+           // die;
+        $map = $this->Trip_model->getmap_details($last_trip_id);
+        $this->load->library('googlemaps');
+        $config['center'] = $map['origin'];
+        $config['zoom'] = 'auto';
+        $config['directions'] = TRUE;
+        $config['directionsStart'] = $map['origin'];
+        $config['directionsEnd'] = $map['destination'];
+        $config['directionsWaypointArray'] = $map['route'];
+        $config['map_height'] = '230px';
+        $config['draggable'] = FALSE;
+        $config['scrollwheel'] = FALSE;
+    
+    
+        $this->googlemaps->initialize($config);
+        $data['map'] = $this->googlemaps->create_map();
+
+
+        $this->load->view('addtrip_individual_next', $data);
+        
+    }
+
     function get_vehiclenumber() {
         $vehiclenumber = $this->input->post('vid');
         $vehicle = $this->Trip_model->get_vehicle($vehiclenumber);
@@ -477,6 +530,16 @@ class Addtrip extends Traveller_Controller {
         } else {
             die(json_encode(array('result' => false, 'message' => 'please enter valid rate')));
         }
+    }
+
+    /* Mettre à jour la le trajet pour le mettre en public afin de le publier*/
+    function publish_trip($ajax = false) {
+        $trip_id = $this->input->post('trip_id');
+        $trip_public = $this->input->post('trip_public');
+
+                $data['trip_public'] = $trip_public;
+                $this->Trip_model->publish_trip($data);      
+               
     }
 
     function update_time($ajax = false) {
@@ -579,7 +642,7 @@ class Addtrip extends Traveller_Controller {
         $this->user_id = $carpool_session['carpool_session']['user_id'];
         $data['enquiries'] = $this->Enquiry_model->get_enquires_list($this->user_id);
         $data['user']= $carpool_session['carpool_session']['user_id'];
-	// echo '<pre>';print_r($data['user']);echo'</pre>';exit;
+    // echo '<pre>';print_r($data['user']);echo'</pre>';exit;
         $id = $carpool_session['carpool_session']['user_id'];  
         $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('enquery_list', $data);
@@ -614,7 +677,7 @@ class Addtrip extends Traveller_Controller {
                         $save['enquiry_trip_status'] = 1;
                         $save['enquiry_id'] = $enquiryId;
                         $this->Enquiry_model->save_enquiry($save);
-			
+            
                         $this->tripowner($edata);
 
                         die(json_encode(array('result'=>true,'message'=>'success')));
@@ -741,7 +804,8 @@ class Addtrip extends Traveller_Controller {
         $data['customer'] = $this->Customer_model->get_customer($id);
         $this->load->view('trips', $data);
     }
-    
+
+      
     function upcoming_trip_passenger() {
 
         $data = array();

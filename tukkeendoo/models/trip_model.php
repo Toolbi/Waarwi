@@ -206,6 +206,7 @@ Class Trip_model extends CI_Model
 		{
 			$dats['trip_created_date'] = date('Y-m-d H:i:s',now());
 			$this->db->insert('tbl_trips', $trip);
+			// Récupération du dernier ID ajouté par l'utilisateur
 			return $this->db->insert_id();
 		}
 	}
@@ -392,7 +393,13 @@ Class Trip_model extends CI_Model
 		}
 		
 	}
-	
+
+	function publish_trip($data)
+	{
+		$this->db->update('tbl_trips', $data);
+		return $this->db->insert_id();
+	}
+		
 	function delete_legdetils($trip_id)
 	{
 		$this->db->where('trip_id', $trip_id);
@@ -402,6 +409,54 @@ Class Trip_model extends CI_Model
 	function get_legdetails($id)
 	{
 		return $this->db->where('trip_led_id', $id)->get('tbl_t_trip_legs')->row();	
+	}
+
+	function get_trips_details($id)
+	{
+		return $this->db->where('trip_id', $id)->get('tbl_trips')->row();	
+	}
+
+	/*  Nouvelle fonction pour récupérer uniquement les parties d'un trajet soumis par l'utilisateur
+		pour continuer la saisie des prix*/	
+	function get_legs($trip_led_id, $user_id, $data)
+	{	
+		
+		$this->db->where('tbl_trips.trip_id',$trip_led_id);
+		$this->db->where('tbl_trips.trip_user_id', $user_id);
+		$query = $this->db->get('tbl_trips');
+		$result =  $query->result_array();
+
+		$temp = array();
+		if($result)
+		{
+		
+			foreach( $result as $key => $row )
+			{
+				
+				if($row['trip_routes'])
+				{
+					
+					$trip_route_ids = explode('~',$row['trip_routes']);				 							
+					array_shift($trip_route_ids);
+					array_pop($trip_route_ids);
+					$ids = array();
+					foreach($trip_route_ids as $route)
+					{	 				 
+						 $ids[] = $route;					 
+					}
+					
+					$temp['route_'.$row['trip_id']] = $ids;
+				}
+				$temp['leg_'.$row['trip_id']] = $this->db->order_by('trip_led_id','ASC')->get_where('tbl_t_trip_legs', array('trip_id'=>$row['trip_id']))->result_array();
+			}
+		}
+		
+		$data['legdetails'] = $temp;
+			
+		$data['trip_details'] = $result;
+		/*echo "<pre>";print_r($data);echo "<pre/>";
+		die;*/
+		return $data;
 	}
 	
 	function get_user($tripid)
@@ -630,5 +685,6 @@ Class Trip_model extends CI_Model
             return $data;
 
     }
-		
+
+   		
 }

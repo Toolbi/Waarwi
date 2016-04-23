@@ -12,14 +12,13 @@ if(!empty($description)){
 ?>
 <title><?php echo lang('head_title'); ?> </title>
 <!-- must have -->
-<!-- <?php echo theme_js('jquery-1.9.1.js', true);?> -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<?php echo theme_js('jquery-1.9.1.js', true);?>
+<?php echo theme_js('jquery-migrate-1.3.0.min.js', true);?>
 <?php echo theme_js('bootstrap.js', true);?>
 
     <?php  echo theme_css('bootstrap.css', true);?>
     <?php  echo theme_css('font-awesome.min.css', true);?>
-	<?php  echo theme_css('bootstrap-theme.css', true);?>
+  <?php  echo theme_css('bootstrap-theme.css', true);?>
 <?php  echo theme_css('style.css', true);?>
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -30,12 +29,12 @@ if(!empty($description)){
 <script type="text/javascript">
 $(document).ready(function(){
   $(".my-account-button").click(function(){
-	$(".my-account-details").fadeToggle("fast", function(){
-	  if($(".my-account-details").css('display') == "none")
-		$(".my-account-button").removeClass("active");
-	  else
-		$(".my-account-button").addClass("active");
-	});
+  $(".my-account-details").fadeToggle("fast", function(){
+    if($(".my-account-details").css('display') == "none")
+    $(".my-account-button").removeClass("active");
+    else
+    $(".my-account-button").addClass("active");
+  });
   });
 });
 </script>
@@ -63,18 +62,18 @@ $(document).ready(function(){
      <img src="<?php echo theme_logo_img($this->logo->name)?>"style="width:180px;"> </a> </div>
         <div class="pull-right head-rht">  
                   
-       	 <?php 
-				$this->CI =& get_instance();
-				$carpool_session['carpool_session']		= $this->CI->carpool_session->userdata('carpool');
-				//print_r($carpool_session['carpool_session']	);
-			   $id	= $carpool_session['carpool_session']['user_id'];
-			   $profile	= $this->auth_travel->get_travel($id);
-				if($this->auth_travel->is_logged_in(false, false)):				
-				?>	
+         <?php 
+        $this->CI =& get_instance();
+        $carpool_session['carpool_session']   = $this->CI->carpool_session->userdata('carpool');
+        //print_r($carpool_session['carpool_session'] );
+         $id  = $carpool_session['carpool_session']['user_id'];
+         $profile = $this->auth_travel->get_travel($id);
+        if($this->auth_travel->is_logged_in(false, false)):       
+        ?>  
             <ul class="top-nav new-top-nav pull-right">
             <!-- Publier un trajet -->
               <div class="top-trip-add">
-                <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
+                <a href="<?php echo base_url('addtrip/step_1');?>" class="top-trip ">
                   <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
 
                   <p class="size20">
@@ -93,9 +92,9 @@ $(document).ready(function(){
                       <li><a href="<?php echo base_url('profile#settings');?>"> <img src="<?php echo theme_img('settings-ico.png')?>"> <?php echo lang('settings');?> </a></li>
                       <li><a href="<?php echo base_url('profile#my-cars-info');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_vehicles');?> </a></li>
                        <li><a href="<?php echo base_url('addtrip');?>"> <img src="<?php echo theme_img('mail-ico.png')?>" width="13"> <?php echo lang('my_trips');?> </a></li>
-						<li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
-						<li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> <span class="badge badge-danger">3</span></a></li>
-						
+            <li><a href="<?php echo base_url('rating');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_ratings'); ?> </a></li>
+            <li><a href="<?php echo base_url('addtrip/enquery_list');?>"> <img src="<?php echo theme_img('star-ico.png')?>" width="13"> <?php echo lang('my_enquiries_message'); ?> <span class="badge badge-danger">3</span></a></li>
+            
                       <li><a href="<?php echo base_url('login/logout');?>"> <img src="<?php echo theme_img('logout-ico.png')?>" width="13"> <?php echo lang('logout');?> </a></li>
                     </ul>
                   </div>

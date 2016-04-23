@@ -7,6 +7,7 @@
 <!-- Librairies -->
 
 <?php echo theme_js('jquery-1.9.1.js', true);?>
+<?php echo theme_js('jquery-migrate-1.3.0.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.9.2.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>
@@ -115,7 +116,7 @@ $(document).ready(function(){
 </div>
 
 <div class="top-trip-add">
-  <a href="<?php echo base_url('addtrip/form');?>" class="top-trip ">
+  <a href="<?php echo base_url('addtrip/step_1');?>" class="top-trip ">
     <h2 class="size16"> <?php echo lang('do_you_have_car');?> </h2>
 
     <p class="size20">

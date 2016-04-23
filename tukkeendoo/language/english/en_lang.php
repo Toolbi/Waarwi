@@ -20,7 +20,11 @@ $lang['trip_type']					= 'Trip type';
 $lang['expected_departure']			= 'Expected time for departure:';
 $lang['edit_time']					= 'Edit Time';
 $lang['edit_rate']					= 'Edit Price';
+$lang['rate_description_text']		= 'One last step to finalize the publication of your trip. Record prices for parts of your trip and finish by clicking Publish my trip.';
+$lang['rate_error_message']         = 'Make sure you do not put space, points, text or comma in the box.';
 $lang['price']						= 'Price:';
+$lang['publish_trip']				= 'Publish my trip:';
+$lang['edit_price']						= 'Edit price:';
 $lang['inr']						= 'Per Passenger';
 $lang['available_seats']			= 'Available Seats :';
 $lang['cancel']						= 'Cancel';
@@ -153,6 +157,11 @@ $lang['travel_type']						= 'Vehicle:';
 $lang['select_your_car']					= 'Select your car';
 $lang['vehicle_number']						= 'Vehicle Number:';
 $lang['step_2']								= 'Step: 2';
+$lang['step_3']								= 'Step: 3';
+$lang['step_4']								= 'Step: 4';
+$lang['step_5']								= 'Step: 5';
+$lang['info_map']							= 'Your trip';
+$lang['add_details']						= 'Add details';
 $lang['add_trip']							= 'Add Trip';
 $lang['from']								= 'From :';
 $lang['from_placeholder']					= 'Your departure point (address,city,station...)';
@@ -171,7 +180,9 @@ $lang['return_time']						= 'Departure Time :';
 $lang['available_seat']						= 'Available Seat :';
 $lang['available_seat_placeholder']			= 'Number of available seats';
 $lang['phone_number']						= 'Phone Number :';
+$lang['phone_number_desc']					= 'Your phone number will not be published. It will be sent that to people whose reservation is confirmed for this trip.';
 $lang['comments']							= 'Comments :';
+$lang['comments_desc']						= 'Add Comments for in trip, such as your place of departure and arrival, detours to do, breaks during the journey. Avoid giving your phone number or email address here for the respect of our rules.';
 $lang['post']								= 'Post';
 $lang['contact_person_number']				= 'Contact Person Number';
 $lang['date_of_journey']					= 'Date Of Journey';
@@ -210,7 +221,7 @@ $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Facebook Profile';
 $lang['fb-login']						= 'Login with facebook';
 $lang['gl-login']						= 'Login with Google';
-$lang['i_agree_to']						= 'I agree upon receiving newsletters from Tukkeendoo';
+$lang['i_agree_to']						= 'I agree upon receiving newsletters from Carpooling';
 $lang['submit']							= 'Submit';
 $lang['settings']						= 'Settings';
 
@@ -240,7 +251,7 @@ $lang['confirm_new_pass']				= 'Confirm new password';
 $lang['save']				            = 'Save';
 
 //Register Language
-$lang['join_tukkeendoo']			    = 'Join Tukkeendoo';
+$lang['join_carpooling']			    = 'Join Carpooling';
 $lang['login']			                = 'LOGIN';
 $lang['first_name']				     	= 'First Name';
 $lang['last_name']					    = 'Last Name';
@@ -311,7 +322,7 @@ $lang['dash_para'] 				        = 'Lorem ipsum dolor sit amet, consectetur adipis
 $lang['find_a_car'] 					= 'Find a Car';
 
 //Login Language
-$lang['sign_in_to_tukkeendoo']					= 'Sign in to Tukkeendoo';
+$lang['sign_in_to_carpooling']					= 'Sign in to Carpooling';
 $lang['login']					                = 'LOGIN';
 $lang['email_username']							= 'Email / Username';
 $lang['password']								= 'Password';
@@ -362,7 +373,7 @@ $lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an em
 
 $lang['find_para_ride']					= 'Find a perfect ride based on your travel needs and share a ride with drivers travelling towards same destination.';
 
-$lang['newsletter_content']					= 'Would you like to get regular updates from our Tukkeendoo website? Then, simply provide your email id and we shall update you regularly. ';
+$lang['newsletter_content']					= 'Would you like to get regular updates from our Carpooling website? Then, simply provide your email id and we shall update you regularly. ';
 $lang['road_travel_made_para']				= 'A connecting site for Car Owners and travellers.';
 
 $lang['road_travel_made_para1']				= 'Sign up and meet drivers who are travelling in the same direction. Get in touch with them to reach the common destination at the same time, through the same ride.';
@@ -390,7 +401,7 @@ $lang['error_login']                          = 'Authentication Failed!';
 $lang['error_edit']                           = 'The vehicle has already been allocated a trip. Now you cannot make any changes to the vehicle.';
 $lang['error_delete']                         = 'The vehicle has already been allocated a trip. Now you cannot delete this vehicle.';
 $lang['error_unable_login']                   = 'Unable to login';
-$lang['error_account_disable']                = 'Currently your account has been disabled. Please contact contact@tukkeendoo.com for more information.';
+$lang['error_account_disable']                = 'Currently your account has been disabled. Please contact info@carpoolingscript.com for more information.';
 $lang['error_code']                           = 'Incorrect code';
 $lang['error_invalid_currpass']               = 'Invalid password. Please try again.';
 

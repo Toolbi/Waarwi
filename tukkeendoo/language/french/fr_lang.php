@@ -8,6 +8,8 @@ Langue du tableau de bord utilisateur
 $lang['my_trips']					= 'Mes trajets';
 $lang['my_trip']					= 'Mes trajets';
 $lang['trip']						= 'Trajet';
+$lang['next']						= 'Suivant';
+$lang['prev']						= 'Précedant';
 $lang['see_trip']					= 'Voir le trajet';
 $lang['rides_offered']				= 'Trajets proposés';
 $lang['enquiry']				    = 'Trajets réservés';
@@ -23,15 +25,18 @@ $lang['trip_type']					= 'Type de trajet';
 $lang['expected_departure']			= 'Départ prévu:';
 $lang['edit_time']					= 'Modifier le temps';
 $lang['edit_rate']					= 'Modifier le prix'; // Taux / taxt / vitesse
+$lang['manage_price']				= 'Gérer les prix';
 $lang['price']						= 'Prix';
-$lang['price']						= 'Prix';
+$lang['edit_price']					= 'Modifier les prix';
+$lang['rate_description_text']		= 'Une dernière étape pour finaliser la publication de votre trajet. Enregistrer les prix des parties de votre trajet et terminer en cliquant sur Publier mon trajet.';
+$lang['publish_trip']				= 'Publier'; //  International Normalised Ratio
 $lang['inr']						= '(INR) Par passager'; //  International Normalised Ratio
 $lang['available_seats']			= 'Places disponibles :';
 $lang['trip_complet']				= 'Nous sommes désolés, ce trajet est complet.';
 $lang['cancel']						= 'Annuler';
 $lang['cancel_enquiry']				= 'Annuler la réservation';
 $lang['save']						= 'Enregistrer';
-$lang['delete_all_trips']			= 'Supprimer tous les trajets';
+$lang['delete_all_trips']			= 'Annuler tous les trajets';
 $lang['no_ratings_given']			= 'Pas de note attribuée';
 $lang['vehicle_information']		= 'Les informations du véhicule';
 $lang['enquiry_date']			    = 'Date de la réservation';
@@ -40,7 +45,7 @@ $lang['passenger_name']			    = 'Nom du passager';
 $lang['passenger_number']		    = 'Numéro du passager';
 $lang['passenger_email']		    = 'Email du passager';
 $lang['there_is_no']			    = "Il n'y a pas de demande fournie";
-$lang['deviation_holder']           = 'Passez-vous par une autre ville ? (adresse, ville, gare ...)';
+$lang['deviation_holder']           = 'Ville de passage (nom de la ville, adresse, gare ...)';
 //Enquiry Language
 $lang['vehicle_information']		= 'Les informations du véhicule';
 // $lang['enquiry_date']			    = 'Date de la demande';
@@ -138,7 +143,7 @@ $lang['no_age']							= 'Age non défini';
 //Add Trip Form Language
 $lang['register_your_carpool']				= 'Enregistrer votre annonce';
 $lang['register_your_trip']					= 'Enregistrer votre trajet';
-$lang['journey_route']						= 'Parcours';
+$lang['journey_route']						= 'Aperçu de votre trajet';
 $lang['part_1_of_2']						= 'Partie 1 sur 2';
 $lang['part_2_of_2']						= 'Partie 2 sur 2';
 $lang['step_1']								= 'Etape 1';
@@ -147,14 +152,25 @@ $lang['travel_type']						= 'Véhicule:';
 $lang['select_your_car']					= 'Sélectionnez le véhicule';
 $lang['vehicle_number']						= 'Numéro du véhicule:';
 $lang['step_2']								= 'Etape 2';
+$lang['step_3']								= 'Etape 3';
+$lang['step_4']								= 'Etape 4';
+$lang['step_5']								= 'Etape 5';
+$lang['step_6']								= 'Etape 6';
+$lang['info_map']							= 'Votre parcours';
+$lang['add_details']						= 'Ajouter des détails';
 $lang['from_placeholder']					= 'Votre point de départ (adresse, ville, arrêt...)';
 $lang['add_trip']							= 'Ajouter un trajet';
 $lang['from']								= 'De :';
 $lang['to']									= 'A :';
 $lang['date-format']						= 'dd/mm/yyyy';
 $lang['to_placeholder']						= "Votre point de d'arrivée (adresse, ville, arrêt...)";
-$lang['add_route']							= 'Ajouter un parcours :';
+$lang['add_route']							= 'Ajouter un itinéraire (Villes de passage) :';
+$lang['add_route_desc']						= 'Vous pouvez ajouter des villes de passage dans ce trajet pour attirer plus de passagers. Les prix ne seront pas les mêmes en fonction de la distance.';
+$lang['add_route_btn']						= 'Ajouter';
+$lang['remove_tag']							= 'Supprimer';
+$lang['remove_tag_confirm']					= 'Voulez-vous vraiment supprimer ça ?';
 $lang['frequency']							= 'Fréquence :';
+$lang['add_frequency']						= 'Gérer la fréquence';
 $lang['recurring']							= 'Fréquent';
 $lang['one_time']							= "Cet fois seulement";
 $lang['type_of_trip']						= 'Type de trajet :';
@@ -164,8 +180,10 @@ $lang['departure_time']						= 'Heure de départ :';
 $lang['return_time']						= 'Heure de départ :';
 $lang['available_seat']						= 'Places disponibles :';
 $lang['available_seat_placeholder']			= 'Nombre de places disponibles';
-$lang['phone_number']						= 'Tel :';
+$lang['phone_number']						= 'Numéro de téléphone :';
+$lang['phone_number_desc']					= 'Votre numéro de téléphone ne sera pas public. Il sera envoyé qu\'aux personnes dont la réservation est confirmé pour ce trajet.';
 $lang['comments']							= 'Commentaires :';
+$lang['comments_desc']						= 'Ajouter des commentaires dans ce trajet, comme votre lieu de départ et d\'arrivée, les détours à faire, les pauses pendant le trajet. Eviter de donner votre numéro de téléphone ou adresse e-mail ici pour le respect de nos règles. ';
 $lang['post']								= 'Publier';
 
 $lang['contact_person_number']				= 'Nombre de contacts';
@@ -206,7 +224,7 @@ $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Profil Facebook';
 $lang['fb-login']						= 'Se connecter avec facebook';
 $lang['gl-login']						= 'Se connecter avec Google';
-$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from Tukkeendoo
+$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from Carpooling
 $lang['submit']							= 'Valider';
 $lang['settings']						= 'Paramètres';
 $lang['show_phone']						= 'Monter le numéro de téléphone';
@@ -229,9 +247,8 @@ $lang['change_password']			    = 'Modifier le mot de passe';
 $lang['old_password']					= 'Ancien mot de passe';
 $lang['new_password']					= 'Nouveau mot de passe';
 $lang['confirm_new_pass']				= 'Confirmer le mot de passe';
-$lang['save']				            = 'Enregistrer';
 //Register Language
-$lang['join_tukkeendoo']			    = 'Rejoignez-nous !';
+$lang['join_carpooling']			    = 'Rejoignez-nous !';
 $lang['login']			                = 'CONNEXION';
 $lang['first_name']				     	= 'Prénom';
 $lang['last_name']					    = 'Nom';
@@ -282,7 +299,7 @@ $lang['contact']        				= 'Contact';
 $lang['find_a_candidate'] 				= 'Trouver un voyageur';
 $lang['find_a_car'] 					= 'Trouver un véhicule';
 //Login Language
-$lang['sign_in_to_tukkeendoo']					= 'Se connecter';
+$lang['sign_in_to_carpooling']					= 'Se connecter';
 $lang['login']					                = 'CONNEXION';
 $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
@@ -365,6 +382,7 @@ $lang['rate4']                 	  	  			= 'Très bien';
 $lang['rate3']                 	  	  			= 'Bien';
 $lang['rate2']                 	  	  			= 'Dévevant';
 $lang['rate1']                 	  	  			= 'A éviter';
+$lang['rate_error_message']                 	= 'Assurer vous de ne pas mettre d\'espace, de points, du texte ou de virgules dans la case.';
 
 //Enquiry
 
@@ -649,4 +667,18 @@ $lang['settings_update_msg']				= 'Vos paramètres ont été changés avec succ�
 
 $lang['home']								= 'Accueil';
 $lang['dashboard_message']					= 'Bonjour';
+
+/*Détails trajet*/
+$lang['luggage_size_1']						= 'Petits';
+$lang['luggage_size_2']						= 'Moyens';
+$lang['luggage_size_3']						= 'Grands';
+
+$lang['flexibility_1']						= 'Pile à l\'heure';
+$lang['flexibility_2']						= 'à plus ou moins 15mn';
+$lang['flexibility_3']						= 'à plus ou moins 30mn';
+$lang['flexibility_4']						= 'à plus ou moins 45mn';
+
+$lang['detour_1']							= '15mn';
+$lang['detour_2']							= '30mn';
+$lang['detour_3']							= '45mn';
 ?>
