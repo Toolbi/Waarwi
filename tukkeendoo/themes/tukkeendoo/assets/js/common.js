@@ -107,6 +107,32 @@
 		}
 			
 	});
+
+	/*Edit route rates*/
+	$('body').on("click",'.publish-trip',function()
+	{
+		var ID = parseInt($(this).attr("rel"));
+		var publish_trip = parseInt($(this).attr("val"));
+
+		if($.isNumeric(publish_trip))
+		{
+			
+			var dataString = 'trip_public=' + publish_trip +'&trip_id='+ ID;
+			console.log(dataString);
+			$.ajax({
+				type: "POST",
+				url:  baseurl+"addtrip/publish_trip/true",
+				dataType: "json",
+				data: dataString,
+				cache: false,
+				success: function(json){
+					window.location.href= baseurl+'addtrip';			
+				}
+			
+			});
+		}
+			
+	});
 	
 	
 	

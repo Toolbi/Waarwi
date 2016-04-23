@@ -62,6 +62,8 @@ class Home_model extends CI_Model
 		ORDER BY max(tbl_trips.`trip_id`) DESC LIMIT ".$limit);
 	/*	echo $this->db->last_query();
 		die;*/
+		$this->db->where('trip_public','1');
+		$this->db->where('trip_status','1');
 		$result = $result->result_array();
 		
 		if($result)

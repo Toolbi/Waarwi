@@ -394,6 +394,11 @@ Class Trip_model extends CI_Model
 		
 	}
 
+	function publish_trip($data)
+	{
+		$this->db->update('tbl_trips', $data);
+		return $this->db->insert_id();
+	}
 		
 	function delete_legdetils($trip_id)
 	{
@@ -404,6 +409,11 @@ Class Trip_model extends CI_Model
 	function get_legdetails($id)
 	{
 		return $this->db->where('trip_led_id', $id)->get('tbl_t_trip_legs')->row();	
+	}
+
+	function get_trips_details($id)
+	{
+		return $this->db->where('trip_id', $id)->get('tbl_trips')->row();	
 	}
 
 	/*  Nouvelle fonction pour récupérer uniquement les parties d'un trajet soumis par l'utilisateur
@@ -675,5 +685,6 @@ Class Trip_model extends CI_Model
             return $data;
 
     }
-		
+
+   		
 }

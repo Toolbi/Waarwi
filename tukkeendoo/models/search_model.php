@@ -109,6 +109,7 @@ Class Search_model extends CI_Model
 			$this->db->having('distination_distance <'.$radius);
 			$this->db->order_by('source_distance','DESC');
                         $this->db->where('tbl_trips.trip_status','1');
+                        $this->db->where('tbl_trips.trip_public','1');
 			
 			$result = $this->db->get('tbl_t_trip_legs');
                         

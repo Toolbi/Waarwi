@@ -202,8 +202,8 @@ $(document).ready(function() {
             </div>
 
       <div class="fleft width100 padding20">
-        <div class="next">
-          <a href="<?php print base_url(); ?>addtrip" class="padding10 btn next-btn"><span class="fa fa-check"> <?php echo lang('publish_trip');?> </a>
+        <div class="next">        
+          <a  class="publish-trip padding10 btn next-btn" rel="<?= $trip['trip_id'];?>" val="1"> <span class="fa fa-check"> </span> <?php echo lang('publish_trip');?></a>
         </div> 
             
         <div class="prev">

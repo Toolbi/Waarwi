@@ -522,17 +522,15 @@ class Addtrip extends Traveller_Controller {
         }
     }
 
+    /* Mettre à jour la le trajet pour le mettre en public afin de le publier*/
+    function publish_trip($ajax = false) {
+        $trip_id = $this->input->post('trip_id');
+        $trip_public = $this->input->post('trip_public');
 
-    function test() 
-      {
-  foreach($_POST['Won'] as $key=>$val) {
-echo "The value of $key is $val <br>";
-} 
-foreach($_POST['Lost'] as $key=>$val) {
-echo "The value of $key is $val <br>";
-} 
-      }
-
+                $data['trip_public'] = $trip_public;
+                $this->Trip_model->publish_trip($data);      
+               
+    }
 
     function update_time($ajax = false) {
         $trip_leg_id = $this->input->post('lid');
