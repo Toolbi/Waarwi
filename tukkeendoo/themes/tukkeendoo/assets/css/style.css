@@ -1563,7 +1563,7 @@ ol.unstyled, ul.unstyled {
   font-size: 10px;
 }
 .show-rate{
- 
+ float: right;
 }
 
 #route-map-data{

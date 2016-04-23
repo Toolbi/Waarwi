@@ -155,16 +155,15 @@ function viewPopcontact(pmId)
     <!-- End Left -->
 
     <div class="trip-right cs-lgrey-bg">
-      
       <div class="rowrec trp-top padding10">
           <img  class="passanger-img" src="<?php if($tripdetails['user_profile_img']) { echo theme_profile_img($tripdetails['user_profile_img']); } else { echo theme_img('default.png');  }?>">
           <strong class="cs-blue-text"><?= $tripdetails['user_first_name']?></strong> <span><?php echo lang('offer');?> </span>
           <h4 class="paddingtop10 cs-blue-text">
-      <?php $source = explode(",", $tripdetails['source_leg']); 
-      echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
-      <?php $destination = explode(",", $tripdetails['destination_leg']); 
-      echo  $destination[0]; ?>
-      </h4>
+          <?php $source = explode(",", $tripdetails['source_leg']); 
+          echo  $source[0]; ?>  <span class="paddinglr10"> <img src="<?php echo theme_img('search-arrow-right-grey.png');?>"> </span>
+          <?php $destination = explode(",", $tripdetails['destination_leg']); 
+          echo  $destination[0]; ?>
+        </h4>
       </div>
 
       <div class="rowrec line4"></div>

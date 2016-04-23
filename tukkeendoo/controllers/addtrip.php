@@ -435,16 +435,17 @@ class Addtrip extends Traveller_Controller {
     }
 
     // Fonction pour continuer l'ajout du trajet
-    function step_2() {
+    function step_2($idd) {
         $last_trip_id =  $this->session->flashdata('trip_id');
         $data = array();
         $this->load->helper('form');
         $carpool_session['carpool_session'] = $this->CI->carpool_session->userdata('carpool');
         $id = $carpool_session['carpool_session']['user_id'];
         $this->user_id = $carpool_session['carpool_session']['user_id'];
+        $data['symbol']  = $this->CI->config->item('currency_symbol');
         // $data = $this->Trip_model->get_trips($this->user_id, $data);
         $data['tripdetails'] = $this->Trip_model->get_tripdetail($last_trip_id);
-        $data = $this->Trip_model->get_legs($last_trip_id, $this->user_id, $data);
+        $data = $this->Trip_model->get_legs(44, $this->user_id, $data);
         // $data['customer'] = $this->Customer_model->get_customer($id);
         // echo '<pre>';print_r($data);echo'</pre>';
            // die;

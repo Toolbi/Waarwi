@@ -169,6 +169,7 @@ $(document).ready(function() {
                         </thead>
                         <tbody>
                         <?php foreach ($trip_details as $trip){
+
                         if(!empty($legdetails['leg_'.$trip['trip_id']])){
                           foreach ($legdetails['leg_'.$trip['trip_id']] as $trip_leg){?>
                           <tr>
@@ -178,7 +179,9 @@ $(document).ready(function() {
                             </td>
                             
                             <td>
-                            <input  type="text"  name="trip_rate_<?=$trip_leg['trip_led_id']?>" id="trip_rate_<?=$trip_leg['trip_led_id']?>" value="<?=$trip_leg['route_rate']?>" class="edit_fld show-rate" disabled>
+                            <input  type="text"  name="trip_rate_<?=$trip_leg['trip_led_id']?>" id="trip_rate_<?=$trip_leg['trip_led_id']?>" 
+                            value="<?=$trip_leg['route_rate']?>" class="edit_fld" disabled>
+                            <?php echo $symbol.' '.lang('per_passenger');?>
                             </td>
                             
                             <td>
