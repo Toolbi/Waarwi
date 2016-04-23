@@ -175,7 +175,7 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .margintop20 { margin-top: 20px; }
 .trp-part li { width: 50%; float: left; font-size: 14px; }
 .trp-part li span { background: #e6e6e6; height: 8px; width: 100%; float: left; }
-.cs-blue-border {border: 0.1em solid #13988a; border-radius: 100px; }
+.cs-blue-border {border: 0.1em solid #c6412e; border-radius: 100px; }
 .cs-blue-bg { background: #13988a!important; border-radius: 100px; }
 .roundstep-no { height: 23px; background: none repeat scroll 0% 0% #13988a; color: #FFF; border-radius: 23px; padding: 1px 0px 0px 6px; border: 1px solid #13988a; margin-right: 10px; }
 .bold { font-weight: 700; }
@@ -1565,3 +1565,100 @@ ol.unstyled, ul.unstyled {
 .show-rate{
  
 }
+
+#route-map-data{
+  width: 356px;
+  height: 400px;
+}
+
+#formToolbox {
+    position: absolute;
+    margin-bottom: 2%;
+    bottom: 0;
+    background-color: #DDD;
+    z-index: 9999;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.next{
+  float: right;
+}
+.next-btn{
+  border: 1px #13988a;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #13988a;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+  width: 150px!important;
+  padding: 15px 25px!important;
+  font-size: 16px;
+}
+.next-btn:hover { 
+  border: 1px #128a7c; 
+  background-color: #128a7c ;
+  color:#FFF;
+}
+
+.cancel{
+ float: left; 
+ padding-left: 15%;
+}
+
+.cancel-btn{
+  border: 1px #c6412e;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #c6412e;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+  width: 150px!important;
+  padding: 15px 25px!important;
+  font-size: 16px;
+}
+.cancel-btn:hover { 
+  border: 1px #a6260e; 
+  background-color: #a6260e ;
+  color:#FFF;
+}
+.prev{
+  float: left;
+}
+
+.prev-btn{
+  border: 1px #13988a;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #13988a;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+  width: 150px!important;
+  padding: 15px 25px!important;
+  font-size: 16px;
+}
+.prev-btn:hover { 
+  border: 1px #128a7c; 
+  background-color: #128a7c ;
+  color:#FFF;
+}
+
+.tagbox-btn{
+  border: 1px #13988a;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #13988a;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+  width: 100px!important;
+  font-size: 16px;
+}
+.tagbox-btn:hover { 
+  border: 1px #128a7c; 
+  background-color: #128a7c ;
+  color:#FFF;
+}
+.width300{
+  width: 300px;
+}
+

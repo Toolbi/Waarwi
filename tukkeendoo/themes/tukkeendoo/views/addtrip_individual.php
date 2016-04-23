@@ -261,10 +261,10 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         </div>  
         
         <!-- <div class="fleft width100 line4"></div> -->
-                <div class="fleft width100 margintop20">
+                <div class="fleft  margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('available_seat');?></span>          
           <?php
-    $data = array('name'=>'avail_seats','id'=>'avail_seats','class'=>'fleft width100 padding10 row', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
+    $data = array('name'=>'avail_seats', 'type'=>'number','id'=>'avail_seats','class'=>'fleft width100 padding10 row width300', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
     echo form_input($data);?>
         </div>
         <div class="fleft width100 line4"></div>
@@ -272,22 +272,36 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
           <span class="size16 fleft bold"><?php echo lang('add_details');?></span>   
 
         <div class="fleft width100 margintop20">
-          <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('phone_number');?></span>
+          <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('phone_number');?></span><br>
+          <span class="description"> <?php echo lang('phone_number_desc');?></span>
           <?php
-    $data = array('name'=>'number', 'id'=>'number','class'=>'fleft width100 padding10 row',  'placeholder'=>lang('contact_person_number'), 'value'=>set_value('number', $number));
+    $data = array('name'=>'number', 'id'=>'number','class'=>'fleft width300 padding10 row',  'placeholder'=>lang('contact_person_number'), 'value'=>set_value('number', $number));
     echo form_input($data);?>
         </div>
         <div class="fleft width100 margintop20">
-          <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('comments');?></span>
+          <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('comments');?></span><br>
+          <span class="description"> <?php echo lang('comments_desc');?></span>
            <?php
     $data = array('name'=>'comments','class'=>'fleft width100 padding10 rows','rows'=>'4', 'id'=>'comments', 'value'=>set_value('comments', $comments));
     echo form_textarea($data);?> 
          
         </div>
-    <div class="fleft width100 line4"></div>
-      <div class="margintop20 fright">
-        <input type="submit" value="<?php echo lang('next');?>" class="padding10 btn btn-success">
-      </div>
+    <div class="float width100 line4"></div>
+    <div class="fleft width100 padding20">
+        <div class="next">
+          <button type="submit" class="padding10 btn next-btn"><span class="fa fa-arrow-right"></span> <?php echo lang('next');?></button>
+        </div> 
+            
+        <div class="prev">
+          <button class="padding10 btn prev-btn" disabled="disabled"><span class="fa fa-arrow-left"></span> <?php echo lang('prev');?></button>
+        </div> 
+        <div class="cancel">
+          <a class="padding10 btn cancel-btn" href="<?php print base_url(); ?>"><span class="fa fa-times "></span> <?php echo lang('cancel');?></a>
+        </div>     
+    </div>
+
+
+     
     </div>
      </div>
     <!-- End Left -->
@@ -298,6 +312,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
       <h2 class="size16 fleft bold"><?php echo lang('journey_route');?></h2><br>
 
       <div class="float width100 line4"></div>
+
         <div id="route-map-data"></div>
       <div class="fleft width100 line4"></div>
 
@@ -316,6 +331,18 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
   </div>
   </div>
   </div>
+  
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(14.499454,-14.445561),
+    zoom:6,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("route-map-data"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
  
 <?php include('footer.php');?> 

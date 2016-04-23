@@ -200,12 +200,21 @@ $(document).ready(function() {
                          <?php $i++; } } ?>
                       </table>
             </div>
-      
-        <div class="fleft width100 padding20 ">
-          <a class="btn btn-info" href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>"> <?php echo lang('prev'); ?></a>
-          <a href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>" class="btn btn-danger fcenter"> <?php echo lang('delete_all_trips');?> </a>
-                    <a href="<?php print base_url(); ?>addtrip" class="btn btn-success fright"> <?php echo lang('publish_trip');?> </a>
-        </div>
+
+      <div class="fleft width100 padding20">
+        <div class="next">
+          <a href="<?php print base_url(); ?>addtrip" class="padding10 btn next-btn"><span class="fa fa-check"> <?php echo lang('publish_trip');?> </a>
+        </div> 
+            
+        <div class="prev">
+          <a href="<?= base_url('addtrip/step_1/'.$trip['trip_id']); ?>" class="padding10 btn prev-btn"><span class="fa fa-arrow-left"></span> <?php echo lang('prev');?></a>
+        </div> 
+        <div class="cancel">
+          <a class="padding10 btn cancel-btn" href="<?= base_url('addtrip/delete/'.$trip['trip_id']); ?>"><span class="fa fa-times "></span> <?php echo lang('cancel');?></a>
+        </div>     
+    </div>
+
+       
     <!-- End Left -->
    
     <!-- End Right -->

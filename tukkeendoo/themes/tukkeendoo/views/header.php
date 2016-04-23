@@ -13,8 +13,7 @@ if(!empty($description)){
 <title><?php echo lang('head_title'); ?> </title>
 <!-- must have -->
 <?php echo theme_js('jquery-1.9.1.js', true);?>
-<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
-<!-- <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+<?php echo theme_js('jquery-migrate-1.3.0.min.js', true);?>
 <?php echo theme_js('bootstrap.js', true);?>
 
     <?php  echo theme_css('bootstrap.css', true);?>

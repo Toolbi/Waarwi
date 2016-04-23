@@ -7,6 +7,7 @@
 <!-- Librairies -->
 
 <?php echo theme_js('jquery-1.9.1.js', true);?>
+<?php echo theme_js('jquery-migrate-1.3.0.min.js', true);?>
 <?php echo theme_js('jquery-ui-1.9.2.js', true);?>
 <?php echo theme_js('bootstrap.js',true); ?>
 <?php echo theme_js('bootstrap-datepicker.js',true); ?>

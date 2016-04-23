@@ -19,10 +19,10 @@
     var defaults = {
       separator: '~',
       className: 'tagBox',
-      tagInputClassName: 'fleft padding10 ',
-      tagButtonClassName: 'btn btn-success tagbox',
+      tagInputClassName: 'fleft padding10 marginleft10',
+      tagButtonClassName: 'btn tagbox-btn tagbox colorwhite',
       tagButtonTitle: '<?php echo lang('add_route_btn');?>',
-      confirmRemoval: false,
+      confirmRemoval: true,
       confirmRemovalText: '<?php echo lang('remove_tag_confirm');?>',
       completeOnSeparator: true,
       completeOnBlur: false,
@@ -36,6 +36,7 @@
       beforeTagAdd: function(tag_to_add) {},
       afterTagAdd: function(added_tag) {}
     }
+    
     
     if (options) {
       options = jQuery.extend(defaults, options);
@@ -185,7 +186,7 @@
         jQuery.each(tags_list, function(key, val) {
          
       if(val != "") {
-            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+'btn btn-danger padding10 fright" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
+            var remove_tag_link = (options.readonly) ? '' : '<a href="javascript:void(0)"  class="'+options.className+'-remove '+options.className+'-remove-'+uuid+' btn cancel-btn fright" title="Remove Tag" rel="'+val+'">'+options.removeTagText+'</a>';
             if((options.enableDropdown) && jQuery('#'+options.className+'-input-'+uuid).find("option").length > 0) {
               var display_val = jQuery('#'+options.className+'-input-'+uuid).find("option[value='"+val+"']").text();
             } else {
