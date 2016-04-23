@@ -104,6 +104,15 @@
 			}
 			
 			});
+		}else{
+			$.goNotification(errorMessage, { 
+		      type: 'error', // success | warning | error | info | loading
+		      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
+		      timeout: 7000, // time in milliseconds to self-close; false for disable 4000 | false
+		      animation: 'fade', // fade | slide
+		      animationSpeed: 'slow', // slow | normal | fast
+		      allowClose: true, // display shadow?true | false
+		     });
 		}
 			
 	});

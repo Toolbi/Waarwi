@@ -13,11 +13,6 @@
 <script>
 $(document).ready(function() {  
   
-    <?php if (empty($txtphone)){ ?>
-    $('#txtphone').attr('readonly', false);
-    $('#txtphone').removeClass('disable');
-    <?php } ?>
-    
     <?php
     //lets have the flashdata overright "$message" if it exists
     if($this->session->flashdata('message'))
@@ -122,8 +117,7 @@ $(document).ready(function() {
    
       
   });
-  
-  
+var errorMessage = "<?php echo lang('rate_error_message');?>";
   
 </script>
 <?php  echo theme_js('common.js', true);?>

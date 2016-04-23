@@ -382,6 +382,7 @@ $lang['rate4']                 	  	  			= 'Très bien';
 $lang['rate3']                 	  	  			= 'Bien';
 $lang['rate2']                 	  	  			= 'Dévevant';
 $lang['rate1']                 	  	  			= 'A éviter';
+$lang['rate_error_message']                 	= 'Assurer vous de ne pas mettre d\'espace, de points, du texte ou de virgules dans la case.';
 
 //Enquiry
 
