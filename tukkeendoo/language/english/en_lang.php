@@ -21,6 +21,7 @@ $lang['expected_departure']			= 'Expected time for departure:';
 $lang['edit_time']					= 'Edit Time';
 $lang['edit_rate']					= 'Edit Price';
 $lang['rate_description_text']		= 'One last step to finalize the publication of your trip. Record prices for parts of your trip and finish by clicking Publish my trip.';
+$lang['rate_error_message']         = 'Make sure you do not put space, points, text or comma in the box.';
 $lang['price']						= 'Price:';
 $lang['publish_trip']				= 'Publish my trip:';
 $lang['edit_price']						= 'Edit price:';
