@@ -681,4 +681,21 @@ $lang['flexibility_4']						= 'à plus ou moins 45mn';
 $lang['detour_1']							= '15mn';
 $lang['detour_2']							= '30mn';
 $lang['detour_3']							= '45mn';
+
+/*Ajout de trajet errors message*/
+$lang['vechicletype']		 				= 'Sélectionnez votre type de véhicule';
+$lang['amenities'] 							= 'Choisissez un des équipements';
+$lang['txtsource'] 							= 'Entrez votre ville de départ';
+$lang['txtdestination']						= 'Entrez votre ville d\'arrivée';
+$lang['avail_seats'] 						= 'Entrez le nombre de places proposées';
+$lang['jhour'] 								= 'Vérifiez les informations saisies';
+$lang['passenger_type'] 					= 'Sélectionnez votre type de passager';
+$lang['name_error'] 						= 'Entrez votre nom';
+$lang['number_error'] 						= 'Votre numéro mobile est nécessaire';
+$lang['comments_error'] 					= 'Entrez un commentaire pour plus de détails';
+$lang['jquerytagboxtext'] 					= 'Ajouter minimum une route';
+$lang['tzone'] 								= 'Vérifiez les informations';
+$lang['frequency_error'] 					= 'Sélectionnez votre type de voyage';
+$lang['letter_only']						= 'Veuillez entrer des lettres uniquement.';
+
 ?>

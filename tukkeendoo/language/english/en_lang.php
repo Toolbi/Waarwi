@@ -698,4 +698,20 @@ $lang['settings_update_msg']					= 'Your setting changed';
 
 $lang['home']								= 'Home';
 $lang['dashboard_message']					= 'Hi';
+
+/*Ajout de trajet errors message*/
+$lang['vechicletype']							= 'Select your vechicle type';
+$lang['amenities']								= 'Choose one amenities';
+$lang['txtsource']								= 'Enter your source';
+$lang['txtdestination']							= 'Enter your destination';
+$lang['avail_seats']							= 'Availble sets';
+$lang['jhour']									= 'Please check your active trips/timings';
+$lang['passenger_type']							= 'Select your passenger type';
+$lang['name_error']								= 'Enter your name';
+$lang['number_error']							= 'Mobile number is required';
+$lang['comments_error']							= 'Enter your commends';
+$lang['jquerytagboxtext']						= 'Please add atleast one route';
+$lang['tzone']									= 'Please check your timings';
+$lang['frequency_error']						= 'Select your trip type';
+$lang['letter_only']							= 'Please enter only letters';
 ?>

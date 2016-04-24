@@ -10,66 +10,6 @@
 <?php echo theme_js('popup/jquery.boxy.js',true) ?>
 <?php echo theme_css('checkbox.css',true) ?>
 
-<script>
-$(document).ready(function() {  
-  
-    <?php
-    //lets have the flashdata overright "$message" if it exists
-    if($this->session->flashdata('message'))
-    {
-      $message  = $this->session->flashdata('message'); ?>
-      $.goNotification('<?=$message?>', { 
-      type: 'success', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php }
-    
-    if($this->session->flashdata('error'))
-    {
-      $error  = $this->session->flashdata('error'); 
-      ?>
-      $.goNotification("<?=trim($error)?>", { 
-      type: 'error', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 5000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php
-    }
-    
-    if(function_exists('validation_errors') && validation_errors() != '')
-    {
-      $error  = validation_errors();
-      ?>
-      $.goNotification('<?=trim($error)?>', { 
-      type: 'error', // success | warning | error | info | loading
-      position: 'top center', // bottom left | bottom right | bottom center | top left | top right | top center
-      timeout: 200000, // time in milliseconds to self-close; false for disable 4000 | false
-      animation: 'fade', // fade | slide
-      animationSpeed: 'slow', // slow | normal | fast
-      allowClose: true, // display shadow?true | false
-      });
-    <?php
-    }
-    ?>
-    
-      
-  });
-  
-<?php /*?>function areyousure()
-{
-  //return confirm('<?php echo 'Are you want to delete this Vehicle';?>');
-   Boxy.confirm("Please confirm:", function() { return true; }, {title: 'Message'});
-    //return false;
-} <?php */?>
-  
-
 </script>
 <script type="text/javascript" src="<?php echo theme_js('jquery.validate.js');?>"></script>
 <?php echo theme_js('profile.js',true) ?>
@@ -112,7 +52,6 @@ $(document).ready(function() {
              $(this).slideToggle('slow');
         });
     }
-  
   
    
       
@@ -182,7 +121,7 @@ var errorMessage = "<?php echo lang('rate_error_message');?>";
                               <div id="edit-rate-<?=$trip_leg['trip_led_id']?>" style="display:none;">
                             <?php  
                               $fresult = $trip_leg['route_rate'];            
-                              $data = array('name'=>'route_rate','id'=>'rate'.$trip_leg['trip_led_id'],'class'=>'rate'.$trip_leg['trip_led_id'], 'placeholder'=>'Trip Rate', 'value'=>set_value('avail_seats', $fresult));
+                              $data = array('name'=>'route_rate', 'type'=>'number','min'=>'0','id'=>'rate'.$trip_leg['trip_led_id'],'class'=>'rate'.$trip_leg['trip_led_id'], 'placeholder'=>'Trip Rate', 'value'=>set_value('avail_seats', $fresult));
                               echo form_input($data);?>
                               <span class="edit-rate-btn"><a href="javascript:void(0)" class="btn btn-success table-rate-btn padchg save-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('save');?> </a>
                               <a href="javascript:void(0)" class="btn btn-danger table-rate-btn padchg cancel-leg-rate" rel="<?=$trip_leg['trip_led_id']?>"> <?php echo lang('cancel');?> </a></span>

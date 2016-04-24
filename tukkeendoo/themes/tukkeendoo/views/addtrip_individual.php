@@ -113,8 +113,12 @@ $(function () {
 <script type="text/javascript">
 var baseurl = "<?php print base_url(); ?>";
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
+
+
+
 </script>
-<?php  echo theme_js('trip.js', true);?>
+<!-- <?php  echo theme_js('trip.js', true);?> -->
+<?php include ('trip.php');?>
   
   
 <div class="container-fluid margintop40">
@@ -264,7 +268,7 @@ var country = '<?php print ($this->config->item('country_code') != '')?$this->co
         <div class="fleft  margintop20">
           <span class="size14 bold row"><span class="mandatory">*</span> <?php echo lang('available_seat');?></span>          
           <?php
-    $data = array('name'=>'avail_seats', 'type'=>'number','id'=>'avail_seats','class'=>'fleft width100 padding10 row width300', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
+    $data = array('name'=>'avail_seats', 'type'=>'number', 'min'=>'0','id'=>'avail_seats','class'=>'fleft width100 padding10 row width300', 'placeholder'=>lang('available_seat_placeholder'), 'value'=>set_value('avail_seats', $avail_seats));
     echo form_input($data);?>
         </div>
         <div class="fleft width100 line4"></div>
