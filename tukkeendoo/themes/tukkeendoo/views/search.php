@@ -18,9 +18,15 @@ $(document).ready(function() {
 		                            // displayed. You can change this if you want.
 		delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
 		               // This is mainly for usability concerns. You can alter this as you see fit
-		scroll  : true // The main bit, if set to false posts will not load as the user scrolls. 
+		scroll  : true, // The main bit, if set to false posts will not load as the user scrolls. 
 		               // but will still load if the user clicks.
+		no_more_trips: '<?php echo lang('no_more_trips');?>',
 		
+		scroll_for_more_or_click_here: '<?php echo lang('scroll_for_more_or_click_here');?>',
+		
+		click_for_more: '<?php echo lang('click_for_more');?>',
+		
+		loading_trips: '<?php echo lang('loading_trips');?>'
 	});
 	
 });

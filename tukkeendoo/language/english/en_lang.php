@@ -103,7 +103,10 @@ $lang['arrival']						    = 'Arrival:';
 $lang['per_passenger']					    = 'Per Passenger';
 $lang['available_seat']					    = 'Availabe Seat';
 $lang['comfort_level']					    = 'Comfort Level of Car';
-
+$lang['search_error']						= 'Correct source,desination address and date required';
+$lang['click_for_more']						= 'Click for more';
+$lang['scroll_for_more_or_click_here']		= 'Scroll for more or click here';
+$lang['loading_trips']						= 'Loading trips...';
 //Trip Detail Language
 $lang['search']					        = 'Search';
 $lang['trip_detail']					= 'Trip Details';
