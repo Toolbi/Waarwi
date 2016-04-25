@@ -294,7 +294,7 @@ $(document).ready(function() {
                                                               <option value="2"><?php echo lang('rate2'); ?></option>
                                                               <option value="1"><?php echo lang('rate1'); ?></option>
                                                             </select>
-                                                              <button class="btn btn-warning" onClick="addRating(this,<?php echo $rating->user_id;?>); refresh();"><?php echo lang('give_rate'); ?></button>  
+                                                              <button class="btn btn-warning" onClick="addRating(this,<?php echo $rating->user_id;?>); "><?php echo lang('give_rate'); ?></button>  
                                                               
                                                         </div>
                                                     </td>

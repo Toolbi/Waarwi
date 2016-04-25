@@ -93,15 +93,17 @@ $lang['both']					            = 'Les deux';
 $lang['allowed_type']						= 'Type de permis';
 $lang['male_only']						    = 'Homme seulement';
 $lang['female_only']					    = 'Femme seulement';
-$lang['return_journy']						= 'Trajet de retour';
+$lang['return_journy']						= 'Trajet retour';
 $lang['yes']						        = 'Oui';
 $lang['no']						            = 'Non';
 $lang['search']						        = 'Rechercher';
-$lang['no_more_trips']						= 'Aucun trajet correspondant à votre recherche !';
+$lang['no_more_trips']						= 'Aucun autre trajet ne correspond à votre recherche !';
 $lang['departure']						    = 'Départ:';
 $lang['arrival']						    = 'Arrivée:';
-$lang['per_passenger']					    = 'Par passager';
+// $lang['per_passenger']					    = 'Par passager';
+$lang['available_seat_search_1']			= 'places disponibles';
 $lang['available_seat']					    = 'Places disponibles';
+$lang['available_seat_search_2']			= 'place disponible';
 $lang['comfort_level']					    = 'Confort';
 //Trip Detail Language
 $lang['search']					        = 'Recherche';
@@ -132,6 +134,7 @@ $lang['enquiry_accepted']				= 'Vous avez déjà réservé pour ce trajet.';
 $lang['please_trip_date']				= 'Merci de renseigner la date du trajet';
 $lang['driver']							= 'Conducteur';
 $lang['years']							= 'Années';
+$lang['dob_year']							= 'ans';
 $lang['my_verifications']				= 'Mes vérifications';
 $lang['phone']							= 'Téléphone';
 $lang['email']							= 'Email';
@@ -697,5 +700,33 @@ $lang['jquerytagboxtext'] 					= 'Ajouter minimum une route';
 $lang['tzone'] 								= 'Vérifiez les informations';
 $lang['frequency_error'] 					= 'Sélectionnez votre type de voyage';
 $lang['letter_only']						= 'Veuillez entrer des lettres uniquement.';
+
+/*Search page*/
+$lang['short_by']							= 'Filtrer par';
+
+$lang['proximity']							= 'Proximité';
+$lang['time']								= 'Temps';
+$lang['price']								= 'Prix';
+
+$lang['car_comfort_level']					= 'Confort';
+$lang['Luxury']								= 'Luxe';
+$lang['comfort_or_above']					= 'Confort ou au-dessus';
+$lang['normal_or_above']					= 'Nonfort ou au-dessus';
+$lang['all_ypes']							= 'Tous les types';
+$lang['at']							= 'à';
+$lang['chat_green']							= 'J\'aime bien discuter';
+$lang['chat_red']							= 'Je n\'aime pas discuter';
+
+$lang['food_green']							= 'J\'aime manger en voiture.';
+$lang['food_red']							= 'Je n\'aime pas qu\'on mange dans la voiture.';
+$lang['music_green']						= 'J\'aime la musique.';
+$lang['music_red']							= 'J n\'aime pas la musique dans la voiture.';
+
+$lang['smoke_green']						= 'J\'aime la cigarette';
+$lang['smoke_red']							= 'Je n\'aime pas la cigarette dans la voiture';
+$lang['km_away']							= 'km de votre lieu de recherche )';
+$lang['sea_trip_complet']					= 'Complet';
+
+
 
 ?>

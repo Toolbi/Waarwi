@@ -120,9 +120,14 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .sea-inp { width: 29%; }
 .sea-dat { width: 15%; }
 .srcin-but { padding: 11px 10px!important; width: 146px; }
-.sea-box { padding: 10px 0 25px; margin-bottom: 15px; border-bottom: solid thin #E2E1E1; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
+.sea-box { /*padding: 10px 0 25px;*/ /*margin-bottom: 15px;*/ border-bottom: solid thin #E2E1E1; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
 .sea-box:hover { background: #f2f2f2; }
-.sea-col1 { width: 16.5%; float: left; padding: 0 10px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
+.sea-col1 { 
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  /*width: 200px;*/
+  /*padding: 10px; */
+  color:#000; width: 16.5%; float: left; padding: 0 10px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
 .sea-nam { text-align: center; }
 .sea-nam h3 { color: #13988a; font-size: 18px; } 
 .line2 { background: #e8e8e8; height: 1px; margin: 12px 0 6px; padding: 0; display: block; }
@@ -136,8 +141,10 @@ background: 0 0; left: inherit; bottom: -10px; margin-left: 130px;  }
 .cs-blue-text { color: #13988a; }
 .paddingtop10 { padding-top: 10px; }
 .sea-col3 { width: 33.33%; float: left; color: #333; padding: 0 10px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
+.sea-col4 { width: 33.33%; float: left; color: #333; padding: 0 10px; box-sizing: border-box; -webkitbox-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
 .size14 { font-size: 14px; }
 .sea-col3 h4 { color: #13988a; }
+.sea-col4 h4 { color: #13988a; }
 .blue-badge {  }
 .marginleft0 { margin-left: 0; }
 .fleft { float: left; }
@@ -333,6 +340,7 @@ top: -9px; left: 50%; margin-left: 43px; }*/
 .profile-img img { border-radius: 50%; }
 .passanger-img { width: 40px; height: 40px; border-radius: 50%; border: solid 2px #13988a; margin-right: 10px; }
 .passanger-img img { border-radius: 50%; }
+
 .my-account-button span { font-size: 16px; color: #fff; padding: 4px 0 0;   float: left; }
 .my-account-button p {  padding: 5px 0 0 10px;; float: left; }
 .how-but { text-align: center; font-size: 36px; margin: 35px 0; font-weight: 400; color: #13988a;  }
@@ -1600,6 +1608,23 @@ ol.unstyled, ul.unstyled {
   background-color: #128a7c ;
   color:#FFF;
 }
+.search-btn{
+  border: 1px #13988a;
+  background-position:  35px 8px; 
+  background-repeat:  no-repeat; 
+  background-color: #13988a;
+  transition: all 200ms linear 0s; 
+  color: #FFF;
+  width: 150px!important;
+  height: 45px!important;
+  padding: 15px 25px!important;
+  font-size: 16px;
+}
+.search-btn:hover { 
+  border: 1px #128a7c; 
+  background-color: #128a7c ;
+  color:#FFF;
+}
 
 .cancel{
  float: left; 
@@ -1662,3 +1687,229 @@ ol.unstyled, ul.unstyled {
   width: 300px;
 }
 
+.container.container-sea{
+  width: 1100px;
+}
+
+/* Page de recherche*/
+
+.sea-box-result{
+  font-size: 18px;
+}
+
+.sea-user{
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+}
+
+.search-user-img { width: 70px; height: 70px; border-radius: 50%; /*border: solid 2px #13988a;*/ margin-right: 10px; }
+.search-user-img img { border-radius: 50%; }
+
+.sea-user-info{
+  
+}
+.sea-name{
+/*float: right;*/
+font-size: 14px;
+}
+.sea-age{
+      font-size: 14px;
+    padding-bottom: 0%;
+    /* margin: 10px; */
+    margin-top: -15%;
+    /* float: right; */
+    margin-left: 60%;
+}
+.sea-user-rating{
+
+}
+.sea-preferences{
+    }
+.sea-description{
+
+}
+.sea-departure{
+
+}
+.sea-date{
+   /*border-bottom: 1px solid #ccc;*/
+  /*display: inline-block;*/
+  color: #000!important;
+  /*font-size: 18px;*/
+}
+.sea-from-to{
+
+}
+.sea-from{
+width: 15px;
+height: 15px;
+}
+.marker-from{
+
+}
+.sea-to{
+width: 15px;
+height: 15px;
+}
+.marker-to{
+
+}
+.sea-car-type{
+
+}
+.sea-car-title{
+font-size: 13px;
+}
+.sea-car-name{
+
+}
+.sea-car-comfort{
+color: #000!important;
+font-size: 14px;
+}
+.sea-car-picture{
+
+}
+.search-thumb{
+
+}
+.sea-rate {
+    /* border-bottom: 1px solid #ccc; */
+    /* display: inline-block; */
+    color: #e54527!important;
+    font-size: 25px;
+}
+.sea-seat{
+font-size: 20px;
+}
+.sea-seat{
+font-size: 20px;
+}
+.sea-price{
+border-bottom: 1px solid #ccc;
+  /*display: inline-block;*/
+  color: #000!important;
+  /*font-size: 18px;*/
+}
+.sea-av-seat a{
+color: #FFF!important;
+}
+
+
+.sea-seat-av{
+/*color: #000!important;*/
+text-align: center;
+padding-right: 100px;
+}
+.sea-trip-complet{
+ /*position: absolute;*/
+    /*top: 50px;*/
+    /*right: 0;*/
+    font-size: 25px;
+   
+
+}
+.sea-av{
+
+    font-size: 20px;
+   
+
+}
+
+.sea-col2 { 
+  width: 50%; 
+
+  float: left; 
+
+  padding: 0 10px; 
+
+  box-sizing: border-box; 
+  -webkitbox-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  -o-box-sizing: border-box; 
+
+}
+.sea-col2 h3 { 
+  
+    color: #13988a;
+    font-size: 16px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+   } 
+
+
+.trip-icons span{
+   
+    /*width: 25px;*/
+    height: 27px;
+    /* float: right; */
+    margin: -1px;
+    padding: 10px;
+    /* border-radius: 50%; */
+    display: inline-block;
+    /* border: 1px solid #c4c4cc; */
+    position: relative;
+    /* left: -88px; */
+    /* margin-right: 12px; */
+}
+.trip-icons span img{
+  width:80%; 
+  text-align:center; 
+  padding-left:7px;}
+
+
+
+
+.t-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.t-tooltip .t-tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.t-tooltip:hover .t-tooltiptext {
+    visibility: visible;
+}
+.sea-city{
+  font-size: 18px;
+}
+.sea-comfort-star{
+   margin-right: 40px;
+    position: relative;
+    margin-top: 10%;
+}
+.sea-veh-logo { 
+    margin-right: 40px;
+    position: relative;
+    margin-top: 10%;
+    width: 60px;
+    height: 60px;
+    /* border-radius: 100%; */
+    /* display: inline; */
+    /* margin-bottom: 5px; */
+    /* display: block; */
+    /* padding: 4px; */
+    /* margin-bottom: 20px; */
+    /* line-height: 1.428571429; */
+    /* background-color: #fff; */
+    /* border: 0.5px solid #13988a; */
+    /* border-radius: 4px; */
+    /* -webkit-transition: all .2s ease-in-out; */
+    /* transition: all .2s ease-in-out; */}

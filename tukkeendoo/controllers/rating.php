@@ -76,7 +76,7 @@ class Rating extends Traveller_Controller {
         $save['rating_receiver_id'] = $receiver_id;
         $save['rating'] = $rating;
         $save['rating_comment'] = $comment;
-        $save['trip_id'] = $trip_id;
+        $save['id_trip'] = $trip_id;
         $save['created_date'] = $trip_date;
         $this->rating_model->save_rating($save);
     }

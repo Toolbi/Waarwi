@@ -30,11 +30,14 @@
 <script type="text/javascript">
 var baseurl = "<?php print base_url(); ?>";  
 var country = '<?php print ($this->config->item('country_code') != '')?$this->config->item('country_code'):''; ?>';
+var nowDate = new Date();
+var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
 $(function () {
   $("#datepicker").datepicker({ 
     autoclose: true, 
     todayHighlight: true,
     language: "fr",
+    startDate: today,
   }).datepicker('update', new Date());;
 });
 /* Bouton user fonction */

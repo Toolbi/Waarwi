@@ -27,7 +27,7 @@ function addRating(obj,id) {
 	var trip_id =  'user_id='+id+'&trip_id='+$('#rating-'+id+' #trip_id').val();
 	$.ajax({
 	url: baseurl+"rating/add_rating",
-	data:rating+date+trip_id+comment,
+	data:rating+trip_id+date+comment,
 	type: "POST"
 	});
 }
