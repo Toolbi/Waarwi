@@ -7,7 +7,7 @@
 		var settings = { 
 			nop     : 3, // The number of posts per scroll to be loaded
 			offset  : 0, // Initial offset, begins at 0 in this case
-			error   : 'No More Trips!', // When the user reaches the end this is the message that is
+			error   : options.no_more_trips, // When the user reaches the end this is the message that is
 			                            // displayed. You can change this if you want.
 			delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
 			               // This is mainly for usability concerns. You can alter this as you see fit
@@ -31,8 +31,9 @@
 			                  // so we don't run it multiple times
 			
 			// Custom messages based on settings
-			if($settings.scroll == true) $initmessage = 'Scroll for more or click here';
-			else $initmessage = 'Click for more';
+			var initmessage = 'Test';
+			if($settings.scroll == true) $initmessage = options.scroll_for_more_or_click_here;
+			else $initmessage = options.click_for_more;
 			
 			// Append custom messages and extra UI
 			$this.append('<div class="search_results"></div><div class="loading-bar">'+$initmessage+'</div>');
@@ -112,7 +113,8 @@ var param = 'source='+Source+'&destination='+escape(Destination)+'&formlatlng='+
 				}, function(data) {
 						
 					// Change loading bar content (it may have been altered)
-					$this.find('.loading-bar').html($initmessage);
+					//alert('Initmessage =' + $initmessage);
+					$this.find('.loading-bar').html($initmessage); // TODO corriger l'erreur lorsequ'on clique sur fréquent etc
 						
 					// If there is no data returned, there are no more posts to be shown. Show error
 					if($.trim(data) == "") { 
@@ -149,7 +151,7 @@ var param = 'source='+Source+'&destination='+escape(Destination)+'&formlatlng='+
 						busy = true;
 						
 						// Tell the user we're loading posts
-						$this.find('.loading-bar').html('Loading Trips');
+						$this.find('.loading-bar').html(options.loading_trips);
 						
 						// Run the function to fetch the data inside a delay
 						// This is useful if you have content in a footer you

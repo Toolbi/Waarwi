@@ -42,16 +42,45 @@ class Search extends Front_Controller {
         $data['vechiclecategory'] = $this->category_model->getcategory_list();
 
         if ($_GET) {
-            $param = array('SOURCE' => $this->input->get('source', true), 'DESTINATION' => $this->input->get('destination', true), 'fromlatlng' => $this->input->get('formlatlng', true), 'tolatlng' => $this->input->get('tolatlng', true), 'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))), 'date' => $this->input->get('journey_date', true), 'vechiclecategory' => $this->input->get('VECHICATEGORY_FILTER', true), 'vechicletype' => $this->input->get('VECHITYPE_FILTER', true), 'amenities' => $this->input->get('AMENITIES_FILTER', true), 'traveltype' => $this->input->get('TRAVELTYPE_FILTER', true), 'allowtype' => $this->input->get('TRAVELALLOW_FILTER', true), 'frquencytype' => $this->input->post('FREQUENCY_FILTER', true), 'return' => $this->input->get('Return_Type', true));
+            $param = array(
+	            'SOURCE' => $this->input->get('source', true), 
+	            'DESTINATION' => $this->input->get('destination', true), 
+	            'fromlatlng' => $this->input->get('formlatlng', true), 
+	            'tolatlng' => $this->input->get('tolatlng', true), 
+	            'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))), 
+	            'date' => $this->input->get('journey_date', true), 
+	            'vechiclecategory' => $this->input->get('VECHICATEGORY_FILTER', true), 
+	            'vechicletype' => $this->input->get('VECHITYPE_FILTER', true), 
+	            'amenities' => $this->input->get('AMENITIES_FILTER', true), 
+	            'traveltype' => $this->input->get('TRAVELTYPE_FILTER', true), 
+	            'allowtype' => $this->input->get('TRAVELALLOW_FILTER', true), 
+	            'frquencytype' => $this->input->post('FREQUENCY_FILTER', true), 
+	            'return' => $this->input->get('Return_Type', true)
+			);
         } else {
 
-            $param = array('SOURCE' => $this->input->get('source', true), 'DESTINATION' => $this->input->get('destination', true), 'fromlatlng' => $this->input->get('formlatlng', true), 'tolatlng' => $this->input->get('tolatlng', true), 'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))), 'date' => $this->input->get('journey_date', true), 'vechiclecategory' => $this->input->get('VECHICATEGORY_FILTER', true), 'vechicletype' => $this->input->get('VECHITYPE_FILTER', true), 'amenities' => $this->input->get('AMENITIES_FILTER', true), 'traveltype' => $this->input->get('TRAVELTYPE_FILTER', true), 'frquencytype' => $this->input->get('FREQUENCY_FILTER', true), 'allowtype' => $this->input->get('TRAVELALLOW_FILTER', true), 'return' => $this->input->get('Return_Type', true));
+            $param = array(
+	            'SOURCE' => $this->input->get('source', true), 
+	            'DESTINATION' => $this->input->get('destination', true), 
+	            'fromlatlng' => $this->input->get('formlatlng', true), 
+	            'tolatlng' => $this->input->get('tolatlng', true), 
+	            'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))), 
+	            'date' => $this->input->get('journey_date', true), 
+	            'vechiclecategory' => $this->input->get('VECHICATEGORY_FILTER', true), 
+	            'vechicletype' => $this->input->get('VECHITYPE_FILTER', true), 
+	            'amenities' => $this->input->get('AMENITIES_FILTER', true), 
+	            'traveltype' => $this->input->get('TRAVELTYPE_FILTER', true), 
+	            'frquencytype' => $this->input->get('FREQUENCY_FILTER', true), 
+	            'allowtype' => $this->input->get('TRAVELALLOW_FILTER', true), 
+	            'return' => $this->input->get('Return_Type', true)
+			);
         }
 
         if (!empty($param['fromlatlng']) && !empty($param['tolatlng']) && !empty($param['date'])) {
             
             $this->session->set_userdata('journeyDate', $param['date']);            
             $data['selparam'] = $param;
+			//print_r ($param); // TODO test
             $data = $this->search_model->getSearchResults($param, $offset = null, $data);
             $data = $this->search_model->SearchResults_count($param, $data);
             if ($data['count'] == 0) {
@@ -62,13 +91,13 @@ class Search extends Front_Controller {
             $data['selparam'] = $param;
             $data['count'] = '';
             $data['search_results'] = '';
-            $data['error'] = 'Correct source,desination address and date required';
+            $data['error'] = lang('search_error');
         }
         if (!empty($this->travel)) {
             $data['travel'] = $this->travel;
         }
 
-//		echo '<pre>';print_r($data);echo'</pre>';
+		//echo '<pre>';print_r($data);echo'</pre>'; //TODO test
 //		die;
 
         $this->load->view('search', $data);
@@ -77,7 +106,23 @@ class Search extends Front_Controller {
     function search_ajax($offset) {
         $this->load->helper('form');
 
-        $param = array('SOURCE' => $this->input->post('source', true), 'DESTINATION' => $this->input->post('destination', true), 'fromlatlng' => $this->input->post('formlatlng', true), 'tolatlng' => $this->input->post('tolatlng', true), 'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))), 'date' => $this->input->post('journey_date', true), 'vechiclecategory' => $this->input->post('VECHICATEGORY_FILTER', true), 'vechicletype' => $this->input->post('VECHITYPE_FILTER', true), 'filter' => $this->input->post('FILTER', true), 'amenities' => $this->input->post('AMENITIES_FILTER', true), 'traveltype' => $this->input->post('TRAVELTYPE_FILTER', true), 'frquencytype' => $this->input->post('FREQUENCY_FILTER', true), 'allowtype' => $this->input->post('TRAVELALLOW_FILTER', true), 'return' => $this->input->post('Return_Type', true));
+        $param = array(
+	        'SOURCE' => $this->input->post('source', true), 
+	        'DESTINATION' => $this->input->post('destination', true), 
+	        'fromlatlng' => $this->input->post('formlatlng', true), 
+	        'tolatlng' => $this->input->post('tolatlng', true), 
+	        'frequency' => date('w', strtotime(str_replace("/", "-", $this->input->get('journey_date', true)))),
+	        'date' => $this->input->post('journey_date', true), 
+	        'vechiclecategory' => $this->input->post('VECHICATEGORY_FILTER', true),
+	        'vechicletype' => $this->input->post('VECHITYPE_FILTER', true),
+	        'filter' => $this->input->post('FILTER', true), 
+	        'amenities' => $this->input->post('AMENITIES_FILTER', true), 
+	        'traveltype' => $this->input->post('TRAVELTYPE_FILTER', true), 
+	        'frquencytype' => $this->input->post('FREQUENCY_FILTER', true), 
+	        'allowtype' => $this->input->post('TRAVELALLOW_FILTER', true), 
+	        'return' => $this->input->post('Return_Type', true)
+		);
+        print_r($param); //TODO test
         $data['vechicletype'] = $this->vechicle_model->getvechicletype_list();
         $data['selparam'] = $param;
 

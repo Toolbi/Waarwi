@@ -103,6 +103,11 @@ $lang['arrival']						    = 'Arrivée:';
 $lang['per_passenger']					    = 'Par passager';
 $lang['available_seat']					    = 'Places disponibles';
 $lang['comfort_level']					    = 'Confort';
+$lang['search_error']						= 'Veuillez renseigner votre point de départ, votre destination et la date !';
+$lang['click_for_more']						= 'Cliquer pour voir plus';
+$lang['scroll_for_more_or_click_here']		= 'Dérouler ou cliquer pour voir plus';
+$lang['loading_trips']						= 'Chargement...';
+
 //Trip Detail Language
 $lang['search']					        = 'Recherche';
 $lang['trip_detail']					= 'Détails du trajet';
