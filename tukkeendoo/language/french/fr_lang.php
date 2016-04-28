@@ -229,7 +229,7 @@ $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Profil Facebook';
 $lang['fb-login']						= 'Se connecter avec facebook';
 $lang['gl-login']						= 'Se connecter avec Google';
-$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from Carpooling
+$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from tukkeendoo
 $lang['submit']							= 'Valider';
 $lang['settings']						= 'Paramètres';
 $lang['show_phone']						= 'Monter le numéro de téléphone';
@@ -253,7 +253,7 @@ $lang['old_password']					= 'Ancien mot de passe';
 $lang['new_password']					= 'Nouveau mot de passe';
 $lang['confirm_new_pass']				= 'Confirmer le mot de passe';
 //Register Language
-$lang['join_carpooling']			    = 'Rejoignez-nous !';
+$lang['join_tukkeendoo']			    = 'Rejoignez-nous !';
 $lang['login']			                = 'CONNEXION';
 $lang['first_name']				     	= 'Prénom';
 $lang['last_name']					    = 'Nom';
@@ -304,7 +304,7 @@ $lang['contact']        				= 'Contact';
 $lang['find_a_candidate'] 				= 'Trouver un voyageur';
 $lang['find_a_car'] 					= 'Trouver un véhicule';
 //Login Language
-$lang['sign_in_to_carpooling']					= 'Se connecter';
+$lang['sign_in_to_tukkeendoo']					= 'Se connecter';
 $lang['login']					                = 'CONNEXION';
 $lang['email_username']							= 'Email / nom d\'utilisateur';
 $lang['password']								= 'Mot de passe';
