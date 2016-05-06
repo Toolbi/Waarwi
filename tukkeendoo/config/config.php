@@ -224,7 +224,7 @@ $config['encryption_key'] = '554c66873afb21bec89f8af359d1af77';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'Waarwi';
+$config['sess_cookie_name']		= 'Tukkeendoo';
 $config['sess_expiration']		= 0;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;

@@ -1,6 +1,6 @@
 <footer id="footer-bar" class="row">
 						<p id="footer-copyright" class="col-xs-12">
-							&copy; Copyright 2016 - Waarwi - <?php echo lang('copyright');?>
+							&copy; <?php echo lang('copyright');?>
 						</p>
 					</footer>
 				</div>

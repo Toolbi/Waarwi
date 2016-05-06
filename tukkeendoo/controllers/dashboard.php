@@ -18,7 +18,7 @@ class Dashboard extends Traveller_Controller {
 			$id	= $carpool_session['carpool_session']['user_id'];
 			$data['customer'] = $this->Customer_model->get_customer($id);
 
-			$this->load->helper('form');	
+			$this->load->helper('form');
 					
 			$this->load->view('dashboard', $data);
 	
