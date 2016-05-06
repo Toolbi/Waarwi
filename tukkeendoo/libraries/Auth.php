@@ -14,7 +14,7 @@ class Auth
 		$this->CI->load->library('encrypt');
 		
 		$admin_session_config = array(
-		    'sess_cookie_name' => 'admin_session_config',
+		    'sess_cookie_name' => 'jawrine_session_config',
 		    'sess_expiration' => 0
 		);
 		$this->CI->load->library('session', $admin_session_config, 'admin_session');

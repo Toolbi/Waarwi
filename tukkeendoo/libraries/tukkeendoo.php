@@ -26,11 +26,11 @@ class Tukkeendoo {
 		$this->CI->load->database();
 		$this->CI->load->library('encrypt');
 		
-		$carpool_session_config = array(
-		    'sess_cookie_name' => 'carpool_session_config',
+		$tukkeendoo_session = array(
+		    'sess_cookie_name' => 'tukkeendoo_session',
 		    'sess_expiration' => 0
 		);
-		$this->CI->load->library('session', $carpool_session_config, 'carpool_session');
+		$this->CI->load->library('session', $tukkeendoo_session, 'carpool_session');
 		//print_r($this->CI->student_session->userdata('student'));
 		if ($this->CI->carpool_session->userdata('carpool') !== FALSE)
 		{
