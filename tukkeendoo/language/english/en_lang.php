@@ -295,7 +295,7 @@ $lang['change_password']					= 'Change Password';
 $lang['settings']							= 'Settings';
 
 //header
-$lang['head_title']							= 'Waarwi';
+$lang['head_title']							= 'Tukkeendoo';
 $lang['post_a_trip']					= 'POST A TRIP';
 $lang['login']							= 'LOGIN';
 $lang['register']						= 'REGISTER';
@@ -371,7 +371,7 @@ $lang['view_all_profiles']				= 'View All Profiles';
 $lang['view_your_profile']				= 'View your profil';
 $lang['got_a_question']					= 'Got a Question';
 $lang['contact_now']					= 'Contact Now';
-$lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an email on <strong>contac@waarwi.com</strong>";
+$lang['help_faqs']						= "We're here to help. Check out our FAQs, Send us an email on <strong>contac@tukkeendoo.com</strong>";
 
 
 $lang['find_para_ride']					= 'Find a perfect ride based on your travel needs and share a ride with drivers travelling towards same destination.';
@@ -668,7 +668,7 @@ $lang['upload_text']					= 'Upload your logo image file here';
 $lang['change_size_text']				= "Ensure that your image size is exactly 225px in width, and 53px in height.";
 
 // copyright 
-$lang['copyright']					= 'Copyright 2016 - Waarwi - All right reserved';
+$lang['copyright']					= 'Copyright 2016 - Tukkeendoo - All right reserved';
 $lang['newsletters']				= 'Subscribe to Newsletter';
 
 // client

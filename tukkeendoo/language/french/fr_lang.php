@@ -229,7 +229,7 @@ $lang['email']					        = 'Email';
 $lang['facebook_profile']				= 'Profil Facebook';
 $lang['fb-login']						= 'Se connecter avec facebook';
 $lang['gl-login']						= 'Se connecter avec Google';
-$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Waarwi'";//'I agree to receive newsletter from tukkeendoo
+$lang['i_agree_to']						=  "J'accepte de recevoir des offres de 'Tukkeendoo'";//'I agree to receive newsletter from tukkeendoo
 $lang['submit']							= 'Valider';
 $lang['settings']						= 'Paramètres';
 $lang['show_phone']						= 'Monter le numéro de téléphone';
@@ -261,7 +261,7 @@ $lang['email_id']					    = 'Email';
 // $lang['mobile_no']					    = 'Portable';
 $lang['password']					    = 'Mot de passe';
 $lang['register']					    = "S'incrire";
-$lang['welcome_to_car_pooling']		    = 'Bienvenue sur Waarwi';
+$lang['welcome_to_car_pooling']		    = 'Bienvenue sur Tukkeendoo';
 $lang['Find_a_ride_and_Share_a_ride']	= 'Trouver un trajet et partagr un trajet';
 $lang['save_money_fuel_environment']	= "Economiser de l'argent, du carburant et protèger l'environnement.";
 $lang['got_a_question']		            = 'Une question ?';
@@ -280,7 +280,7 @@ $lang['edit_profile']						= 'Gestion de profil';
 $lang['change_password_page']				= 'Changement du mot de passe';
 $lang['settings']							= 'Paramètres';
 //header
-$lang['head_title']							= 'Waarwi';
+$lang['head_title']							= 'Tukkeendoo';
 $lang['post_a_trip']					= 'PUBLIER UN TRAJET';
 $lang['login']							= 'CONNEXION';
 $lang['register']						= 'S\'INSCRIRE';
@@ -344,7 +344,7 @@ $lang['become_a_star']					= 'Devenez une star';
 $lang['view_all_profiles']				= 'Afficher tous les profils';
 $lang['view_your_profile']				= 'Afficher votre profil';
 $lang['got_a_question']					= 'Une Question ?';
-$lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nous un email à <strong>contac@waarwi.com</strong>";
+$lang['help_faqs']						= "Nous sommes là pour vous aider. Cherchez dans notre FAQs ou envoyez-nous un email à <strong>contac@tukkeendoo.com</strong>";
 $lang['contact_now']					= 'Contactez-nous maintenant';
 //Error Messages
 $lang['error_cheack_email']                   = 'Cette adresse email est déjà utilisée.';
@@ -352,7 +352,7 @@ $lang['error_login']                          = "Erreur d'authentication !";
 $lang['error_edit']                           = 'Vous ne pouvez pas modifier ce véhicule, car il est déjà réservé';
 $lang['error_delete']                         = 'Vous ne pouvez pas supprimer ce véhicule, car il est déjà réservé';
 $lang['error_unable_login']                   = 'Impossible de se connecter';
-$lang['error_account_disable']                = 'Votre compte est désactivé, veuillez nous contacter à contact@waarwi.com'; // contact à changer peut être
+$lang['error_account_disable']                = 'Votre compte est désactivé, veuillez nous contacter à contact@tukkeendoo.com'; // contact à changer peut être
 $lang['error_code']                           = 'Code incorrect';
 $lang['error_invalid_currpass']               = 'Mot de passe incorrect, veuillez vérifier votre saisie';
 //Sucess Messages
@@ -632,7 +632,7 @@ $lang['change_size_text']				= "Assurez-vous que la taille de l'image est exacte
 $lang['logo_image']						= "Logo";
 
 //copyright 
-$lang['copyright']					= 'Copyright 2016 - Waarwi - Tous droits réservés';
+$lang['copyright']					= 'Copyright 2016 - Tukkeendoo - Tous droits réservés';
 $lang['newsletters']				= 'S\'inscrire à la Newsletter';
 
 

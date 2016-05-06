@@ -17,9 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `waarwi3`
+-- Base de données :  `waarwi`
 
-USE waarwi3;
+USE waarwi;
 -- ---------------------------------------------------------------------------------------
 
 

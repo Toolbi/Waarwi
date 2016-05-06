@@ -6,7 +6,7 @@
 <meta content="tukkeendoo, rideshare, travel, car pool, car pooling, car, commute, vanpools, carpools, commuter services, dynamic ridesharing" name="keywords">
 <meta content="www.tukkeendoo.com | India's largest ridesharing network" name="description">
 <link type="image/png; charset=binary" href="http://www.tukkeendoo.com/tukkeendoo/themes/tukkeendoo/assets/img/favicon.ico" rel="shortcut icon">
-<title><?php echo lang('waarwi'); ?></title>
+<title><?php echo lang('head_title'); ?></title>
 
 <?php  echo theme_css('style.css', true);?>
 <?php echo theme_js('jquery-1.6.1.js', true);?>
