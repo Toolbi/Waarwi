@@ -38,7 +38,18 @@ class CI_DB_pdo_result extends CI_DB_result {
 		{
 			$dbh = $this->conn_id;
 			$query = $dbh->query($this->result_id->queryString);
-			$result = $query->fetchAll();
+			
+			//print_r ($dbh . "<br/>");
+			//print_r("Is query an object: " . is_object($query) );
+			//print_r ("query = " . $query . "<br/>");
+			//print_r ("queryString = " . $this->result_id->queryString . "<br/>");
+			
+			if (is_object($query)) {
+				$result = $query->fetchAll();
+			}else{
+				$result = array();
+			}
+			
 			unset($dbh, $query);
 			return count($result);
 		}

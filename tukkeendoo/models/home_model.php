@@ -83,7 +83,7 @@ class Home_model extends CI_Model
 		
 		$data['recent_trips'] = $temp;
 		/*echo'<pre>';print_r($data);echo'</pre>';
-		die;*/
+		/*die;/*/
 		return $data;
 		/*echo $this->db->last_query();
 		die;
