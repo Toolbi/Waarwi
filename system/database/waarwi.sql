@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 06 Mai 2016 à 01:41
+-- Généré le :  Mer 18 Mai 2016 à 00:36
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -19,10 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `waarwi`
 --
-
-CREATE DATABASE waarwi;
-USE waarwi;
-
 
 -- --------------------------------------------------------
 
@@ -103,9 +99,49 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 --
 
 INSERT INTO `sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('2988a46653b8407b9ea00ab3d0a9b718', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462491430, ''),
-('80b050ef711e041a93aa5ef9799734c5', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462491430, ''),
-('bd1688a837b9073759e5bdc05b057deb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462491430, '');
+('cb7adaa3e7bff2f88b86174c85ebc6e5', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572282, ''),
+('80456995a3302fec817ad1b5ab0d5e48', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572282, ''),
+('aae6f6b5ef77b8314898e58869e76023', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462571864, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:20:"fallfallo@hotmail.fr";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"3";s:7:"trip_id";b:0;s:6:"expire";i:1462572580;}}'),
+('72f5d71fae26d4e1478751691a4f1203', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572282, 'a:1:{s:9:"user_data";s:0:"";}'),
+('83726d074cd6a17b792755cf440418a8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572330, ''),
+('0365858bfb202313faa117dc102d8736', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572330, ''),
+('73ed36105f5a83b02fe81ae1d2b418c3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572330, ''),
+('c0fbd2005bd1a7e5f48872a537960bba', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572462, ''),
+('f7733367cccae1cfdf5fa8e2da961804', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572462, ''),
+('a3b223be3d77d5ba71d57f4880f49201', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572462, ''),
+('34050b80329c72c28231daee9cdb8cc0', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572601, ''),
+('20eeaf0438db84fabc4ab2fd8060ab55', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572601, ''),
+('2b63391fb66ce7e5d3fdfdf881ac1ce5', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462572601, ''),
+('0cb2cc6212c2394cb19bec9f5b8750ef', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462669223, 'a:1:{s:9:"user_data";s:0:"";}'),
+('4dab0740a80a4d87730953c009239ed8', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462669223, ''),
+('bd1fbaf1eb53367f0111a8e067737654', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0', 1462669223, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:20:"fallfallo@hotmail.fr";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"3";s:7:"trip_id";b:0;s:6:"expire";i:1462670060;}}'),
+('94be298b920f041ae4d5974b55ce00fa', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1462839622, ''),
+('c8660be72850462d7dbcb106f71fdf77', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463520055, ''),
+('6bbe0aa52b4894f102334a1c96835207', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463519704, ''),
+('00cc571502428fac1f4f8546e9f3c70d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463524476, ''),
+('695e39e45fea1fe6081173c2ea207de1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463439134, ''),
+('a0d742127537fc2849dc3840a4616cb7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720108, 'a:1:{s:9:"user_data";s:0:"";}'),
+('10d05a5ad58a64716a028d872fb0e7d7', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720108, ''),
+('4359724f395d6f208f847aaaab8e80db', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720108, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";a:0:{}s:6:"expire";i:1462720708;}}'),
+('e9c54fd7c63de6a3bd4657462518db9a', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720113, ''),
+('cfce8bbb04aac7182296f7e47554ec41', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720113, ''),
+('558ab6e83a9c5e58fdf0bc1cecb03f5f', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 1462720113, 'a:2:{s:9:"user_data";s:0:"";s:7:"carpool";a:5:{s:10:"user_email";s:22:"falloufall87@gmail.com";s:6:"access";s:6:"travel";s:7:"user_id";s:1:"2";s:7:"trip_id";a:0:{}s:6:"expire";i:1462720761;}}'),
+('8c49593310ba3d7d99b5f868f62d1609', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463439134, ''),
+('1d2966515cedffd964d443031c32d456', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463519800, ''),
+('e79352811b61c29511797177371295b9', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463519920, ''),
+('a017a83ccbb671f030785b8f4c2cd7ca', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463520055, ''),
+('0f798ae9127efa915341d6860bdf30d1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463520752, ''),
+('efb28a0091e59773ce91ea2147ea79ae', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463520752, ''),
+('2c75376249defd8c116f0bbfadb1ad47', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521181, ''),
+('9c8f735b8452fb753eda757c0ec66ae3', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521181, ''),
+('6c7ef0eb4f762393f4073ec5d9dbc6f6', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521738, ''),
+('91806db76d4b42590f31491716eeef9f', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521738, ''),
+('2d7a45e1e0510f188105946cc7e65c69', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521740, ''),
+('88dcb139525b179ee58baedcb1298fcb', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521740, ''),
+('c4767beaf52f40fe7aff38d53e83163d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463524476, ''),
+('856f24d3a3eca6dd84041b4eada342dc', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521802, ''),
+('9c1c68ecd795feaea0f2efa2f7279b98', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463521804, ''),
+('d2d6c5f2763768061651658b2d16ac51', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0', 1463524476, '');
 
 -- --------------------------------------------------------
 
@@ -1161,7 +1197,7 @@ CREATE TABLE IF NOT EXISTS `tbl_enquires` (
   PRIMARY KEY (`enquiry_id`),
   KEY `tbl_trips_tbl_enquires` (`enquiry_trip_id`),
   KEY `tbl_passengers_tbl_enquires` (`enquiry_passanger_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=95 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=96 ;
 
 --
 -- Contenu de la table `tbl_enquires`
@@ -1178,7 +1214,8 @@ INSERT INTO `tbl_enquires` (`enquiry_id`, `enquiry_passanger_id`, `enquiry_trip_
 (90, '8', '276', '7', '2016-04-19', 1, '2016-04-17 22:02:57'),
 (91, '2', '44', '7', '2016-04-23', 0, '2016-04-23 20:19:19'),
 (92, '2', '49', '3', '2016-04-23', 1, '2016-04-23 20:20:08'),
-(94, '2', '50', '3', '2016-04-26', 1, '2016-04-23 21:13:35');
+(94, '2', '50', '3', '2016-04-26', 1, '2016-04-23 21:13:35'),
+(95, '2', '52', '3', '2016-05-08', 1, '2016-05-08 15:08:28');
 
 -- --------------------------------------------------------
 
@@ -1363,7 +1400,7 @@ CREATE TABLE IF NOT EXISTS `tbl_trips` (
   KEY `tbl_users_tbl_trips` (`trip_user_id`),
   KEY `tbl_vehicle_tbl_trips` (`trip_vehicle_id`),
   KEY `tbl_drivers_tbl_trips` (`trip_driver_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
 
 --
 -- Contenu de la table `tbl_trips`
@@ -1373,7 +1410,9 @@ INSERT INTO `tbl_trips` (`trip_id`, `trip_driver_id`, `trip_vehicle_id`, `trip_f
 (44, NULL, '232', '~14.7645042,-17.366028599999936~', '~14.8665572,-15.899495600000023~', 'Dakar, Senegal', 'Touba, Diourbel, Senegal', '', '', '~14.7645042,-17.366028599999936~,,~14.8665572,-15.899495600000023~', 'Dakar, Senegal~Touba, Diourbel, Senegal', 'no', '14:15:00', '01:00:00', NULL, NULL, '', '2', '0', NULL, NULL, '0638226417', 'kjnfekdf elfe jfe ', '7', '2016/04/23', '2016-04-23 17:08:01', 1, 1, 0, 2, 3, 2),
 (45, NULL, '233', '~14.7645042,-17.366028599999936~', '~16.0326307,-16.481816699999968~', 'Dakar, Senegal', 'Saint Louis, Saint-Louis, Senegal', '', '', '~14.7645042,-17.366028599999936~,,~16.0326307,-16.481816699999968~', 'Dakar, Senegal~Saint Louis, Saint-Louis, Senegal', 'no', '10:30:00', '12:38:00', NULL, NULL, '~0~,~2~,~4~', '4', '0', NULL, NULL, '0781786703', 'J''aime voyager', '3', '2016/04/23', '2016-04-23 20:00:25', 1, 1, 0, 2, 1, 2),
 (50, NULL, '233', '~12.5641479,-16.263982499999997~', '~14.7645042,-17.366028599999936~', 'Ziguinchor, Senegal', 'Dakar, Senegal', 'Kaolack', '', '~12.5641479,-16.263982499999997~,~14.1652083,-16.075774899999942~,~14.7645042,-17.366028599999936~', 'Ziguinchor, Senegal~Kaolack, Senegal~Dakar, Senegal', 'no', '09:00:00', '01:00:00', NULL, NULL, '', '5', '0', NULL, NULL, '0781786703', 'Je vai à Dakar', '3', '2016/04/26', '2016-04-23 20:46:35', 1, 1, 0, 2, 1, 2),
-(49, NULL, '233', '~14.7645042,-17.366028599999936~', '~14.8665572,-15.899495600000023~', 'Dakar, Senegal', 'Touba, Diourbel, Senegal', 'Thies', '', '~14.7645042,-17.366028599999936~,~14.7910052,-16.935860400000024~,~14.8665572,-15.899495600000023~', 'Dakar, Senegal~Thies, Senegal~Touba, Diourbel, Senegal', 'no', '08:15:00', '10:14:00', NULL, NULL, '~0~', '4', '0', NULL, NULL, '0781786703', 'J''aime voyager', '3', '2016/04/23', '2016-04-23 20:15:59', 1, 1, 0, 1, 1, 2);
+(49, NULL, '233', '~14.7645042,-17.366028599999936~', '~14.8665572,-15.899495600000023~', 'Dakar, Senegal', 'Touba, Diourbel, Senegal', 'Thies', '', '~14.7645042,-17.366028599999936~,~14.7910052,-16.935860400000024~,~14.8665572,-15.899495600000023~', 'Dakar, Senegal~Thies, Senegal~Touba, Diourbel, Senegal', 'no', '08:15:00', '10:14:00', NULL, NULL, '~0~', '4', '0', NULL, NULL, '0781786703', 'J''aime voyager', '3', '2016/04/23', '2016-04-23 20:15:59', 1, 1, 0, 1, 1, 2),
+(51, NULL, '233', '~14.8665572,-15.899495600000023~', '~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal', 'Dakar, Senegal', 'Thies', '', '~14.8665572,-15.899495600000023~,~14.7910052,-16.935860400000024~,~14.7645042,-17.366028599999936~', 'Touba, Diourbel, Senegal~Thies, Senegal~Dakar, Senegal', 'no', '08:15:00', '10:14:00', NULL, NULL, '', '4', '0', NULL, NULL, '0781786703', 'Je vais rendre visite à mes parent', '3', '2016/05/08', '2016-05-08 00:57:37', 1, 1, 0, 2, 1, 2),
+(52, NULL, '233', '~14.7645042,-17.366028599999936~', '~13.7725888,-13.671005899999955~', 'Dakar, Senegal', 'Tambacounda, Senegal', 'Thies', '', '~14.7645042,-17.366028599999936~,~14.7910052,-16.935860400000024~,~13.7725888,-13.671005899999955~', 'Dakar, Senegal~Thies, Senegal~Tambacounda, Senegal', 'no', '08:15:00', '01:00:00', NULL, NULL, '', '4', '0', NULL, NULL, '0781786703', 'edzfzevftrbrt', '3', '2016/05/08', '2016-05-08 15:07:06', 1, 1, 0, 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1805,7 +1844,15 @@ INSERT INTO `tbl_t_login_logs` (`login_log_id`, `login_id`, `login_ip`, `login_t
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
 (NULL, 3, '127.0.0.1', NULL),
-(NULL, 3, '127.0.0.1', NULL);
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL),
+(NULL, 3, '127.0.0.1', NULL),
+(NULL, 2, '127.0.0.1', NULL);
 
 -- --------------------------------------------------------
 
@@ -1827,7 +1874,7 @@ CREATE TABLE IF NOT EXISTS `tbl_t_trip_legs` (
   `trip_id` int(150) NOT NULL,
   `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`trip_led_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Contenu de la table `tbl_t_trip_legs`
@@ -1860,7 +1907,13 @@ INSERT INTO `tbl_t_trip_legs` (`trip_led_id`, `source_leg`, `source_latitude`, `
 (28, 'Thies, Senegal', '14.7910052', '-16.935860400000024', 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', '08:50 am', 0, 700, 49, '2016-04-23 20:15:59'),
 (29, 'Ziguinchor, Senegal', '12.5641479', '-16.263982499999997', 'Kaolack, Senegal', '14.1652083', '-16.075774899999942', '9:00 ', 0, 5000, 50, '2016-04-23 20:46:35'),
 (30, 'Ziguinchor, Senegal', '12.5641479', '-16.263982499999997', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '9:00 ', 0, 10000, 50, '2016-04-23 20:46:35'),
-(31, 'Kaolack, Senegal', '14.1652083', '-16.075774899999942', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '11:14 am', 0, 6000, 50, '2016-04-23 20:46:35');
+(31, 'Kaolack, Senegal', '14.1652083', '-16.075774899999942', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '11:14 am', 0, 6000, 50, '2016-04-23 20:46:35'),
+(32, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Thies, Senegal', '14.7910052', '-16.935860400000024', '8:15 ', 0, 1000, 51, '2016-05-08 00:57:37'),
+(33, 'Touba, Diourbel, Senegal', '14.8665572', '-15.899495600000023', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '8:15 ', 0, 1500, 51, '2016-05-08 00:57:37'),
+(34, 'Thies, Senegal', '14.7910052', '-16.935860400000024', 'Dakar, Senegal', '14.7645042', '-17.366028599999936', '09:39 am', 0, 2000, 51, '2016-05-08 00:57:37'),
+(35, 'Dakar, Senegal', '14.7645042', '-17.366028599999936', 'Thies, Senegal', '14.7910052', '-16.935860400000024', '8:15 ', 0, 75827, 52, '2016-05-08 15:07:06'),
+(36, 'Dakar, Senegal', '14.7645042', '-17.366028599999936', 'Tambacounda, Senegal', '13.7725888', '-13.671005899999955', '8:15 ', 0, 757527, 52, '2016-05-08 15:07:06'),
+(37, 'Thies, Senegal', '14.7910052', '-16.935860400000024', 'Tambacounda, Senegal', '13.7725888', '-13.671005899999955', '08:50 am', 0, 77275, 52, '2016-05-08 15:07:06');
 
 -- --------------------------------------------------------
 
@@ -1916,8 +1969,8 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 
 INSERT INTO `tbl_users` (`user_id`, `user_email`, `user_password`, `user_type`, `user_company_name`, `user_first_name`, `user_last_name`, `user_about_us`, `user_profile_img`, `user_mobile`, `user_secondary_phone`, `user_secondary_mail`, `user_company_id`, `user_url`, `user_street`, `user_city`, `postal_code`, `user_occupation`, `marital_status`, `isverified`, `show_number`, `send_sms`, `allowed_food`, `allowed_pet`, `allowed_smoke`, `allowed_chat`, `allowed_music`, `user_gender`, `user_country`, `user_dob`, `communication_mobile`, `communication_email`, `login_type`, `isactive`, `user_admin_status`, `user_created_date`, `user_lost_login`) VALUES
 (8, 'demba@gmail.com', '9fad81caabbd30778873b660f5b5ded01c67388a', '0', NULL, 'Demba Amar', 'Hann', '', '', '063332152', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:21:53', '2016-04-18 00:02:53'),
-(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Kalidou', 'Ndao', 'Je m''appelle Kalidou, j''aime bien voyager  de temps en temps. dzjdzd', 'user2_profile_1459710648.jpg', '0638226417', NULL, 'kal@gmail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 1, 1, 1, 1, 1, '0', NULL, '1989-01-01', 0, 1, 0, 1, 1, '2016-03-23 19:30:28', '2016-04-23 23:09:21'),
-(3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-05-06 01:25:37'),
+(2, 'falloufall87@gmail.com', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Kalidou', 'Ndao', 'Je m''appelle Kalidou, j''aime bien voyager  de temps en temps. dzjdzd', 'user2_profile_1459710648.jpg', '0638226417', NULL, 'kal@gmail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 1, 1, 1, 1, 1, '0', NULL, '1989-01-01', 0, 1, 0, 1, 1, '2016-03-23 19:30:28', '2016-05-08 17:09:15'),
+(3, 'fallfallo@hotmail.fr', '7ebde5f6ff5fb02b123ad42698e1a4e2132bd258', '0', NULL, 'Falilou', 'Fall', 'Ku beug am mbay', 'user3_profile_1459015848.jpg', '0781786703', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '3774c08ddc69a4184ce9865b8ea9e7ea69070f08', '1', '1', 0, 0, 0, 0, 0, '0', NULL, '1988-01-01', 0, 0, 0, 1, 1, '2016-03-26 16:36:45', '2016-05-08 17:05:56'),
 (6, 'contact@khadimdev.com', '9606e19dc2ea173ac9cdabde96aad09d73d8bcd0', '0', NULL, 'Abdou Karim', 'Thioye', 'Khadim Mbacké', 'user6_profile_1460669667.png', '0638226417', NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, '32e141e74aa53d773dead5f468f2dd52bd1743b6', '1', '1', 1, 0, 0, 1, 0, '0', NULL, '1989-01-01', 0, 0, 0, 1, 1, '2016-04-03 20:17:41', '2016-04-17 23:32:34'),
 (7, 'khadimbacke@gmail.com', '59f167aaec9eb8789feb7f0a1e53b96803652874', '0', NULL, 'Khadim', 'Mbacké', '', '', '0638226417', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', '1', '1', 0, 0, 0, 0, 0, NULL, NULL, '', 0, 0, 0, 1, 1, '2016-04-15 10:15:37', '2016-04-23 21:34:43');
 
@@ -2242,7 +2295,7 @@ CREATE TABLE IF NOT EXISTS `tbl_vehicle` (
   `vechicle_createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`vechicle_id`),
   KEY `tbl_vechicle_types_tbl_vehicle` (`vechicle_type_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=234 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=235 ;
 
 --
 -- Contenu de la table `tbl_vehicle`

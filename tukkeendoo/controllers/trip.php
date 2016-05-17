@@ -94,6 +94,7 @@ class Trip extends Front_Controller
         $this->db->where(array('enquiry_passanger_id' => $user_id, 'enquiry_trip_id' => $trip_id,'enquiry_trip_date' => $journey_date));
         $this->db->from('tbl_enquires');
         $result = $this->db->get();
+		print("trip.php:97: "); print_r($result); //TODO test
         if ($result->num_rows > 0) 
 		{
             return 0;
