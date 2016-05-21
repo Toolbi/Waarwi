@@ -329,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `isactive` int(2) NOT NULL,
   `user_admin_status` int(11) NOT NULL DEFAULT '0',
   `user_created_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `user_lost_login` varchar(255) NOT NULL,
+  `user_last_login` varchar(255) NOT NULL,
   PRIMARY KEY (`user_id`),
   KEY `tbl_company_tbl_users` (`user_company_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;

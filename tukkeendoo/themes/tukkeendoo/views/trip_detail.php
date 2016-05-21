@@ -486,7 +486,7 @@ function viewPopcontact(pmId)
 
         <ul class="size14 row trp-cont-rht">           
             <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('cal-14-14.png');?>" width="12" height="12"></span> <strong class="paddingleft8"><?php echo lang('since');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_created_date']));?></li>
-            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('time-ico.png');?>"></span> <strong class="paddingleft8"><?php echo lang('last_visit');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_lost_login']));?></li>           
+            <li><span class="trp-imge paddingtop5"><img src="<?php echo theme_img('time-ico.png');?>"></span> <strong class="paddingleft8"><?php echo lang('last_visit');?></strong>: <?php echo date('d/m/Y',strtotime($tripdetails['user_last_login']));?></li>           
         </ul>
 
         <div class="rowrec line4"></div>

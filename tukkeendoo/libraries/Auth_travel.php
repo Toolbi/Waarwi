@@ -116,7 +116,7 @@ class Auth_travel
 				redirect('login');
 			}
 			$save['user_id'] =  $result['user_id'];
-			$save['user_lost_login'] = date('Y-m-d H:i:s',now());
+			$save['user_last_login'] = date('Y-m-d H:i:s',now());
 			
 			$this->save($save);
 			$carpool = array();
@@ -161,7 +161,7 @@ class Auth_travel
 		$carpool['carpool']['trip_id']	= $this->trips($user_id);
 		$carpool['carpool']['expire'] = time()+$this->session_expire;
 		$save['user_id'] =  $user_id;
-		$save['user_lost_login'] = date('Y-m-d H:i:s',now());
+		$save['user_last_login'] = date('Y-m-d H:i:s',now());
 		$data['login_ip']=$this->CI->input->ip_address();
 		$data['login_id']=$user_id;					
 		$id=$this->savelog($data);
